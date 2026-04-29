@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Embroidery initial detail">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <rect x="210" y="150" width="780" height="600" rx="28" fill="#ffffff" stroke="#e4dfd7" stroke-width="12"/>
+  <path d="M396 598V314h104c90 0 146 48 146 125S590 562 500 562h-64" fill="none" stroke="#8f4d4f" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M718 308v292M718 308c82 0 126 42 126 94 0 45-34 78-88 90l106 108" fill="none" stroke="#7f8c6b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M302 228c64 62 130 62 198 0M710 682c70-54 140-54 210 0" fill="none" stroke="#b7664d" stroke-width="10" stroke-linecap="round"/>
+</svg>

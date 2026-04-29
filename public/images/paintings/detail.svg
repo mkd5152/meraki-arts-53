@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Painting layered brush detail">
+  <rect width="1200" height="900" fill="#f8f5f0"/>
+  <path d="M178 268c160-76 310-80 450-12s274 64 402-12" fill="none" stroke="#b7664d" stroke-width="58" stroke-linecap="round" opacity="0.9"/>
+  <path d="M154 432c150-78 302-80 456-6s306 70 456-12" fill="none" stroke="#7f8c6b" stroke-width="58" stroke-linecap="round" opacity="0.9"/>
+  <path d="M184 596c142-70 286-72 432-6s290 64 432-8" fill="none" stroke="#8f4d4f" stroke-width="58" stroke-linecap="round" opacity="0.88"/>
+  <circle cx="982" cy="164" r="84" fill="#e8edf0"/>
+</svg>

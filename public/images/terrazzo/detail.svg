@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Terrazzo color chip composition">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <g transform="translate(120 90)">
+    <rect x="0" y="0" width="960" height="720" rx="30" fill="#ffffff"/>
+    <path d="M112 154l126-66 74 112-144 54z" fill="#b7664d"/>
+    <path d="M400 118l150 32-52 118-142-30z" fill="#7f8c6b"/>
+    <path d="M690 176l102-88 88 94-112 76z" fill="#8f4d4f"/>
+    <path d="M184 442l144-86 76 126-150 58z" fill="#e8edf0"/>
+    <path d="M542 404l172-44 44 130-184 54z" fill="#272523" opacity="0.62"/>
+    <path d="M746 568l104-54 48 86-116 48z" fill="#b7664d"/>
+  </g>
+</svg>

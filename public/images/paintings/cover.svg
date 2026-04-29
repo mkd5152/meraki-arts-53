@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Painting botanical canvas">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <rect x="214" y="134" width="772" height="600" rx="24" fill="#ffffff" stroke="#e0d8ce" stroke-width="16"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M430 640c0-204 74-348 222-432" stroke="#7f8c6b" stroke-width="18"/>
+    <path d="M510 468c-98-48-178-24-240 72 98 36 178 12 240-72z" stroke="#b7664d" stroke-width="14"/>
+    <path d="M578 356c-48-96-25-174 70-234 40 96 17 174-70 234z" stroke="#8f4d4f" stroke-width="14"/>
+    <path d="M604 452c112-58 204-37 276 64-112 45-204 24-276-64z" stroke="#272523" stroke-width="14" opacity="0.58"/>
+  </g>
+  <text x="72" y="112" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Paintings</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Customized personalized gift set">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <rect x="246" y="270" width="708" height="400" rx="30" fill="#ffffff" stroke="#e2d7cf" stroke-width="14"/>
+  <path d="M600 270v400M246 432h708" stroke="#b7664d" stroke-width="22" stroke-linecap="round"/>
+  <path d="M478 270c-90-112-16-218 122-76 138-142 212-36 122 76" fill="none" stroke="#7f8c6b" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="432" r="70" fill="#8f4d4f"/>
+  <text x="570" y="452" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700">B</text>
+  <text x="72" y="120" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Custom Gifts</text>
+</svg>

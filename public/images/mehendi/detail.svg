@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Mehendi fine line floral pattern">
+  <rect width="1200" height="900" fill="#fffaf4"/>
+  <g transform="translate(166 110)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M130 614c108-236 244-395 520-525" stroke="#b7664d" stroke-width="12"/>
+    <path d="M228 514c-16-74 30-132 97-138 70-7 126 42 130 109-71 17-146 28-227 29z" stroke="#7f8c6b" stroke-width="9"/>
+    <path d="M394 346c-9-61 29-111 84-119 58-8 109 29 119 84-58 19-126 31-203 35z" stroke="#8f4d4f" stroke-width="9"/>
+    <path d="M558 230c-7-48 23-87 67-94 44-7 83 21 91 64-43 17-96 27-158 30z" stroke="#7f8c6b" stroke-width="8"/>
+    <path d="M252 624c86-52 176-80 271-84M346 450c73-39 148-60 225-62M507 303c58-27 116-43 176-47" stroke="#272523" stroke-width="6" opacity="0.72"/>
+  </g>
+  <circle cx="930" cy="682" r="110" fill="#e8edf0"/>
+  <circle cx="930" cy="682" r="68" fill="none" stroke="#8f4d4f" stroke-width="9"/>
+</svg>

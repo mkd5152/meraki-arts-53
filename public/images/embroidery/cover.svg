@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Embroidery floral threadwork">
+  <rect width="1200" height="900" fill="#fdfbf7"/>
+  <circle cx="600" cy="455" r="300" fill="#ffffff" stroke="#e4dfd7" stroke-width="18"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M590 664V334" stroke="#7f8c6b" stroke-width="12"/>
+    <path d="M590 456c-112-88-190-89-252-6 72 54 155 56 252 6z" stroke="#b7664d" stroke-width="12"/>
+    <path d="M590 512c116-88 198-86 256 5-75 48-160 47-256-5z" stroke="#8f4d4f" stroke-width="12"/>
+    <path d="M590 378c78-94 154-116 230-65-46 76-123 99-230 65z" stroke="#7f8c6b" stroke-width="12"/>
+    <path d="M590 334c-70-84-138-105-205-62 39 68 107 89 205 62z" stroke="#272523" stroke-width="12" opacity="0.62"/>
+  </g>
+  <text x="72" y="120" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Embroidery</text>
+</svg>

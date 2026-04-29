@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Customized gift name and wrapping detail">
+  <rect width="1200" height="900" fill="#f8f5f0"/>
+  <rect x="196" y="198" width="808" height="504" rx="30" fill="#ffffff" stroke="#e2d7cf" stroke-width="12"/>
+  <path d="M286 316h628M286 452h628M286 588h628" stroke="#e8edf0" stroke-width="18" stroke-linecap="round"/>
+  <path d="M380 452c72-84 148-84 228 0s156 84 228 0" fill="none" stroke="#b7664d" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="374" cy="316" r="46" fill="#7f8c6b"/>
+  <circle cx="600" cy="316" r="46" fill="#8f4d4f"/>
+  <circle cx="826" cy="316" r="46" fill="#b7664d"/>
+</svg>

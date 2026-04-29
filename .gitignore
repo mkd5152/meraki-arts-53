@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+dist
+*.tsbuildinfo
+.env*
+!.env.example
+
+# Local source assets and generated backups
+backups/
+creations/
+
+# Deployment/local tooling
+.vercel/
+
+# OS/editor noise
+.DS_Store

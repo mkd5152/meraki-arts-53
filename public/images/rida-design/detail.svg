@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Rida border and palette detail">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <rect x="140" y="184" width="920" height="532" rx="24" fill="#ffffff" stroke="#e4dfd7" stroke-width="12"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M210 300h780M210 450h780M210 600h780" stroke="#272523" stroke-width="10" opacity="0.28"/>
+    <path d="M254 300c64-64 128-64 192 0s128 64 192 0 128-64 192 0" stroke="#7f8c6b" stroke-width="16"/>
+    <path d="M254 450c64-64 128-64 192 0s128 64 192 0 128-64 192 0" stroke="#b7664d" stroke-width="16"/>
+    <path d="M254 600c64-64 128-64 192 0s128 64 192 0 128-64 192 0" stroke="#8f4d4f" stroke-width="16"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Terrazzo decor tray">
+  <rect width="1200" height="900" fill="#f6f4ef"/>
+  <rect x="212" y="178" width="776" height="544" rx="42" fill="#ffffff" stroke="#ded8ce" stroke-width="16"/>
+  <g opacity="0.94">
+    <path d="M320 300l86-30 24 72-92 34z" fill="#b7664d"/>
+    <path d="M520 244l112 38-44 84-106-28z" fill="#7f8c6b"/>
+    <path d="M752 306l78-62 58 70-86 54z" fill="#8f4d4f"/>
+    <path d="M420 498l100-54 54 92-112 38z" fill="#e8edf0"/>
+    <path d="M688 520l132-28 28 86-132 44z" fill="#272523" opacity="0.68"/>
+    <path d="M820 426l62-16 22 60-62 20z" fill="#b7664d"/>
+  </g>
+  <text x="72" y="120" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Terrazzo</text>
+</svg>

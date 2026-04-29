@@ -1,0 +1,989 @@
+{
+  "artist": {
+    "name": "Batul",
+    "brandName": "Batul Studio",
+    "tagline": "Thoughtfully crafted, detail-driven creations",
+    "intro": "A multidisciplinary artist creating meaningful, handcrafted work across textures, patterns, and materials."
+  },
+  "navigation": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Work",
+        "href": "/gallery",
+        "hasDropdown": true
+      },
+      {
+        "label": "Gallery",
+        "href": "/gallery"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "openMenuLabel": "Open menu",
+    "closeMenuLabel": "Close menu",
+    "workDropdownLabel": "Work categories",
+    "allWorkLabel": "All work"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Handcrafted creative studio",
+      "image": "/images/mehendi/mehendi-design-01.webp",
+      "primaryCta": {
+        "label": "View Work",
+        "href": "/gallery"
+      },
+      "secondaryCta": {
+        "label": "Request Custom Work",
+        "href": "/contact"
+      }
+    },
+    "featuredSection": {
+      "eyebrow": "Creative disciplines",
+      "title": "Work shaped with patience, precision, and purpose",
+      "intro": "Explore the studio's core art forms, from occasion-ready mehendi to tactile decor, textile work, and custom keepsakes.",
+      "actionLabel": "View category"
+    },
+    "selectedSection": {
+      "eyebrow": "Selected work",
+      "title": "A closer look at handcrafted details",
+      "intro": "A concise preview of the textures, patterns, and finishes that define Batul Studio.",
+      "allLabel": "All",
+      "viewAllLabel": "Open full gallery",
+      "viewAllHref": "/gallery"
+    },
+    "servicesSection": {
+      "eyebrow": "Services",
+      "title": "Designed for personal moments, events, and thoughtful gifting",
+      "intro": "Commission handmade pieces, occasion decor, and collaborative creative work with a clear process and careful execution.",
+      "actionLabel": "Explore services",
+      "actionHref": "/services"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "A multidisciplinary practice built around detail and intention",
+      "intro": "Batul Studio brings together handmade methods, refined patterns, and thoughtful customization for clients who value work with a personal touch."
+    },
+    "approach": {
+      "eyebrow": "Creative approach",
+      "title": "Calm process, considered materials, polished results",
+      "body": "Each project begins with the occasion, the person, and the feeling the piece should carry. From there, Batul develops patterns, palettes, and finishes that feel personal while staying elegant and useful."
+    },
+    "highlights": {
+      "eyebrow": "Signature strengths",
+      "title": "What makes the work distinct",
+      "items": [
+        {
+          "title": "Attention to detail",
+          "description": "Fine lines, balanced composition, and careful finishing guide every medium."
+        },
+        {
+          "title": "Handcrafted work",
+          "description": "Pieces are made with time, patience, and respect for tactile craft."
+        },
+        {
+          "title": "Multi-medium capability",
+          "description": "The studio can translate an idea across mehendi, textile detail, decor, art, and gifting."
+        }
+      ]
+    }
+  },
+  "galleryPage": {
+    "hero": {
+      "eyebrow": "Gallery",
+      "title": "Browse the studio's creative range",
+      "intro": "Filter by medium to explore mehendi, chenille craft, embroidery, rida design, lamasa, terrazzo, paintings, and customized gifts."
+    },
+    "allLabel": "All"
+  },
+  "galleryViewer": {
+    "viewerLabel": "Large image preview",
+    "openLabel": "Open larger image",
+    "closeLabel": "Close preview",
+    "previousLabel": "Previous image",
+    "nextLabel": "Next image"
+  },
+  "servicesPage": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Creative services for custom pieces and meaningful occasions",
+      "intro": "Batul Studio supports clients with handmade gifts, event-ready details, decor, artwork, and collaborative design."
+    },
+    "overview": {
+      "eyebrow": "How it works",
+      "title": "A simple commission process",
+      "body": "Share the occasion, timeline, preferred medium, and any inspiration. Batul Studio will shape a clear creative direction, confirm feasibility, and prepare a piece with careful attention to finish."
+    },
+    "cta": {
+      "title": "Request a custom piece",
+      "intro": "Start with a few details and Batul Studio will help translate your idea into a polished handmade result.",
+      "primaryCta": {
+        "label": "Request a custom piece",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "View gallery",
+        "href": "/gallery"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Start a custom request or collaboration",
+      "intro": "Share the occasion, medium, timeline, and any details that will help Batul Studio understand your idea."
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us what you would like to create",
+      "submitLabel": "Send request",
+      "successMessage": "Thank you. Batul Studio will review your request and respond soon."
+    },
+    "details": {
+      "title": "Project details to include",
+      "items": [
+        "Preferred medium or art form",
+        "Occasion or purpose",
+        "Timeline and quantity",
+        "Color, size, or personalization notes"
+      ]
+    }
+  },
+  "artPage": {
+    "cta": {
+      "title": "Available for custom work",
+      "intro": "Share your occasion, preferences, and timeline to begin a tailored request.",
+      "primaryCta": {
+        "label": "Request custom work",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "Back to gallery",
+        "href": "/gallery"
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Custom commissions",
+    "title": "Bring a thoughtful handmade idea to life",
+    "intro": "For gifts, occasions, decor, or collaborative creative work, Batul Studio can help shape a polished custom piece.",
+    "primaryCta": {
+      "label": "Request custom work",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explore services",
+      "href": "/services"
+    }
+  },
+  "footer": {
+    "description": "A multidisciplinary creative brand for handmade detail, thoughtful gifting, and refined custom work.",
+    "linksTitle": "Explore",
+    "contactLabel": "Start a request",
+    "contactHref": "/contact",
+    "copyright": "Batul Studio. All rights reserved."
+  },
+  "services": [
+    {
+      "title": "Custom Gifts",
+      "description": "Personalized handmade pieces designed for meaningful occasions."
+    },
+    {
+      "title": "Decor & Art",
+      "description": "Creative decor elements and artwork for spaces and events."
+    },
+    {
+      "title": "Bridal & Occasion Mehendi",
+      "description": "Elegant mehendi design for celebrations, portraits, and personal expression."
+    },
+    {
+      "title": "Textile Detail Work",
+      "description": "Chenille craft, embroidery, and rida details planned with balance and finish."
+    },
+    {
+      "title": "Creative Collaborations",
+      "description": "Flexible support for brands, families, and event concepts that need a handmade touch."
+    }
+  ],
+  "artForms": [
+    {
+      "id": "mehendi",
+      "title": "Mehendi",
+      "slug": "mehendi",
+      "description": "Intricate, elegant mehendi designs tailored for occasions and personal expression.",
+      "coverImage": "/images/mehendi/mehendi-design-01.webp",
+      "gallery": [
+        {
+          "image": "/images/mehendi/mehendi-design-01.webp",
+          "caption": "Mehendi design 1"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-02.webp",
+          "caption": "Mehendi design 2"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-03.webp",
+          "caption": "Mehendi design 3"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-04.webp",
+          "caption": "Mehendi design 4"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-05.webp",
+          "caption": "Mehendi design 5"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-06.webp",
+          "caption": "Mehendi design 6"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-07.webp",
+          "caption": "Mehendi design 7"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-08.webp",
+          "caption": "Mehendi design 8"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-09.webp",
+          "caption": "Mehendi design 9"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-10.webp",
+          "caption": "Mehendi design 10"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-11.webp",
+          "caption": "Mehendi design 11"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-12.webp",
+          "caption": "Mehendi design 12"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-13.webp",
+          "caption": "Mehendi design 13"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-14.webp",
+          "caption": "Mehendi design 14"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-15.webp",
+          "caption": "Mehendi design 15"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-16.webp",
+          "caption": "Mehendi design 16"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-17.webp",
+          "caption": "Mehendi design 17"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-18.webp",
+          "caption": "Mehendi design 18"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-19.webp",
+          "caption": "Mehendi design 19"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-20.webp",
+          "caption": "Mehendi design 20"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-21.webp",
+          "caption": "Mehendi design 21"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-22.webp",
+          "caption": "Mehendi design 22"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-23.webp",
+          "caption": "Mehendi design 23"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-24.webp",
+          "caption": "Mehendi design 24"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-25.webp",
+          "caption": "Mehendi design 25"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-26.webp",
+          "caption": "Mehendi design 26"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-27.webp",
+          "caption": "Mehendi design 27"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-28.webp",
+          "caption": "Mehendi design 28"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-29.webp",
+          "caption": "Mehendi design 29"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-30.webp",
+          "caption": "Mehendi design 30"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-31.webp",
+          "caption": "Mehendi design 31"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-32.webp",
+          "caption": "Mehendi design 32"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-33.webp",
+          "caption": "Mehendi design 33"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-34.webp",
+          "caption": "Mehendi design 34"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-35.webp",
+          "caption": "Mehendi design 35"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-36.webp",
+          "caption": "Mehendi design 36"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-37.webp",
+          "caption": "Mehendi design 37"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-38.webp",
+          "caption": "Mehendi design 38"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-39.webp",
+          "caption": "Mehendi design 39"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-40.webp",
+          "caption": "Mehendi design 40"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-41.webp",
+          "caption": "Mehendi design 41"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-42.webp",
+          "caption": "Mehendi design 42"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-43.webp",
+          "caption": "Mehendi design 43"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-44.webp",
+          "caption": "Mehendi design 44"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-45.webp",
+          "caption": "Mehendi design 45"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-46.webp",
+          "caption": "Mehendi design 46"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-47.webp",
+          "caption": "Mehendi design 47"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-48.webp",
+          "caption": "Mehendi design 48"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-49.webp",
+          "caption": "Mehendi design 49"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-50.webp",
+          "caption": "Mehendi design 50"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-51.webp",
+          "caption": "Mehendi design 51"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-52.webp",
+          "caption": "Mehendi design 52"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-53.webp",
+          "caption": "Mehendi design 53"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-54.webp",
+          "caption": "Mehendi design 54"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-55.webp",
+          "caption": "Mehendi design 55"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-56.webp",
+          "caption": "Mehendi design 56"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-57.webp",
+          "caption": "Mehendi design 57"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-58.webp",
+          "caption": "Mehendi design 58"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-59.webp",
+          "caption": "Mehendi design 59"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-60.webp",
+          "caption": "Mehendi design 60"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-61.webp",
+          "caption": "Mehendi design 61"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-62.webp",
+          "caption": "Mehendi design 62"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-63.webp",
+          "caption": "Mehendi design 63"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-64.webp",
+          "caption": "Mehendi design 64"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-65.webp",
+          "caption": "Mehendi design 65"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-66.webp",
+          "caption": "Mehendi design 66"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-67.webp",
+          "caption": "Mehendi design 67"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-68.webp",
+          "caption": "Mehendi design 68"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-69.webp",
+          "caption": "Mehendi design 69"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-70.webp",
+          "caption": "Mehendi design 70"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-71.webp",
+          "caption": "Mehendi design 71"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-72.webp",
+          "caption": "Mehendi design 72"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-73.webp",
+          "caption": "Mehendi design 73"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-74.webp",
+          "caption": "Mehendi design 74"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-75.webp",
+          "caption": "Mehendi design 75"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-76.webp",
+          "caption": "Mehendi design 76"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-77.webp",
+          "caption": "Mehendi design 77"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-78.webp",
+          "caption": "Mehendi design 78"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-79.webp",
+          "caption": "Mehendi design 79"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-80.webp",
+          "caption": "Mehendi design 80"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-81.webp",
+          "caption": "Mehendi design 81"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-82.webp",
+          "caption": "Mehendi design 82"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-83.webp",
+          "caption": "Mehendi design 83"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-84.webp",
+          "caption": "Mehendi design 84"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-85.webp",
+          "caption": "Mehendi design 85"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-86.webp",
+          "caption": "Mehendi design 86"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-87.webp",
+          "caption": "Mehendi design 87"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-88.webp",
+          "caption": "Mehendi design 88"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-89.webp",
+          "caption": "Mehendi design 89"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-90.webp",
+          "caption": "Mehendi design 90"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-91.webp",
+          "caption": "Mehendi design 91"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-92.webp",
+          "caption": "Mehendi design 92"
+        },
+        {
+          "image": "/images/mehendi/mehendi-design-93.webp",
+          "caption": "Mehendi design 93"
+        }
+      ]
+    },
+    {
+      "id": "chenille-craft",
+      "title": "Chenille Craft",
+      "slug": "chenille-craft",
+      "description": "Soft sculptural florals and decorative pieces shaped with chenille stems for a playful handmade finish.",
+      "coverImage": "/images/chenille-craft/chenille-floral-01.webp",
+      "gallery": [
+        {
+          "image": "/images/chenille-craft/chenille-floral-01.webp",
+          "caption": "Chenille floral craft 1"
+        }
+      ]
+    },
+    {
+      "id": "embroidery",
+      "title": "Embroidery",
+      "slug": "embroidery",
+      "description": "Threadwork with refined color, clean detailing, and a personal handmade finish.",
+      "coverImage": "/images/embroidery/embroidered-floral-detail-01.webp",
+      "gallery": [
+        {
+          "image": "/images/embroidery/embroidered-floral-detail-01.webp",
+          "caption": "Embroidered floral detail 1"
+        }
+      ]
+    },
+    {
+      "id": "rida-design",
+      "title": "Rida Design",
+      "slug": "rida-design",
+      "description": "Considered rida design details with balanced motifs, colors, and finishing.",
+      "coverImage": "/images/rida-design/rida-design-study-01.webp",
+      "gallery": [
+        {
+          "image": "/images/rida-design/rida-design-study-01.webp",
+          "caption": "Rida design study 1"
+        },
+        {
+          "image": "/images/rida-design/rida-design-study-02.webp",
+          "caption": "Rida design study 2"
+        },
+        {
+          "image": "/images/rida-design/rida-design-study-03.webp",
+          "caption": "Rida design study 3"
+        },
+        {
+          "image": "/images/rida-design/rida-design-study-04.webp",
+          "caption": "Rida design study 4"
+        },
+        {
+          "image": "/images/rida-design/rida-design-study-05.webp",
+          "caption": "Rida design study 5"
+        }
+      ]
+    },
+    {
+      "id": "lamasa",
+      "title": "Lamasa",
+      "slug": "lamasa",
+      "description": "Handmade lamasa decor pieces shaped with playful detail, soft color, and a polished finish.",
+      "coverImage": "/images/lamasa/lamasa-decor-01.webp",
+      "gallery": [
+        {
+          "image": "/images/lamasa/lamasa-decor-01.webp",
+          "caption": "Lamasa decor 1"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-02.webp",
+          "caption": "Lamasa decor 2"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-03.webp",
+          "caption": "Lamasa decor 3"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-04.webp",
+          "caption": "Lamasa decor 4"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-05.webp",
+          "caption": "Lamasa decor 5"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-06.webp",
+          "caption": "Lamasa decor 6"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-07.webp",
+          "caption": "Lamasa decor 7"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-08.webp",
+          "caption": "Lamasa decor 8"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-09.webp",
+          "caption": "Lamasa decor 9"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-10.webp",
+          "caption": "Lamasa decor 10"
+        },
+        {
+          "image": "/images/lamasa/lamasa-decor-11.webp",
+          "caption": "Lamasa decor 11"
+        }
+      ]
+    },
+    {
+      "id": "terrazzo",
+      "title": "Terrazzo",
+      "slug": "terrazzo",
+      "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
+      "coverImage": "/images/terrazzo/terrazzo-decor-01.webp",
+      "gallery": [
+        {
+          "image": "/images/terrazzo/terrazzo-decor-01.webp",
+          "caption": "Terrazzo decor 1"
+        }
+      ]
+    },
+    {
+      "id": "paintings",
+      "title": "Paintings",
+      "slug": "paintings",
+      "description": "Expressive paintings and studies that bring warmth, story, and softness to a space.",
+      "coverImage": "/images/paintings/hand-painted-artwork-01.webp",
+      "gallery": [
+        {
+          "image": "/images/paintings/hand-painted-artwork-01.webp",
+          "caption": "Hand-painted artwork 1"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-02.webp",
+          "caption": "Hand-painted artwork 2"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-03.webp",
+          "caption": "Hand-painted artwork 3"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-04.webp",
+          "caption": "Hand-painted artwork 4"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-05.webp",
+          "caption": "Hand-painted artwork 5"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-06.webp",
+          "caption": "Hand-painted artwork 6"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-07.webp",
+          "caption": "Hand-painted artwork 7"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-08.webp",
+          "caption": "Hand-painted artwork 8"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-09.webp",
+          "caption": "Hand-painted artwork 9"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-10.webp",
+          "caption": "Hand-painted artwork 10"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-11.webp",
+          "caption": "Hand-painted artwork 11"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-12.webp",
+          "caption": "Hand-painted artwork 12"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-13.webp",
+          "caption": "Hand-painted artwork 13"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-14.webp",
+          "caption": "Hand-painted artwork 14"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-15.webp",
+          "caption": "Hand-painted artwork 15"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-16.webp",
+          "caption": "Hand-painted artwork 16"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-17.webp",
+          "caption": "Hand-painted artwork 17"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-18.webp",
+          "caption": "Hand-painted artwork 18"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-19.webp",
+          "caption": "Hand-painted artwork 19"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-20.webp",
+          "caption": "Hand-painted artwork 20"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-21.webp",
+          "caption": "Hand-painted artwork 21"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-22.webp",
+          "caption": "Hand-painted artwork 22"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-23.webp",
+          "caption": "Hand-painted artwork 23"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-24.webp",
+          "caption": "Hand-painted artwork 24"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-25.webp",
+          "caption": "Hand-painted artwork 25"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-26.webp",
+          "caption": "Hand-painted artwork 26"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-27.webp",
+          "caption": "Hand-painted artwork 27"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-28.webp",
+          "caption": "Hand-painted artwork 28"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-29.webp",
+          "caption": "Hand-painted artwork 29"
+        },
+        {
+          "image": "/images/paintings/hand-painted-artwork-30.webp",
+          "caption": "Hand-painted artwork 30"
+        }
+      ]
+    },
+    {
+      "id": "customized-gifts",
+      "title": "Customized Gifts",
+      "slug": "customized-gifts",
+      "description": "Personalized keepsakes designed for celebrations, milestones, and thoughtful gestures.",
+      "coverImage": "/images/customized-gifts/customized-gift-detail-01.webp",
+      "gallery": [
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-01.webp",
+          "caption": "Customized gift detail 1"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-02.webp",
+          "caption": "Customized gift detail 2"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-03.webp",
+          "caption": "Customized gift detail 3"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-04.webp",
+          "caption": "Customized gift detail 4"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-05.webp",
+          "caption": "Customized gift detail 5"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-06.webp",
+          "caption": "Customized gift detail 6"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-07.webp",
+          "caption": "Customized gift detail 7"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-08.webp",
+          "caption": "Customized gift detail 8"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-09.webp",
+          "caption": "Customized gift detail 9"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-10.webp",
+          "caption": "Customized gift detail 10"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-11.webp",
+          "caption": "Customized gift detail 11"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-12.webp",
+          "caption": "Customized gift detail 12"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-13.webp",
+          "caption": "Customized gift detail 13"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-14.webp",
+          "caption": "Customized gift detail 14"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-15.webp",
+          "caption": "Customized gift detail 15"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-16.webp",
+          "caption": "Customized gift detail 16"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-17.webp",
+          "caption": "Customized gift detail 17"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-18.webp",
+          "caption": "Customized gift detail 18"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-19.webp",
+          "caption": "Customized gift detail 19"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-20.webp",
+          "caption": "Customized gift detail 20"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-21.webp",
+          "caption": "Customized gift detail 21"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-22.webp",
+          "caption": "Customized gift detail 22"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-23.webp",
+          "caption": "Customized gift detail 23"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-24.webp",
+          "caption": "Customized gift detail 24"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-25.webp",
+          "caption": "Customized gift detail 25"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-26.webp",
+          "caption": "Customized gift detail 26"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-27.webp",
+          "caption": "Customized gift detail 27"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-28.webp",
+          "caption": "Customized gift detail 28"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-29.webp",
+          "caption": "Customized gift detail 29"
+        },
+        {
+          "image": "/images/customized-gifts/customized-gift-detail-30.webp",
+          "caption": "Customized gift detail 30"
+        }
+      ]
+    }
+  ]
+}

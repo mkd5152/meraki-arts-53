@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Mehendi bridal design">
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <circle cx="930" cy="170" r="120" fill="#e7d6cc"/>
+  <circle cx="224" cy="748" r="155" fill="#d8ded2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M246 712c130-306 287-461 611-552" stroke="#7f8c6b" stroke-width="15"/>
+    <path d="M343 572c112 58 223 50 333-26M438 432c88 48 180 43 274-17M540 315c70 37 144 34 220-12" stroke="#b7664d" stroke-width="11"/>
+    <path d="M288 674c44 14 89 6 135-25M390 514c41 10 82 3 123-20M494 382c38 8 76 1 113-19" stroke="#8f4d4f" stroke-width="9"/>
+  </g>
+  <g fill="#8f4d4f">
+    <circle cx="246" cy="712" r="26"/>
+    <circle cx="857" cy="160" r="22"/>
+    <circle cx="676" cy="546" r="18"/>
+  </g>
+  <text x="76" y="112" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Mehendi</text>
+</svg>

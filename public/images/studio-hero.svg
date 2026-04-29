@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Batul Studio handcrafted textures">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfaf7"/>
+      <stop offset="0.55" stop-color="#edf2f2"/>
+      <stop offset="1" stop-color="#f3dfd6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#272523" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1380" cy="820" r="190" fill="#d9b2a4" opacity="0.38"/>
+  <circle cx="125" cy="150" r="92" fill="#7f8c6b" opacity="0.14"/>
+  <g filter="url(#shadow)" opacity="0.88">
+    <rect x="940" y="115" width="410" height="560" rx="28" fill="#ffffff"/>
+    <circle cx="1110" cy="330" r="128" fill="#efd4c8"/>
+    <path d="M990 232c90 105 214 111 340 18" fill="none" stroke="#b7664d" stroke-width="12" stroke-linecap="round" opacity="0.72"/>
+    <path d="M1028 505h246M1060 558h190" stroke="#272523" stroke-width="9" stroke-linecap="round" opacity="0.52"/>
+    <path d="M1075 606h156" stroke="#7f8c6b" stroke-width="9" stroke-linecap="round" opacity="0.62"/>
+  </g>
+  <g filter="url(#shadow)" opacity="0.76">
+    <rect x="1240" y="230" width="295" height="420" rx="26" fill="#ffffff"/>
+    <path d="M1310 338h150M1310 402h190M1310 466h128M1310 530h170" stroke="#272523" stroke-width="10" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="1352" cy="610" r="34" fill="#b7664d" opacity="0.82"/>
+    <circle cx="1436" cy="610" r="34" fill="#7f8c6b" opacity="0.82"/>
+    <circle cx="1520" cy="610" r="34" fill="#8f4d4f" opacity="0.82"/>
+  </g>
+</svg>
