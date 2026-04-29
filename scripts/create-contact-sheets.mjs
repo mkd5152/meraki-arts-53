@@ -3,7 +3,7 @@ import path from "node:path";
 import sharp from "sharp";
 
 const sourceDir = "creations";
-const outputDir = "/tmp/batul-contact-sheets";
+const outputDir = "/tmp/meraki-arts-53-contact-sheets";
 const files = readdirSync(sourceDir)
   .filter((file) => /\.(jpe?g|png|webp|heic|tiff?)$/i.test(file))
   .sort();

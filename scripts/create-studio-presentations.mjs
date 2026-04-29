@@ -5,8 +5,8 @@ import sharp from "sharp";
 
 const sourceDir = "creations";
 const outputRoot = "public/images";
-const cutoutBinary = "/tmp/batul-vision-cutout";
-const tempRoot = "/tmp/batul-studio-cutouts";
+const cutoutBinary = "/tmp/meraki-arts-53-vision-cutout";
+const tempRoot = "/tmp/meraki-arts-53-studio-cutouts";
 const canvas = { width: 1600, height: 1200 };
 
 const files = readdirSync(sourceDir)
@@ -164,7 +164,7 @@ async function composeStudioImage(cutoutPath, outputPath) {
 
 if (!existsSync(cutoutBinary)) {
   throw new Error(
-    `${cutoutBinary} was not found. Compile it with: xcrun swiftc -module-cache-path /tmp/batul-swift-cache scripts/vision-cutout.swift -O -o ${cutoutBinary}`
+    `${cutoutBinary} was not found. Compile it with: xcrun swiftc -module-cache-path /tmp/meraki-arts-53-swift-cache scripts/vision-cutout.swift -O -o ${cutoutBinary}`
   );
 }
 

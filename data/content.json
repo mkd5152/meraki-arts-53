@@ -1,7 +1,7 @@
 {
   "artist": {
-    "name": "Batul",
-    "brandName": "Batul Studio",
+    "name": "Meraki Arts 53",
+    "brandName": "Meraki Arts 53",
     "tagline": "Thoughtfully crafted, detail-driven creations",
     "intro": "A multidisciplinary artist creating meaningful, handcrafted work across textures, patterns, and materials."
   },
@@ -60,7 +60,7 @@
     "selectedSection": {
       "eyebrow": "Selected work",
       "title": "A closer look at handcrafted details",
-      "intro": "A concise preview of the textures, patterns, and finishes that define Batul Studio.",
+      "intro": "A concise preview of the textures, patterns, and finishes that define Meraki Arts 53.",
       "allLabel": "All",
       "viewAllLabel": "Open full gallery",
       "viewAllHref": "/gallery"
@@ -77,12 +77,12 @@
     "hero": {
       "eyebrow": "About",
       "title": "A multidisciplinary practice built around detail and intention",
-      "intro": "Batul Studio brings together handmade methods, refined patterns, and thoughtful customization for clients who value work with a personal touch."
+      "intro": "Meraki Arts 53 brings together handmade methods, refined patterns, and thoughtful customization for clients who value work with a personal touch."
     },
     "approach": {
       "eyebrow": "Creative approach",
       "title": "Calm process, considered materials, polished results",
-      "body": "Each project begins with the occasion, the person, and the feeling the piece should carry. From there, Batul develops patterns, palettes, and finishes that feel personal while staying elegant and useful."
+      "body": "Each project begins with the occasion, the person, and the feeling the piece should carry. From there, the studio develops patterns, palettes, and finishes that feel personal while staying elegant and useful."
     },
     "highlights": {
       "eyebrow": "Signature strengths",
@@ -122,16 +122,16 @@
     "hero": {
       "eyebrow": "Services",
       "title": "Creative services for custom pieces and meaningful occasions",
-      "intro": "Batul Studio supports clients with handmade gifts, event-ready details, decor, artwork, and collaborative design."
+      "intro": "Meraki Arts 53 supports clients with handmade gifts, event-ready details, decor, artwork, and collaborative design."
     },
     "overview": {
       "eyebrow": "How it works",
       "title": "A simple commission process",
-      "body": "Share the occasion, timeline, preferred medium, and any inspiration. Batul Studio will shape a clear creative direction, confirm feasibility, and prepare a piece with careful attention to finish."
+      "body": "Share the occasion, timeline, preferred medium, and any inspiration. Meraki Arts 53 will shape a clear creative direction, confirm feasibility, and prepare a piece with careful attention to finish."
     },
     "cta": {
       "title": "Request a custom piece",
-      "intro": "Start with a few details and Batul Studio will help translate your idea into a polished handmade result.",
+      "intro": "Start with a few details and Meraki Arts 53 will help translate your idea into a polished handmade result.",
       "primaryCta": {
         "label": "Request a custom piece",
         "href": "/contact"
@@ -146,7 +146,7 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Start a custom request or collaboration",
-      "intro": "Share the occasion, medium, timeline, and any details that will help Batul Studio understand your idea."
+      "intro": "Share the occasion, medium, timeline, and any details that will help Meraki Arts 53 understand your idea."
     },
     "form": {
       "nameLabel": "Name",
@@ -156,7 +156,7 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us what you would like to create",
       "submitLabel": "Send request",
-      "successMessage": "Thank you. Batul Studio will review your request and respond soon."
+      "successMessage": "Thank you. Meraki Arts 53 will review your request and respond soon."
     },
     "details": {
       "title": "Project details to include",
@@ -185,7 +185,7 @@
   "cta": {
     "eyebrow": "Custom commissions",
     "title": "Bring a thoughtful handmade idea to life",
-    "intro": "For gifts, occasions, decor, or collaborative creative work, Batul Studio can help shape a polished custom piece.",
+    "intro": "For gifts, occasions, decor, or collaborative creative work, Meraki Arts 53 can help shape a polished custom piece.",
     "primaryCta": {
       "label": "Request custom work",
       "href": "/contact"
@@ -200,7 +200,7 @@
     "linksTitle": "Explore",
     "contactLabel": "Start a request",
     "contactHref": "/contact",
-    "copyright": "Batul Studio. All rights reserved."
+    "copyright": "Meraki Arts 53. All rights reserved."
   },
   "services": [
     {
