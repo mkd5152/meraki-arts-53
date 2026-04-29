@@ -14,6 +14,8 @@ type FooterProps = {
   links: NavigationContent["links"];
 };
 
+const isExternalHref = (href: string) => href.startsWith("http");
+
 export function Footer({ brand, footer, links }: FooterProps) {
   return (
     <footer className="border-t border-line bg-panel px-4 py-10 sm:px-6 lg:px-8">
@@ -54,6 +56,8 @@ export function Footer({ brand, footer, links }: FooterProps) {
               <Link
                 key={link.label}
                 href={link.href}
+                target={isExternalHref(link.href) ? "_blank" : undefined}
+                rel={isExternalHref(link.href) ? "noreferrer" : undefined}
                 className="text-sm font-medium text-muted hover:text-clay"
               >
                 {link.label}

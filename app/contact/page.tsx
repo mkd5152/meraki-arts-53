@@ -47,6 +47,8 @@ export default function ContactPage() {
                 <a
                   key={link.label}
                   href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-soft px-4 text-sm font-semibold text-ink transition hover:border-clay hover:text-clay"
                 >
                   {link.label}
