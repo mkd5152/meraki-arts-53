@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meraki-arts-53.vercel.app"),
+  metadataBase: new URL("https://merakiarts53.vercel.app"),
   title: {
     default: content.artist.brandName,
     template: `%s | ${content.artist.brandName}`
