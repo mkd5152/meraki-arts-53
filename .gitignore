@@ -9,6 +9,11 @@ dist
 # Local source assets and generated backups
 backups/
 creations/
+brand-assets/
+
+# Local logo export scripts
+scripts/build-logo-kit.mjs
+scripts/build-original-logo-kit.mjs
 
 # Deployment/local tooling
 .vercel/
