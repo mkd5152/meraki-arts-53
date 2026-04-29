@@ -18,7 +18,7 @@ export function FilterTabs({
   const filters = [{ id: "all", title: allLabel }, ...artForms];
 
   return (
-    <div className="mb-8 flex gap-2 overflow-x-auto pb-2">
+    <div className="flex gap-2 overflow-x-auto pb-2">
       {filters.map((filter) => {
         const isActive = activeFilter === filter.id;
 
@@ -29,8 +29,8 @@ export function FilterTabs({
             onClick={() => onFilterChange(filter.id)}
             className={`min-h-11 shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition ${
               isActive
-                ? "border-ink bg-ink text-white"
-                : "border-stone-200 bg-white text-stone-700 hover:border-clay hover:text-clay"
+                ? "border-ink bg-ink text-paper"
+                : "border-line bg-panel text-muted hover:border-clay hover:text-clay"
             }`}
           >
             {filter.title}

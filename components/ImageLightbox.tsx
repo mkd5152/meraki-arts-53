@@ -79,13 +79,13 @@ export function ImageLightbox({
           />
 
           <motion.div
-            className="relative mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-lg bg-soft shadow-soft"
+            className="relative mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-[1.5rem] bg-soft shadow-frame"
             initial={{ opacity: 0, y: 16, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.24, ease: "easeOut" }}
           >
-            <div className="flex items-start justify-between gap-4 border-b border-stone-200 bg-white px-4 py-3 sm:px-5">
+            <div className="flex items-start justify-between gap-4 border-b border-line bg-panel px-4 py-3 sm:px-5">
               <div className="min-w-0">
                 {item.categoryTitle && (
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-clay">
@@ -95,7 +95,7 @@ export function ImageLightbox({
                 <h2 className="mt-1 truncate text-base font-semibold text-ink sm:text-lg">
                   {item.caption}
                 </h2>
-                <p className="mt-1 text-xs font-medium text-stone-500">
+                <p className="mt-1 text-xs font-medium text-muted">
                   {currentIndex + 1} / {total}
                 </p>
               </div>
@@ -103,7 +103,7 @@ export function ImageLightbox({
               <button
                 type="button"
                 onClick={onClose}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-stone-200 bg-soft text-lg font-semibold text-ink transition hover:border-clay hover:text-clay"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-soft text-lg font-semibold text-ink transition hover:border-clay hover:text-clay"
                 aria-label={labels.closeLabel}
               >
                 X
@@ -125,7 +125,7 @@ export function ImageLightbox({
                   <button
                     type="button"
                     onClick={onPrevious}
-                    className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg bg-white/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-white hover:text-clay sm:left-5"
+                    className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-paper hover:text-clay sm:left-5"
                     aria-label={labels.previousLabel}
                   >
                     <span aria-hidden="true">&lt;</span>
@@ -133,7 +133,7 @@ export function ImageLightbox({
                   <button
                     type="button"
                     onClick={onNext}
-                    className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg bg-white/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-white hover:text-clay sm:right-5"
+                    className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-paper hover:text-clay sm:right-5"
                     aria-label={labels.nextLabel}
                   >
                     <span aria-hidden="true">&gt;</span>

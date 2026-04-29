@@ -11,7 +11,7 @@ type ServiceCardProps = {
 export function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <motion.article
-      className="h-full rounded-lg border border-stone-200 bg-white p-6 shadow-sm"
+      className="h-full rounded-[1.35rem] border border-line bg-panel p-6 shadow-sm"
       initial={{ opacity: 0.96, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.28 }}
@@ -21,7 +21,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         {String(index + 1).padStart(2, "0")}
       </div>
       <h3 className="text-xl font-semibold text-ink">{service.title}</h3>
-      <p className="mt-3 text-sm leading-6 text-stone-600">
+      <p className="mt-3 text-sm leading-6 text-muted">
         {service.description}
       </p>
     </motion.article>

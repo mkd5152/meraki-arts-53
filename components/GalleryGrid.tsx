@@ -16,6 +16,8 @@ type GalleryGridProps = {
   limit?: number;
   viewAllLabel?: string;
   viewAllHref?: string;
+  countLabel?: string;
+  inquiryLabel?: string;
 };
 
 export function GalleryGrid({
@@ -25,7 +27,9 @@ export function GalleryGrid({
   showFilters = true,
   limit,
   viewAllLabel,
-  viewAllHref
+  viewAllHref,
+  countLabel,
+  inquiryLabel
 }: GalleryGridProps) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -76,22 +80,33 @@ export function GalleryGrid({
   return (
     <div>
       {showFilters && (
-        <FilterTabs
-          artForms={artForms}
-          activeFilter={activeFilter}
-          allLabel={allLabel}
-          onFilterChange={(filter) => {
-            setActiveFilter(filter);
-            setSelectedIndex(null);
-          }}
-        />
+        <div className="mb-8 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+          <FilterTabs
+            artForms={artForms}
+            activeFilter={activeFilter}
+            allLabel={allLabel}
+            onFilterChange={(filter) => {
+              setActiveFilter(filter);
+              setSelectedIndex(null);
+            }}
+          />
+          {countLabel && (
+            <p className="rounded-full border border-line bg-panel px-4 py-2 text-sm font-semibold text-muted">
+              {filteredItems.length} {countLabel}
+            </p>
+          )}
+        </div>
       )}
-      <motion.div layout className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        layout
+        className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
         <AnimatePresence mode="popLayout">
           {filteredItems.map((item, index) => (
             <motion.div
               key={`${item.categoryId}-${item.caption}`}
               layout
+              className="flex h-full flex-col gap-2"
               initial={{ opacity: 0.96, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 12 }}
@@ -105,6 +120,14 @@ export function GalleryGrid({
                 onClick={() => setSelectedIndex(index)}
                 interactionLabel={viewer.openLabel}
               />
+              {inquiryLabel && (
+                <Link
+                  href={`/contact?medium=${encodeURIComponent(item.categoryTitle)}`}
+                  className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
+                >
+                  {inquiryLabel}
+                </Link>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
@@ -113,7 +136,7 @@ export function GalleryGrid({
         <div className="mt-8 text-center">
           <Link
             href={viewAllHref}
-            className="inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-clay"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-clay"
           >
             {viewAllLabel}
           </Link>

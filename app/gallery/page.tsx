@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
 
@@ -12,17 +13,21 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="pt-16">
-      <SectionWrapper
+    <main>
+      <PageHero
         eyebrow={content.galleryPage.hero.eyebrow}
         title={content.galleryPage.hero.title}
         intro={content.galleryPage.hero.intro}
-        className="pt-16"
-      >
+        image={content.artForms[0]?.coverImage}
+        meta={`${content.artForms.length} ${content.galleryPage.featuredLabel}`}
+      />
+      <SectionWrapper>
         <GalleryGrid
           artForms={content.artForms}
           allLabel={content.galleryPage.allLabel}
           viewer={content.galleryViewer}
+          countLabel={content.galleryPage.countLabel}
+          inquiryLabel={content.galleryPage.inquiryLabel}
         />
       </SectionWrapper>
     </main>

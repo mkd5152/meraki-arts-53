@@ -1,29 +1,36 @@
 import Link from "next/link";
-import type { Artist, Content, NavigationContent } from "@/lib/getData";
+import type {
+  Artist,
+  BrandContent,
+  Content,
+  NavigationContent
+} from "@/lib/getData";
+import { LogoMark } from "@/components/LogoMark";
 
 type FooterProps = {
   artist: Artist;
+  brand: BrandContent;
   footer: Content["footer"];
   links: NavigationContent["links"];
 };
 
-export function Footer({ artist, footer, links }: FooterProps) {
+export function Footer({ brand, footer, links }: FooterProps) {
   return (
-    <footer className="border-t border-stone-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-[1.2fr_0.8fr]">
+    <footer className="border-t border-line bg-panel px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_0.55fr_0.55fr]">
         <div>
-          <Link href="/" className="text-lg font-semibold text-ink">
-            {artist.brandName}
+          <Link href="/" className="inline-flex">
+            <LogoMark logo={brand.logo} />
           </Link>
-          <p className="mt-3 max-w-md text-sm leading-6 text-stone-600">
+          <p className="mt-5 max-w-md text-sm leading-6 text-muted">
             {footer.description}
           </p>
-          <p className="mt-6 text-xs text-stone-400">
+          <p className="mt-6 text-xs text-muted/70">
             {new Date().getFullYear()} {footer.copyright}
           </p>
         </div>
-        <div className="grid gap-3 sm:justify-end">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-400">
+        <div className="grid content-start gap-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
             {footer.linksTitle}
           </p>
           <div className="grid gap-2">
@@ -31,7 +38,23 @@ export function Footer({ artist, footer, links }: FooterProps) {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-stone-600 hover:text-clay"
+                className="text-sm font-medium text-muted hover:text-clay"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="grid content-start gap-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+            {footer.socialTitle}
+          </p>
+          <div className="grid gap-2">
+            {brand.social.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-muted hover:text-clay"
               >
                 {link.label}
               </Link>
@@ -39,7 +62,7 @@ export function Footer({ artist, footer, links }: FooterProps) {
           </div>
           <Link
             href={footer.contactHref}
-            className="mt-2 inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-white hover:bg-clay"
+            className="mt-2 inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-paper hover:bg-clay"
           >
             {footer.contactLabel}
           </Link>

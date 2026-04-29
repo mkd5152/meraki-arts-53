@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { ArtCard } from "@/components/ArtCard";
 import { CTASection } from "@/components/CTASection";
+import { ExperienceSection } from "@/components/ExperienceSection";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { HeroSection } from "@/components/HeroSection";
+import { MoodSection } from "@/components/MoodSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { ServiceCard } from "@/components/ServiceCard";
+import { TestimonialSection } from "@/components/TestimonialSection";
 import { getContent } from "@/lib/getData";
 
 export default function Home() {
@@ -14,6 +17,7 @@ export default function Home() {
     <main>
       <HeroSection
         artist={content.artist}
+        brand={content.brand}
         artForms={content.artForms}
         hero={content.home.hero}
       />
@@ -23,7 +27,7 @@ export default function Home() {
         title={content.home.featuredSection.title}
         intro={content.home.featuredSection.intro}
       >
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {content.artForms.map((artForm) => (
             <ArtCard
               key={artForm.id}
@@ -37,11 +41,14 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      <ExperienceSection section={content.home.experienceSection} />
+      <MoodSection section={content.home.moodSection} />
+
       <SectionWrapper
         eyebrow={content.home.selectedSection.eyebrow}
         title={content.home.selectedSection.title}
         intro={content.home.selectedSection.intro}
-        className="bg-white"
+        className="bg-panel"
       >
         <GalleryGrid
           artForms={content.artForms}
@@ -49,6 +56,7 @@ export default function Home() {
           viewer={content.galleryViewer}
           showFilters={false}
           limit={6}
+          countLabel={content.galleryPage.countLabel}
           viewAllLabel={content.home.selectedSection.viewAllLabel}
           viewAllHref={content.home.selectedSection.viewAllHref}
         />
@@ -71,12 +79,14 @@ export default function Home() {
         <div className="mt-8 text-center">
           <Link
             href={content.home.servicesSection.actionHref}
-            className="inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-clay"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-clay"
           >
             {content.home.servicesSection.actionLabel}
           </Link>
         </div>
       </SectionWrapper>
+
+      <TestimonialSection section={content.home.testimonialSection} />
 
       <CTASection
         eyebrow={content.cta.eyebrow}

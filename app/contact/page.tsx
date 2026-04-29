@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { FAQSection } from "@/components/FAQSection";
+import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
 
@@ -12,16 +14,21 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="pt-16">
-      <SectionWrapper
+    <main>
+      <PageHero
         eyebrow={content.contactPage.hero.eyebrow}
         title={content.contactPage.hero.title}
         intro={content.contactPage.hero.intro}
-        className="pt-16"
-      >
+        image={content.artForms[1]?.coverImage}
+        meta={content.home.hero.featureLabel}
+      />
+      <SectionWrapper>
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <ContactForm form={content.contactPage.form} />
-          <aside className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm">
+          <ContactForm
+            form={content.contactPage.form}
+            artForms={content.artForms}
+          />
+          <aside className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-sm">
             <h2 className="text-2xl font-semibold text-ink">
               {content.contactPage.details.title}
             </h2>
@@ -29,15 +36,27 @@ export default function ContactPage() {
               {content.contactPage.details.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-lg bg-soft px-4 py-3 text-sm font-medium text-stone-700"
+                  className="rounded-xl bg-soft px-4 py-3 text-sm font-medium text-muted"
                 >
                   {item}
                 </li>
               ))}
             </ul>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {content.contactPage.quickLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-soft px-4 text-sm font-semibold text-ink transition hover:border-clay hover:text-clay"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </aside>
         </div>
       </SectionWrapper>
+      <FAQSection faq={content.contactPage.faq} />
     </main>
   );
 }

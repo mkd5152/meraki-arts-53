@@ -5,6 +5,30 @@
     "tagline": "Thoughtfully crafted, detail-driven creations",
     "intro": "A multidisciplinary artist creating meaningful, handcrafted work across textures, patterns, and materials."
   },
+  "brand": {
+    "logo": {
+      "placeholderLabel": "Logo placeholder",
+      "wordmark": "Meraki Arts 53",
+      "monogram": "M",
+      "caption": "Handmade art studio"
+    },
+    "theme": {
+      "label": "Theme",
+      "lightLabel": "Light",
+      "darkLabel": "Dark",
+      "systemLabel": "System"
+    },
+    "social": [
+      {
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "#"
+      }
+    ]
+  },
   "navigation": {
     "links": [
       {
@@ -42,6 +66,22 @@
     "hero": {
       "eyebrow": "Handcrafted creative studio",
       "image": "/images/mehendi/mehendi-design-01.webp",
+      "featureLabel": "Open for custom work",
+      "frameLabel": "Studio preview",
+      "stats": [
+        {
+          "value": "8",
+          "label": "creative disciplines"
+        },
+        {
+          "value": "180+",
+          "label": "gallery details"
+        },
+        {
+          "value": "1:1",
+          "label": "custom direction"
+        }
+      ],
       "primaryCta": {
         "label": "View Work",
         "href": "/gallery"
@@ -57,6 +97,56 @@
       "intro": "Explore the studio's core art forms, from occasion-ready mehendi to tactile decor, textile work, and custom keepsakes.",
       "actionLabel": "View category"
     },
+    "experienceSection": {
+      "eyebrow": "Studio experience",
+      "title": "A calm commission journey from idea to finished piece",
+      "intro": "Every request is shaped with clear direction, material sensitivity, and thoughtful presentation.",
+      "steps": [
+        {
+          "title": "Share the moment",
+          "description": "Start with the occasion, preferred medium, colors, size, and timeline."
+        },
+        {
+          "title": "Shape the direction",
+          "description": "The studio translates your brief into a focused concept with a practical handmade plan."
+        },
+        {
+          "title": "Craft the details",
+          "description": "Patterns, textures, finishing, and personalization are handled with patient attention."
+        },
+        {
+          "title": "Present with care",
+          "description": "The finished piece is prepared for gifting, events, display, or collaboration."
+        }
+      ]
+    },
+    "moodSection": {
+      "eyebrow": "Browse by intention",
+      "title": "Find the right direction for your occasion",
+      "intro": "Explore work by the way it will be used: celebration, keepsake, decor, textile detail, or collaborative concept.",
+      "items": [
+        {
+          "title": "Occasion-ready",
+          "description": "Mehendi, keepsakes, and event details for celebrations.",
+          "href": "/gallery"
+        },
+        {
+          "title": "Giftable",
+          "description": "Personalized pieces designed to feel considered and memorable.",
+          "href": "/services"
+        },
+        {
+          "title": "Decorative",
+          "description": "Artwork and handmade decor for intimate spaces and special setups.",
+          "href": "/gallery"
+        },
+        {
+          "title": "Collaborative",
+          "description": "Flexible creative support for brands, families, and event concepts.",
+          "href": "/contact"
+        }
+      ]
+    },
     "selectedSection": {
       "eyebrow": "Selected work",
       "title": "A closer look at handcrafted details",
@@ -71,6 +161,20 @@
       "intro": "Commission handmade pieces, occasion decor, and collaborative creative work with a clear process and careful execution.",
       "actionLabel": "Explore services",
       "actionHref": "/services"
+    },
+    "testimonialSection": {
+      "eyebrow": "Client-ready",
+      "title": "Built for thoughtful requests, collaborations, and future collections",
+      "items": [
+        {
+          "quote": "Clear process, refined presentation, and handmade work that feels personal from the first detail.",
+          "name": "Custom order experience"
+        },
+        {
+          "quote": "A flexible creative studio that can move across materials without losing polish or intention.",
+          "name": "Collaboration note"
+        }
+      ]
     }
   },
   "aboutPage": {
@@ -109,7 +213,10 @@
       "title": "Browse the studio's creative range",
       "intro": "Filter by medium to explore mehendi, chenille craft, embroidery, rida design, lamasa, terrazzo, paintings, and customized gifts."
     },
-    "allLabel": "All"
+    "allLabel": "All",
+    "countLabel": "works",
+    "featuredLabel": "Featured",
+    "inquiryLabel": "Ask about this style"
   },
   "galleryViewer": {
     "viewerLabel": "Large image preview",
@@ -153,6 +260,14 @@
       "namePlaceholder": "Your name",
       "emailLabel": "Email",
       "emailPlaceholder": "you@example.com",
+      "mediumLabel": "Preferred medium",
+      "mediumPlaceholder": "Select a direction",
+      "occasionLabel": "Occasion",
+      "occasionPlaceholder": "Wedding, gift, decor, collaboration...",
+      "timelineLabel": "Timeline",
+      "timelinePlaceholder": "When do you need it?",
+      "budgetLabel": "Budget range",
+      "budgetPlaceholder": "Optional",
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us what you would like to create",
       "submitLabel": "Send request",
@@ -165,6 +280,34 @@
         "Occasion or purpose",
         "Timeline and quantity",
         "Color, size, or personalization notes"
+      ]
+    },
+    "quickLinks": [
+      {
+        "label": "WhatsApp",
+        "href": "#"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      }
+    ],
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Before you request",
+      "items": [
+        {
+          "question": "Can I request a fully custom piece?",
+          "answer": "Yes. Share the occasion, medium, size, colors, timeline, and any references so the studio can shape a clear direction."
+        },
+        {
+          "question": "Can the same idea work across different materials?",
+          "answer": "Yes. The studio can translate an idea across mehendi, textile detail, decor, art, and custom gifting when the material is suitable."
+        },
+        {
+          "question": "Do I need a complete idea before reaching out?",
+          "answer": "No. A few details are enough to begin. The studio can help refine the concept before confirming the final direction."
+        }
       ]
     }
   },
@@ -198,6 +341,7 @@
   "footer": {
     "description": "A multidisciplinary creative brand for handmade detail, thoughtful gifting, and refined custom work.",
     "linksTitle": "Explore",
+    "socialTitle": "Connect",
     "contactLabel": "Start a request",
     "contactHref": "/contact",
     "copyright": "Meraki Arts 53. All rights reserved."

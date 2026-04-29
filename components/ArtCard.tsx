@@ -14,6 +14,7 @@ type ArtCardProps = {
   category?: string;
   actionLabel?: string;
   interactionLabel?: string;
+  aspectClassName?: string;
 };
 
 export function ArtCard({
@@ -25,14 +26,15 @@ export function ArtCard({
   caption,
   category,
   actionLabel,
-  interactionLabel
+  interactionLabel,
+  aspectClassName = "aspect-[4/3]"
 }: ArtCardProps) {
-  const cardClassName = `group h-full overflow-hidden rounded-lg border border-stone-200/80 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${
+  const cardClassName = `group flex h-full flex-col overflow-hidden rounded-[1.35rem] border border-line bg-panel shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${
     onClick ? "cursor-zoom-in" : ""
   }`;
   const cardBody = (
     <>
-      <div className="relative aspect-[4/3] overflow-hidden bg-mist">
+      <div className={`relative shrink-0 overflow-hidden bg-mist ${aspectClassName}`}>
         <Image
           src={image}
           alt={caption || title}
@@ -40,8 +42,9 @@ export function ArtCard({
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition duration-500 group-hover:scale-105"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent opacity-70" />
       </div>
-      <div className="p-5">
+      <div className="flex min-h-[122px] flex-1 flex-col p-5">
         {category && (
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-sage">
             {category}
@@ -49,10 +52,10 @@ export function ArtCard({
         )}
         <h3 className="text-xl font-semibold leading-snug text-ink">{title}</h3>
         {description && (
-          <p className="mt-3 text-sm leading-6 text-stone-600">{description}</p>
+          <p className="mt-3 text-sm leading-6 text-muted">{description}</p>
         )}
         {caption && !description && caption !== title && (
-          <p className="mt-3 text-sm leading-6 text-stone-600">{caption}</p>
+          <p className="mt-3 text-sm leading-6 text-muted">{caption}</p>
         )}
         {actionLabel && (
           <p className="mt-5 text-sm font-semibold text-clay">{actionLabel}</p>
@@ -66,7 +69,7 @@ export function ArtCard({
       <motion.button
         type="button"
         onClick={onClick}
-        className={`${cardClassName} block w-full p-0 text-left text-inherit outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2`}
+        className={`${cardClassName} block w-full p-0 text-left text-inherit outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-paper`}
         aria-label={interactionLabel ? `${interactionLabel}: ${title}` : title}
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.2, ease: "easeOut" }}

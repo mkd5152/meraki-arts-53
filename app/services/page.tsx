@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { ServiceCard } from "@/components/ServiceCard";
 import { getContent } from "@/lib/getData";
@@ -13,23 +15,26 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="pt-16">
-      <SectionWrapper
+    <main>
+      <PageHero
         eyebrow={content.servicesPage.hero.eyebrow}
         title={content.servicesPage.hero.title}
         intro={content.servicesPage.hero.intro}
-        className="pt-16"
+        image={content.artForms[content.artForms.length - 1]?.coverImage}
+        meta={content.home.hero.featureLabel}
       />
 
       <SectionWrapper
         eyebrow={content.servicesPage.overview.eyebrow}
         title={content.servicesPage.overview.title}
-        className="bg-white"
+        className="bg-panel"
       >
-        <p className="mx-auto max-w-3xl text-center text-base leading-8 text-stone-600 sm:text-lg">
+        <p className="mx-auto max-w-3xl text-center text-base leading-8 text-muted sm:text-lg">
           {content.servicesPage.overview.body}
         </p>
       </SectionWrapper>
+
+      <ExperienceSection section={content.home.experienceSection} />
 
       <SectionWrapper>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

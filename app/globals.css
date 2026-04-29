@@ -3,8 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #fbfaf7;
-  --foreground: #272523;
+  color-scheme: light;
+  --color-paper: 251 247 239;
+  --color-soft: 246 240 230;
+  --color-panel: 255 252 247;
+  --color-ink: 39 37 35;
+  --color-muted: 112 103 94;
+  --color-line: 225 214 202;
+  --color-clay: 183 102 77;
+  --color-rosewood: 143 77 79;
+  --color-sage: 127 140 107;
+  --color-gold: 195 160 106;
+  --color-mist: 232 237 240;
+  --shadow-color: 39 37 35;
+  --background: rgb(var(--color-paper));
+  --foreground: rgb(var(--color-ink));
+}
+
+.dark {
+  color-scheme: dark;
+  --color-paper: 35 33 31;
+  --color-soft: 44 41 38;
+  --color-panel: 48 45 42;
+  --color-ink: 247 239 228;
+  --color-muted: 202 190 177;
+  --color-line: 78 70 63;
+  --color-clay: 211 148 128;
+  --color-rosewood: 207 132 135;
+  --color-sage: 183 194 169;
+  --color-gold: 214 189 133;
+  --color-mist: 63 67 67;
+  --shadow-color: 0 0 0;
+  --background: rgb(var(--color-paper));
+  --foreground: rgb(var(--color-ink));
 }
 
 * {
@@ -13,6 +44,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--background);
 }
 
 body {
@@ -23,6 +55,9 @@ body {
   font-family:
     var(--font-sans), Montserrat, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
 }
 
 a {
@@ -38,4 +73,15 @@ textarea {
 
 ::selection {
   background: rgba(183, 102, 77, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

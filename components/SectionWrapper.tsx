@@ -21,7 +21,7 @@ export function SectionWrapper({
   contentClassName = ""
 }: SectionWrapperProps) {
   return (
-    <section className={`px-4 py-14 sm:px-6 sm:py-16 lg:px-8 ${className}`}>
+    <section className={`px-4 py-16 sm:px-6 sm:py-20 lg:px-8 ${className}`}>
       <motion.div
         className={`mx-auto w-full max-w-6xl ${contentClassName}`}
         initial={{ opacity: 0.96, y: 8 }}
@@ -42,7 +42,7 @@ export function SectionWrapper({
               </h2>
             )}
             {intro && (
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-stone-600 sm:text-lg">
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-muted sm:text-lg">
                 {intro}
               </p>
             )}

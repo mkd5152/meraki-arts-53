@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { CTASection } from "@/components/CTASection";
+import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
 
@@ -11,20 +13,21 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="pt-16">
-      <SectionWrapper
+    <main>
+      <PageHero
         eyebrow={content.aboutPage.hero.eyebrow}
         title={content.aboutPage.hero.title}
         intro={content.aboutPage.hero.intro}
-        className="pt-16"
+        image={content.home.hero.image}
+        meta={content.artist.tagline}
       />
 
       <SectionWrapper
         eyebrow={content.aboutPage.approach.eyebrow}
         title={content.aboutPage.approach.title}
-        className="bg-white"
+        className="bg-panel"
       >
-        <div className="mx-auto max-w-3xl text-center text-base leading-8 text-stone-600 sm:text-lg">
+        <div className="mx-auto max-w-3xl text-center text-base leading-8 text-muted sm:text-lg">
           {content.aboutPage.approach.body}
         </div>
       </SectionWrapper>
@@ -37,16 +40,24 @@ export default function AboutPage() {
           {content.aboutPage.highlights.items.map((item) => (
             <article
               key={item.title}
-              className="rounded-lg border border-stone-200 bg-white p-6 shadow-sm"
+              className="rounded-[1.35rem] border border-line bg-panel p-6 shadow-sm"
             >
               <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-stone-600">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 {item.description}
               </p>
             </article>
           ))}
         </div>
       </SectionWrapper>
+
+      <CTASection
+        eyebrow={content.cta.eyebrow}
+        title={content.cta.title}
+        intro={content.cta.intro}
+        primaryCta={content.cta.primaryCta}
+        secondaryCta={content.cta.secondaryCta}
+      />
     </main>
   );
 }
