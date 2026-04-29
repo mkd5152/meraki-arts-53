@@ -41,6 +41,9 @@ export function SectionWrapper({
                 {title}
               </h2>
             )}
+            {(eyebrow || title) && (
+              <div className="brand-separator mx-auto mt-5 w-36" aria-hidden="true" />
+            )}
             {intro && (
               <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-muted sm:text-lg">
                 {intro}

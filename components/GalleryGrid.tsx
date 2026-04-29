@@ -2,8 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
-import type { ArtForm, GalleryViewerContent } from "@/lib/getData";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import type { ArtForm, Content, GalleryViewerContent } from "@/lib/getData";
 import { FilterTabs } from "@/components/FilterTabs";
 import { ArtCard } from "@/components/ArtCard";
 import { ImageLightbox } from "@/components/ImageLightbox";
@@ -18,7 +18,16 @@ type GalleryGridProps = {
   viewAllHref?: string;
   countLabel?: string;
   inquiryLabel?: string;
+  favoriteLabel?: string;
+  savedLabel?: string;
+  similarLabel?: string;
+  filters?: Content["galleryPage"]["filters"];
+  delivery?: Content["contactPage"]["delivery"];
+  watermarkSrc?: string;
 };
+
+type GalleryFilterState = Record<string, string>;
+type FilterProfile = Record<string, string[]>;
 
 export function GalleryGrid({
   artForms,
@@ -29,29 +38,135 @@ export function GalleryGrid({
   viewAllLabel,
   viewAllHref,
   countLabel,
-  inquiryLabel
+  inquiryLabel,
+  favoriteLabel,
+  savedLabel,
+  similarLabel,
+  filters,
+  delivery,
+  watermarkSrc
 }: GalleryGridProps) {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [advancedFilters, setAdvancedFilters] = useState<GalleryFilterState>({});
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [origin, setOrigin] = useState("");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    setOrigin(window.location.origin);
+    const stored = window.localStorage.getItem("meraki-favorites");
+
+    if (stored) {
+      try {
+        setFavorites(new Set(JSON.parse(stored) as string[]));
+      } catch {
+        window.localStorage.removeItem("meraki-favorites");
+      }
+    }
+  }, []);
 
   const items = useMemo(
     () =>
       artForms.flatMap((artForm) =>
-        artForm.gallery.map((item) => ({
-          ...item,
-          categoryId: artForm.id,
-          categoryTitle: artForm.title,
-          categorySlug: artForm.slug
-        }))
+        artForm.gallery.map((item, itemIndex) => {
+          const profiles = filters?.profiles as
+            | Record<string, FilterProfile>
+            | undefined;
+          const profile = profiles?.[artForm.id];
+          const tags = Object.fromEntries(
+            (filters?.groups ?? []).map((group) => {
+              const values = profile?.[group.key] ?? [];
+              return [group.key, values[itemIndex % values.length] ?? ""];
+            })
+          ) as GalleryFilterState;
+
+          return {
+            ...item,
+            categoryId: artForm.id,
+            categoryTitle: artForm.title,
+            categorySlug: artForm.slug,
+            categoryAccent: artForm.accent,
+            tags
+          };
+        })
       ),
-    [artForms]
+    [artForms, filters]
+  );
+
+  const filterOptions = useMemo(
+    () =>
+      (filters?.groups ?? []).map((group) => ({
+        ...group,
+        options: Array.from(
+          new Set(
+            Object.values(filters?.profiles ?? {}).flatMap(
+              (profile) => profile[group.key as keyof typeof profile] ?? []
+            )
+          )
+        )
+      })),
+    [filters]
   );
 
   const filteredItems = items
     .filter((item) => activeFilter === "all" || item.categoryId === activeFilter)
+    .filter((item) =>
+      Object.entries(advancedFilters).every(
+        ([key, value]) => !value || item.tags[key] === value
+      )
+    )
     .slice(0, limit ?? items.length);
   const selectedItem =
     selectedIndex === null ? null : filteredItems[selectedIndex] ?? null;
+  const similarItems =
+    selectedIndex === null
+      ? []
+      : filteredItems
+          .map((item, index) => ({ ...item, index }))
+          .filter(
+            (item) =>
+              item.index !== selectedIndex &&
+              item.categoryId === selectedItem?.categoryId
+          )
+          .slice(0, 6);
+
+  const getInquiryHref = useCallback(
+    (item: (typeof filteredItems)[number]) => {
+      if (!delivery) {
+        return `/contact?medium=${encodeURIComponent(item.categoryTitle)}`;
+      }
+
+      const message = [
+        "Hi Meraki Arts 53, I want to ask about this exact piece.",
+        "",
+        `Medium: ${item.categoryTitle}`,
+        `Style: ${item.caption}`,
+        `Image: ${origin}${item.image}`
+      ].join("\n");
+
+      return `${delivery.whatsappHref}?text=${encodeURIComponent(message)}`;
+    },
+    [delivery, origin]
+  );
+
+  const toggleFavorite = useCallback((image: string) => {
+    setFavorites((current) => {
+      const next = new Set(current);
+
+      if (next.has(image)) {
+        next.delete(image);
+      } else {
+        next.add(image);
+      }
+
+      window.localStorage.setItem(
+        "meraki-favorites",
+        JSON.stringify(Array.from(next))
+      );
+
+      return next;
+    });
+  }, []);
 
   const closeLightbox = useCallback(() => {
     setSelectedIndex(null);
@@ -87,6 +202,7 @@ export function GalleryGrid({
             allLabel={allLabel}
             onFilterChange={(filter) => {
               setActiveFilter(filter);
+              setAdvancedFilters({});
               setSelectedIndex(null);
             }}
           />
@@ -95,6 +211,45 @@ export function GalleryGrid({
               {filteredItems.length} {countLabel}
             </p>
           )}
+        </div>
+      )}
+      {showFilters && filters && (
+        <div className="mb-8 rounded-[1.5rem] border border-line bg-panel p-3 shadow-sm">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {filterOptions.map((group) => (
+              <label
+                key={group.key}
+                className="grid gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted"
+              >
+                {group.label}
+                <select
+                  value={advancedFilters[group.key] ?? ""}
+                  onChange={(event) => {
+                    setAdvancedFilters((current) => ({
+                      ...current,
+                      [group.key]: event.target.value
+                    }));
+                    setSelectedIndex(null);
+                  }}
+                  className="min-h-11 rounded-full border border-line bg-soft px-4 text-sm normal-case tracking-normal text-ink outline-none focus:border-clay"
+                >
+                  <option value="">{group.allLabel}</option>
+                  {group.options.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setAdvancedFilters({})}
+            className="mt-3 inline-flex min-h-10 items-center rounded-full border border-line px-4 text-sm font-semibold text-muted transition hover:border-clay hover:text-clay"
+          >
+            {filters.resetLabel}
+          </button>
         </div>
       )}
       <motion.div
@@ -112,17 +267,35 @@ export function GalleryGrid({
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: 0.28, ease: "easeOut" }}
             >
-              <ArtCard
-                title={item.caption}
-                image={item.image}
-                caption={item.caption}
-                category={item.categoryTitle}
-                onClick={() => setSelectedIndex(index)}
-                interactionLabel={viewer.openLabel}
-              />
+              <div className="relative">
+                <ArtCard
+                  title={item.caption}
+                  image={item.image}
+                  caption={item.caption}
+                  category={item.categoryTitle}
+                  categoryAccent={item.categoryAccent}
+                  onClick={() => setSelectedIndex(index)}
+                  interactionLabel={viewer.openLabel}
+                  showLens
+                />
+                {favoriteLabel && savedLabel && (
+                <button
+                  type="button"
+                  onClick={() => toggleFavorite(item.image)}
+                  className="absolute right-3 top-3 z-10 inline-flex min-h-10 items-center rounded-full border border-white/30 bg-ink/70 px-3 text-xs font-semibold text-paper shadow-sm backdrop-blur transition hover:bg-clay"
+                  aria-label={`${
+                    favorites.has(item.image) ? savedLabel : favoriteLabel
+                  }: ${item.caption}`}
+                >
+                  {favorites.has(item.image) ? savedLabel : favoriteLabel}
+                </button>
+                )}
+              </div>
               {inquiryLabel && (
                 <Link
-                  href={`/contact?medium=${encodeURIComponent(item.categoryTitle)}`}
+                  href={getInquiryHref(item)}
+                  target={delivery ? "_blank" : undefined}
+                  rel={delivery ? "noreferrer" : undefined}
                   className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
                 >
                   {inquiryLabel}
@@ -150,6 +323,14 @@ export function GalleryGrid({
         onClose={closeLightbox}
         onPrevious={showPrevious}
         onNext={showNext}
+        similarLabel={similarLabel}
+        similarItems={similarItems}
+        onSelectIndex={setSelectedIndex}
+        inquiryLabel={inquiryLabel}
+        getInquiryHref={
+          selectedItem ? () => getInquiryHref(selectedItem) : undefined
+        }
+        watermarkSrc={watermarkSrc}
       />
     </div>
   );

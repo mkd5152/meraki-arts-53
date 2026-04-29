@@ -10,7 +10,27 @@
       "placeholderLabel": "Logo placeholder",
       "wordmark": "Meraki Arts 53",
       "monogram": "M",
-      "caption": "Handmade art studio"
+      "caption": "Handmade art studio",
+      "assets": {
+        "wordmark": "/brand/generated/meraki-option4-wordmark.png",
+        "wordmarkDark": "/brand/generated/meraki-option4-wordmark-dark.png",
+        "mark": "/brand/generated/meraki-option4-mark.png",
+        "badge": "/brand/generated/meraki-option4-mark.png",
+        "loading": "/brand/generated/meraki-option4-mark.png",
+        "watermark": "/brand/generated/meraki-option4-wordmark.png",
+        "watermarkDark": "/brand/generated/meraki-option4-wordmark-dark.png",
+        "lockupDark": "/brand/generated/meraki-option4-lockup-dark.png",
+        "socialCard": "/brand/generated/meraki-option4-lockup.png"
+      }
+    },
+    "palette": {
+      "ink": "#28231f",
+      "coral": "#d65f4d",
+      "rose": "#df7b80",
+      "gold": "#e1a135",
+      "sage": "#7d8b68",
+      "teal": "#2e7c80",
+      "ivory": "#fff8eb"
     },
     "theme": {
       "label": "Theme",
@@ -53,6 +73,10 @@
         "href": "/services"
       },
       {
+        "label": "Journal",
+        "href": "/journal"
+      },
+      {
         "label": "Contact",
         "href": "/contact"
       }
@@ -68,6 +92,7 @@
       "image": "/images/mehendi/mehendi-design-01.webp",
       "featureLabel": "Open for custom work",
       "frameLabel": "Studio preview",
+      "journeyLabel": "Tap a medium to shift the studio mood",
       "stats": [
         {
           "value": "8",
@@ -175,6 +200,34 @@
           "name": "Collaboration note"
         }
       ]
+    },
+    "journalSection": {
+      "eyebrow": "Studio journal",
+      "title": "Stories, care notes, and behind-the-scenes craft",
+      "intro": "A living record of process, materials, gift ideas, and the small decisions that make handmade work feel personal.",
+      "actionLabel": "Read journal",
+      "actionHref": "/journal"
+    },
+    "trustSection": {
+      "eyebrow": "Why clients trust the studio",
+      "title": "A clear, warm process for thoughtful handmade requests",
+      "intro": "Meraki Arts 53 is built for clients who want beauty, clarity, and careful communication before the work begins.",
+      "responseLabel": "Estimated response",
+      "responseValue": "Within 24 hours",
+      "items": [
+        {
+          "title": "Clear request flow",
+          "description": "Every inquiry asks for the medium, occasion, timing, and preferences so the first conversation is focused."
+        },
+        {
+          "title": "Client-ready updates",
+          "description": "Custom work is shaped with practical expectations around feasibility, finish, and timeline."
+        },
+        {
+          "title": "Detail-first finishing",
+          "description": "The studio treats presentation, color balance, and small handmade details as part of the final piece."
+        }
+      ]
     }
   },
   "aboutPage": {
@@ -216,7 +269,85 @@
     "allLabel": "All",
     "countLabel": "works",
     "featuredLabel": "Featured",
-    "inquiryLabel": "Ask about this style"
+    "inquiryLabel": "Ask about this exact piece",
+    "favoriteLabel": "Save",
+    "savedLabel": "Saved",
+    "similarLabel": "Similar styles",
+    "filters": {
+      "resetLabel": "Reset filters",
+      "groups": [
+        {
+          "key": "occasion",
+          "label": "Occasion",
+          "allLabel": "Any occasion"
+        },
+        {
+          "key": "color",
+          "label": "Color mood",
+          "allLabel": "Any color"
+        },
+        {
+          "key": "giftType",
+          "label": "Gift type",
+          "allLabel": "Any gift type"
+        },
+        {
+          "key": "eventType",
+          "label": "Event type",
+          "allLabel": "Any event"
+        }
+      ],
+      "profiles": {
+        "mehendi": {
+          "occasion": ["Wedding", "Festive", "Personal"],
+          "color": ["Warm brown", "Deep detail", "Natural"],
+          "giftType": ["Occasion styling", "Personal detail"],
+          "eventType": ["Bridal", "Celebration"]
+        },
+        "chenille-craft": {
+          "occasion": ["Gifting", "Decor"],
+          "color": ["Pastel", "Floral"],
+          "giftType": ["Keepsake", "Decor"],
+          "eventType": ["Birthday", "Home"]
+        },
+        "embroidery": {
+          "occasion": ["Gifting", "Personal"],
+          "color": ["Soft neutral", "Floral"],
+          "giftType": ["Textile detail", "Keepsake"],
+          "eventType": ["Personal", "Home"]
+        },
+        "rida-design": {
+          "occasion": ["Personal", "Festive"],
+          "color": ["Soft neutral", "Warm accent"],
+          "giftType": ["Wearable detail", "Personal detail"],
+          "eventType": ["Celebration", "Personal"]
+        },
+        "lamasa": {
+          "occasion": ["Gifting", "Decor", "Festive"],
+          "color": ["Pastel", "Gold accent", "Bright"],
+          "giftType": ["Decor", "Keepsake"],
+          "eventType": ["Birthday", "Home", "Celebration"]
+        },
+        "terrazzo": {
+          "occasion": ["Decor", "Gifting"],
+          "color": ["Terrazzo mix", "Neutral"],
+          "giftType": ["Decor", "Home object"],
+          "eventType": ["Home", "Housewarming"]
+        },
+        "paintings": {
+          "occasion": ["Decor", "Gifting", "Personal"],
+          "color": ["Warm", "Floral", "Bright"],
+          "giftType": ["Wall art", "Keepsake"],
+          "eventType": ["Home", "Personal"]
+        },
+        "customized-gifts": {
+          "occasion": ["Gifting", "Milestone", "Festive"],
+          "color": ["Personal palette", "Warm", "Pastel"],
+          "giftType": ["Personalized", "Keepsake", "Hamper detail"],
+          "eventType": ["Birthday", "Anniversary", "Celebration"]
+        }
+      }
+    }
   },
   "galleryViewer": {
     "viewerLabel": "Large image preview",
@@ -224,6 +355,89 @@
     "closeLabel": "Close preview",
     "previousLabel": "Previous image",
     "nextLabel": "Next image"
+  },
+  "journalPage": {
+    "hero": {
+      "eyebrow": "Journal",
+      "title": "Notes from the studio table",
+      "intro": "Process stories, care guidance, gift ideas, material notes, and inspiration from the Meraki Arts 53 creative practice."
+    },
+    "featuredLabel": "Featured note",
+    "readLabel": "Read story",
+    "articles": [
+      {
+        "slug": "behind-the-studio-table",
+        "category": "Behind the scenes",
+        "title": "Behind the studio table",
+        "excerpt": "A look at how references, color, material, and occasion come together before a handmade piece begins.",
+        "readTime": "3 min read",
+        "image": "/images/customized-gifts/customized-gift-detail-01.webp",
+        "sections": [
+          {
+            "heading": "Start with the moment",
+            "body": "The strongest pieces begin with the person and the occasion. A few references, colors, and practical details help the studio choose the right direction."
+          },
+          {
+            "heading": "Then shape the material",
+            "body": "Each medium behaves differently. Mehendi needs flow, embroidery needs balance, and decor work needs structure, finish, and presentation."
+          }
+        ]
+      },
+      {
+        "slug": "care-for-handmade-pieces",
+        "category": "Care notes",
+        "title": "How to care for handmade pieces",
+        "excerpt": "Simple care habits for storing, gifting, and displaying handcrafted decor, textile detail, and keepsakes.",
+        "readTime": "4 min read",
+        "image": "/images/lamasa/lamasa-decor-05.webp",
+        "sections": [
+          {
+            "heading": "Keep it dry and supported",
+            "body": "Store delicate pieces away from moisture and pressure. Use a flat surface or protective box for decor and keepsakes."
+          },
+          {
+            "heading": "Handle details gently",
+            "body": "Small decorative elements can be strong but still need careful handling, especially during gifting, packing, or event setup."
+          }
+        ]
+      },
+      {
+        "slug": "gift-ideas-with-a-personal-touch",
+        "category": "Gift ideas",
+        "title": "Gift ideas with a personal touch",
+        "excerpt": "Ways to turn a small handmade detail into a thoughtful gift for birthdays, weddings, milestones, and intimate celebrations.",
+        "readTime": "3 min read",
+        "image": "/images/customized-gifts/customized-gift-detail-08.webp",
+        "sections": [
+          {
+            "heading": "Use the recipient as the brief",
+            "body": "Favorite colors, initials, dates, memories, and hobbies can become the anchor for a custom gift."
+          },
+          {
+            "heading": "Make presentation part of the piece",
+            "body": "A handmade gift feels more complete when the finishing, note, packaging, and reveal all feel intentional."
+          }
+        ]
+      },
+      {
+        "slug": "material-notes-lamasa-terrazzo-and-thread",
+        "category": "Material notes",
+        "title": "Material notes: lamasa, terrazzo, and thread",
+        "excerpt": "A short guide to choosing a medium based on texture, durability, color, and the kind of detail the final piece needs.",
+        "readTime": "5 min read",
+        "image": "/images/terrazzo/terrazzo-decor-01.webp",
+        "sections": [
+          {
+            "heading": "Texture changes the feeling",
+            "body": "Soft thread, sculptural lamasa, painted surfaces, and terrazzo-inspired details each carry a different mood."
+          },
+          {
+            "heading": "Choose by purpose",
+            "body": "A display piece, wearable detail, event accent, and keepsake each need a different balance of delicacy and structure."
+          }
+        ]
+      }
+    ]
   },
   "servicesPage": {
     "hero": {
@@ -384,6 +598,7 @@
       "slug": "mehendi",
       "description": "Intricate, elegant mehendi designs tailored for occasions and personal expression.",
       "coverImage": "/images/mehendi/mehendi-design-01.webp",
+      "accent": "#d65f4d",
       "gallery": [
         {
           "image": "/images/mehendi/mehendi-design-01.webp",
@@ -765,6 +980,7 @@
       "slug": "chenille-craft",
       "description": "Soft sculptural florals and decorative pieces shaped with chenille stems for a playful handmade finish.",
       "coverImage": "/images/chenille-craft/chenille-floral-01.webp",
+      "accent": "#2e7c80",
       "gallery": [
         {
           "image": "/images/chenille-craft/chenille-floral-01.webp",
@@ -778,6 +994,7 @@
       "slug": "embroidery",
       "description": "Threadwork with refined color, clean detailing, and a personal handmade finish.",
       "coverImage": "/images/embroidery/embroidered-floral-detail-01.webp",
+      "accent": "#df7b80",
       "gallery": [
         {
           "image": "/images/embroidery/embroidered-floral-detail-01.webp",
@@ -791,6 +1008,7 @@
       "slug": "rida-design",
       "description": "Considered rida design details with balanced motifs, colors, and finishing.",
       "coverImage": "/images/rida-design/rida-design-study-01.webp",
+      "accent": "#7d8b68",
       "gallery": [
         {
           "image": "/images/rida-design/rida-design-study-01.webp",
@@ -820,6 +1038,7 @@
       "slug": "lamasa",
       "description": "Handmade lamasa decor pieces shaped with playful detail, soft color, and a polished finish.",
       "coverImage": "/images/lamasa/lamasa-decor-01.webp",
+      "accent": "#e1a135",
       "gallery": [
         {
           "image": "/images/lamasa/lamasa-decor-01.webp",
@@ -873,6 +1092,7 @@
       "slug": "terrazzo",
       "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
       "coverImage": "/images/terrazzo/terrazzo-decor-01.webp",
+      "accent": "#b8844a",
       "gallery": [
         {
           "image": "/images/terrazzo/terrazzo-decor-01.webp",
@@ -886,6 +1106,7 @@
       "slug": "paintings",
       "description": "Expressive paintings and studies that bring warmth, story, and softness to a space.",
       "coverImage": "/images/paintings/hand-painted-artwork-01.webp",
+      "accent": "#c85e4d",
       "gallery": [
         {
           "image": "/images/paintings/hand-painted-artwork-01.webp",
@@ -1015,6 +1236,7 @@
       "slug": "customized-gifts",
       "description": "Personalized keepsakes designed for celebrations, milestones, and thoughtful gestures.",
       "coverImage": "/images/customized-gifts/customized-gift-detail-01.webp",
+      "accent": "#2e7c80",
       "gallery": [
         {
           "image": "/images/customized-gifts/customized-gift-detail-01.webp",

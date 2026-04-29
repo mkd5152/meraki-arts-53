@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BrandTexture } from "@/components/BrandTexture";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -10,7 +11,8 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, intro, image, meta }: PageHeroProps) {
   return (
-    <section className="px-4 pb-10 pt-24 sm:px-6 sm:pb-14 sm:pt-28 lg:px-8">
+    <section className="relative isolate overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pb-14 sm:pt-28 lg:px-8">
+      <BrandTexture className="-z-10 opacity-45" />
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-clay">

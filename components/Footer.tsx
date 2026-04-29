@@ -22,7 +22,7 @@ export function Footer({ brand, footer, links }: FooterProps) {
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_0.55fr_0.55fr]">
         <div>
           <Link href="/" className="inline-flex">
-            <LogoMark logo={brand.logo} />
+            <LogoMark logo={brand.logo} footer />
           </Link>
           <p className="mt-5 max-w-md text-sm leading-6 text-muted">
             {footer.description}

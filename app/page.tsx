@@ -4,10 +4,12 @@ import { CTASection } from "@/components/CTASection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { HeroSection } from "@/components/HeroSection";
+import { JournalSection } from "@/components/JournalSection";
 import { MoodSection } from "@/components/MoodSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialSection } from "@/components/TestimonialSection";
+import { TrustLayer } from "@/components/TrustLayer";
 import { getContent } from "@/lib/getData";
 
 export default function Home() {
@@ -34,6 +36,7 @@ export default function Home() {
               title={artForm.title}
               description={artForm.description}
               image={artForm.coverImage}
+              categoryAccent={artForm.accent}
               href={`/art/${artForm.slug}`}
               actionLabel={content.home.featuredSection.actionLabel}
             />
@@ -87,6 +90,14 @@ export default function Home() {
       </SectionWrapper>
 
       <TestimonialSection section={content.home.testimonialSection} />
+      <TrustLayer
+        section={content.home.trustSection}
+        social={content.brand.social}
+      />
+      <JournalSection
+        section={content.home.journalSection}
+        journal={content.journalPage}
+      />
 
       <CTASection
         eyebrow={content.cta.eyebrow}

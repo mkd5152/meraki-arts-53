@@ -48,7 +48,9 @@ export function Navbar({ brand, artForms, navigation }: NavbarProps) {
             {navigation.links.map((link) => {
               const isActive = link.hasDropdown
                 ? pathname.startsWith("/art/")
-                : pathname === link.href;
+                : link.href === "/"
+                  ? pathname === link.href
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
 
               if (link.hasDropdown) {
                 return (
@@ -107,13 +109,13 @@ export function Navbar({ brand, artForms, navigation }: NavbarProps) {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
-            <div className="hidden sm:block">
+            <div className="hidden lg:block">
               <ThemeToggle theme={brand.theme} />
             </div>
             <button
               type="button"
               onClick={() => setIsOpen((current) => !current)}
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-panel text-ink shadow-sm lg:hidden"
+              className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-panel text-ink shadow-sm lg:hidden"
               aria-label={isOpen ? navigation.closeMenuLabel : navigation.openMenuLabel}
               aria-expanded={isOpen}
             >

@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { BrandCursor } from "@/components/BrandCursor";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -15,16 +16,34 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://meraki-arts-53.vercel.app"),
   title: {
     default: content.artist.brandName,
     template: `%s | ${content.artist.brandName}`
   },
   description: content.artist.intro,
+  icons: {
+    icon: "/icon.png"
+  },
   openGraph: {
     title: content.artist.brandName,
     description: content.artist.intro,
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: content.brand.logo.assets.socialCard,
+        width: 3400,
+        height: 1500,
+        alt: content.artist.brandName
+      }
+    ]
   }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5
 };
 
 export default function RootLayout({
@@ -42,6 +61,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
+          <BrandCursor />
           <Navbar
             artist={content.artist}
             brand={content.brand}

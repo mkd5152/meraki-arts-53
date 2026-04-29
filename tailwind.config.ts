@@ -20,6 +20,7 @@ const config: Config = {
         rosewood: "rgb(var(--color-rosewood) / <alpha-value>)",
         sage: "rgb(var(--color-sage) / <alpha-value>)",
         gold: "rgb(var(--color-gold) / <alpha-value>)",
+        teal: "rgb(var(--color-teal) / <alpha-value>)",
         mist: "rgb(var(--color-mist) / <alpha-value>)"
       },
       boxShadow: {

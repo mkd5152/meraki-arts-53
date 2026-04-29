@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import type { Artist, ArtForm, BrandContent, Content } from "@/lib/getData";
+import { BrandTexture } from "@/components/BrandTexture";
 import { LogoMark } from "@/components/LogoMark";
 
 type HeroSectionProps = {
@@ -14,22 +16,28 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
   const previewItems = artForms
-    .map((artForm) => ({
+    .map((artForm, index) => ({
       title: artForm.title,
+      description: artForm.description,
       image: artForm.coverImage,
-      href: `/art/${artForm.slug}`
+      href: `/art/${artForm.slug}`,
+      accent: artForm.accent
     }))
     .slice(0, 6);
 
-  const primaryPreview = previewItems[0] ?? {
+  const activePreview = previewItems[activeIndex] ?? {
     title: artist.brandName,
+    description: artist.intro,
     image: hero.image,
-    href: "/gallery"
+    href: "/gallery",
+    accent: "#d65f4d"
   };
 
   return (
     <section className="relative isolate overflow-hidden bg-paper px-4 pb-14 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:min-h-[88svh] lg:px-8">
+      <BrandTexture className="-z-10 opacity-70" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgb(var(--color-clay)/0.18),transparent_28%),radial-gradient(circle_at_86%_24%,rgb(var(--color-sage)/0.16),transparent_28%),linear-gradient(135deg,rgb(var(--color-paper))_0%,rgb(var(--color-soft))_100%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-panel to-transparent" />
 
@@ -50,9 +58,29 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
           <p className="mb-4 max-w-full text-[11px] font-semibold uppercase tracking-[0.18em] text-clay sm:text-xs sm:tracking-[0.22em]">
             {hero.eyebrow}
           </p>
-          <h1 className="max-w-[9ch] break-words text-4xl font-semibold leading-[1.02] text-ink sm:max-w-3xl sm:text-6xl lg:text-7xl">
-            {artist.brandName}
-          </h1>
+          <motion.div
+            initial={{ opacity: 0, y: 12, rotate: -1 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+            className="relative max-w-[19rem] sm:max-w-[30rem] lg:max-w-[36rem]"
+          >
+            <Image
+              src={brand.logo.assets.wordmark}
+              alt={artist.brandName}
+              width={760}
+              height={260}
+              priority
+              className="h-auto w-full dark:hidden"
+            />
+            <Image
+              src={brand.logo.assets.wordmarkDark}
+              alt=""
+              width={760}
+              height={260}
+              priority
+              className="hidden h-auto w-full dark:block"
+            />
+          </motion.div>
           <p className="mt-5 max-w-xl text-lg leading-8 text-ink sm:mt-6 sm:text-2xl">
             {artist.tagline}
           </p>
@@ -88,6 +116,35 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
               </div>
             ))}
           </div>
+
+          <div className="mt-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+              {hero.journeyLabel}
+            </p>
+            <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
+              {previewItems.map((item, index) => (
+                <button
+                  key={item.title}
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  className={`min-h-12 min-w-[8.75rem] snap-start rounded-full border px-4 text-left text-xs font-semibold transition sm:min-w-0 ${
+                    activeIndex === index
+                      ? "border-transparent bg-ink text-paper shadow-soft"
+                      : "border-line bg-panel/75 text-muted hover:border-clay hover:text-ink"
+                  }`}
+                  style={{
+                    boxShadow:
+                      activeIndex === index
+                        ? `0 18px 45px ${item.accent}33`
+                        : undefined
+                  }}
+                >
+                  {item.title}
+                </button>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -102,20 +159,40 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
             <div className="relative overflow-hidden rounded-[2rem] border border-line bg-panel p-2 shadow-frame">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem] min-[460px]:aspect-[5/4] lg:aspect-[4/5]">
                 <Image
-                  src={hero.image}
-                  alt={hero.frameLabel}
+                  key={activePreview.image}
+                  src={activePreview.image}
+                  alt={activePreview.title}
                   fill
                   priority
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                  className="object-cover transition duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/8 to-transparent" />
+                <Image
+                  src={brand.logo.assets.watermark}
+                  alt=""
+                  width={360}
+                  height={120}
+                  className="absolute right-4 top-4 w-36 opacity-55 dark:hidden"
+                  aria-hidden="true"
+                />
+                <Image
+                  src={brand.logo.assets.watermarkDark}
+                  alt=""
+                  width={360}
+                  height={120}
+                  className="absolute right-4 top-4 hidden w-36 opacity-70 dark:block"
+                  aria-hidden="true"
+                />
                 <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/15 bg-ink/55 p-4 text-paper backdrop-blur-md">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/70">
                     {hero.frameLabel}
                   </p>
                   <p className="mt-2 text-lg font-semibold">
-                    {primaryPreview.title}
+                    {activePreview.title}
+                  </p>
+                  <p className="mt-1 line-clamp-2 text-sm leading-6 text-paper/75">
+                    {activePreview.description}
                   </p>
                 </div>
               </div>
@@ -126,7 +203,13 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="group relative aspect-square overflow-hidden rounded-2xl border border-line bg-panel shadow-sm"
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onFocus={() => setActiveIndex(index)}
+                  className={`group relative aspect-square overflow-hidden rounded-2xl border bg-panel shadow-sm transition ${
+                    activeIndex === index
+                      ? "border-clay ring-2 ring-clay/20"
+                      : "border-line"
+                  }`}
                   aria-label={item.title}
                 >
                   <Image

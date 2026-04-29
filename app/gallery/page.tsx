@@ -28,6 +28,12 @@ export default function GalleryPage() {
           viewer={content.galleryViewer}
           countLabel={content.galleryPage.countLabel}
           inquiryLabel={content.galleryPage.inquiryLabel}
+          favoriteLabel={content.galleryPage.favoriteLabel}
+          savedLabel={content.galleryPage.savedLabel}
+          similarLabel={content.galleryPage.similarLabel}
+          filters={content.galleryPage.filters}
+          delivery={content.contactPage.delivery}
+          watermarkSrc={content.brand.logo.assets.watermarkDark}
         />
       </SectionWrapper>
     </main>

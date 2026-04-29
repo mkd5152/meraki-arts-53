@@ -2,13 +2,17 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { GalleryViewerContent } from "@/lib/getData";
 
 export type LightboxItem = {
   image: string;
   caption: string;
   categoryTitle?: string;
+};
+
+type SimilarLightboxItem = LightboxItem & {
+  index: number;
 };
 
 type ImageLightboxProps = {
@@ -19,6 +23,12 @@ type ImageLightboxProps = {
   onClose: () => void;
   onPrevious: () => void;
   onNext: () => void;
+  similarLabel?: string;
+  similarItems?: SimilarLightboxItem[];
+  onSelectIndex?: (index: number) => void;
+  inquiryLabel?: string;
+  getInquiryHref?: () => string;
+  watermarkSrc?: string;
 };
 
 export function ImageLightbox({
@@ -28,12 +38,22 @@ export function ImageLightbox({
   labels,
   onClose,
   onPrevious,
-  onNext
+  onNext,
+  similarLabel,
+  similarItems = [],
+  onSelectIndex,
+  inquiryLabel,
+  getInquiryHref,
+  watermarkSrc
 }: ImageLightboxProps) {
+  const [zoomed, setZoomed] = useState(false);
+
   useEffect(() => {
     if (!item) {
       return;
     }
+
+    setZoomed(false);
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -110,15 +130,48 @@ export function ImageLightbox({
               </button>
             </div>
 
-            <div className="relative min-h-0 flex-1 bg-ink">
-              <Image
-                src={item.image}
-                alt={item.caption}
-                fill
-                priority
-                sizes="100vw"
-                className="object-contain"
-              />
+            <div className="relative min-h-0 flex-1 overflow-auto bg-ink">
+              <button
+                type="button"
+                onClick={() => setZoomed((current) => !current)}
+                className={`relative block h-full min-h-[22rem] w-full touch-pan-x touch-pan-y ${
+                  zoomed ? "min-w-[140%] cursor-zoom-out" : "cursor-zoom-in"
+                }`}
+                aria-label={zoomed ? labels.closeLabel : labels.openLabel}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.caption}
+                  fill
+                  priority
+                  sizes="100vw"
+                  className={`object-contain transition duration-300 ${
+                    zoomed ? "scale-125" : "scale-100"
+                  }`}
+                />
+              </button>
+
+              {watermarkSrc && (
+                <Image
+                  src={watermarkSrc}
+                  alt=""
+                  width={360}
+                  height={120}
+                  className="pointer-events-none absolute right-4 top-4 z-10 w-32 opacity-55 sm:w-44"
+                  aria-hidden="true"
+                />
+              )}
+
+              {inquiryLabel && getInquiryHref && (
+                <a
+                  href={getInquiryHref()}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="absolute bottom-4 left-1/2 z-10 inline-flex min-h-11 -translate-x-1/2 items-center justify-center rounded-full bg-paper px-5 text-sm font-semibold text-ink shadow-soft transition hover:bg-gold"
+                >
+                  {inquiryLabel}
+                </a>
+              )}
 
               {total > 1 && (
                 <>
@@ -141,6 +194,32 @@ export function ImageLightbox({
                 </>
               )}
             </div>
+            {similarItems.length > 0 && similarLabel && onSelectIndex && (
+              <div className="border-t border-line bg-panel p-3">
+                <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  {similarLabel}
+                </p>
+                <div className="flex gap-3 overflow-x-auto pb-1">
+                  {similarItems.map((similar) => (
+                    <button
+                      key={`${similar.image}-${similar.index}`}
+                      type="button"
+                      onClick={() => onSelectIndex(similar.index)}
+                      className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-line bg-mist transition hover:border-clay"
+                      aria-label={similar.caption}
+                    >
+                      <Image
+                        src={similar.image}
+                        alt={similar.caption}
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}

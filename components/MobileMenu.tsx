@@ -42,7 +42,9 @@ export function MobileMenu({
             {navigation.links.map((link) => {
               const isActive = link.hasDropdown
                 ? pathname.startsWith("/art/")
-                : pathname === link.href;
+                : link.href === "/"
+                  ? pathname === link.href
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
 
               return (
                 <div key={link.label}>

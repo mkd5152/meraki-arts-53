@@ -13,7 +13,8 @@
   --color-clay: 183 102 77;
   --color-rosewood: 143 77 79;
   --color-sage: 127 140 107;
-  --color-gold: 195 160 106;
+  --color-gold: 225 161 53;
+  --color-teal: 46 124 128;
   --color-mist: 232 237 240;
   --shadow-color: 39 37 35;
   --background: rgb(var(--color-paper));
@@ -32,6 +33,7 @@
   --color-rosewood: 207 132 135;
   --color-sage: 183 194 169;
   --color-gold: 214 189 133;
+  --color-teal: 102 176 181;
   --color-mist: 63 67 67;
   --shadow-color: 0 0 0;
   --background: rgb(var(--color-paper));
@@ -73,6 +75,42 @@ textarea {
 
 ::selection {
   background: rgba(183, 102, 77, 0.22);
+}
+
+.brand-texture {
+  background-image:
+    radial-gradient(circle at 18px 16px, rgb(var(--color-clay) / 0.16) 0 2px, transparent 3px),
+    radial-gradient(circle at 54px 46px, rgb(var(--color-sage) / 0.14) 0 2px, transparent 3px),
+    radial-gradient(circle at 82px 22px, rgb(var(--color-gold) / 0.18) 0 2px, transparent 3px),
+    linear-gradient(120deg, transparent 0 42%, rgb(var(--color-clay) / 0.07) 42% 44%, transparent 44% 100%);
+  background-size: 104px 84px, 104px 84px, 104px 84px, 180px 180px;
+}
+
+.brand-separator {
+  position: relative;
+  height: 12px;
+}
+
+.brand-separator::before,
+.brand-separator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+.brand-separator::before {
+  left: 0;
+  width: 58%;
+  background: rgb(var(--color-teal, var(--color-sage)) / 0.8);
+}
+
+.brand-separator::after {
+  right: 0;
+  width: 32%;
+  background: rgb(var(--color-gold) / 0.8);
 }
 
 @media (prefers-reduced-motion: reduce) {

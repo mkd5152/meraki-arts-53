@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type ArtCardProps = {
   title: string;
@@ -12,9 +13,11 @@ type ArtCardProps = {
   onClick?: () => void;
   caption?: string;
   category?: string;
+  categoryAccent?: string;
   actionLabel?: string;
   interactionLabel?: string;
   aspectClassName?: string;
+  showLens?: boolean;
 };
 
 export function ArtCard({
@@ -25,16 +28,32 @@ export function ArtCard({
   onClick,
   caption,
   category,
+  categoryAccent,
   actionLabel,
   interactionLabel,
-  aspectClassName = "aspect-[4/3]"
+  aspectClassName = "aspect-[4/3]",
+  showLens = false
 }: ArtCardProps) {
+  const [lens, setLens] = useState({ x: 50, y: 50 });
   const cardClassName = `group flex h-full flex-col overflow-hidden rounded-[1.35rem] border border-line bg-panel shadow-sm transition hover:-translate-y-1 hover:shadow-soft ${
     onClick ? "cursor-zoom-in" : ""
   }`;
   const cardBody = (
     <>
-      <div className={`relative shrink-0 overflow-hidden bg-mist ${aspectClassName}`}>
+      <div
+        className={`relative shrink-0 overflow-hidden bg-mist ${aspectClassName}`}
+        onPointerMove={(event) => {
+          if (!showLens) {
+            return;
+          }
+
+          const rect = event.currentTarget.getBoundingClientRect();
+          setLens({
+            x: ((event.clientX - rect.left) / rect.width) * 100,
+            y: ((event.clientY - rect.top) / rect.height) * 100
+          });
+        }}
+      >
         <Image
           src={image}
           alt={caption || title}
@@ -43,8 +62,24 @@ export function ArtCard({
           className="object-cover transition duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent opacity-70" />
+        {showLens && (
+          <div
+            className="pointer-events-none absolute hidden h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-paper/80 bg-cover bg-no-repeat opacity-0 shadow-frame ring-4 ring-ink/10 transition group-hover:opacity-100 lg:block"
+            style={{
+              left: `${lens.x}%`,
+              top: `${lens.y}%`,
+              backgroundImage: `url(${image})`,
+              backgroundPosition: `${lens.x}% ${lens.y}%`,
+              backgroundSize: "230%"
+            }}
+            aria-hidden="true"
+          />
+        )}
       </div>
-      <div className="flex min-h-[122px] flex-1 flex-col p-5">
+      <div
+        className="flex min-h-[122px] flex-1 flex-col border-t-4 p-5"
+        style={{ borderColor: categoryAccent ?? "rgb(var(--color-line))" }}
+      >
         {category && (
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-sage">
             {category}
