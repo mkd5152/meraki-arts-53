@@ -26,6 +26,7 @@ export default function ContactPage() {
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <ContactForm
             form={content.contactPage.form}
+            delivery={content.contactPage.delivery}
             artForms={content.artForms}
           />
           <aside className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-sm">

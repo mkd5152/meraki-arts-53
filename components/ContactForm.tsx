@@ -1,15 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { type FormEvent, useEffect, useState } from "react";
 import type { ArtForm, Content } from "@/lib/getData";
 
 type ContactFormProps = {
   form: Content["contactPage"]["form"];
+  delivery: Content["contactPage"]["delivery"];
   artForms: ArtForm[];
 };
 
-export function ContactForm({ form, artForms }: ContactFormProps) {
-  const [submitted, setSubmitted] = useState(false);
+type SubmissionStatus = "idle" | "sending" | "sent" | "fallback" | "error";
+
+const fieldValue = (formData: FormData, field: string) =>
+  String(formData.get(field) ?? "").trim();
+
+export function ContactForm({ form, delivery, artForms }: ContactFormProps) {
+  const [status, setStatus] = useState<SubmissionStatus>("idle");
   const [selectedMedium, setSelectedMedium] = useState("");
 
   useEffect(() => {
@@ -21,13 +27,99 @@ export function ContactForm({ form, artForms }: ContactFormProps) {
     }
   }, [artForms]);
 
+  const statusMessage =
+    status === "sent"
+      ? delivery.successMessage
+      : status === "fallback"
+        ? delivery.fallbackMessage
+        : status === "error"
+          ? delivery.errorMessage
+          : "";
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (status === "sending") {
+      return;
+    }
+
+    const currentForm = event.currentTarget;
+    const formData = new FormData(currentForm);
+    const name = fieldValue(formData, "name");
+    const email = fieldValue(formData, "email");
+    const medium = fieldValue(formData, "medium") || form.mediumPlaceholder;
+    const timeline = fieldValue(formData, "timeline") || "-";
+    const occasion = fieldValue(formData, "occasion") || "-";
+    const budget = fieldValue(formData, "budget") || "-";
+    const message = fieldValue(formData, "message");
+    const requestMessage = [
+      delivery.whatsappIntro,
+      "",
+      `${form.nameLabel}: ${name}`,
+      `${form.emailLabel}: ${email}`,
+      `${form.mediumLabel}: ${medium}`,
+      `${form.occasionLabel}: ${occasion}`,
+      `${form.timelineLabel}: ${timeline}`,
+      `${form.budgetLabel}: ${budget}`,
+      "",
+      `${form.messageLabel}:`,
+      message
+    ].join("\n");
+    const emailPayload = new FormData();
+
+    emailPayload.append("_subject", delivery.emailSubject);
+    emailPayload.append("_template", "table");
+    emailPayload.append("_captcha", "false");
+    emailPayload.append(form.nameLabel, name);
+    emailPayload.append(form.emailLabel, email);
+    emailPayload.append(form.mediumLabel, medium);
+    emailPayload.append(form.occasionLabel, occasion);
+    emailPayload.append(form.timelineLabel, timeline);
+    emailPayload.append(form.budgetLabel, budget);
+    emailPayload.append(form.messageLabel, message);
+    emailPayload.append("Formatted request", requestMessage);
+
+    setStatus("sending");
+
+    const whatsappUrl = `${delivery.whatsappHref}?text=${encodeURIComponent(
+      requestMessage
+    )}`;
+    const whatsappWindow = window.open(
+      whatsappUrl,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+    if (!whatsappWindow) {
+      window.location.href = whatsappUrl;
+    }
+
+    try {
+      const response = await fetch(delivery.emailEndpoint, {
+        method: "POST",
+        body: emailPayload,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Email request failed");
+      }
+
+      setStatus("sent");
+      currentForm.reset();
+      setSelectedMedium("");
+    } catch (error) {
+      console.error(error);
+      setStatus("fallback");
+    }
+  };
+
   return (
     <form
       className="rounded-[1.5rem] border border-line bg-panel p-5 shadow-sm sm:p-6"
-      onSubmit={(event) => {
-        event.preventDefault();
-        setSubmitted(true);
-      }}
+      onSubmit={handleSubmit}
     >
       <div className="grid gap-5">
         <label className="grid gap-2 text-sm font-semibold text-ink">
@@ -113,13 +205,20 @@ export function ContactForm({ form, artForms }: ContactFormProps) {
         </label>
         <button
           type="submit"
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-clay"
+          disabled={status === "sending"}
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-clay disabled:cursor-not-allowed disabled:opacity-65 disabled:hover:translate-y-0"
         >
-          {form.submitLabel}
+          {status === "sending" ? form.sendingLabel : form.submitLabel}
         </button>
-        {submitted && (
-          <p className="rounded-xl bg-sage/10 px-4 py-3 text-sm font-medium text-ink">
-            {form.successMessage}
+        {statusMessage && (
+          <p
+            className={`rounded-xl px-4 py-3 text-sm font-medium ${
+              status === "sent"
+                ? "bg-sage/10 text-ink"
+                : "bg-clay/10 text-ink"
+            }`}
+          >
+            {statusMessage}
           </p>
         )}
       </div>

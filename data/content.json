@@ -271,7 +271,16 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us what you would like to create",
       "submitLabel": "Send request",
-      "successMessage": "Thank you. Meraki Arts 53 will review your request and respond soon."
+      "sendingLabel": "Sending request..."
+    },
+    "delivery": {
+      "emailEndpoint": "https://formsubmit.co/ajax/batulsunelwala94@gmail.com",
+      "emailSubject": "New custom request for Meraki Arts 53",
+      "whatsappHref": "https://wa.me/919884262707",
+      "whatsappIntro": "New custom request for Meraki Arts 53",
+      "successMessage": "Request sent by email. WhatsApp has opened with the same message ready to send.",
+      "fallbackMessage": "WhatsApp has opened with your request. Email could not be sent, so please send the WhatsApp message.",
+      "errorMessage": "Something went wrong. Please send the WhatsApp message or try again."
     },
     "details": {
       "title": "Project details to include",
