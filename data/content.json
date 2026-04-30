@@ -10,7 +10,7 @@
       "placeholderLabel": "Logo placeholder",
       "wordmark": "Meraki Arts 53",
       "monogram": "M",
-      "caption": "Handmade art studio",
+      "caption": "Handmade creative brand",
       "assets": {
         "wordmark": "/brand/generated/meraki-option4-wordmark.png",
         "wordmarkDark": "/brand/generated/meraki-option4-wordmark-dark.png",
@@ -88,11 +88,11 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Handcrafted creative studio",
+      "eyebrow": "Handcrafted creative brand",
       "image": "/images/texture-art/texture-art-floral-relief-01.webp",
       "featureLabel": "Open for custom work",
-      "frameLabel": "Studio preview",
-      "journeyLabel": "Tap a medium to shift the studio mood",
+      "frameLabel": "Featured piece",
+      "journeyLabel": "Tap a medium to explore the mood",
       "stats": [
         {
           "value": "8",
@@ -119,12 +119,12 @@
     "featuredSection": {
       "eyebrow": "Creative disciplines",
       "title": "Work shaped with patience, precision, and purpose",
-      "intro": "A curated look at the studio's active creative directions, from dimensional texture art to handmade decor, textile detail, paintings, and personalized gifts.",
+      "intro": "A curated look at Meraki Arts 53's active creative directions, from dimensional texture art to handmade decor, textile detail, paintings, and personalized gifts.",
       "actionLabel": "View category"
     },
     "experienceSection": {
-      "eyebrow": "Studio experience",
-      "title": "A clear studio journey from first idea to finished piece",
+      "eyebrow": "Creative process",
+      "title": "A clear creative journey from first idea to finished piece",
       "intro": "The process is intentionally simple: understand the moment, shape the direction, craft the details, and present the work with care.",
       "steps": [
         {
@@ -135,7 +135,7 @@
         {
           "icon": "Mood",
           "title": "Shape the direction",
-          "description": "The studio translates your references into a focused visual direction and practical handmade plan."
+          "description": "Meraki Arts 53 translates your references into a focused visual direction and practical handmade plan."
         },
         {
           "icon": "Craft",
@@ -193,7 +193,7 @@
     },
     "testimonialSection": {
       "eyebrow": "Client confidence",
-      "title": "A studio built for thoughtful requests and careful handmade work",
+      "title": "A creative brand built for thoughtful requests and careful handmade work",
       "items": [
         {
           "quote": "The process feels clear from the first message, with enough guidance to turn a rough idea into something personal.",
@@ -210,14 +210,14 @@
       ]
     },
     "journalSection": {
-      "eyebrow": "Studio journal",
+      "eyebrow": "Creative journal",
       "title": "Stories, care notes, and behind-the-scenes craft",
       "intro": "A living record of process, materials, gift ideas, and the small decisions that make handmade work feel personal.",
       "actionLabel": "Read journal",
       "actionHref": "/journal"
     },
     "trustSection": {
-      "eyebrow": "Why clients trust the studio",
+      "eyebrow": "Why clients trust the process",
       "title": "Trust comes from clarity, care, and consistent detail",
       "intro": "Meraki Arts 53 is shaped for clients who want handmade work with a calm process, realistic expectations, and polished presentation.",
       "responseLabel": "Estimated response",
@@ -233,7 +233,7 @@
         },
         {
           "title": "Warm communication",
-          "description": "You can begin with a rough idea. The studio helps shape it into a direction that can be made well."
+          "description": "You can begin with a rough idea. Meraki Arts 53 helps shape it into a direction that can be made well."
         }
       ]
     }
@@ -247,7 +247,7 @@
     "approach": {
       "eyebrow": "Creative approach",
       "title": "Calm process, considered materials, polished results",
-      "body": "Each project begins with the occasion, the person, and the feeling the piece should carry. From there, the studio develops patterns, palettes, and finishes that feel personal while staying elegant and useful."
+      "body": "Each project begins with the occasion, the person, and the feeling the piece should carry. From there, patterns, palettes, and finishes are developed to feel personal while staying elegant and useful."
     },
     "highlights": {
       "eyebrow": "Signature strengths",
@@ -263,14 +263,14 @@
         },
         {
           "title": "Multi-medium capability",
-          "description": "The studio can translate an idea across texture art, textile detail, decor, paintings, and gifting."
+          "description": "An idea can be translated across texture art, textile detail, decor, paintings, and gifting."
         }
       ]
     },
     "visualIntro": {
-      "eyebrow": "Studio story",
+      "eyebrow": "Creative story",
       "title": "Handmade work with a soft eye for detail",
-      "intro": "What began as a love for detailed handmade work has grown into a multi-medium studio practice for gifts, decor, textile details, and textured art.",
+      "intro": "What began as a love for detailed handmade work has grown into a multi-medium creative practice for gifts, decor, textile details, and textured art.",
       "images": [
         "/images/texture-art/texture-art-floral-relief-01.webp",
         "/images/lamasa/lamasa-decor-05.webp",
@@ -304,7 +304,7 @@
   "galleryPage": {
     "hero": {
       "eyebrow": "Gallery",
-      "title": "Browse the studio's creative range",
+      "title": "Browse the creative range",
       "intro": "Start with featured work, then refine by medium, occasion, color mood, gift type, or event type when you want something specific."
     },
     "allLabel": "All",
@@ -517,7 +517,7 @@
     "featuredSection": {
       "eyebrow": "Featured first",
       "title": "A curated opening set before the full archive",
-      "intro": "Begin with selected pieces, then use filters when you want to narrow the studio by material, mood, or occasion.",
+      "intro": "Begin with selected pieces, then use filters when you want to narrow the work by material, mood, or occasion.",
       "browseTitle": "Browse the full gallery",
       "featuredCount": 6,
       "moreFiltersLabel": "More filters",
@@ -534,23 +534,23 @@
   "journalPage": {
     "hero": {
       "eyebrow": "Journal",
-      "title": "Notes from the studio table",
+      "title": "Notes from the making table",
       "intro": "Process stories, care guidance, gift ideas, material notes, and inspiration from the Meraki Arts 53 creative practice."
     },
     "featuredLabel": "Featured note",
     "readLabel": "Read story",
     "articles": [
       {
-        "slug": "behind-the-studio-table",
+        "slug": "behind-the-making-table",
         "category": "Behind the scenes",
-        "title": "Behind the studio table",
+        "title": "Behind the making table",
         "excerpt": "A look at how references, color, material, and occasion come together before a handmade piece begins.",
         "readTime": "3 min read",
         "image": "/images/customized-gifts/customized-gift-detail-01.webp",
         "sections": [
           {
             "heading": "Start with the moment",
-            "body": "The strongest pieces begin with the person and the occasion. A few references, colors, and practical details help the studio choose the right direction."
+            "body": "The strongest pieces begin with the person and the occasion. A few references, colors, and practical details help shape the right direction."
           },
           {
             "heading": "Then shape the material",
@@ -676,7 +676,7 @@
       "messagePlaceholder": "Tell us what you would like to create",
       "submitLabel": "Send request",
       "sendingLabel": "Sending request...",
-      "reassurance": "Do not worry if the idea is not fully clear yet. Share what you know, and the studio can help shape the direction.",
+      "reassurance": "Do not worry if the idea is not fully clear yet. Share what you know, and Meraki Arts 53 can help shape the direction.",
       "sections": [
         {
           "title": "Step 1: Basic info",
@@ -726,15 +726,15 @@
       "items": [
         {
           "question": "Can I request a fully custom piece?",
-          "answer": "Yes. Share the occasion, medium, size, colors, timeline, and any references so the studio can shape a clear direction."
+          "answer": "Yes. Share the occasion, medium, size, colors, timeline, and any references so Meraki Arts 53 can shape a clear direction."
         },
         {
           "question": "Can the same idea work across different materials?",
-          "answer": "Yes. The studio can translate an idea across texture art, textile detail, decor, paintings, and custom gifting when the material is suitable."
+          "answer": "Yes. An idea can be translated across texture art, textile detail, decor, paintings, and custom gifting when the material is suitable."
         },
         {
           "question": "Do I need a complete idea before reaching out?",
-          "answer": "No. A few details are enough to begin. The studio can help refine the concept before confirming the final direction."
+          "answer": "No. A few details are enough to begin. Meraki Arts 53 can help refine the concept before confirming the final direction."
         }
       ]
     }
@@ -753,7 +753,7 @@
       }
     },
     "detailSection": {
-      "eyebrow": "Studio notes",
+      "eyebrow": "Creative notes",
       "title": "How this medium is usually requested",
       "intro": "Each category can be shaped for gifting, display, event styling, or collaboration depending on the material and finish.",
       "requestsLabel": "What clients request",
