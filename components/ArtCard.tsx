@@ -14,6 +14,7 @@ type ArtCardProps = {
   caption?: string;
   category?: string;
   categoryAccent?: string;
+  referenceId?: string;
   actionLabel?: string;
   interactionLabel?: string;
   aspectClassName?: string;
@@ -29,6 +30,7 @@ export function ArtCard({
   caption,
   category,
   categoryAccent,
+  referenceId,
   actionLabel,
   interactionLabel,
   aspectClassName = "aspect-[4/3]",
@@ -62,6 +64,11 @@ export function ArtCard({
           className="object-cover transition duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent opacity-70" />
+        {referenceId && (
+          <span className="absolute left-3 top-3 z-10 rounded-full border border-paper/35 bg-ink/72 px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-paper shadow-sm backdrop-blur">
+            {referenceId}
+          </span>
+        )}
         {showLens && (
           <div
             className="pointer-events-none absolute hidden h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-paper/80 bg-cover bg-no-repeat opacity-0 shadow-frame ring-4 ring-ink/10 transition group-hover:opacity-100 lg:block"

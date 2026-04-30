@@ -31,6 +31,28 @@ type GalleryGridProps = {
 type GalleryFilterState = Record<string, string>;
 type FilterProfile = Record<string, string[]>;
 
+const categoryReferenceCodes: Record<string, string> = {
+  "texture-art": "TEX",
+  mehendi: "MEH",
+  "chenille-craft": "CHN",
+  embroidery: "EMB",
+  "rida-design": "RDA",
+  lamasa: "LAM",
+  terrazzo: "TRZ",
+  paintings: "PNT",
+  "customized-gifts": "GFT"
+};
+
+const getGalleryReferenceId = (
+  categoryId: string,
+  itemIndex: number,
+  configuredId?: string
+) =>
+  configuredId ??
+  `MA53-${categoryReferenceCodes[categoryId] ?? "ART"}-${String(
+    itemIndex + 1
+  ).padStart(3, "0")}`;
+
 export function GalleryGrid({
   artForms,
   allLabel,
@@ -84,9 +106,16 @@ export function GalleryGrid({
               return [group.key, values[itemIndex % values.length] ?? ""];
             })
           ) as GalleryFilterState;
+          const configuredReferenceId =
+            "id" in item && typeof item.id === "string" ? item.id : undefined;
 
           return {
             ...item,
+            referenceId: getGalleryReferenceId(
+              artForm.id,
+              itemIndex,
+              configuredReferenceId
+            ),
             categoryId: artForm.id,
             categoryTitle: artForm.title,
             categorySlug: artForm.slug,
@@ -153,8 +182,9 @@ export function GalleryGrid({
       const message = [
         "Hi Meraki Arts 53, I want to ask about this exact piece.",
         "",
+        `Picture ID: ${item.referenceId}`,
         `Medium: ${item.categoryTitle}`,
-        `Style: ${item.caption}`,
+        `Piece name: ${item.caption}`,
         `Image: ${origin}${item.image}`
       ].join("\n");
 
@@ -211,7 +241,7 @@ export function GalleryGrid({
     index: number
   ) => (
     <motion.div
-      key={`${item.categoryId}-${item.caption}-${index}`}
+      key={`${item.categoryId}-${item.referenceId}-${index}`}
       layout
       className="flex h-full flex-col gap-2"
       initial={{ opacity: 0.96, y: 6 }}
@@ -226,6 +256,7 @@ export function GalleryGrid({
           caption={item.caption}
           category={item.categoryTitle}
           categoryAccent={item.categoryAccent}
+          referenceId={item.referenceId}
           onClick={() => setSelectedIndex(index)}
           interactionLabel={viewer.openLabel}
           showLens
@@ -237,7 +268,7 @@ export function GalleryGrid({
             className="absolute right-3 top-3 z-10 inline-flex min-h-10 items-center rounded-full border border-white/30 bg-ink/70 px-3 text-xs font-semibold text-paper shadow-sm backdrop-blur transition hover:bg-clay"
             aria-label={`${
               favorites.has(item.image) ? savedLabel : favoriteLabel
-            }: ${item.caption}`}
+            }: ${item.caption} ${item.referenceId}`}
           >
             {favorites.has(item.image) ? savedLabel : favoriteLabel}
           </button>
@@ -378,7 +409,7 @@ export function GalleryGrid({
               inlineCta && itemIndex === 5 && displayItems.length > 6;
 
             return (
-              <Fragment key={`${item.categoryId}-${item.caption}-${itemIndex}`}>
+              <Fragment key={`${item.categoryId}-${item.referenceId}-${itemIndex}`}>
                 {renderGalleryItem(item, itemIndex)}
                 {shouldShowInlineCta && (
                   <motion.div

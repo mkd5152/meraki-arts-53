@@ -8,6 +8,7 @@ import type { GalleryViewerContent } from "@/lib/getData";
 export type LightboxItem = {
   image: string;
   caption: string;
+  referenceId?: string;
   categoryTitle?: string;
 };
 
@@ -112,9 +113,16 @@ export function ImageLightbox({
                     {item.categoryTitle}
                   </p>
                 )}
-                <h2 className="mt-1 truncate text-base font-semibold text-ink sm:text-lg">
-                  {item.caption}
-                </h2>
+                <div className="mt-1 flex min-w-0 flex-wrap items-center gap-2">
+                  <h2 className="min-w-0 truncate text-base font-semibold text-ink sm:text-lg">
+                    {item.caption}
+                  </h2>
+                  {item.referenceId && (
+                    <span className="shrink-0 rounded-full border border-line bg-soft px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">
+                      {item.referenceId}
+                    </span>
+                  )}
+                </div>
                 <p className="mt-1 text-xs font-medium text-muted">
                   {currentIndex + 1} / {total}
                 </p>

@@ -859,16 +859,19 @@
       "accent": "#2e7c80",
       "gallery": [
         {
+          "id": "MA53-TEX-001",
           "image": "/images/texture-art/texture-art-floral-relief-01.webp",
-          "caption": "Gold floral relief texture art"
+          "caption": "Golden Bloom Relief Panel"
         },
         {
+          "id": "MA53-TEX-002",
           "image": "/images/texture-art/texture-art-green-flow-02.webp",
-          "caption": "Green flow texture painting"
+          "caption": "Emerald River Texture Study"
         },
         {
+          "id": "MA53-TEX-003",
           "image": "/images/texture-art/texture-art-leaf-relief-03.webp",
-          "caption": "Green leaf relief texture art"
+          "caption": "Layered Leaf Texture Study"
         }
       ],
       "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully.",
@@ -1276,8 +1279,9 @@
       "accent": "#2e7c80",
       "gallery": [
         {
+          "id": "MA53-CHN-001",
           "image": "/images/chenille-craft/chenille-floral-01.webp",
-          "caption": "Chenille floral craft 1"
+          "caption": "Purple Chenille Lily Stem"
         }
       ],
       "story": "Chenille craft brings a soft sculptural look to florals, keepsakes, and playful decorative details.",
@@ -1302,8 +1306,9 @@
       "accent": "#df7b80",
       "gallery": [
         {
+          "id": "MA53-EMB-001",
           "image": "/images/embroidery/embroidered-floral-detail-01.webp",
-          "caption": "Embroidered floral detail 1"
+          "caption": "Golden Bloom Lace Panel"
         }
       ],
       "story": "Embroidery adds quiet texture and detailed textile personality to fabric-led work and keepsakes.",
@@ -1328,28 +1333,34 @@
       "accent": "#7d8b68",
       "gallery": [
         {
+          "id": "MA53-RDA-001",
           "image": "/images/rida-design/rida-design-study-01.webp",
-          "caption": "Rida design study 1"
+          "caption": "Lilac Lace Border Draft"
         },
         {
+          "id": "MA53-RDA-002",
           "image": "/images/rida-design/rida-design-study-02.webp",
-          "caption": "Rida design study 2"
+          "caption": "Purple Lily Border Motif"
         },
         {
+          "id": "MA53-RDA-003",
           "image": "/images/rida-design/rida-design-study-03.webp",
-          "caption": "Rida design study 3"
+          "caption": "Linear Floral Rida Sketch"
         },
         {
+          "id": "MA53-RDA-004",
           "image": "/images/rida-design/rida-design-study-04.webp",
-          "caption": "Rida design study 4"
+          "caption": "Side Bloom Border Study"
         },
         {
+          "id": "MA53-RDA-005",
           "image": "/images/rida-design/rida-design-study-05.webp",
-          "caption": "Rida design study 5"
+          "caption": "Soft Vine Hem Motif"
         },
         {
+          "id": "MA53-RDA-006",
           "image": "/images/rida-design/rida-design-study-06.webp",
-          "caption": "Rida floral detail"
+          "caption": "Single Daisy Sleeve Motif"
         }
       ],
       "story": "Rida design focuses on refined wearable detail, balanced motifs, and gentle customization.",
@@ -1374,44 +1385,54 @@
       "accent": "#e1a135",
       "gallery": [
         {
+          "id": "MA53-LAM-001",
           "image": "/images/lamasa/lamasa-decor-01.webp",
-          "caption": "Lamasa decor 1"
+          "caption": "Candy Dot Trinket Garden"
         },
         {
+          "id": "MA53-LAM-002",
           "image": "/images/lamasa/lamasa-decor-02.webp",
-          "caption": "Lamasa decor 2"
+          "caption": "Moonboat Star Bowl"
         },
         {
+          "id": "MA53-LAM-003",
           "image": "/images/lamasa/lamasa-decor-03.webp",
-          "caption": "Lamasa decor 3"
+          "caption": "Moon and Star Tray"
         },
         {
+          "id": "MA53-LAM-004",
           "image": "/images/lamasa/lamasa-decor-04.webp",
-          "caption": "Lamasa decor 4"
+          "caption": "Starlit Moon Keepsake Bowl"
         },
         {
+          "id": "MA53-LAM-005",
           "image": "/images/lamasa/lamasa-decor-05.webp",
-          "caption": "Lamasa decor 5"
+          "caption": "Twin Moonstar Decor Bowls"
         },
         {
+          "id": "MA53-LAM-006",
           "image": "/images/lamasa/lamasa-decor-06.webp",
-          "caption": "Lamasa decor 6"
+          "caption": "Blue Daisy Mini Blooms"
         },
         {
+          "id": "MA53-LAM-007",
           "image": "/images/lamasa/lamasa-decor-07.webp",
-          "caption": "Lamasa decor 7"
+          "caption": "Pastel Daisy Scatter Set"
         },
         {
+          "id": "MA53-LAM-008",
           "image": "/images/lamasa/lamasa-decor-08.webp",
-          "caption": "Lamasa decor 8"
+          "caption": "Sunflower Cup Keepsake"
         },
         {
+          "id": "MA53-LAM-009",
           "image": "/images/lamasa/lamasa-decor-09.webp",
-          "caption": "Lamasa decor 9"
+          "caption": "Daisy Night Wall Hanging"
         },
         {
+          "id": "MA53-LAM-010",
           "image": "/images/lamasa/lamasa-decor-10.webp",
-          "caption": "Lamasa decor 10"
+          "caption": "Sunflower Garden Wall Hanging"
         }
       ],
       "story": "Lamasa pieces are sculpted for charming handmade decor, miniature details, and occasion-ready presentation.",
@@ -1436,8 +1457,9 @@
       "accent": "#b8844a",
       "gallery": [
         {
+          "id": "MA53-TRZ-001",
           "image": "/images/terrazzo/terrazzo-decor-01.webp",
-          "caption": "Terrazzo decor 1"
+          "caption": "Rose Quartz Oval Tray"
         }
       ],
       "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",
@@ -1462,120 +1484,149 @@
       "accent": "#c85e4d",
       "gallery": [
         {
+          "id": "MA53-PNT-001",
           "image": "/images/paintings/hand-painted-artwork-01.webp",
-          "caption": "Hand-painted artwork 1"
+          "caption": "Storybook Garden Bookmark Trio"
         },
         {
+          "id": "MA53-PNT-002",
           "image": "/images/paintings/hand-painted-artwork-02.webp",
-          "caption": "Hand-painted artwork 2"
+          "caption": "Blue Blossom Note Set"
         },
         {
+          "id": "MA53-PNT-003",
           "image": "/images/paintings/hand-painted-artwork-03.webp",
-          "caption": "Hand-painted artwork 3"
+          "caption": "Tiny Wreath Keepsake Card"
         },
         {
+          "id": "MA53-PNT-004",
           "image": "/images/paintings/hand-painted-artwork-04.webp",
-          "caption": "Hand-painted artwork 4"
+          "caption": "Marigold Memory Notes"
         },
         {
+          "id": "MA53-PNT-005",
           "image": "/images/paintings/hand-painted-artwork-05.webp",
-          "caption": "Hand-painted artwork 5"
+          "caption": "Mint Garden Letter Set"
         },
         {
+          "id": "MA53-PNT-006",
           "image": "/images/paintings/hand-painted-artwork-06.webp",
-          "caption": "Hand-painted artwork 6"
+          "caption": "Sunlit Daisy Bookmark Trio"
         },
         {
+          "id": "MA53-PNT-007",
           "image": "/images/paintings/hand-painted-artwork-07.webp",
-          "caption": "Hand-painted artwork 7"
+          "caption": "Wildflower Blush Card"
         },
         {
+          "id": "MA53-PNT-008",
           "image": "/images/paintings/hand-painted-artwork-08.webp",
-          "caption": "Hand-painted artwork 8"
+          "caption": "Festival Bloom Gift Tags"
         },
         {
+          "id": "MA53-PNT-009",
           "image": "/images/paintings/hand-painted-artwork-09.webp",
-          "caption": "Hand-painted artwork 9"
+          "caption": "Rose Garden Mini Cards"
         },
         {
+          "id": "MA53-PNT-010",
           "image": "/images/paintings/hand-painted-artwork-10.webp",
-          "caption": "Hand-painted artwork 10"
+          "caption": "Skyline Bloom Note Trio"
         },
         {
+          "id": "MA53-PNT-011",
           "image": "/images/paintings/hand-painted-artwork-11.webp",
-          "caption": "Hand-painted artwork 11"
+          "caption": "Vintage Rose Letter Garden"
         },
         {
+          "id": "MA53-PNT-012",
           "image": "/images/paintings/hand-painted-artwork-12.webp",
-          "caption": "Hand-painted artwork 12"
+          "caption": "Moonwash Floral Orbs"
         },
         {
+          "id": "MA53-PNT-013",
           "image": "/images/paintings/hand-painted-artwork-13.webp",
-          "caption": "Hand-painted artwork 13"
+          "caption": "Wreath and Rose Stationery"
         },
         {
+          "id": "MA53-PNT-014",
           "image": "/images/paintings/hand-painted-artwork-14.webp",
-          "caption": "Hand-painted artwork 14"
+          "caption": "Rainbow Arc Bookmark"
         },
         {
+          "id": "MA53-PNT-015",
           "image": "/images/paintings/hand-painted-artwork-15.webp",
-          "caption": "Hand-painted artwork 15"
+          "caption": "Pastel Rainbow Pocket Card"
         },
         {
+          "id": "MA53-PNT-016",
           "image": "/images/paintings/hand-painted-artwork-16.webp",
-          "caption": "Hand-painted artwork 16"
+          "caption": "Violet Petal Bookmark"
         },
         {
+          "id": "MA53-PNT-017",
           "image": "/images/paintings/hand-painted-artwork-17.webp",
-          "caption": "Hand-painted artwork 17"
+          "caption": "Emerald Wreath Note Duo"
         },
         {
+          "id": "MA53-PNT-018",
           "image": "/images/paintings/hand-painted-artwork-18.webp",
-          "caption": "Hand-painted artwork 18"
+          "caption": "Tulip Whisper Note Set"
         },
         {
+          "id": "MA53-PNT-019",
           "image": "/images/paintings/hand-painted-artwork-19.webp",
-          "caption": "Hand-painted artwork 19"
+          "caption": "Lavender Corner Cards"
         },
         {
+          "id": "MA53-PNT-020",
           "image": "/images/paintings/hand-painted-artwork-20.webp",
-          "caption": "Hand-painted artwork 20"
+          "caption": "Marigold Border Bookmark Set"
         },
         {
+          "id": "MA53-PNT-021",
           "image": "/images/paintings/hand-painted-artwork-21.webp",
-          "caption": "Hand-painted artwork 21"
+          "caption": "Rainbow Garden Note Collage"
         },
         {
+          "id": "MA53-PNT-022",
           "image": "/images/paintings/hand-painted-artwork-22.webp",
-          "caption": "Hand-painted artwork 22"
+          "caption": "Petal Parade Note Set"
         },
         {
+          "id": "MA53-PNT-023",
           "image": "/images/paintings/hand-painted-artwork-23.webp",
-          "caption": "Hand-painted artwork 23"
+          "caption": "Soft Script Mini Notes"
         },
         {
+          "id": "MA53-PNT-024",
           "image": "/images/paintings/hand-painted-artwork-24.webp",
-          "caption": "Hand-painted artwork 24"
+          "caption": "Quiet Line Portrait Study"
         },
         {
+          "id": "MA53-PNT-025",
           "image": "/images/paintings/hand-painted-artwork-25.webp",
-          "caption": "Hand-painted artwork 25"
+          "caption": "Windowlight Figure Sketch"
         },
         {
+          "id": "MA53-PNT-026",
           "image": "/images/paintings/hand-painted-artwork-26.webp",
-          "caption": "Hand-painted artwork 26"
+          "caption": "Blue Veil Silhouette Study"
         },
         {
+          "id": "MA53-PNT-027",
           "image": "/images/paintings/hand-painted-artwork-27.webp",
-          "caption": "Hand-painted artwork 27"
+          "caption": "Ruby Veil Portrait Study"
         },
         {
+          "id": "MA53-PNT-028",
           "image": "/images/paintings/hand-painted-artwork-28.webp",
-          "caption": "Hand-painted artwork 28"
+          "caption": "Lantern Glow Portrait"
         },
         {
+          "id": "MA53-PNT-029",
           "image": "/images/paintings/hand-painted-artwork-29.webp",
-          "caption": "Hand-painted artwork 29"
+          "caption": "Joyful Offering Portrait"
         }
       ],
       "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts.",
@@ -1600,124 +1651,154 @@
       "accent": "#2e7c80",
       "gallery": [
         {
+          "id": "MA53-GFT-001",
           "image": "/images/customized-gifts/customized-gift-detail-01.webp",
-          "caption": "Customized gift detail 1"
+          "caption": "Golden Heart Glow Wall"
         },
         {
+          "id": "MA53-GFT-002",
           "image": "/images/customized-gifts/customized-gift-detail-02.webp",
-          "caption": "Customized gift detail 2"
+          "caption": "Anniversary Heartlight Wall"
         },
         {
+          "id": "MA53-GFT-003",
           "image": "/images/customized-gifts/customized-gift-detail-03.webp",
-          "caption": "Customized gift detail 3"
+          "caption": "Floating Lantern Room Decor"
         },
         {
+          "id": "MA53-GFT-004",
           "image": "/images/customized-gifts/customized-gift-detail-04.webp",
-          "caption": "Customized gift detail 4"
+          "caption": "Love Glow Keepsake"
         },
         {
+          "id": "MA53-GFT-005",
           "image": "/images/customized-gifts/customized-gift-detail-05.webp",
-          "caption": "Customized gift detail 5"
+          "caption": "Petal Heart Hand Portrait"
         },
         {
+          "id": "MA53-GFT-006",
           "image": "/images/customized-gifts/customized-gift-detail-06.webp",
-          "caption": "Customized gift detail 6"
+          "caption": "Birthday Balloon Room Moment"
         },
         {
+          "id": "MA53-GFT-007",
           "image": "/images/customized-gifts/customized-gift-detail-07.webp",
-          "caption": "Customized gift detail 7"
+          "caption": "Love Letter Celebration Table"
         },
         {
+          "id": "MA53-GFT-008",
           "image": "/images/customized-gifts/customized-gift-detail-08.webp",
-          "caption": "Customized gift detail 8"
+          "caption": "Midnight Birthday Hamper"
         },
         {
+          "id": "MA53-GFT-009",
           "image": "/images/customized-gifts/customized-gift-detail-09.webp",
-          "caption": "Customized gift detail 9"
+          "caption": "Tiny Travel Blessing Jar"
         },
         {
+          "id": "MA53-GFT-010",
           "image": "/images/customized-gifts/customized-gift-detail-10.webp",
-          "caption": "Customized gift detail 10"
+          "caption": "Forever Love Mini Sign"
         },
         {
+          "id": "MA53-GFT-011",
           "image": "/images/customized-gifts/customized-gift-detail-11.webp",
-          "caption": "Customized gift detail 11"
+          "caption": "Purple Birthday Surprise Box"
         },
         {
+          "id": "MA53-GFT-012",
           "image": "/images/customized-gifts/customized-gift-detail-12.webp",
-          "caption": "Customized gift detail 12"
+          "caption": "Memory Frame Gift Board"
         },
         {
+          "id": "MA53-GFT-013",
           "image": "/images/customized-gifts/customized-gift-detail-13.webp",
-          "caption": "Customized gift detail 13"
+          "caption": "Balloon Note Keepsake"
         },
         {
+          "id": "MA53-GFT-014",
           "image": "/images/customized-gifts/customized-gift-detail-14.webp",
-          "caption": "Customized gift detail 14"
+          "caption": "Balloon Wishes Mini Card"
         },
         {
+          "id": "MA53-GFT-015",
           "image": "/images/customized-gifts/customized-gift-detail-15.webp",
-          "caption": "Customized gift detail 15"
+          "caption": "Sunshine Dress Keepsake"
         },
         {
+          "id": "MA53-GFT-016",
           "image": "/images/customized-gifts/customized-gift-detail-16.webp",
-          "caption": "Customized gift detail 16"
+          "caption": "Strawberry Gift Pair"
         },
         {
+          "id": "MA53-GFT-017",
           "image": "/images/customized-gifts/customized-gift-detail-17.webp",
-          "caption": "Customized gift detail 17"
+          "caption": "Strawberry Party Favors"
         },
         {
+          "id": "MA53-GFT-018",
           "image": "/images/customized-gifts/customized-gift-detail-18.webp",
-          "caption": "Customized gift detail 18"
+          "caption": "Festive Favor Pail"
         },
         {
+          "id": "MA53-GFT-019",
           "image": "/images/customized-gifts/customized-gift-detail-19.webp",
-          "caption": "Customized gift detail 19"
+          "caption": "Birthday Name Banner"
         },
         {
+          "id": "MA53-GFT-020",
           "image": "/images/customized-gifts/customized-gift-detail-20.webp",
-          "caption": "Customized gift detail 20"
+          "caption": "Royal Birthday Light Board"
         },
         {
+          "id": "MA53-GFT-021",
           "image": "/images/customized-gifts/customized-gift-detail-21.webp",
-          "caption": "Customized gift detail 21"
+          "caption": "Storybook Garden Birthday Backdrop"
         },
         {
+          "id": "MA53-GFT-022",
           "image": "/images/customized-gifts/customized-gift-detail-22.webp",
-          "caption": "Customized gift detail 22"
+          "caption": "Birthday Door Blessing Frame"
         },
         {
+          "id": "MA53-GFT-023",
           "image": "/images/customized-gifts/customized-gift-detail-23.webp",
-          "caption": "Customized gift detail 23"
+          "caption": "Thoughtful Teacher Keepsake"
         },
         {
+          "id": "MA53-GFT-024",
           "image": "/images/customized-gifts/customized-gift-detail-24.webp",
-          "caption": "Customized gift detail 24"
+          "caption": "Heartfall Photo Curtain"
         },
         {
+          "id": "MA53-GFT-025",
           "image": "/images/customized-gifts/customized-gift-detail-25.webp",
-          "caption": "Customized gift detail 25"
+          "caption": "Golden Birthday Door Bunting"
         },
         {
+          "id": "MA53-GFT-026",
           "image": "/images/customized-gifts/customized-gift-detail-26.webp",
-          "caption": "Customized gift detail 26"
+          "caption": "Welcome Home Wall Sign"
         },
         {
+          "id": "MA53-GFT-027",
           "image": "/images/customized-gifts/customized-gift-detail-27.webp",
-          "caption": "Customized gift detail 27"
+          "caption": "Bilingual Welcome Home Plaque"
         },
         {
+          "id": "MA53-GFT-028",
           "image": "/images/customized-gifts/customized-gift-detail-28.webp",
-          "caption": "Customized gift detail 28"
+          "caption": "Welcome Home Chair Corner"
         },
         {
+          "id": "MA53-GFT-029",
           "image": "/images/customized-gifts/customized-gift-detail-29.webp",
-          "caption": "Customized gift detail 29"
+          "caption": "Ornate Welcome Home Plaque"
         },
         {
+          "id": "MA53-GFT-030",
           "image": "/images/customized-gifts/customized-gift-detail-30.webp",
-          "caption": "Customized gift detail 30"
+          "caption": "Blue Border Welcome Home Plaque"
         }
       ],
       "story": "Custom gifts turn personal details into handmade keepsakes designed around the recipient and occasion.",

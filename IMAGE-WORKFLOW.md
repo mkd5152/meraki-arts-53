@@ -36,7 +36,7 @@ texture-art
 
 ## Naming Convention
 
-Folder decides the category. Filename should describe the item.
+Folder decides the category. Filename should describe the item because it becomes the starting point for the public display name. Each finished gallery entry also gets a stable `MA53-<category>-<number>` picture ID for customer reference.
 
 Preferred format:
 
@@ -51,6 +51,8 @@ creations/_inbox/existing/texture-art/floral-relief-canvas-01.jpg
 creations/_inbox/existing/lamasa/moon-bowl-decor-01.jpeg
 creations/_inbox/new/clay-miniatures/tea-set-miniature-01.png
 ```
+
+Avoid generic camera names such as `IMG_1234.jpg` when possible. If a photo needs a more creative public name, inspect the finished image and update the gallery `caption` while keeping the generated picture `id` stable.
 
 Any common image extension is fine: `.jpg`, `.jpeg`, `.png`, `.webp`, `.heic`, `.heif`, `.avif`.
 
@@ -71,7 +73,7 @@ This verifies category folders and lists everything waiting to be processed.
 3. Back up originals before editing.
 4. Edit/crop/enhance selected images without changing the main artwork.
 5. Export optimized `.webp` files into `public/images/<category>/`.
-6. Update `data/content.json` gallery entries, cover image, visibility, captions, and category metadata.
+6. Update `data/content.json` gallery entries, cover image, visibility, picture IDs, descriptive captions, and category metadata.
 7. Copy originals into `creations/segregated/<category>/` and update the local manifest.
 8. Run build/type checks.
 9. Commit and push only when requested.

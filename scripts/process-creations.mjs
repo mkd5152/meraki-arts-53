@@ -13,34 +13,42 @@ const files = readdirSync(sourceDir)
 
 const categoryConfig = {
   mehendi: {
+    referenceCode: "MEH",
     prefix: "mehendi-design",
     caption: "Mehendi design"
   },
   "chenille-craft": {
+    referenceCode: "CHN",
     prefix: "chenille-floral",
     caption: "Chenille floral craft"
   },
   embroidery: {
+    referenceCode: "EMB",
     prefix: "embroidered-floral-detail",
     caption: "Embroidered floral detail"
   },
   "rida-design": {
+    referenceCode: "RDA",
     prefix: "rida-design-study",
     caption: "Rida design study"
   },
   lamasa: {
+    referenceCode: "LAM",
     prefix: "lamasa-decor",
     caption: "Lamasa decor"
   },
   terrazzo: {
+    referenceCode: "TRZ",
     prefix: "terrazzo-decor",
     caption: "Terrazzo decor"
   },
   paintings: {
+    referenceCode: "PNT",
     prefix: "hand-painted-artwork",
     caption: "Hand-painted artwork"
   },
   "customized-gifts": {
+    referenceCode: "GFT",
     prefix: "customized-gift-detail",
     caption: "Customized gift detail"
   }
@@ -85,6 +93,31 @@ const galleryByCategory = Object.fromEntries(
 );
 
 const ordinal = (value) => String(value).padStart(2, "0");
+const referenceOrdinal = (value) => String(value).padStart(3, "0");
+
+function getReferenceId(category, count) {
+  return `MA53-${categoryConfig[category].referenceCode}-${referenceOrdinal(count)}`;
+}
+
+function titleFromFilename(file, fallback, count) {
+  const baseName = path
+    .basename(file, path.extname(file))
+    .replace(/\b(img|dsc|wa)\b/gi, "")
+    .replace(/\bwa\d+\b/gi, "")
+    .replace(/\b\d{6,}\b/g, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!baseName || baseName.length < 4) {
+    return `${fallback} ${count}`;
+  }
+
+  return baseName
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
 
 async function makePresentableImage(inputPath, outputPath) {
   const foreground = await sharp(inputPath)
@@ -147,8 +180,9 @@ for (const [zeroBasedIndex, file] of files.entries()) {
   await makePresentableImage(path.join(sourceDir, file), outputPath);
 
   galleryByCategory[category].push({
+    id: getReferenceId(category, counts[category]),
     image: publicPath,
-    caption: `${config.caption} ${counts[category]}`
+    caption: titleFromFilename(file, config.caption, counts[category])
   });
 }
 
