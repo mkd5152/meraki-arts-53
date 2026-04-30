@@ -865,6 +865,10 @@
         {
           "image": "/images/texture-art/texture-art-green-flow-02.webp",
           "caption": "Green flow texture painting"
+        },
+        {
+          "image": "/images/texture-art/texture-art-leaf-relief-03.webp",
+          "caption": "Green leaf relief texture art"
         }
       ],
       "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully.",
@@ -1342,6 +1346,10 @@
         {
           "image": "/images/rida-design/rida-design-study-05.webp",
           "caption": "Rida design study 5"
+        },
+        {
+          "image": "/images/rida-design/rida-design-study-06.webp",
+          "caption": "Rida floral detail"
         }
       ],
       "story": "Rida design focuses on refined wearable detail, balanced motifs, and gentle customization.",
@@ -1404,10 +1412,6 @@
         {
           "image": "/images/lamasa/lamasa-decor-10.webp",
           "caption": "Lamasa decor 10"
-        },
-        {
-          "image": "/images/lamasa/lamasa-decor-11.webp",
-          "caption": "Lamasa decor 11"
         }
       ],
       "story": "Lamasa pieces are sculpted for charming handmade decor, miniature details, and occasion-ready presentation.",
@@ -1572,10 +1576,6 @@
         {
           "image": "/images/paintings/hand-painted-artwork-29.webp",
           "caption": "Hand-painted artwork 29"
-        },
-        {
-          "image": "/images/paintings/hand-painted-artwork-30.webp",
-          "caption": "Hand-painted artwork 30"
         }
       ],
       "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts.",
