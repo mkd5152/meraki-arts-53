@@ -81,11 +81,10 @@ export default async function JournalArticlePage({
         </article>
       </SectionWrapper>
       <CTASection
-        eyebrow={content.cta.eyebrow}
-        title={content.cta.title}
-        intro={content.cta.intro}
-        primaryCta={content.cta.primaryCta}
-        secondaryCta={content.cta.secondaryCta}
+        title={content.journalPage.cta.title}
+        intro={content.journalPage.cta.intro}
+        primaryCta={content.journalPage.cta.primaryCta}
+        secondaryCta={content.journalPage.cta.secondaryCta}
       />
     </main>
   );

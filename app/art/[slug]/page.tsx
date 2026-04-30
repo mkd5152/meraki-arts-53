@@ -44,6 +44,13 @@ export default async function ArtFormPage({ params }: PageProps) {
     notFound();
   }
 
+  const story = "story" in artForm && artForm.story
+    ? artForm.story
+    : artForm.description;
+  const popularRequests =
+    "popularRequests" in artForm ? artForm.popularRequests ?? [] : [];
+  const useCases = "useCases" in artForm ? artForm.useCases ?? [] : [];
+
   return (
     <main>
       <PageHero
@@ -53,6 +60,57 @@ export default async function ArtFormPage({ params }: PageProps) {
         image={artForm.coverImage}
         meta={`${artForm.gallery.length} ${content.galleryPage.countLabel}`}
       />
+
+      <SectionWrapper
+        eyebrow={content.artPage.detailSection.eyebrow}
+        title={content.artPage.detailSection.title}
+        intro={content.artPage.detailSection.intro}
+      >
+        <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
+          <article className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-clay">
+              {artForm.title}
+            </p>
+            <p className="mt-4 text-base leading-8 text-muted">
+              {story}
+            </p>
+          </article>
+          {popularRequests.length > 0 && (
+            <article className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-ink">
+                {content.artPage.detailSection.requestsLabel}
+              </h2>
+              <ul className="mt-4 grid gap-3">
+                {popularRequests.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-xl bg-soft px-4 py-3 text-sm font-medium text-muted"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          )}
+          {useCases.length > 0 && (
+            <article className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-ink">
+                {content.artPage.detailSection.useCasesLabel}
+              </h2>
+              <ul className="mt-4 grid gap-3">
+                {useCases.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-xl bg-soft px-4 py-3 text-sm font-medium text-muted"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          )}
+        </div>
+      </SectionWrapper>
 
       <SectionWrapper className="bg-panel">
         <GalleryGrid
@@ -66,6 +124,7 @@ export default async function ArtFormPage({ params }: PageProps) {
           similarLabel={content.galleryPage.similarLabel}
           delivery={content.contactPage.delivery}
           watermarkSrc={content.brand.logo.assets.watermarkDark}
+          inlineCta={content.artPage.inlineCta}
         />
       </SectionWrapper>
 

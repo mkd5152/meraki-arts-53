@@ -12,7 +12,7 @@ export function TestimonialSection({ section }: TestimonialSectionProps) {
       title={section.title}
       className="bg-panel"
     >
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {section.items.map((item) => (
           <figure
             key={item.name}

@@ -76,6 +76,7 @@ export default function Home() {
               key={service.title}
               service={service}
               index={index}
+              includesLabel={content.servicesPage.includesLabel}
             />
           ))}
         </div>

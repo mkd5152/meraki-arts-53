@@ -122,87 +122,134 @@ export function ContactForm({ form, delivery, artForms }: ContactFormProps) {
       onSubmit={handleSubmit}
     >
       <div className="grid gap-5">
-        <label className="grid gap-2 text-sm font-semibold text-ink">
-          {form.nameLabel}
-          <input
-            name="name"
-            type="text"
-            required
-            autoComplete="name"
-            placeholder={form.namePlaceholder}
-            className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
-          />
-        </label>
-        <label className="grid gap-2 text-sm font-semibold text-ink">
-          {form.emailLabel}
-          <input
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            placeholder={form.emailPlaceholder}
-            className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
-          />
-        </label>
-        <div className="grid gap-5 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-semibold text-ink">
-            {form.mediumLabel}
-            <select
-              name="medium"
-              value={selectedMedium}
-              onChange={(event) => setSelectedMedium(event.target.value)}
-              className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition focus:border-clay focus:bg-panel"
-            >
-              <option value="" disabled>
-                {form.mediumPlaceholder}
-              </option>
-              {artForms.map((artForm) => (
-                <option key={artForm.id} value={artForm.title}>
-                  {artForm.title}
+        {form.reassurance && (
+          <p className="rounded-2xl border border-line bg-soft px-4 py-3 text-sm font-medium leading-6 text-muted">
+            {form.reassurance}
+          </p>
+        )}
+
+        <fieldset className="grid gap-5">
+          {form.sections?.[0] && (
+            <div>
+              <legend className="text-base font-semibold text-ink">
+                {form.sections[0].title}
+              </legend>
+              <p className="mt-1 text-sm leading-6 text-muted">
+                {form.sections[0].description}
+              </p>
+            </div>
+          )}
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.nameLabel}
+              <input
+                name="name"
+                type="text"
+                required
+                autoComplete="name"
+                placeholder={form.namePlaceholder}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+              />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.emailLabel}
+              <input
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder={form.emailPlaceholder}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+              />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset className="grid gap-5 border-t border-line pt-5">
+          {form.sections?.[1] && (
+            <div>
+              <legend className="text-base font-semibold text-ink">
+                {form.sections[1].title}
+              </legend>
+              <p className="mt-1 text-sm leading-6 text-muted">
+                {form.sections[1].description}
+              </p>
+            </div>
+          )}
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.mediumLabel}
+              <select
+                name="medium"
+                value={selectedMedium}
+                onChange={(event) => setSelectedMedium(event.target.value)}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition focus:border-clay focus:bg-panel"
+              >
+                <option value="" disabled>
+                  {form.mediumPlaceholder}
                 </option>
-              ))}
-            </select>
-          </label>
+                {artForms.map((artForm) => (
+                  <option key={artForm.id} value={artForm.title}>
+                    {artForm.title}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.timelineLabel}
+              <input
+                name="timeline"
+                type="text"
+                placeholder={form.timelinePlaceholder}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+              />
+            </label>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.occasionLabel}
+              <input
+                name="occasion"
+                type="text"
+                placeholder={form.occasionPlaceholder}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+              />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-ink">
+              {form.budgetLabel}
+              <input
+                name="budget"
+                type="text"
+                placeholder={form.budgetPlaceholder}
+                className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+              />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset className="grid gap-5 border-t border-line pt-5">
+          {form.sections?.[2] && (
+            <div>
+              <legend className="text-base font-semibold text-ink">
+                {form.sections[2].title}
+              </legend>
+              <p className="mt-1 text-sm leading-6 text-muted">
+                {form.sections[2].description}
+              </p>
+            </div>
+          )}
           <label className="grid gap-2 text-sm font-semibold text-ink">
-            {form.timelineLabel}
-            <input
-              name="timeline"
-              type="text"
-              placeholder={form.timelinePlaceholder}
-              className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
+            {form.messageLabel}
+            <textarea
+              name="message"
+              required
+              rows={6}
+              placeholder={form.messagePlaceholder}
+              className="min-h-36 resize-y rounded-xl border border-line bg-soft px-4 py-3 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
             />
           </label>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-semibold text-ink">
-            {form.occasionLabel}
-            <input
-              name="occasion"
-              type="text"
-              placeholder={form.occasionPlaceholder}
-              className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
-            />
-          </label>
-          <label className="grid gap-2 text-sm font-semibold text-ink">
-            {form.budgetLabel}
-            <input
-              name="budget"
-              type="text"
-              placeholder={form.budgetPlaceholder}
-              className="min-h-11 rounded-xl border border-line bg-soft px-4 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
-            />
-          </label>
-        </div>
-        <label className="grid gap-2 text-sm font-semibold text-ink">
-          {form.messageLabel}
-          <textarea
-            name="message"
-            required
-            rows={6}
-            placeholder={form.messagePlaceholder}
-            className="min-h-36 resize-y rounded-xl border border-line bg-soft px-4 py-3 text-base font-normal text-ink outline-none transition placeholder:text-muted/70 focus:border-clay focus:bg-panel"
-          />
-        </label>
+        </fieldset>
+
         <button
           type="submit"
           disabled={status === "sending"}

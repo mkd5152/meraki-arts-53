@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
 
 export default function JournalPage() {
   const [featured, ...articles] = content.journalPage.articles;
+  const categories = Array.from(
+    new Set(content.journalPage.articles.map((article) => article.category))
+  );
 
   return (
     <main>
@@ -25,6 +29,19 @@ export default function JournalPage() {
         meta={content.journalPage.featuredLabel}
       />
       <SectionWrapper>
+        <div className="mb-6 flex flex-wrap items-center gap-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+            {content.journalPage.categoryLabel}
+          </p>
+          {categories.map((category) => (
+            <span
+              key={category}
+              className="rounded-full border border-line bg-panel px-4 py-2 text-sm font-semibold text-ink"
+            >
+              {category}
+            </span>
+          ))}
+        </div>
         {featured && (
           <Link
             href={`/journal/${featured.slug}`}
@@ -86,6 +103,12 @@ export default function JournalPage() {
           ))}
         </div>
       </SectionWrapper>
+      <CTASection
+        title={content.journalPage.cta.title}
+        intro={content.journalPage.cta.intro}
+        primaryCta={content.journalPage.cta.primaryCta}
+        secondaryCta={content.journalPage.cta.secondaryCta}
+      />
     </main>
   );
 }

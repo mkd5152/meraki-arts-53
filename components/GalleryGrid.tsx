@@ -2,10 +2,10 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import type { ArtForm, Content, GalleryViewerContent } from "@/lib/getData";
-import { FilterTabs } from "@/components/FilterTabs";
 import { ArtCard } from "@/components/ArtCard";
+import { FilterTabs } from "@/components/FilterTabs";
 import { ImageLightbox } from "@/components/ImageLightbox";
 
 type GalleryGridProps = {
@@ -22,8 +22,10 @@ type GalleryGridProps = {
   savedLabel?: string;
   similarLabel?: string;
   filters?: Content["galleryPage"]["filters"];
+  featuredSection?: Content["galleryPage"]["featuredSection"];
   delivery?: Content["contactPage"]["delivery"];
   watermarkSrc?: string;
+  inlineCta?: Content["artPage"]["inlineCta"];
 };
 
 type GalleryFilterState = Record<string, string>;
@@ -43,11 +45,14 @@ export function GalleryGrid({
   savedLabel,
   similarLabel,
   filters,
+  featuredSection,
   delivery,
-  watermarkSrc
+  watermarkSrc,
+  inlineCta
 }: GalleryGridProps) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [advancedFilters, setAdvancedFilters] = useState<GalleryFilterState>({});
+  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [origin, setOrigin] = useState("");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -93,28 +98,25 @@ export function GalleryGrid({
     [artForms, filters]
   );
 
-  const filterOptions = useMemo(
-    () => {
-      const visibleArtFormIds = new Set(artForms.map((artForm) => artForm.id));
-      const visibleProfiles = Object.entries(filters?.profiles ?? {}).filter(
-        ([id]) => visibleArtFormIds.has(id)
-      );
+  const filterOptions = useMemo(() => {
+    const visibleArtFormIds = new Set(artForms.map((artForm) => artForm.id));
+    const visibleProfiles = Object.entries(filters?.profiles ?? {}).filter(
+      ([id]) => visibleArtFormIds.has(id)
+    );
 
-      return (filters?.groups ?? []).map((group) => ({
-        ...group,
-        options: Array.from(
-          new Set(
-            visibleProfiles.flatMap(([, profile]) =>
-              profile[group.key as keyof typeof profile] ?? []
-            )
+    return (filters?.groups ?? []).map((group) => ({
+      ...group,
+      options: Array.from(
+        new Set(
+          visibleProfiles.flatMap(([, profile]) =>
+            profile[group.key as keyof typeof profile] ?? []
           )
         )
-      }));
-    },
-    [artForms, filters]
-  );
+      )
+    }));
+  }, [artForms, filters]);
 
-  const filteredItems = items
+  const displayItems = items
     .filter((item) => activeFilter === "all" || item.categoryId === activeFilter)
     .filter((item) =>
       Object.entries(advancedFilters).every(
@@ -122,12 +124,18 @@ export function GalleryGrid({
       )
     )
     .slice(0, limit ?? items.length);
+  const featuredCount =
+    showFilters && !limit ? featuredSection?.featuredCount ?? 0 : 0;
+  const featuredItems =
+    featuredCount > 0 ? displayItems.slice(0, featuredCount) : [];
+  const gridItems =
+    featuredCount > 0 ? displayItems.slice(featuredCount) : displayItems;
   const selectedItem =
-    selectedIndex === null ? null : filteredItems[selectedIndex] ?? null;
+    selectedIndex === null ? null : displayItems[selectedIndex] ?? null;
   const similarItems =
     selectedIndex === null
       ? []
-      : filteredItems
+      : displayItems
           .map((item, index) => ({ ...item, index }))
           .filter(
             (item) =>
@@ -137,7 +145,7 @@ export function GalleryGrid({
           .slice(0, 6);
 
   const getInquiryHref = useCallback(
-    (item: (typeof filteredItems)[number]) => {
+    (item: (typeof displayItems)[number]) => {
       if (!delivery) {
         return `/contact?medium=${encodeURIComponent(item.categoryTitle)}`;
       }
@@ -180,28 +188,78 @@ export function GalleryGrid({
 
   const showPrevious = useCallback(() => {
     setSelectedIndex((current) => {
-      if (current === null || filteredItems.length === 0) {
+      if (current === null || displayItems.length === 0) {
         return current;
       }
 
-      return (current - 1 + filteredItems.length) % filteredItems.length;
+      return (current - 1 + displayItems.length) % displayItems.length;
     });
-  }, [filteredItems.length]);
+  }, [displayItems.length]);
 
   const showNext = useCallback(() => {
     setSelectedIndex((current) => {
-      if (current === null || filteredItems.length === 0) {
+      if (current === null || displayItems.length === 0) {
         return current;
       }
 
-      return (current + 1) % filteredItems.length;
+      return (current + 1) % displayItems.length;
     });
-  }, [filteredItems.length]);
+  }, [displayItems.length]);
+
+  const renderGalleryItem = (
+    item: (typeof displayItems)[number],
+    index: number
+  ) => (
+    <motion.div
+      key={`${item.categoryId}-${item.caption}-${index}`}
+      layout
+      className="flex h-full flex-col gap-2"
+      initial={{ opacity: 0.96, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 12 }}
+      transition={{ duration: 0.28, ease: "easeOut" }}
+    >
+      <div className="relative">
+        <ArtCard
+          title={item.caption}
+          image={item.image}
+          caption={item.caption}
+          category={item.categoryTitle}
+          categoryAccent={item.categoryAccent}
+          onClick={() => setSelectedIndex(index)}
+          interactionLabel={viewer.openLabel}
+          showLens
+        />
+        {favoriteLabel && savedLabel && (
+          <button
+            type="button"
+            onClick={() => toggleFavorite(item.image)}
+            className="absolute right-3 top-3 z-10 inline-flex min-h-10 items-center rounded-full border border-white/30 bg-ink/70 px-3 text-xs font-semibold text-paper shadow-sm backdrop-blur transition hover:bg-clay"
+            aria-label={`${
+              favorites.has(item.image) ? savedLabel : favoriteLabel
+            }: ${item.caption}`}
+          >
+            {favorites.has(item.image) ? savedLabel : favoriteLabel}
+          </button>
+        )}
+      </div>
+      {inquiryLabel && (
+        <Link
+          href={getInquiryHref(item)}
+          target={delivery ? "_blank" : undefined}
+          rel={delivery ? "noreferrer" : undefined}
+          className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
+        >
+          {inquiryLabel}
+        </Link>
+      )}
+    </motion.div>
+  );
 
   return (
     <div>
       {showFilters && (
-        <div className="mb-8 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div className="sticky top-16 z-20 -mx-4 mb-8 grid gap-4 border-y border-line bg-paper/95 px-4 py-3 backdrop-blur-xl sm:top-[4.5rem] lg:static lg:mx-0 lg:grid-cols-[1fr_auto] lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:backdrop-blur-0">
           <FilterTabs
             artForms={artForms}
             activeFilter={activeFilter}
@@ -209,108 +267,167 @@ export function GalleryGrid({
             onFilterChange={(filter) => {
               setActiveFilter(filter);
               setAdvancedFilters({});
+              setShowAdvancedFilters(false);
               setSelectedIndex(null);
             }}
           />
           {countLabel && (
             <p className="rounded-full border border-line bg-panel px-4 py-2 text-sm font-semibold text-muted">
-              {filteredItems.length} {countLabel}
+              {displayItems.length} {countLabel}
             </p>
           )}
         </div>
       )}
+
       {showFilters && filters && (
-        <div className="mb-8 rounded-[1.5rem] border border-line bg-panel p-3 shadow-sm">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {filterOptions.map((group) => (
-              <label
-                key={group.key}
-                className="grid gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted"
-              >
-                {group.label}
-                <select
-                  value={advancedFilters[group.key] ?? ""}
-                  onChange={(event) => {
-                    setAdvancedFilters((current) => ({
-                      ...current,
-                      [group.key]: event.target.value
-                    }));
-                    setSelectedIndex(null);
-                  }}
-                  className="min-h-11 rounded-full border border-line bg-soft px-4 text-sm normal-case tracking-normal text-ink outline-none focus:border-clay"
-                >
-                  <option value="">{group.allLabel}</option>
-                  {group.options.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            ))}
-          </div>
+        <div className="mb-8">
           <button
             type="button"
-            onClick={() => setAdvancedFilters({})}
-            className="mt-3 inline-flex min-h-10 items-center rounded-full border border-line px-4 text-sm font-semibold text-muted transition hover:border-clay hover:text-clay"
+            onClick={() => setShowAdvancedFilters((current) => !current)}
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-panel px-5 text-sm font-semibold text-ink shadow-sm transition hover:border-clay hover:text-clay"
           >
-            {filters.resetLabel}
+            {showAdvancedFilters
+              ? featuredSection?.fewerFiltersLabel
+              : featuredSection?.moreFiltersLabel}
           </button>
+          <div
+            className={`mt-4 overflow-hidden rounded-[1.5rem] border border-line bg-panel p-3 shadow-sm ${
+              showAdvancedFilters ? "block" : "hidden"
+            }`}
+          >
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {filterOptions.map((group) => (
+                <label
+                  key={group.key}
+                  className="grid gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-muted"
+                >
+                  {group.label}
+                  <select
+                    value={advancedFilters[group.key] ?? ""}
+                    onChange={(event) => {
+                      setAdvancedFilters((current) => ({
+                        ...current,
+                        [group.key]: event.target.value
+                      }));
+                      setSelectedIndex(null);
+                    }}
+                    className="min-h-11 rounded-full border border-line bg-soft px-4 text-sm normal-case tracking-normal text-ink outline-none focus:border-clay"
+                  >
+                    <option value="">{group.allLabel}</option>
+                    {group.options.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => setAdvancedFilters({})}
+              className="mt-3 inline-flex min-h-10 items-center rounded-full border border-line px-4 text-sm font-semibold text-muted transition hover:border-clay hover:text-clay"
+            >
+              {filters.resetLabel}
+            </button>
+          </div>
         </div>
       )}
+
+      {featuredSection && featuredItems.length > 0 && (
+        <section className="mb-12">
+          <div className="mb-6 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-clay">
+              {featuredSection.eyebrow}
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+              {featuredSection.title}
+            </h2>
+            <p className="mt-3 text-base leading-7 text-muted">
+              {featuredSection.intro}
+            </p>
+          </div>
+          <motion.div
+            layout
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            <AnimatePresence mode="popLayout">
+              {featuredItems.map((item, index) => renderGalleryItem(item, index))}
+            </AnimatePresence>
+          </motion.div>
+        </section>
+      )}
+
+      {featuredSection && featuredItems.length > 0 && gridItems.length > 0 && (
+        <div className="mb-6 flex items-center gap-4">
+          <h2 className="text-2xl font-semibold text-ink">
+            {featuredSection.browseTitle}
+          </h2>
+          <div className="h-px flex-1 bg-line" />
+        </div>
+      )}
+
       <motion.div
         layout
-        className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
       >
         <AnimatePresence mode="popLayout">
-          {filteredItems.map((item, index) => (
-            <motion.div
-              key={`${item.categoryId}-${item.caption}`}
-              layout
-              className="flex h-full flex-col gap-2"
-              initial={{ opacity: 0.96, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 12 }}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-            >
-              <div className="relative">
-                <ArtCard
-                  title={item.caption}
-                  image={item.image}
-                  caption={item.caption}
-                  category={item.categoryTitle}
-                  categoryAccent={item.categoryAccent}
-                  onClick={() => setSelectedIndex(index)}
-                  interactionLabel={viewer.openLabel}
-                  showLens
-                />
-                {favoriteLabel && savedLabel && (
-                <button
-                  type="button"
-                  onClick={() => toggleFavorite(item.image)}
-                  className="absolute right-3 top-3 z-10 inline-flex min-h-10 items-center rounded-full border border-white/30 bg-ink/70 px-3 text-xs font-semibold text-paper shadow-sm backdrop-blur transition hover:bg-clay"
-                  aria-label={`${
-                    favorites.has(item.image) ? savedLabel : favoriteLabel
-                  }: ${item.caption}`}
-                >
-                  {favorites.has(item.image) ? savedLabel : favoriteLabel}
-                </button>
+          {gridItems.map((item, index) => {
+            const itemIndex = index + featuredItems.length;
+            const shouldShowInlineCta =
+              inlineCta && itemIndex === 5 && displayItems.length > 6;
+
+            return (
+              <Fragment key={`${item.categoryId}-${item.caption}-${itemIndex}`}>
+                {renderGalleryItem(item, itemIndex)}
+                {shouldShowInlineCta && (
+                  <motion.div
+                    layout
+                    className="sm:col-span-2 lg:col-span-3"
+                    initial={{ opacity: 0.96, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 12 }}
+                    transition={{ duration: 0.28, ease: "easeOut" }}
+                  >
+                    <div className="grid gap-5 rounded-[1.75rem] border border-line bg-ink p-6 text-paper shadow-frame sm:grid-cols-[1fr_auto] sm:items-center">
+                      <div>
+                        <h3 className="text-2xl font-semibold">
+                          {inlineCta.title}
+                        </h3>
+                        <p className="mt-3 max-w-2xl text-sm leading-6 text-paper/72">
+                          {inlineCta.intro}
+                        </p>
+                      </div>
+                      <div className="flex flex-col gap-3 sm:flex-row">
+                        <Link
+                          href={inlineCta.primaryCta.href}
+                          className="inline-flex min-h-11 items-center justify-center rounded-full bg-paper px-5 text-sm font-semibold text-ink transition hover:bg-soft"
+                        >
+                          {inlineCta.primaryCta.label}
+                        </Link>
+                        {inlineCta.secondaryCta && (
+                          <Link
+                            href={inlineCta.secondaryCta.href}
+                            className="inline-flex min-h-11 items-center justify-center rounded-full border border-paper/24 px-5 text-sm font-semibold text-paper transition hover:border-paper/60 hover:bg-paper/10"
+                          >
+                            {inlineCta.secondaryCta.label}
+                          </Link>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
                 )}
-              </div>
-              {inquiryLabel && (
-                <Link
-                  href={getInquiryHref(item)}
-                  target={delivery ? "_blank" : undefined}
-                  rel={delivery ? "noreferrer" : undefined}
-                  className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
-                >
-                  {inquiryLabel}
-                </Link>
-              )}
-            </motion.div>
-          ))}
+              </Fragment>
+            );
+          })}
+          {displayItems.length === 0 && countLabel && (
+            <div className="rounded-[1.5rem] border border-line bg-panel p-8 text-center text-sm font-semibold text-muted sm:col-span-2 lg:col-span-3">
+              {displayItems.length} {countLabel}
+            </div>
+          )}
         </AnimatePresence>
       </motion.div>
+
       {viewAllLabel && viewAllHref && (
         <div className="mt-8 text-center">
           <Link
@@ -324,7 +441,7 @@ export function GalleryGrid({
       <ImageLightbox
         item={selectedItem}
         currentIndex={selectedIndex ?? 0}
-        total={filteredItems.length}
+        total={displayItems.length}
         labels={viewer}
         onClose={closeLightbox}
         onPrevious={showPrevious}

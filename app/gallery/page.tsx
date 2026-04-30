@@ -32,6 +32,7 @@ export default function GalleryPage() {
           savedLabel={content.galleryPage.savedLabel}
           similarLabel={content.galleryPage.similarLabel}
           filters={content.galleryPage.filters}
+          featuredSection={content.galleryPage.featuredSection}
           delivery={content.contactPage.delivery}
           watermarkSrc={content.brand.logo.assets.watermarkDark}
         />

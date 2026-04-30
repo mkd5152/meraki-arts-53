@@ -108,40 +108,44 @@
         }
       ],
       "primaryCta": {
-        "label": "View Work",
-        "href": "/gallery"
-      },
-      "secondaryCta": {
         "label": "Request Custom Work",
         "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "View Work",
+        "href": "/gallery"
       }
     },
     "featuredSection": {
       "eyebrow": "Creative disciplines",
       "title": "Work shaped with patience, precision, and purpose",
-      "intro": "Explore the studio's currently featured art forms, from dimensional texture work to tactile decor, textile detail, paintings, and custom keepsakes.",
+      "intro": "A curated look at the studio's active creative directions, from dimensional texture art to handmade decor, textile detail, paintings, and personalized gifts.",
       "actionLabel": "View category"
     },
     "experienceSection": {
       "eyebrow": "Studio experience",
-      "title": "A calm commission journey from idea to finished piece",
-      "intro": "Every request is shaped with clear direction, material sensitivity, and thoughtful presentation.",
+      "title": "A clear studio journey from first idea to finished piece",
+      "intro": "The process is intentionally simple: understand the moment, shape the direction, craft the details, and present the work with care.",
       "steps": [
         {
+          "icon": "Brief",
           "title": "Share the moment",
           "description": "Start with the occasion, preferred medium, colors, size, and timeline."
         },
         {
+          "icon": "Mood",
           "title": "Shape the direction",
-          "description": "The studio translates your brief into a focused concept with a practical handmade plan."
+          "description": "The studio translates your references into a focused visual direction and practical handmade plan."
         },
         {
+          "icon": "Craft",
           "title": "Craft the details",
-          "description": "Patterns, textures, finishing, and personalization are handled with patient attention."
+          "description": "Textures, finishes, colors, and personalization are handled with patient attention."
         },
         {
+          "icon": "Finish",
           "title": "Present with care",
-          "description": "The finished piece is prepared for gifting, events, display, or collaboration."
+          "description": "The finished piece is prepared for gifting, display, events, or collaboration."
         }
       ]
     },
@@ -188,15 +192,19 @@
       "actionHref": "/services"
     },
     "testimonialSection": {
-      "eyebrow": "Client-ready",
-      "title": "Built for thoughtful requests, collaborations, and future collections",
+      "eyebrow": "Client confidence",
+      "title": "A studio built for thoughtful requests and careful handmade work",
       "items": [
         {
-          "quote": "Clear process, refined presentation, and handmade work that feels personal from the first detail.",
-          "name": "Custom order experience"
+          "quote": "The process feels clear from the first message, with enough guidance to turn a rough idea into something personal.",
+          "name": "Custom gifting request"
         },
         {
-          "quote": "A flexible creative studio that can move across materials without losing polish or intention.",
+          "quote": "The strongest part is the finishing: colors, small details, and presentation all feel considered.",
+          "name": "Decor and art note"
+        },
+        {
+          "quote": "A flexible creative practice that can move across materials without losing polish or warmth.",
           "name": "Collaboration note"
         }
       ]
@@ -210,22 +218,22 @@
     },
     "trustSection": {
       "eyebrow": "Why clients trust the studio",
-      "title": "A clear, warm process for thoughtful handmade requests",
-      "intro": "Meraki Arts 53 is built for clients who want beauty, clarity, and careful communication before the work begins.",
+      "title": "Trust comes from clarity, care, and consistent detail",
+      "intro": "Meraki Arts 53 is shaped for clients who want handmade work with a calm process, realistic expectations, and polished presentation.",
       "responseLabel": "Estimated response",
       "responseValue": "Within 24 hours",
       "items": [
         {
           "title": "Clear request flow",
-          "description": "Every inquiry asks for the medium, occasion, timing, and preferences so the first conversation is focused."
+          "description": "Every inquiry gathers the medium, occasion, timing, size, and preference details needed to begin properly."
         },
         {
-          "title": "Client-ready updates",
-          "description": "Custom work is shaped with practical expectations around feasibility, finish, and timeline."
+          "title": "Detail-focused execution",
+          "description": "Color balance, finishing, material behavior, and presentation are treated as part of the final piece."
         },
         {
-          "title": "Detail-first finishing",
-          "description": "The studio treats presentation, color balance, and small handmade details as part of the final piece."
+          "title": "Warm communication",
+          "description": "You can begin with a rough idea. The studio helps shape it into a direction that can be made well."
         }
       ]
     }
@@ -258,13 +266,46 @@
           "description": "The studio can translate an idea across texture art, textile detail, decor, paintings, and gifting."
         }
       ]
+    },
+    "visualIntro": {
+      "eyebrow": "Studio story",
+      "title": "Handmade work with a soft eye for detail",
+      "intro": "What began as a love for detailed handmade work has grown into a multi-medium studio practice for gifts, decor, textile details, and textured art.",
+      "images": [
+        "/images/texture-art/texture-art-floral-relief-01.webp",
+        "/images/lamasa/lamasa-decor-05.webp",
+        "/images/customized-gifts/customized-gift-detail-08.webp"
+      ]
+    },
+    "originStory": {
+      "eyebrow": "How it started",
+      "title": "From small handmade details to a broader creative practice",
+      "body": "Meraki Arts 53 grew through curiosity across materials: sculptural decor, textured surfaces, textile detail, painted work, and personalized gifting. The work keeps returning to the same idea: make something meaningful, balanced, and carefully finished."
+    },
+    "signatureStyle": {
+      "eyebrow": "Signature style",
+      "title": "Soft texture, clean finishing, intentional detailing",
+      "items": [
+        {
+          "title": "Soft textures",
+          "description": "Layered surfaces, tactile details, and gentle compositions give the work warmth without visual clutter."
+        },
+        {
+          "title": "Clean finishes",
+          "description": "Edges, balance, presentation, and durability are considered before a piece feels complete."
+        },
+        {
+          "title": "Intentional details",
+          "description": "Small motifs, colors, and personal references are used carefully so the piece still feels refined."
+        }
+      ]
     }
   },
   "galleryPage": {
     "hero": {
       "eyebrow": "Gallery",
       "title": "Browse the studio's creative range",
-      "intro": "Filter by medium, occasion, color, and gift type to explore the studio's currently featured work."
+      "intro": "Start with featured work, then refine by medium, occasion, color mood, gift type, or event type when you want something specific."
     },
     "allLabel": "All",
     "countLabel": "works",
@@ -472,6 +513,15 @@
           ]
         }
       }
+    },
+    "featuredSection": {
+      "eyebrow": "Featured first",
+      "title": "A curated opening set before the full archive",
+      "intro": "Begin with selected pieces, then use filters when you want to narrow the studio by material, mood, or occasion.",
+      "browseTitle": "Browse the full gallery",
+      "featuredCount": 6,
+      "moreFiltersLabel": "More filters",
+      "fewerFiltersLabel": "Hide filters"
     }
   },
   "galleryViewer": {
@@ -562,7 +612,20 @@
           }
         ]
       }
-    ]
+    ],
+    "categoryLabel": "Explore by topic",
+    "cta": {
+      "title": "Interested in something similar?",
+      "intro": "Use a journal idea as a starting point for a custom handmade piece.",
+      "primaryCta": {
+        "label": "Request custom work",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "View gallery",
+        "href": "/gallery"
+      }
+    }
   },
   "servicesPage": {
     "hero": {
@@ -573,7 +636,7 @@
     "overview": {
       "eyebrow": "How it works",
       "title": "A simple commission process",
-      "body": "Share the occasion, timeline, preferred medium, and any inspiration. Meraki Arts 53 will shape a clear creative direction, confirm feasibility, and prepare a piece with careful attention to finish."
+      "body": "Share the occasion, timeline, preferred medium, and any inspiration. Meraki Arts 53 will shape a clear direction, confirm feasibility, and prepare the final piece with careful attention to finish."
     },
     "cta": {
       "title": "Request a custom piece",
@@ -586,7 +649,9 @@
         "label": "View gallery",
         "href": "/gallery"
       }
-    }
+    },
+    "includesLabel": "What you get",
+    "pricingNote": "Pricing is guided by size, material, detail level, quantity, and timeline."
   },
   "contactPage": {
     "hero": {
@@ -610,7 +675,22 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us what you would like to create",
       "submitLabel": "Send request",
-      "sendingLabel": "Sending request..."
+      "sendingLabel": "Sending request...",
+      "reassurance": "Do not worry if the idea is not fully clear yet. Share what you know, and the studio can help shape the direction.",
+      "sections": [
+        {
+          "title": "Step 1: Basic info",
+          "description": "Tell us who is reaching out."
+        },
+        {
+          "title": "Step 2: Project details",
+          "description": "Choose the closest medium and share timing or occasion details."
+        },
+        {
+          "title": "Step 3: Message",
+          "description": "Describe the idea, reference, mood, size, colors, or anything important."
+        }
+      ]
     },
     "delivery": {
       "emailEndpoint": "https://formsubmit.co/ajax/batulsunelwala94@gmail.com",
@@ -622,12 +702,12 @@
       "errorMessage": "Something went wrong. Please send the WhatsApp message or try again."
     },
     "details": {
-      "title": "Project details to include",
+      "title": "Before you send",
       "items": [
-        "Preferred medium or art form",
-        "Occasion or purpose",
-        "Timeline and quantity",
-        "Color, size, or personalization notes"
+        "A rough idea is enough to begin",
+        "Mention the occasion, timeline, and preferred medium if you know them",
+        "Share colors, size, quantity, or personalization details where possible",
+        "WhatsApp will open with your message so the conversation can continue quickly"
       ]
     },
     "quickLinks": [
@@ -671,19 +751,38 @@
         "label": "Back to gallery",
         "href": "/gallery"
       }
+    },
+    "detailSection": {
+      "eyebrow": "Studio notes",
+      "title": "How this medium is usually requested",
+      "intro": "Each category can be shaped for gifting, display, event styling, or collaboration depending on the material and finish.",
+      "requestsLabel": "What clients request",
+      "useCasesLabel": "Ideal for"
+    },
+    "inlineCta": {
+      "title": "Interested in this direction?",
+      "intro": "Ask about a similar piece with your preferred size, color, occasion, and timeline.",
+      "primaryCta": {
+        "label": "Start a request",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "label": "View services",
+        "href": "/services"
+      }
     }
   },
   "cta": {
     "eyebrow": "Custom commissions",
-    "title": "Bring a thoughtful handmade idea to life",
-    "intro": "For gifts, occasions, decor, or collaborative creative work, Meraki Arts 53 can help shape a polished custom piece.",
+    "title": "Have something in mind? Let's create it together.",
+    "intro": "For gifting, decor, events, or collaboration, Meraki Arts 53 can help shape a thoughtful handmade direction and bring it to life with care.",
     "primaryCta": {
       "label": "Request custom work",
       "href": "/contact"
     },
     "secondaryCta": {
-      "label": "Explore services",
-      "href": "/services"
+      "label": "Explore the gallery",
+      "href": "/gallery"
     }
   },
   "footer": {
@@ -698,12 +797,26 @@
     {
       "title": "Custom Gifts",
       "description": "Personalized handmade pieces designed for meaningful occasions.",
-      "isVisible": true
+      "isVisible": true,
+      "image": "/images/customized-gifts/customized-gift-detail-08.webp",
+      "startingFrom": "Quoted by detail and quantity",
+      "includes": [
+        "Idea refinement",
+        "Personalization direction",
+        "Handmade execution"
+      ]
     },
     {
       "title": "Decor & Art",
       "description": "Creative decor elements and artwork for spaces and events.",
-      "isVisible": true
+      "isVisible": true,
+      "image": "/images/texture-art/texture-art-floral-relief-01.webp",
+      "startingFrom": "Quoted by size and material",
+      "includes": [
+        "Material planning",
+        "Color direction",
+        "Display-ready finishing"
+      ]
     },
     {
       "title": "Bridal & Occasion Mehendi",
@@ -713,12 +826,26 @@
     {
       "title": "Textile Detail Work",
       "description": "Chenille craft, embroidery, and rida details planned with balance and finish.",
-      "isVisible": true
+      "isVisible": true,
+      "image": "/images/embroidery/embroidered-floral-detail-01.webp",
+      "startingFrom": "Quoted by detail level",
+      "includes": [
+        "Motif planning",
+        "Thread or textile direction",
+        "Clean finishing"
+      ]
     },
     {
       "title": "Creative Collaborations",
       "description": "Flexible support for brands, families, and event concepts that need a handmade touch.",
-      "isVisible": true
+      "isVisible": true,
+      "image": "/images/paintings/hand-painted-artwork-01.webp",
+      "startingFrom": "Scoped after discussion",
+      "includes": [
+        "Creative direction",
+        "Feasibility notes",
+        "Custom execution plan"
+      ]
     }
   ],
   "artForms": [
@@ -739,6 +866,17 @@
           "image": "/images/texture-art/texture-art-green-flow-02.webp",
           "caption": "Green flow texture painting"
         }
+      ],
+      "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully.",
+      "popularRequests": [
+        "Floral relief artwork",
+        "Textured wall panels",
+        "Color-led statement pieces"
+      ],
+      "useCases": [
+        "Home styling",
+        "Personal gifting",
+        "Small feature walls"
       ]
     },
     {
@@ -1137,6 +1275,17 @@
           "image": "/images/chenille-craft/chenille-floral-01.webp",
           "caption": "Chenille floral craft 1"
         }
+      ],
+      "story": "Chenille craft brings a soft sculptural look to florals, keepsakes, and playful decorative details.",
+      "popularRequests": [
+        "Floral bunches",
+        "Mini decor accents",
+        "Giftable handmade pieces"
+      ],
+      "useCases": [
+        "Birthdays",
+        "Desk decor",
+        "Personal keepsakes"
       ]
     },
     {
@@ -1152,6 +1301,17 @@
           "image": "/images/embroidery/embroidered-floral-detail-01.webp",
           "caption": "Embroidered floral detail 1"
         }
+      ],
+      "story": "Embroidery adds quiet texture and detailed textile personality to fabric-led work and keepsakes.",
+      "popularRequests": [
+        "Floral textile detail",
+        "Personalized motifs",
+        "Soft fabric accents"
+      ],
+      "useCases": [
+        "Keepsakes",
+        "Home textiles",
+        "Personal gifts"
       ]
     },
     {
@@ -1183,6 +1343,17 @@
           "image": "/images/rida-design/rida-design-study-05.webp",
           "caption": "Rida design study 5"
         }
+      ],
+      "story": "Rida design focuses on refined wearable detail, balanced motifs, and gentle customization.",
+      "popularRequests": [
+        "Floral detailing",
+        "Soft accent work",
+        "Personalized design direction"
+      ],
+      "useCases": [
+        "Personal wear",
+        "Festive moments",
+        "Thoughtful textile detail"
       ]
     },
     {
@@ -1238,6 +1409,17 @@
           "image": "/images/lamasa/lamasa-decor-11.webp",
           "caption": "Lamasa decor 11"
         }
+      ],
+      "story": "Lamasa pieces are sculpted for charming handmade decor, miniature details, and occasion-ready presentation.",
+      "popularRequests": [
+        "Decor bowls",
+        "Mini food-inspired details",
+        "Themed occasion pieces"
+      ],
+      "useCases": [
+        "Home decor",
+        "Celebrations",
+        "Custom gifting"
       ]
     },
     {
@@ -1253,6 +1435,17 @@
           "image": "/images/terrazzo/terrazzo-decor-01.webp",
           "caption": "Terrazzo decor 1"
         }
+      ],
+      "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",
+      "popularRequests": [
+        "Small decor objects",
+        "Neutral home accents",
+        "Giftable display pieces"
+      ],
+      "useCases": [
+        "Housewarming",
+        "Home styling",
+        "Desk and shelf decor"
       ]
     },
     {
@@ -1384,6 +1577,17 @@
           "image": "/images/paintings/hand-painted-artwork-30.webp",
           "caption": "Hand-painted artwork 30"
         }
+      ],
+      "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts.",
+      "popularRequests": [
+        "Floral paintings",
+        "Colorful decor pieces",
+        "Personalized artwork"
+      ],
+      "useCases": [
+        "Wall decor",
+        "Personal gifts",
+        "Room styling"
       ]
     },
     {
@@ -1515,6 +1719,17 @@
           "image": "/images/customized-gifts/customized-gift-detail-30.webp",
           "caption": "Customized gift detail 30"
         }
+      ],
+      "story": "Custom gifts turn personal details into handmade keepsakes designed around the recipient and occasion.",
+      "popularRequests": [
+        "Personalized keepsakes",
+        "Occasion gifts",
+        "Theme-led handmade details"
+      ],
+      "useCases": [
+        "Birthdays",
+        "Anniversaries",
+        "Milestones"
       ]
     }
   ]

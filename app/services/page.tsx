@@ -37,12 +37,18 @@ export default function ServicesPage() {
       <ExperienceSection section={content.home.experienceSection} />
 
       <SectionWrapper>
+        {content.servicesPage.pricingNote && (
+          <p className="mx-auto mb-8 max-w-3xl rounded-[1.25rem] border border-line bg-panel px-5 py-4 text-center text-sm font-medium leading-6 text-muted shadow-sm">
+            {content.servicesPage.pricingNote}
+          </p>
+        )}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {content.services.map((service, index) => (
             <ServiceCard
               key={service.title}
               service={service}
               index={index}
+              includesLabel={content.servicesPage.includesLabel}
             />
           ))}
         </div>
