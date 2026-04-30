@@ -94,18 +94,24 @@ export function GalleryGrid({
   );
 
   const filterOptions = useMemo(
-    () =>
-      (filters?.groups ?? []).map((group) => ({
+    () => {
+      const visibleArtFormIds = new Set(artForms.map((artForm) => artForm.id));
+      const visibleProfiles = Object.entries(filters?.profiles ?? {}).filter(
+        ([id]) => visibleArtFormIds.has(id)
+      );
+
+      return (filters?.groups ?? []).map((group) => ({
         ...group,
         options: Array.from(
           new Set(
-            Object.values(filters?.profiles ?? {}).flatMap(
-              (profile) => profile[group.key as keyof typeof profile] ?? []
+            visibleProfiles.flatMap(([, profile]) =>
+              profile[group.key as keyof typeof profile] ?? []
             )
           )
         )
-      })),
-    [filters]
+      }));
+    },
+    [artForms, filters]
   );
 
   const filteredItems = items

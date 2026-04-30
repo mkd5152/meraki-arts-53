@@ -16,15 +16,26 @@ export type GalleryItem = ArtForm["gallery"][number] & {
   categorySlug: ArtForm["slug"];
 };
 
-export const getContent = (): Content => data;
+type VisibilityControlled = {
+  isVisible?: boolean;
+};
 
-export const getArtForms = (): ArtForm[] => data.artForms;
+const isVisible = <T extends VisibilityControlled>(item: T): boolean =>
+  item.isVisible !== false;
+
+export const getArtForms = (): ArtForm[] => data.artForms.filter(isVisible);
+
+export const getContent = (): Content => ({
+  ...data,
+  artForms: getArtForms(),
+  services: data.services.filter(isVisible)
+});
 
 export const getArtFormBySlug = (slug: string): ArtForm | undefined =>
-  data.artForms.find((artForm) => artForm.slug === slug);
+  getArtForms().find((artForm) => artForm.slug === slug);
 
 export const getGalleryItems = (): GalleryItem[] =>
-  data.artForms.flatMap((artForm) =>
+  getArtForms().flatMap((artForm) =>
     artForm.gallery.map((item) => ({
       ...item,
       categoryId: artForm.id,
