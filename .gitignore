@@ -8,7 +8,16 @@ dist
 
 # Local source assets and generated backups
 backups/
-creations/
+creations/*
+!creations/_inbox/
+creations/_inbox/*
+!creations/_inbox/README.md
+!creations/_inbox/existing/
+!creations/_inbox/new/
+creations/_inbox/existing/*
+!creations/_inbox/existing/.keep
+creations/_inbox/new/*
+!creations/_inbox/new/.keep
 brand-assets/
 
 # Local logo export scripts
