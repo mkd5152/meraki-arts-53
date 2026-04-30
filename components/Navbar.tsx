@@ -60,8 +60,9 @@ export function Navbar({ brand, artForms, navigation }: NavbarProps) {
                     onMouseEnter={() => setIsWorkOpen(true)}
                     onMouseLeave={() => setIsWorkOpen(false)}
                   >
-                    <Link
-                      href={link.href}
+                    <button
+                      type="button"
+                      onClick={() => setIsWorkOpen((current) => !current)}
                       className={`inline-flex min-h-11 items-center rounded-lg px-4 text-sm font-semibold transition ${
                         isActive
                           ? "text-clay"
@@ -71,16 +72,25 @@ export function Navbar({ brand, artForms, navigation }: NavbarProps) {
                       aria-expanded={isWorkOpen}
                     >
                       {link.label}
-                    </Link>
+                    </button>
                     {isWorkOpen && (
                       <div className="absolute left-0 top-full w-72 rounded-lg border border-line bg-panel p-2 shadow-soft">
                         <p className="px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                           {navigation.workDropdownLabel}
                         </p>
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsWorkOpen(false)}
+                          className="block rounded-lg px-3 py-2 text-sm font-semibold text-ink hover:bg-soft hover:text-clay"
+                        >
+                          {navigation.allWorkLabel}
+                        </Link>
+                        <div className="my-2 h-px bg-line" />
                         {artForms.map((artForm) => (
                           <Link
                             key={artForm.id}
                             href={`/art/${artForm.slug}`}
+                            onClick={() => setIsWorkOpen(false)}
                             className="block rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-soft hover:text-clay"
                           >
                             {artForm.title}

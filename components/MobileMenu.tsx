@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import type { ArtForm, BrandContent, NavigationContent } from "@/lib/getData";
 import { LogoMark } from "@/components/LogoMark";
 import { ThemeToggle } from "@/components/ThemeProvider";
@@ -23,6 +24,9 @@ export function MobileMenu({
   onClose
 }: MobileMenuProps) {
   const pathname = usePathname();
+  const [openDropdown, setOpenDropdown] = useState<string | null>(
+    pathname.startsWith("/art/") ? "Work" : null
+  );
 
   return (
     <AnimatePresence>
@@ -48,39 +52,80 @@ export function MobileMenu({
 
               return (
                 <div key={link.label}>
-                  <Link
-                    href={link.href}
-                    onClick={onClose}
-                    className={`flex min-h-12 items-center rounded-lg px-3 text-base font-semibold transition ${
-                      isActive
-                        ? "bg-soft text-clay"
-                        : "text-ink hover:bg-soft"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                  {link.hasDropdown && (
-                    <div className="my-1 ml-3 grid gap-1 border-l border-line pl-3">
-                      {artForms.map((artForm) => {
-                        const artHref = `/art/${artForm.slug}`;
-                        const isArtActive = pathname === artHref;
-
-                        return (
+                  {link.hasDropdown ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenDropdown((current) =>
+                            current === link.label ? null : link.label
+                          )
+                        }
+                        className={`flex min-h-12 w-full items-center justify-between rounded-lg px-3 text-left text-base font-semibold transition ${
+                          isActive
+                            ? "bg-soft text-clay"
+                            : "text-ink hover:bg-soft"
+                        }`}
+                        aria-expanded={openDropdown === link.label}
+                      >
+                        <span>{link.label}</span>
+                        <span
+                          aria-hidden="true"
+                          className={`text-sm transition ${
+                            openDropdown === link.label ? "rotate-180" : ""
+                          }`}
+                        >
+                          v
+                        </span>
+                      </button>
+                      {openDropdown === link.label && (
+                        <div className="my-1 ml-3 grid gap-1 border-l border-line pl-3">
                           <Link
-                            key={artForm.id}
-                            href={artHref}
+                            href={link.href}
                             onClick={onClose}
-                            className={`flex min-h-10 items-center rounded-lg px-3 text-sm font-medium transition ${
-                              isArtActive
+                            className={`flex min-h-10 items-center rounded-lg px-3 text-sm font-semibold transition ${
+                              pathname === link.href
                                 ? "bg-soft text-clay"
-                                : "text-muted hover:bg-soft hover:text-clay"
+                                : "text-ink hover:bg-soft hover:text-clay"
                             }`}
                           >
-                            {artForm.title}
+                            {navigation.allWorkLabel}
                           </Link>
-                        );
-                      })}
-                    </div>
+                          <div className="my-1 h-px bg-line" />
+                          {artForms.map((artForm) => {
+                            const artHref = `/art/${artForm.slug}`;
+                            const isArtActive = pathname === artHref;
+
+                            return (
+                              <Link
+                                key={artForm.id}
+                                href={artHref}
+                                onClick={onClose}
+                                className={`flex min-h-10 items-center rounded-lg px-3 text-sm font-medium transition ${
+                                  isArtActive
+                                    ? "bg-soft text-clay"
+                                    : "text-muted hover:bg-soft hover:text-clay"
+                                }`}
+                              >
+                                {artForm.title}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      className={`flex min-h-12 items-center rounded-lg px-3 text-base font-semibold transition ${
+                        isActive
+                          ? "bg-soft text-clay"
+                          : "text-ink hover:bg-soft"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
                   )}
                 </div>
               );
