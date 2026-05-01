@@ -844,7 +844,7 @@
     },
     {
       "title": "Textile Detail Work",
-      "description": "Chenille craft, embroidery, and rida details planned with balance and finish.",
+      "description": "Chenille craft, embroidery, and wearable textile details planned with balance and finish.",
       "isVisible": true,
       "image": "/images/embroidery/embroidered-floral-detail-01.webp",
       "startingFrom": "Quoted by detail level",
@@ -1388,10 +1388,10 @@
     },
     {
       "id": "rida-design",
-      "isVisible": true,
-      "title": "Rida Design",
+      "isVisible": false,
+      "title": "Textile Motif Studies",
       "slug": "rida-design",
-      "description": "Considered rida design details with balanced motifs, colors, and finishing.",
+      "description": "Considered wearable textile details with balanced motifs, colors, and finishing.",
       "coverImage": "/images/rida-design/rida-design-study-01.webp",
       "accent": "#7d8b68",
       "gallery": [
@@ -1400,8 +1400,8 @@
           "image": "/images/rida-design/rida-design-study-01.webp",
           "caption": "Lilac Lace Border Draft",
           "seriesId": "rida-floral-border-study",
-          "seriesTitle": "Rida Floral Border Study",
-          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesTitle": "Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
           "seriesStage": "Border draft"
         },
         {
@@ -1409,17 +1409,17 @@
           "image": "/images/rida-design/rida-design-study-02.webp",
           "caption": "Purple Lily Border Motif",
           "seriesId": "rida-floral-border-study",
-          "seriesTitle": "Rida Floral Border Study",
-          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesTitle": "Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
           "seriesStage": "Motif direction"
         },
         {
           "id": "MA53-RDA-003",
           "image": "/images/rida-design/rida-design-study-03.webp",
-          "caption": "Linear Floral Rida Sketch",
+          "caption": "Linear Floral Sketch",
           "seriesId": "rida-floral-border-study",
-          "seriesTitle": "Rida Floral Border Study",
-          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesTitle": "Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
           "seriesStage": "Line sketch"
         },
         {
@@ -1438,7 +1438,7 @@
           "caption": "Single Daisy Sleeve Motif"
         }
       ],
-      "story": "Rida design focuses on refined wearable detail, balanced motifs, and gentle customization.",
+      "story": "Wearable textile design focuses on refined detail, balanced motifs, and gentle customization.",
       "popularRequests": [
         "Floral detailing",
         "Soft accent work",

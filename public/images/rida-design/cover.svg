@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Rida design motif study">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Textile motif study">
   <rect width="1200" height="900" fill="#f7f8f5"/>
   <path d="M254 156h692v588H254z" fill="#ffffff" stroke="#dfe6dc" stroke-width="14"/>
   <path d="M306 218h588v464H306z" fill="#fbfaf7" stroke="#7f8c6b" stroke-width="10"/>
@@ -7,5 +7,5 @@
     <path d="M448 374c72-76 152-76 224 0s152 76 224 0" stroke="#8f4d4f" stroke-width="12"/>
     <path d="M448 504c72-76 152-76 224 0s152 76 224 0" stroke="#7f8c6b" stroke-width="12"/>
   </g>
-  <text x="72" y="120" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Rida Design</text>
+  <text x="72" y="120" fill="#272523" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">Textile Motif</text>
 </svg>

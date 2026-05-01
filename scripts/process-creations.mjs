@@ -30,7 +30,7 @@ const categoryConfig = {
   "rida-design": {
     referenceCode: "RDA",
     prefix: "rida-design-study",
-    caption: "Rida design study"
+    caption: "Textile motif study"
   },
   lamasa: {
     referenceCode: "LAM",
