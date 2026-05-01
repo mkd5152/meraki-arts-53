@@ -20,10 +20,22 @@ type VisibilityControlled = {
   isVisible?: boolean;
 };
 
-const isVisible = <T extends VisibilityControlled>(item: T): boolean =>
-  item.isVisible !== false;
+const isVisible = (item: unknown): boolean =>
+  !(
+    typeof item === "object" &&
+    item !== null &&
+    "isVisible" in item &&
+    (item as VisibilityControlled).isVisible === false
+  );
 
-export const getArtForms = (): ArtForm[] => data.artForms.filter(isVisible);
+const withVisibleGallery = (artForm: ArtForm): ArtForm =>
+  ({
+    ...artForm,
+    gallery: artForm.gallery.filter(isVisible)
+  }) as ArtForm;
+
+export const getArtForms = (): ArtForm[] =>
+  data.artForms.filter(isVisible).map(withVisibleGallery);
 
 export const getContent = (): Content => ({
   ...data,

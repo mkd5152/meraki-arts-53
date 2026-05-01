@@ -1467,7 +1467,8 @@
         {
           "id": "MA53-LAM-002",
           "image": "/images/lamasa/lamasa-decor-02.webp",
-          "caption": "Moonboat Star Bowl"
+          "caption": "Moonboat Star Bowl",
+          "isVisible": false
         },
         {
           "id": "MA53-LAM-003",
@@ -1477,12 +1478,14 @@
         {
           "id": "MA53-LAM-004",
           "image": "/images/lamasa/lamasa-decor-04.webp",
-          "caption": "Starlit Moon Keepsake Bowl"
+          "caption": "Starlit Moon Keepsake Bowl",
+          "isVisible": false
         },
         {
           "id": "MA53-LAM-005",
           "image": "/images/lamasa/lamasa-decor-05.webp",
-          "caption": "Twin Moonstar Decor Bowls"
+          "caption": "Twin Moonstar Decor Bowls",
+          "isVisible": false
         },
         {
           "id": "MA53-LAM-006",
@@ -1497,12 +1500,14 @@
         {
           "id": "MA53-LAM-008",
           "image": "/images/lamasa/lamasa-decor-08.webp",
-          "caption": "Sunflower Cup Keepsake"
+          "caption": "Sunflower Cup Keepsake",
+          "isVisible": false
         },
         {
           "id": "MA53-LAM-009",
           "image": "/images/lamasa/lamasa-decor-09.webp",
-          "caption": "Daisy Night Wall Hanging"
+          "caption": "Daisy Night Wall Hanging",
+          "isVisible": false
         },
         {
           "id": "MA53-LAM-010",
