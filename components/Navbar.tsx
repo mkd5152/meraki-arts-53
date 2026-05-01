@@ -47,7 +47,9 @@ export function Navbar({ brand, artForms, navigation }: NavbarProps) {
           <nav className="hidden items-center gap-2 lg:flex xl:gap-3">
             {navigation.links.map((link) => {
               const isActive = link.hasDropdown
-                ? pathname.startsWith("/art/")
+                ? pathname === link.href ||
+                  pathname.startsWith(`${link.href}/`) ||
+                  pathname.startsWith("/art/")
                 : link.href === "/"
                   ? pathname === link.href
                   : pathname === link.href || pathname.startsWith(`${link.href}/`);

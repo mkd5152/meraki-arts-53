@@ -2,8 +2,8 @@
   "artist": {
     "name": "Meraki Arts 53",
     "brandName": "Meraki Arts 53",
-    "tagline": "Thoughtfully crafted, detail-driven creations",
-    "intro": "A multidisciplinary artist creating meaningful, handcrafted work across textures, patterns, and materials."
+    "tagline": "Handmade art, textile detail, decor, and personalized craft.",
+    "intro": "A visual portfolio of texture art, textile detail, handmade decor, paintings, and customized gifts."
   },
   "brand": {
     "logo": {
@@ -56,21 +56,13 @@
         "href": "/"
       },
       {
-        "label": "About",
-        "href": "/about"
-      },
-      {
-        "label": "Work",
+        "label": "Portfolio",
         "href": "/gallery",
         "hasDropdown": true
       },
       {
-        "label": "Gallery",
-        "href": "/gallery"
-      },
-      {
-        "label": "Services",
-        "href": "/services"
+        "label": "About",
+        "href": "/about"
       },
       {
         "label": "Journal",
@@ -83,16 +75,16 @@
     ],
     "openMenuLabel": "Open menu",
     "closeMenuLabel": "Close menu",
-    "workDropdownLabel": "Work categories",
-    "allWorkLabel": "All work"
+    "workDropdownLabel": "Portfolio categories",
+    "allWorkLabel": "Full gallery"
   },
   "home": {
     "hero": {
-      "eyebrow": "Handcrafted creative brand",
+      "eyebrow": "Handmade art portfolio",
       "image": "/images/texture-art/texture-art-floral-relief-01.webp",
-      "featureLabel": "Open for custom work",
+      "featureLabel": "Selected handmade work",
       "frameLabel": "Featured piece",
-      "journeyLabel": "Tap a medium to explore the mood",
+      "journeyLabel": "Explore by medium",
       "stats": [
         {
           "value": "8",
@@ -108,18 +100,18 @@
         }
       ],
       "primaryCta": {
-        "label": "Request Custom Work",
-        "href": "/contact"
+        "label": "View Portfolio",
+        "href": "/gallery"
       },
       "secondaryCta": {
-        "label": "View Work",
-        "href": "/gallery"
+        "label": "Discuss Custom Work",
+        "href": "/contact"
       }
     },
     "featuredSection": {
       "eyebrow": "Creative disciplines",
-      "title": "Work shaped with patience, precision, and purpose",
-      "intro": "A curated look at Meraki Arts 53's active creative directions, from dimensional texture art to handmade decor, textile detail, paintings, and personalized gifts.",
+      "title": "Browse the creative directions",
+      "intro": "Move through the active mediums in the studio: dimensional texture art, textile detail, handmade decor, paintings, and personalized gifts.",
       "actionLabel": "View category"
     },
     "experienceSection": {
@@ -177,9 +169,9 @@
       ]
     },
     "selectedSection": {
-      "eyebrow": "Selected work",
-      "title": "A closer look at handcrafted details",
-      "intro": "A concise preview of the textures, patterns, and finishes that define Meraki Arts 53.",
+      "eyebrow": "Selected portfolio",
+      "title": "Start with the work",
+      "intro": "A quick visual pass through the pieces, materials, patterns, and finishing details that define Meraki Arts 53.",
       "allLabel": "All",
       "viewAllLabel": "Open full gallery",
       "viewAllHref": "/gallery"
@@ -339,6 +331,42 @@
         }
       ],
       "profiles": {
+        "texture-art": {
+          "occasion": [
+            "Home Decor",
+            "Gifting"
+          ],
+          "color": [
+            "Black & Gold",
+            "Green"
+          ],
+          "giftType": [
+            "Wall Art",
+            "Statement Piece"
+          ],
+          "eventType": [
+            "Home Styling",
+            "Personal Gifting"
+          ]
+        },
+        "terrazzo": {
+          "occasion": [
+            "Decor",
+            "Gifting"
+          ],
+          "color": [
+            "Terrazzo mix",
+            "Neutral"
+          ],
+          "giftType": [
+            "Decor",
+            "Home object"
+          ],
+          "eventType": [
+            "Home",
+            "Housewarming"
+          ]
+        },
         "mehendi": {
           "occasion": [
             "Wedding",
@@ -434,24 +462,6 @@
             "Celebration"
           ]
         },
-        "terrazzo": {
-          "occasion": [
-            "Decor",
-            "Gifting"
-          ],
-          "color": [
-            "Terrazzo mix",
-            "Neutral"
-          ],
-          "giftType": [
-            "Decor",
-            "Home object"
-          ],
-          "eventType": [
-            "Home",
-            "Housewarming"
-          ]
-        },
         "paintings": {
           "occasion": [
             "Decor",
@@ -492,24 +502,6 @@
             "Birthday",
             "Anniversary",
             "Celebration"
-          ]
-        },
-        "texture-art": {
-          "occasion": [
-            "Home Decor",
-            "Gifting"
-          ],
-          "color": [
-            "Black & Gold",
-            "Green"
-          ],
-          "giftType": [
-            "Wall Art",
-            "Statement Piece"
-          ],
-          "eventType": [
-            "Home Styling",
-            "Personal Gifting"
           ]
         }
       }
@@ -884,6 +876,33 @@
         "Home styling",
         "Personal gifting",
         "Small feature walls"
+      ]
+    },
+    {
+      "id": "terrazzo",
+      "isVisible": true,
+      "title": "Terrazzo",
+      "slug": "terrazzo",
+      "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
+      "coverImage": "/images/terrazzo/terrazzo-decor-01.webp",
+      "accent": "#b8844a",
+      "gallery": [
+        {
+          "id": "MA53-TRZ-001",
+          "image": "/images/terrazzo/terrazzo-decor-01.webp",
+          "caption": "Rose Quartz Oval Tray"
+        }
+      ],
+      "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",
+      "popularRequests": [
+        "Small decor objects",
+        "Neutral home accents",
+        "Giftable display pieces"
+      ],
+      "useCases": [
+        "Housewarming",
+        "Home styling",
+        "Desk and shelf decor"
       ]
     },
     {
@@ -1445,33 +1464,6 @@
         "Home decor",
         "Celebrations",
         "Custom gifting"
-      ]
-    },
-    {
-      "id": "terrazzo",
-      "isVisible": true,
-      "title": "Terrazzo",
-      "slug": "terrazzo",
-      "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
-      "coverImage": "/images/terrazzo/terrazzo-decor-01.webp",
-      "accent": "#b8844a",
-      "gallery": [
-        {
-          "id": "MA53-TRZ-001",
-          "image": "/images/terrazzo/terrazzo-decor-01.webp",
-          "caption": "Rose Quartz Oval Tray"
-        }
-      ],
-      "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",
-      "popularRequests": [
-        "Small decor objects",
-        "Neutral home accents",
-        "Giftable display pieces"
-      ],
-      "useCases": [
-        "Housewarming",
-        "Home styling",
-        "Desk and shelf decor"
       ]
     },
     {

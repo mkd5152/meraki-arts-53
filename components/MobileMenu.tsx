@@ -24,8 +24,10 @@ export function MobileMenu({
   onClose
 }: MobileMenuProps) {
   const pathname = usePathname();
+  const workLinkLabel =
+    navigation.links.find((link) => link.hasDropdown)?.label ?? null;
   const [openDropdown, setOpenDropdown] = useState<string | null>(
-    pathname.startsWith("/art/") ? "Work" : null
+    pathname.startsWith("/art/") ? workLinkLabel : null
   );
 
   return (
@@ -45,7 +47,9 @@ export function MobileMenu({
           <nav className="mx-auto flex max-w-6xl flex-col gap-2 pb-10">
             {navigation.links.map((link) => {
               const isActive = link.hasDropdown
-                ? pathname.startsWith("/art/")
+                ? pathname === link.href ||
+                  pathname.startsWith(`${link.href}/`) ||
+                  pathname.startsWith("/art/")
                 : link.href === "/"
                   ? pathname === link.href
                   : pathname === link.href || pathname.startsWith(`${link.href}/`);
