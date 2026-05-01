@@ -18,8 +18,6 @@ type GalleryGridProps = {
   viewAllHref?: string;
   countLabel?: string;
   inquiryLabel?: string;
-  favoriteLabel?: string;
-  savedLabel?: string;
   similarLabel?: string;
   filters?: Content["galleryPage"]["filters"];
   featuredSection?: Content["galleryPage"]["featuredSection"];
@@ -69,8 +67,6 @@ export function GalleryGrid({
   viewAllHref,
   countLabel,
   inquiryLabel,
-  favoriteLabel,
-  savedLabel,
   similarLabel,
   filters,
   featuredSection,
@@ -81,21 +77,11 @@ export function GalleryGrid({
   const [activeFilter, setActiveFilter] = useState("all");
   const [advancedFilters, setAdvancedFilters] = useState<GalleryFilterState>({});
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [origin, setOrigin] = useState("");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setOrigin(window.location.origin);
-    const stored = window.localStorage.getItem("meraki-favorites");
-
-    if (stored) {
-      try {
-        setFavorites(new Set(JSON.parse(stored) as string[]));
-      } catch {
-        window.localStorage.removeItem("meraki-favorites");
-      }
-    }
   }, []);
 
   const items = useMemo(
@@ -156,6 +142,7 @@ export function GalleryGrid({
     seriesItems?: GalleryItem[];
     seriesCount?: number;
     seriesDescription?: string;
+    displayReferenceId?: string;
   };
   const getSeriesId = (item: GalleryItem) =>
     "seriesId" in item && typeof item.seriesId === "string" ? item.seriesId : "";
@@ -167,6 +154,59 @@ export function GalleryGrid({
     "seriesDescription" in item && typeof item.seriesDescription === "string"
       ? item.seriesDescription
       : undefined;
+  const getSeriesKey = (item: GalleryItem) =>
+    `${item.categoryId}:${getSeriesId(item)}`;
+  const getItemKey = (item: GalleryItem) =>
+    `${item.categoryId}:${item.referenceId}:${item.image}`;
+  const getStageReferenceId = (referenceId: string, stageIndex: number) =>
+    `${referenceId}-${String(stageIndex + 1).padStart(3, "0")}`;
+
+  const referenceMaps = useMemo(() => {
+    const visibleCategoryCounts: Record<string, number> = {};
+    const itemReferenceIds = new Map<string, string>();
+    const seriesReferenceIds = new Map<string, string>();
+    const stageReferenceIds = new Map<string, string>();
+    const seriesStageCounts = new Map<string, number>();
+
+    items.forEach((item) => {
+      const seriesId = getSeriesId(item);
+
+      if (!seriesId) {
+        visibleCategoryCounts[item.categoryId] =
+          (visibleCategoryCounts[item.categoryId] ?? 0) + 1;
+        itemReferenceIds.set(
+          getItemKey(item),
+          getGalleryReferenceId(
+            item.categoryId,
+            visibleCategoryCounts[item.categoryId] - 1
+          )
+        );
+        return;
+      }
+
+      const seriesKey = getSeriesKey(item);
+      let parentReferenceId = seriesReferenceIds.get(seriesKey);
+
+      if (!parentReferenceId) {
+        visibleCategoryCounts[item.categoryId] =
+          (visibleCategoryCounts[item.categoryId] ?? 0) + 1;
+        parentReferenceId = getGalleryReferenceId(
+          item.categoryId,
+          visibleCategoryCounts[item.categoryId] - 1
+        );
+        seriesReferenceIds.set(seriesKey, parentReferenceId);
+      }
+
+      const stageIndex = seriesStageCounts.get(seriesKey) ?? 0;
+      seriesStageCounts.set(seriesKey, stageIndex + 1);
+      stageReferenceIds.set(
+        getItemKey(item),
+        getStageReferenceId(parentReferenceId, stageIndex)
+      );
+    });
+
+    return { itemReferenceIds, seriesReferenceIds, stageReferenceIds };
+  }, [items]);
 
   const filteredItems = items
     .filter((item) => activeFilter === "all" || item.categoryId === activeFilter)
@@ -175,35 +215,53 @@ export function GalleryGrid({
         ([key, value]) => !value || item.tags[key] === value
       )
     );
-  const displayItems = filteredItems
-    .reduce<DisplayItem[]>((result, item) => {
-      const seriesId = getSeriesId(item);
+  const groupedItems = filteredItems.reduce<DisplayItem[]>((result, item) => {
+    const seriesId = getSeriesId(item);
 
-      if (!seriesId) {
-        result.push(item);
-        return result;
-      }
-
-      const existing = result.find(
-        (displayItem) => getSeriesId(displayItem) === seriesId
-      );
-
-      if (existing) {
-        existing.seriesItems = [...(existing.seriesItems ?? [existing]), item];
-        existing.seriesCount = existing.seriesItems.length;
-        return result;
-      }
-
-      result.push({
-        ...item,
-        caption: getSeriesTitle(item),
-        seriesItems: [item],
-        seriesCount: 1,
-        seriesDescription: getSeriesDescription(item)
-      });
-
+    if (!seriesId) {
+      result.push(item);
       return result;
-    }, [])
+    }
+
+    const existing = result.find(
+      (displayItem) => getSeriesId(displayItem) === seriesId
+    );
+
+    if (existing) {
+      existing.seriesItems = [...(existing.seriesItems ?? [existing]), item];
+      existing.seriesCount = existing.seriesItems.length;
+      return result;
+    }
+
+    result.push({
+      ...item,
+      caption: getSeriesTitle(item),
+      seriesItems: [item],
+      seriesCount: 1,
+      seriesDescription: getSeriesDescription(item)
+    });
+
+    return result;
+  }, []);
+  const displayItems = groupedItems
+    .map((item) => {
+      const seriesId = getSeriesId(item);
+      const displayReferenceId = seriesId
+        ? referenceMaps.seriesReferenceIds.get(getSeriesKey(item))
+        : referenceMaps.itemReferenceIds.get(getItemKey(item));
+
+      return {
+        ...item,
+        referenceId: displayReferenceId ?? item.referenceId,
+        displayReferenceId: displayReferenceId ?? item.referenceId,
+        seriesItems: item.seriesItems?.map((seriesItem) => ({
+          ...seriesItem,
+          referenceId:
+            referenceMaps.stageReferenceIds.get(getItemKey(seriesItem)) ??
+            seriesItem.referenceId
+        }))
+      };
+    })
     .slice(0, limit ?? items.length);
   const featuredCount =
     showFilters && !limit ? featuredSection?.featuredCount ?? 0 : 0;
@@ -213,6 +271,14 @@ export function GalleryGrid({
     featuredCount > 0 ? displayItems.slice(featuredCount) : displayItems;
   const selectedItem =
     selectedIndex === null ? null : displayItems[selectedIndex] ?? null;
+  const getDisplayReferenceId = (item: DisplayItem) =>
+    item.displayReferenceId ?? item.referenceId;
+  const selectedLightboxItem = selectedItem
+    ? {
+        ...selectedItem,
+        referenceId: getDisplayReferenceId(selectedItem)
+      }
+    : null;
   const similarItems =
     selectedIndex === null
       ? []
@@ -244,25 +310,6 @@ export function GalleryGrid({
     },
     [delivery, origin]
   );
-
-  const toggleFavorite = useCallback((image: string) => {
-    setFavorites((current) => {
-      const next = new Set(current);
-
-      if (next.has(image)) {
-        next.delete(image);
-      } else {
-        next.add(image);
-      }
-
-      window.localStorage.setItem(
-        "meraki-favorites",
-        JSON.stringify(Array.from(next))
-      );
-
-      return next;
-    });
-  }, []);
 
   const closeLightbox = useCallback(() => {
     setSelectedIndex(null);
@@ -307,40 +354,30 @@ export function GalleryGrid({
           image={item.image}
           description={
             item.seriesCount && item.seriesCount > 1
-              ? `${item.seriesCount} ${viewer.relatedStagesLabel}. ${
-                  item.seriesDescription ?? ""
-                }`.trim()
+              ? item.seriesDescription
               : undefined
           }
           caption={item.caption}
           category={item.categoryTitle}
           categoryAccent={item.categoryAccent}
-          referenceId={item.referenceId}
+          referenceId={getDisplayReferenceId(item)}
           onClick={() => setSelectedIndex(index)}
           interactionLabel={viewer.openLabel}
           showLens
+          stableBody
         />
         {item.seriesCount && item.seriesCount > 1 && (
-          <span className="absolute bottom-3 left-3 z-10 rounded-full border border-white/30 bg-ink/72 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-paper shadow-sm backdrop-blur">
+          <span className="absolute right-3 top-3 z-10 rounded-full border border-paper/35 bg-ink/72 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-paper shadow-sm backdrop-blur">
             {item.seriesCount} {viewer.stageCountLabel}
           </span>
-        )}
-        {favoriteLabel && savedLabel && (
-          <button
-            type="button"
-            onClick={() => toggleFavorite(item.image)}
-            className="absolute right-3 top-3 z-10 inline-flex min-h-10 items-center rounded-full border border-white/30 bg-ink/70 px-3 text-xs font-semibold text-paper shadow-sm backdrop-blur transition hover:bg-clay"
-            aria-label={`${
-              favorites.has(item.image) ? savedLabel : favoriteLabel
-            }: ${item.caption} ${item.referenceId}`}
-          >
-            {favorites.has(item.image) ? savedLabel : favoriteLabel}
-          </button>
         )}
       </div>
       {inquiryLabel && (
         <Link
-          href={getInquiryHref(item)}
+          href={getInquiryHref({
+            ...item,
+            referenceId: getDisplayReferenceId(item)
+          })}
           target={delivery ? "_blank" : undefined}
           rel={delivery ? "noreferrer" : undefined}
           className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
@@ -534,7 +571,7 @@ export function GalleryGrid({
         </div>
       )}
       <ImageLightbox
-        item={selectedItem}
+        item={selectedLightboxItem}
         currentIndex={selectedIndex ?? 0}
         total={displayItems.length}
         labels={viewer}
@@ -546,8 +583,8 @@ export function GalleryGrid({
         onSelectIndex={setSelectedIndex}
         inquiryLabel={inquiryLabel}
         getInquiryHref={
-          selectedItem
-            ? (item) => getInquiryHref(item ?? selectedItem)
+          selectedLightboxItem
+            ? (item) => getInquiryHref(item ?? selectedLightboxItem)
             : undefined
         }
         watermarkSrc={watermarkSrc}

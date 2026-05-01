@@ -119,8 +119,6 @@ export default async function ArtFormPage({ params }: PageProps) {
           viewer={content.galleryViewer}
           showFilters={false}
           inquiryLabel={content.galleryPage.inquiryLabel}
-          favoriteLabel={content.galleryPage.favoriteLabel}
-          savedLabel={content.galleryPage.savedLabel}
           similarLabel={content.galleryPage.similarLabel}
           delivery={content.contactPage.delivery}
           watermarkSrc={content.brand.logo.assets.watermarkDark}

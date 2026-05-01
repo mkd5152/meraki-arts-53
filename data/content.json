@@ -303,8 +303,6 @@
     "countLabel": "works",
     "featuredLabel": "Featured",
     "inquiryLabel": "Ask about this exact piece",
-    "favoriteLabel": "Save",
-    "savedLabel": "Saved",
     "similarLabel": "Similar styles",
     "filters": {
       "resetLabel": "Reset filters",
@@ -621,7 +619,7 @@
         "title": "Material notes: lamasa, terrazzo, and thread",
         "excerpt": "A short guide to choosing a medium based on texture, durability, color, and the kind of detail the final piece needs.",
         "readTime": "5 min read",
-        "image": "/images/terrazzo/terrazzo-decor-01.webp",
+        "image": "/images/terrazzo/terrazzo-marbled-gold-tray-01.webp",
         "sections": [
           {
             "heading": "Texture changes the feeling",
@@ -881,16 +879,33 @@
       "gallery": [
         {
           "id": "MA53-TEX-001",
-          "image": "/images/texture-art/texture-art-floral-relief-01.webp",
-          "caption": "Golden Bloom Relief Panel"
+          "image": "/images/texture-art/texture-art-gilded-bloom-02.webp",
+          "caption": "Gilded Bloom Texture Detail",
+          "seriesId": "gilded-bloom-texture-panel",
+          "seriesTitle": "Gilded Bloom Texture Panel",
+          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
+          "seriesStage": "Detail view"
         },
         {
           "id": "MA53-TEX-002",
-          "image": "/images/texture-art/texture-art-green-flow-02.webp",
-          "caption": "Emerald River Texture Study"
+          "image": "/images/texture-art/texture-art-gilded-bloom-04.webp",
+          "caption": "Gilded Bloom Styled Panel",
+          "seriesId": "gilded-bloom-texture-panel",
+          "seriesTitle": "Gilded Bloom Texture Panel",
+          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
+          "seriesStage": "Styled display"
         },
         {
           "id": "MA53-TEX-003",
+          "image": "/images/texture-art/texture-art-floral-relief-01.webp",
+          "caption": "Golden Bloom Relief Panel",
+          "seriesId": "gilded-bloom-texture-panel",
+          "seriesTitle": "Gilded Bloom Texture Panel",
+          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
+          "seriesStage": "Finished panel"
+        },
+        {
+          "id": "MA53-TEX-004",
           "image": "/images/texture-art/texture-art-leaf-relief-03.webp",
           "caption": "Layered Leaf Texture Study"
         }
@@ -913,13 +928,13 @@
       "title": "Terrazzo",
       "slug": "terrazzo",
       "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
-      "coverImage": "/images/terrazzo/terrazzo-decor-01.webp",
+      "coverImage": "/images/terrazzo/terrazzo-marbled-gold-tray-01.webp",
       "accent": "#b8844a",
       "gallery": [
         {
           "id": "MA53-TRZ-001",
-          "image": "/images/terrazzo/terrazzo-decor-01.webp",
-          "caption": "Rose Quartz Oval Tray"
+          "image": "/images/terrazzo/terrazzo-marbled-gold-tray-01.webp",
+          "caption": "Marbled Gold Oval Tray"
         }
       ],
       "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",

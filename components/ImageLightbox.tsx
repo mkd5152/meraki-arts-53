@@ -233,7 +233,9 @@ export function ImageLightbox({
                       className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border bg-mist transition ${
                         index === seriesIndex ? "border-clay" : "border-line"
                       }`}
-                      aria-label={seriesItem.caption}
+                      aria-label={`${seriesItem.referenceId ?? index + 1}: ${
+                        seriesItem.caption
+                      }`}
                     >
                       <Image
                         src={seriesItem.image}
@@ -242,8 +244,8 @@ export function ImageLightbox({
                         sizes="80px"
                         className="object-cover"
                       />
-                      <span className="absolute inset-x-1 bottom-1 rounded-full bg-ink/72 px-1 py-0.5 text-[9px] font-semibold text-paper">
-                        {index + 1}
+                      <span className="absolute inset-x-1 bottom-1 truncate rounded-full bg-ink/72 px-1 py-0.5 font-mono text-[7px] font-semibold uppercase tracking-[0.02em] text-paper">
+                        {seriesItem.referenceId ?? index + 1}
                       </span>
                     </button>
                   ))}
