@@ -30,6 +30,12 @@ type GalleryGridProps = {
 
 type GalleryFilterState = Record<string, string>;
 type FilterProfile = Record<string, string[]>;
+type InquiryItem = {
+  image: string;
+  caption: string;
+  referenceId?: string;
+  categoryTitle?: string;
+};
 
 const categoryReferenceCodes: Record<string, string> = {
   "texture-art": "TEX",
@@ -145,13 +151,59 @@ export function GalleryGrid({
     }));
   }, [artForms, filters]);
 
-  const displayItems = items
+  type GalleryItem = (typeof items)[number];
+  type DisplayItem = GalleryItem & {
+    seriesItems?: GalleryItem[];
+    seriesCount?: number;
+    seriesDescription?: string;
+  };
+  const getSeriesId = (item: GalleryItem) =>
+    "seriesId" in item && typeof item.seriesId === "string" ? item.seriesId : "";
+  const getSeriesTitle = (item: GalleryItem) =>
+    "seriesTitle" in item && typeof item.seriesTitle === "string"
+      ? item.seriesTitle
+      : item.caption;
+  const getSeriesDescription = (item: GalleryItem) =>
+    "seriesDescription" in item && typeof item.seriesDescription === "string"
+      ? item.seriesDescription
+      : undefined;
+
+  const filteredItems = items
     .filter((item) => activeFilter === "all" || item.categoryId === activeFilter)
     .filter((item) =>
       Object.entries(advancedFilters).every(
         ([key, value]) => !value || item.tags[key] === value
       )
-    )
+    );
+  const displayItems = filteredItems
+    .reduce<DisplayItem[]>((result, item) => {
+      const seriesId = getSeriesId(item);
+
+      if (!seriesId) {
+        result.push(item);
+        return result;
+      }
+
+      const existing = result.find(
+        (displayItem) => getSeriesId(displayItem) === seriesId
+      );
+
+      if (existing) {
+        existing.seriesItems = [...(existing.seriesItems ?? [existing]), item];
+        existing.seriesCount = existing.seriesItems.length;
+        return result;
+      }
+
+      result.push({
+        ...item,
+        caption: getSeriesTitle(item),
+        seriesItems: [item],
+        seriesCount: 1,
+        seriesDescription: getSeriesDescription(item)
+      });
+
+      return result;
+    }, [])
     .slice(0, limit ?? items.length);
   const featuredCount =
     showFilters && !limit ? featuredSection?.featuredCount ?? 0 : 0;
@@ -174,9 +226,9 @@ export function GalleryGrid({
           .slice(0, 6);
 
   const getInquiryHref = useCallback(
-    (item: (typeof displayItems)[number]) => {
+    (item: InquiryItem) => {
       if (!delivery) {
-        return `/contact?medium=${encodeURIComponent(item.categoryTitle)}`;
+        return `/contact?medium=${encodeURIComponent(item.categoryTitle ?? "")}`;
       }
 
       const message = [
@@ -253,6 +305,13 @@ export function GalleryGrid({
         <ArtCard
           title={item.caption}
           image={item.image}
+          description={
+            item.seriesCount && item.seriesCount > 1
+              ? `${item.seriesCount} ${viewer.relatedStagesLabel}. ${
+                  item.seriesDescription ?? ""
+                }`.trim()
+              : undefined
+          }
           caption={item.caption}
           category={item.categoryTitle}
           categoryAccent={item.categoryAccent}
@@ -261,6 +320,11 @@ export function GalleryGrid({
           interactionLabel={viewer.openLabel}
           showLens
         />
+        {item.seriesCount && item.seriesCount > 1 && (
+          <span className="absolute bottom-3 left-3 z-10 rounded-full border border-white/30 bg-ink/72 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-paper shadow-sm backdrop-blur">
+            {item.seriesCount} {viewer.stageCountLabel}
+          </span>
+        )}
         {favoriteLabel && savedLabel && (
           <button
             type="button"
@@ -482,7 +546,9 @@ export function GalleryGrid({
         onSelectIndex={setSelectedIndex}
         inquiryLabel={inquiryLabel}
         getInquiryHref={
-          selectedItem ? () => getInquiryHref(selectedItem) : undefined
+          selectedItem
+            ? (item) => getInquiryHref(item ?? selectedItem)
+            : undefined
         }
         watermarkSrc={watermarkSrc}
       />

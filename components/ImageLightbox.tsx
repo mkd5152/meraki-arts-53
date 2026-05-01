@@ -10,6 +10,9 @@ export type LightboxItem = {
   caption: string;
   referenceId?: string;
   categoryTitle?: string;
+  seriesItems?: LightboxItem[];
+  seriesDescription?: string;
+  seriesStage?: string;
 };
 
 type SimilarLightboxItem = LightboxItem & {
@@ -28,7 +31,7 @@ type ImageLightboxProps = {
   similarItems?: SimilarLightboxItem[];
   onSelectIndex?: (index: number) => void;
   inquiryLabel?: string;
-  getInquiryHref?: () => string;
+  getInquiryHref?: (item?: LightboxItem) => string;
   watermarkSrc?: string;
 };
 
@@ -48,6 +51,9 @@ export function ImageLightbox({
   watermarkSrc
 }: ImageLightboxProps) {
   const [zoomed, setZoomed] = useState(false);
+  const [seriesIndex, setSeriesIndex] = useState(0);
+  const seriesItems = item?.seriesItems?.length ? item.seriesItems : [];
+  const activeItem = seriesItems[seriesIndex] ?? item;
 
   useEffect(() => {
     if (!item) {
@@ -55,6 +61,7 @@ export function ImageLightbox({
     }
 
     setZoomed(false);
+    setSeriesIndex(0);
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -117,12 +124,19 @@ export function ImageLightbox({
                   <h2 className="min-w-0 truncate text-base font-semibold text-ink sm:text-lg">
                     {item.caption}
                   </h2>
-                  {item.referenceId && (
+                  {activeItem?.referenceId && (
                     <span className="shrink-0 rounded-full border border-line bg-soft px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">
-                      {item.referenceId}
+                      {activeItem.referenceId}
                     </span>
                   )}
                 </div>
+                {seriesItems.length > 1 && activeItem && (
+                  <p className="mt-1 text-xs font-medium text-muted">
+                    {activeItem.seriesStage
+                      ? `${activeItem.seriesStage}: ${activeItem.caption}`
+                      : activeItem.caption}
+                  </p>
+                )}
                 <p className="mt-1 text-xs font-medium text-muted">
                   {currentIndex + 1} / {total}
                 </p>
@@ -148,11 +162,11 @@ export function ImageLightbox({
                 aria-label={zoomed ? labels.closeLabel : labels.openLabel}
               >
                 <Image
-                  src={item.image}
-                  alt={item.caption}
+                  src={activeItem?.image ?? item.image}
+                  alt={activeItem?.caption ?? item.caption}
                   fill
                   priority
-                  sizes="100vw"
+                  sizes="(min-width: 1280px) 1152px, 100vw"
                   className={`object-contain transition duration-300 ${
                     zoomed ? "scale-125" : "scale-100"
                   }`}
@@ -172,7 +186,7 @@ export function ImageLightbox({
 
               {inquiryLabel && getInquiryHref && (
                 <a
-                  href={getInquiryHref()}
+                  href={getInquiryHref(activeItem ?? item)}
                   target="_blank"
                   rel="noreferrer"
                   className="absolute bottom-4 left-1/2 z-10 inline-flex min-h-11 -translate-x-1/2 items-center justify-center rounded-full bg-paper px-5 text-sm font-semibold text-ink shadow-soft transition hover:bg-gold"
@@ -202,6 +216,40 @@ export function ImageLightbox({
                 </>
               )}
             </div>
+            {seriesItems.length > 1 && (
+              <div className="border-t border-line bg-panel p-3">
+                <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  {labels.seriesLabel}
+                </p>
+                <div className="flex gap-3 overflow-x-auto pb-1">
+                  {seriesItems.map((seriesItem, index) => (
+                    <button
+                      key={`${seriesItem.image}-${index}`}
+                      type="button"
+                      onClick={() => {
+                        setSeriesIndex(index);
+                        setZoomed(false);
+                      }}
+                      className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border bg-mist transition ${
+                        index === seriesIndex ? "border-clay" : "border-line"
+                      }`}
+                      aria-label={seriesItem.caption}
+                    >
+                      <Image
+                        src={seriesItem.image}
+                        alt={seriesItem.caption}
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
+                      <span className="absolute inset-x-1 bottom-1 rounded-full bg-ink/72 px-1 py-0.5 text-[9px] font-semibold text-paper">
+                        {index + 1}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             {similarItems.length > 0 && similarLabel && onSelectIndex && (
               <div className="border-t border-line bg-panel p-3">
                 <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">

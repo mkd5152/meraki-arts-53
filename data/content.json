@@ -521,7 +521,10 @@
     "openLabel": "Open larger image",
     "closeLabel": "Close preview",
     "previousLabel": "Previous image",
-    "nextLabel": "Next image"
+    "nextLabel": "Next image",
+    "seriesLabel": "Process stages",
+    "stageCountLabel": "stages",
+    "relatedStagesLabel": "related stages"
   },
   "journalPage": {
     "hero": {
@@ -532,6 +535,32 @@
     "featuredLabel": "Featured note",
     "readLabel": "Read story",
     "articles": [
+      {
+        "slug": "from-sketch-to-final-touch",
+        "category": "Process",
+        "title": "From sketch to final touch",
+        "excerpt": "A painting does not arrive all at once. This portrait sequence shows the patience behind the work: paper sketch, canvas draft, color layers, refinement, and final detail.",
+        "readTime": "4 min read",
+        "image": "/images/paintings/hand-painted-artwork-29.webp",
+        "sections": [
+          {
+            "heading": "The first line is a thinking space",
+            "body": "The paper sketch is where proportion, pose, and feeling are tested without pressure. It lets the artist understand the subject before committing to the canvas."
+          },
+          {
+            "heading": "The canvas starts rough on purpose",
+            "body": "The next stage is not meant to look finished. A loose canvas draft gives the piece structure, checks the placement, and leaves room for correction before color takes over."
+          },
+          {
+            "heading": "Color builds the emotion",
+            "body": "The first painted layer sets the mood, then later passes deepen the fabric, face, light, and surrounding details. Each layer makes the work more confident without losing the softness of the original idea."
+          },
+          {
+            "heading": "The final touch shows patience",
+            "body": "The finished piece carries evidence of all the earlier decisions. That sequence says a lot about the artist: she observes carefully, changes direction when needed, and gives the work time to become complete."
+          }
+        ]
+      },
       {
         "slug": "behind-the-making-table",
         "category": "Behind the scenes",
@@ -1354,17 +1383,29 @@
         {
           "id": "MA53-RDA-001",
           "image": "/images/rida-design/rida-design-study-01.webp",
-          "caption": "Lilac Lace Border Draft"
+          "caption": "Lilac Lace Border Draft",
+          "seriesId": "rida-floral-border-study",
+          "seriesTitle": "Rida Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesStage": "Border draft"
         },
         {
           "id": "MA53-RDA-002",
           "image": "/images/rida-design/rida-design-study-02.webp",
-          "caption": "Purple Lily Border Motif"
+          "caption": "Purple Lily Border Motif",
+          "seriesId": "rida-floral-border-study",
+          "seriesTitle": "Rida Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesStage": "Motif direction"
         },
         {
           "id": "MA53-RDA-003",
           "image": "/images/rida-design/rida-design-study-03.webp",
-          "caption": "Linear Floral Rida Sketch"
+          "caption": "Linear Floral Rida Sketch",
+          "seriesId": "rida-floral-border-study",
+          "seriesTitle": "Rida Floral Border Study",
+          "seriesDescription": "A connected set of border and motif studies showing how a rida detail develops from lace placement to floral linework.",
+          "seriesStage": "Line sketch"
         },
         {
           "id": "MA53-RDA-004",
@@ -1593,32 +1634,56 @@
         {
           "id": "MA53-PNT-024",
           "image": "/images/paintings/hand-painted-artwork-24.webp",
-          "caption": "Quiet Line Portrait Study"
+          "caption": "Quiet Line Portrait Study",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "Paper sketch"
         },
         {
           "id": "MA53-PNT-025",
           "image": "/images/paintings/hand-painted-artwork-25.webp",
-          "caption": "Windowlight Figure Sketch"
+          "caption": "Windowlight Figure Sketch",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "Canvas sketch"
         },
         {
           "id": "MA53-PNT-026",
           "image": "/images/paintings/hand-painted-artwork-26.webp",
-          "caption": "Blue Veil Silhouette Study"
+          "caption": "Blue Veil Silhouette Study",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "First color layer"
         },
         {
           "id": "MA53-PNT-027",
           "image": "/images/paintings/hand-painted-artwork-27.webp",
-          "caption": "Ruby Veil Portrait Study"
+          "caption": "Ruby Veil Portrait Study",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "Palette refinement"
         },
         {
           "id": "MA53-PNT-028",
           "image": "/images/paintings/hand-painted-artwork-28.webp",
-          "caption": "Lantern Glow Portrait"
+          "caption": "Lantern Glow Portrait",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "Light and mood"
         },
         {
           "id": "MA53-PNT-029",
           "image": "/images/paintings/hand-painted-artwork-29.webp",
-          "caption": "Joyful Offering Portrait"
+          "caption": "Joyful Offering Portrait",
+          "seriesId": "portrait-painting-process",
+          "seriesTitle": "Portrait Painting Process Sequence",
+          "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
+          "seriesStage": "Final touch"
         }
       ],
       "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts.",
