@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatedLogo } from "@/components/AnimatedLogo";
 import type { Artist, ArtForm, BrandContent, Content } from "@/lib/getData";
 
 type HeroSectionProps = {
@@ -83,23 +84,9 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
         <div className="max-w-3xl">
           <h1 className="sr-only">{artist.brandName}</h1>
           <div className="mx-auto max-w-[18rem] sm:max-w-[29rem] lg:max-w-[34rem]">
-            <Image
-              src={brand.logo.assets.wordmarkDark}
-              alt=""
-              width={1200}
-              height={698}
-              priority
-              className="h-auto w-full drop-shadow-[0_18px_38px_rgb(0_0_0_/_0.32)] dark:hidden"
-              aria-hidden="true"
-            />
-            <Image
-              src={brand.logo.assets.wordmark}
-              alt=""
-              width={1200}
-              height={698}
-              priority
-              className="hidden h-auto w-full drop-shadow-[0_18px_38px_rgb(39_37_35_/_0.18)] dark:block"
-              aria-hidden="true"
+            <AnimatedLogo
+              logo={brand.logo}
+              className="drop-shadow-[0_18px_38px_rgb(0_0_0_/_0.32)] dark:drop-shadow-[0_18px_38px_rgb(39_37_35_/_0.18)]"
             />
           </div>
           <p className="mt-5 max-w-2xl text-xl font-medium leading-8 text-paper sm:text-2xl">
