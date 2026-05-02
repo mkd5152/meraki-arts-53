@@ -16,8 +16,8 @@ const categoryConfig = {
   "chenille-craft": {
     prefix: "chenille-floral"
   },
-  embroidery: {
-    prefix: "embroidered-floral-detail"
+  "outline-art": {
+    prefix: "golden-bloom-outline"
   },
   "rida-design": {
     prefix: "rida-design-study"
@@ -61,7 +61,7 @@ const assignments = new Map([
   ...range(144, 148, "customized-gifts"),
   ...range(149, 150, "rida-design"),
   ...range(151, 157, "mehendi"),
-  [158, "embroidery"],
+  [158, "outline-art"],
   ...range(159, 162, "mehendi"),
   [163, "terrazzo"],
   ...range(164, 166, "rida-design"),
@@ -69,13 +69,23 @@ const assignments = new Map([
   [172, "chenille-craft"]
 ]);
 
+const archivedSourceIndexes = new Set([144, 145, 146, 147]);
+
 const ordinal = (value) => String(value).padStart(2, "0");
 
 const counts = Object.fromEntries(Object.keys(categoryConfig).map((category) => [category, 0]));
 const failures = [];
+let archived = 0;
+let processed = 0;
 
 for (const [zeroBasedIndex, file] of files.entries()) {
   const oneBasedIndex = zeroBasedIndex + 1;
+
+  if (archivedSourceIndexes.has(oneBasedIndex)) {
+    archived += 1;
+    continue;
+  }
+
   const category = assignments.get(oneBasedIndex);
 
   if (!category) {
@@ -103,6 +113,7 @@ for (const [zeroBasedIndex, file] of files.entries()) {
       })
       .webp({ quality: 92, effort: 5 })
       .toFile(outputPath);
+    processed += 1;
   } catch (error) {
     failures.push({
       file,
@@ -115,7 +126,8 @@ for (const [zeroBasedIndex, file] of files.entries()) {
 console.log(
   JSON.stringify(
     {
-      processed: files.length - failures.length,
+      processed,
+      archived,
       total: files.length,
       counts,
       failures

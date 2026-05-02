@@ -39,7 +39,7 @@ const categoryReferenceCodes: Record<string, string> = {
   "texture-art": "TEX",
   mehendi: "MEH",
   "chenille-craft": "CHN",
-  embroidery: "EMB",
+  "outline-art": "OUT",
   "rida-design": "RDA",
   lamasa: "LAM",
   terrazzo: "TRZ",

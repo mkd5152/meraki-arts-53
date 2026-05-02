@@ -22,10 +22,10 @@ const categoryConfig = {
     prefix: "chenille-floral",
     caption: "Chenille floral craft"
   },
-  embroidery: {
-    referenceCode: "EMB",
-    prefix: "embroidered-floral-detail",
-    caption: "Embroidered floral detail"
+  "outline-art": {
+    referenceCode: "OUT",
+    prefix: "golden-bloom-outline",
+    caption: "Outline artwork"
   },
   "rida-design": {
     referenceCode: "RDA",
@@ -79,7 +79,7 @@ const assignments = new Map([
   ...range(144, 148, "customized-gifts"),
   ...range(149, 150, "rida-design"),
   ...range(151, 157, "mehendi"),
-  [158, "embroidery"],
+  [158, "outline-art"],
   ...range(159, 162, "mehendi"),
   [163, "terrazzo"],
   ...range(164, 166, "rida-design"),
@@ -87,10 +87,14 @@ const assignments = new Map([
   [172, "chenille-craft"]
 ]);
 
+const archivedSourceIndexes = new Set([144, 145, 146, 147]);
+
 const counts = Object.fromEntries(Object.keys(categoryConfig).map((category) => [category, 0]));
 const galleryByCategory = Object.fromEntries(
   Object.keys(categoryConfig).map((category) => [category, []])
 );
+let archived = 0;
+let processed = 0;
 
 const ordinal = (value) => String(value).padStart(2, "0");
 const referenceOrdinal = (value) => String(value).padStart(3, "0");
@@ -163,12 +167,19 @@ async function makePresentableImage(inputPath, outputPath) {
 
 for (const [zeroBasedIndex, file] of files.entries()) {
   const oneBasedIndex = zeroBasedIndex + 1;
+
+  if (archivedSourceIndexes.has(oneBasedIndex)) {
+    archived += 1;
+    continue;
+  }
+
   const category = assignments.get(oneBasedIndex);
 
   if (!category) {
     throw new Error(`No category assignment for #${oneBasedIndex}: ${file}`);
   }
 
+  processed += 1;
   counts[category] += 1;
   const config = categoryConfig[category];
   const fileName = `${config.prefix}-${ordinal(counts[category])}.webp`;
@@ -203,7 +214,9 @@ writeFileSync(contentPath, `${JSON.stringify(content, null, 2)}\n`);
 console.log(
   JSON.stringify(
     {
-      processed: files.length,
+      processed,
+      archived,
+      total: files.length,
       counts,
       contentPath
     },

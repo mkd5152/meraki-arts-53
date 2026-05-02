@@ -403,7 +403,7 @@
             "Home"
           ]
         },
-        "embroidery": {
+        "outline-art": {
           "occasion": [
             "Gifting",
             "Personal"
@@ -573,7 +573,7 @@
           },
           {
             "heading": "Then shape the material",
-            "body": "Each medium behaves differently. Texture work needs depth, embroidery needs balance, and decor work needs structure, finish, and presentation."
+            "body": "Each medium behaves differently. Texture work needs depth, outline work needs clean balance, and decor work needs structure, finish, and presentation."
           }
         ]
       },
@@ -845,9 +845,9 @@
     },
     {
       "title": "Textile Detail Work",
-      "description": "Chenille craft, embroidery, and wearable textile details planned with balance and finish.",
+      "description": "Chenille craft, outline art, and wearable textile details planned with balance and finish.",
       "isVisible": true,
-      "image": "/images/embroidery/embroidered-floral-detail-01.webp",
+      "image": "/images/outline-art/golden-bloom-outline-01.webp",
       "startingFrom": "Quoted by detail level",
       "includes": [
         "Motif planning",
@@ -1384,29 +1384,29 @@
       ]
     },
     {
-      "id": "embroidery",
+      "id": "outline-art",
       "isVisible": true,
-      "title": "Embroidery",
-      "slug": "embroidery",
-      "description": "Threadwork with refined color, clean detailing, and a personal handmade finish.",
-      "coverImage": "/images/embroidery/embroidered-floral-detail-01.webp",
+      "title": "Outline Art",
+      "slug": "outline-art",
+      "description": "Clean outlined panels with floral detail, lace-like borders, and a polished handmade finish.",
+      "coverImage": "/images/outline-art/golden-bloom-outline-01.webp",
       "accent": "#df7b80",
       "gallery": [
         {
-          "id": "MA53-EMB-001",
-          "image": "/images/embroidery/embroidered-floral-detail-01.webp",
+          "id": "MA53-OUT-001",
+          "image": "/images/outline-art/golden-bloom-outline-01.webp",
           "caption": "Golden Bloom Lace Panel"
         }
       ],
-      "story": "Embroidery adds quiet texture and detailed textile personality to fabric-led work and keepsakes.",
+      "story": "Outline art brings floral shapes, lace-inspired borders, and clean line detail into polished handmade panels.",
       "popularRequests": [
-        "Floral textile detail",
-        "Personalized motifs",
-        "Soft fabric accents"
+        "Floral outline panels",
+        "Lace-style borders",
+        "Personalized motifs"
       ],
       "useCases": [
         "Keepsakes",
-        "Home textiles",
+        "Decor panels",
         "Personal gifts"
       ]
     },
@@ -1879,31 +1879,11 @@
         {
           "id": "MA53-GFT-026",
           "image": "/images/customized-gifts/customized-gift-detail-26.webp",
-          "caption": "Welcome Home Wall Sign"
+          "caption": "Blue Border Welcome Home Plaque"
         },
         {
           "id": "MA53-GFT-027",
           "image": "/images/customized-gifts/customized-gift-detail-27.webp",
-          "caption": "Bilingual Welcome Home Plaque"
-        },
-        {
-          "id": "MA53-GFT-028",
-          "image": "/images/customized-gifts/customized-gift-detail-28.webp",
-          "caption": "Welcome Home Chair Corner"
-        },
-        {
-          "id": "MA53-GFT-029",
-          "image": "/images/customized-gifts/customized-gift-detail-29.webp",
-          "caption": "Ornate Welcome Home Plaque"
-        },
-        {
-          "id": "MA53-GFT-030",
-          "image": "/images/customized-gifts/customized-gift-detail-30.webp",
-          "caption": "Blue Border Welcome Home Plaque"
-        },
-        {
-          "id": "MA53-GFT-031",
-          "image": "/images/customized-gifts/customized-gift-detail-31.webp",
           "caption": "Moonlight Star Gift Boxes"
         }
       ],
