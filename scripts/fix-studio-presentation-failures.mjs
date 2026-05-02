@@ -25,17 +25,6 @@ const targets = [
     mode: "banner"
   },
   {
-    input: "creations/IMG-20250926-WA0013.jpg",
-    output: "public/images/lamasa/lamasa-decor-09.webp",
-    mode: "frame",
-    crop: { left: 35, top: 260, width: 790, height: 1010 }
-  },
-  {
-    input: "creations/IMG-20250927-WA0000.jpg",
-    output: "public/images/lamasa/lamasa-decor-10.webp",
-    mode: "yellowLamasa"
-  },
-  {
     input: "creations/IMG-20260309-WA0001.jpg",
     output: "public/images/mehendi/mehendi-design-92.webp",
     mode: "mehendiHand"

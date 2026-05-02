@@ -81,7 +81,7 @@
   "home": {
     "hero": {
       "eyebrow": "Handmade art portfolio",
-      "image": "/images/texture-art/texture-art-floral-relief-01.webp",
+      "image": "/images/texture-art/texture-art-gilded-bloom-04.webp",
       "featureLabel": "Selected handmade work",
       "frameLabel": "Featured piece",
       "journeyLabel": "Explore by medium",
@@ -264,8 +264,8 @@
       "title": "Handmade work with a soft eye for detail",
       "intro": "What began as a love for detailed handmade work has grown into a multi-medium creative practice for gifts, decor, textile details, and textured art.",
       "images": [
-        "/images/texture-art/texture-art-floral-relief-01.webp",
-        "/images/lamasa/lamasa-decor-05.webp",
+        "/images/texture-art/texture-art-gilded-bloom-04.webp",
+        "/images/lamasa/lamasa-decor-04.webp",
         "/images/customized-gifts/customized-gift-detail-08.webp"
       ]
     },
@@ -583,7 +583,7 @@
         "title": "How to care for handmade pieces",
         "excerpt": "Simple care habits for storing, gifting, and displaying handcrafted decor, textile detail, and keepsakes.",
         "readTime": "4 min read",
-        "image": "/images/lamasa/lamasa-decor-05.webp",
+        "image": "/images/lamasa/lamasa-decor-04.webp",
         "sections": [
           {
             "heading": "Keep it dry and supported",
@@ -830,7 +830,7 @@
       "title": "Decor & Art",
       "description": "Creative decor elements and artwork for spaces and events.",
       "isVisible": true,
-      "image": "/images/texture-art/texture-art-floral-relief-01.webp",
+      "image": "/images/texture-art/texture-art-gilded-bloom-04.webp",
       "startingFrom": "Quoted by size and material",
       "includes": [
         "Material planning",
@@ -875,7 +875,7 @@
       "title": "Texture Art",
       "slug": "texture-art",
       "description": "Layered texture artwork with sculptural details, raised surfaces, and dimensional finishes for statement decor.",
-      "coverImage": "/images/texture-art/texture-art-floral-relief-01.webp",
+      "coverImage": "/images/texture-art/texture-art-gilded-bloom-04.webp",
       "accent": "#2e7c80",
       "gallery": [
         {
@@ -884,7 +884,7 @@
           "caption": "Gilded Bloom Texture Detail",
           "seriesId": "gilded-bloom-texture-panel",
           "seriesTitle": "Gilded Bloom Texture Panel",
-          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
+          "seriesDescription": "A two-view texture art sequence showing the raised floral detail and styled display.",
           "seriesStage": "Detail view"
         },
         {
@@ -893,25 +893,16 @@
           "caption": "Gilded Bloom Styled Panel",
           "seriesId": "gilded-bloom-texture-panel",
           "seriesTitle": "Gilded Bloom Texture Panel",
-          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
+          "seriesDescription": "A two-view texture art sequence showing the raised floral detail and styled display.",
           "seriesStage": "Styled display"
         },
         {
           "id": "MA53-TEX-003",
-          "image": "/images/texture-art/texture-art-floral-relief-01.webp",
-          "caption": "Golden Bloom Relief Panel",
-          "seriesId": "gilded-bloom-texture-panel",
-          "seriesTitle": "Gilded Bloom Texture Panel",
-          "seriesDescription": "A three-view texture art sequence showing the raised floral detail, styled display, and finished relief panel.",
-          "seriesStage": "Finished panel"
-        },
-        {
-          "id": "MA53-TEX-004",
           "image": "/images/texture-art/texture-art-layered-leaf-display-03.webp",
           "caption": "Layered Leaf Texture Display"
         },
         {
-          "id": "MA53-TEX-005",
+          "id": "MA53-TEX-004",
           "image": "/images/texture-art/texture-art-pink-bloom-panel-05.webp",
           "caption": "Pink Bloom Texture Detail",
           "seriesId": "pink-bloom-texture-panel",
@@ -920,7 +911,7 @@
           "seriesStage": "Detail view"
         },
         {
-          "id": "MA53-TEX-006",
+          "id": "MA53-TEX-005",
           "image": "/images/texture-art/texture-art-pink-bloom-panel-06.webp",
           "caption": "Pink Bloom Styled Panel",
           "seriesId": "pink-bloom-texture-panel",
@@ -929,7 +920,7 @@
           "seriesStage": "Styled view"
         },
         {
-          "id": "MA53-TEX-007",
+          "id": "MA53-TEX-006",
           "image": "/images/texture-art/texture-art-emerald-flow-panel-07.webp",
           "caption": "Emerald Flow Texture Panel"
         }
@@ -1479,6 +1470,7 @@
       "isVisible": true,
       "title": "Lamasa",
       "slug": "lamasa",
+      "reserveSeriesNumbers": true,
       "description": "Handmade lamasa decor pieces shaped with playful detail, soft color, and a polished finish.",
       "coverImage": "/images/lamasa/lamasa-decor-01.webp",
       "accent": "#e1a135",
@@ -1491,51 +1483,24 @@
         {
           "id": "MA53-LAM-002",
           "image": "/images/lamasa/lamasa-decor-02.webp",
-          "caption": "Moonboat Star Bowl",
-          "isVisible": false
+          "caption": "Moonlit Star Trinket Tray",
+          "seriesId": "lamasa-trinket-stage-set",
+          "seriesTitle": "Lamasa Trinket Stage Set",
+          "seriesDescription": "A two-stage lamasa sequence showing the coordinated handmade decor views as one set.",
+          "seriesStage": "Tray view"
         },
         {
           "id": "MA53-LAM-003",
-          "image": "/images/lamasa/lamasa-decor-03-lamasa1.webp",
-          "caption": "Moonlit Star Trinket Tray"
+          "image": "/images/lamasa/lamasa-decor-03.webp",
+          "caption": "Pastel Daisy Scatter Set",
+          "seriesId": "lamasa-trinket-stage-set",
+          "seriesTitle": "Lamasa Trinket Stage Set",
+          "seriesDescription": "A two-stage lamasa sequence showing the coordinated handmade decor views as one set.",
+          "seriesStage": "Scatter view"
         },
         {
           "id": "MA53-LAM-004",
           "image": "/images/lamasa/lamasa-decor-04.webp",
-          "caption": "Starlit Moon Keepsake Bowl",
-          "isVisible": false
-        },
-        {
-          "id": "MA53-LAM-005",
-          "image": "/images/lamasa/lamasa-decor-05.webp",
-          "caption": "Twin Moonstar Decor Bowls",
-          "isVisible": false
-        },
-        {
-          "id": "MA53-LAM-006",
-          "image": "/images/lamasa/lamasa-decor-06.webp",
-          "caption": "Blue Daisy Mini Blooms"
-        },
-        {
-          "id": "MA53-LAM-007",
-          "image": "/images/lamasa/lamasa-decor-07.webp",
-          "caption": "Pastel Daisy Scatter Set"
-        },
-        {
-          "id": "MA53-LAM-008",
-          "image": "/images/lamasa/lamasa-decor-08.webp",
-          "caption": "Sunflower Cup Keepsake",
-          "isVisible": false
-        },
-        {
-          "id": "MA53-LAM-009",
-          "image": "/images/lamasa/lamasa-decor-09.webp",
-          "caption": "Daisy Night Wall Hanging",
-          "isVisible": false
-        },
-        {
-          "id": "MA53-LAM-010",
-          "image": "/images/lamasa/lamasa-decor-10.webp",
           "caption": "Sunflower Garden Wall Hanging"
         }
       ],
