@@ -539,7 +539,7 @@
         "title": "From sketch to final touch",
         "excerpt": "A painting does not arrive all at once. This portrait sequence shows the patience behind the work: paper sketch, canvas draft, color layers, refinement, and final detail.",
         "readTime": "4 min read",
-        "image": "/images/paintings/hand-painted-artwork-29.webp",
+        "image": "/images/paintings/hand-painted-artwork-29-painting1.webp",
         "sections": [
           {
             "heading": "The first line is a thinking space",
@@ -810,6 +810,7 @@
     "socialTitle": "Connect",
     "contactLabel": "Start a request",
     "contactHref": "/contact",
+    "copyrightYear": "2026",
     "copyright": "Meraki Arts 53. All rights reserved."
   },
   "services": [
@@ -906,8 +907,31 @@
         },
         {
           "id": "MA53-TEX-004",
-          "image": "/images/texture-art/texture-art-leaf-relief-03.webp",
-          "caption": "Layered Leaf Texture Study"
+          "image": "/images/texture-art/texture-art-layered-leaf-display-03.webp",
+          "caption": "Layered Leaf Texture Display"
+        },
+        {
+          "id": "MA53-TEX-005",
+          "image": "/images/texture-art/texture-art-pink-bloom-panel-05.webp",
+          "caption": "Pink Bloom Texture Detail",
+          "seriesId": "pink-bloom-texture-panel",
+          "seriesTitle": "Pink Bloom Texture Panel",
+          "seriesDescription": "A two-view texture art sequence showing the raised floral texture in close detail and as a styled finished panel.",
+          "seriesStage": "Detail view"
+        },
+        {
+          "id": "MA53-TEX-006",
+          "image": "/images/texture-art/texture-art-pink-bloom-panel-06.webp",
+          "caption": "Pink Bloom Styled Panel",
+          "seriesId": "pink-bloom-texture-panel",
+          "seriesTitle": "Pink Bloom Texture Panel",
+          "seriesDescription": "A two-view texture art sequence showing the raised floral texture in close detail and as a styled finished panel.",
+          "seriesStage": "Styled view"
+        },
+        {
+          "id": "MA53-TEX-007",
+          "image": "/images/texture-art/texture-art-emerald-flow-panel-07.webp",
+          "caption": "Emerald Flow Texture Panel"
         }
       ],
       "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully.",
@@ -1472,8 +1496,8 @@
         },
         {
           "id": "MA53-LAM-003",
-          "image": "/images/lamasa/lamasa-decor-03.webp",
-          "caption": "Moon and Star Tray"
+          "image": "/images/lamasa/lamasa-decor-03-lamasa1.webp",
+          "caption": "Moonlit Star Trinket Tray"
         },
         {
           "id": "MA53-LAM-004",
@@ -1698,8 +1722,8 @@
         },
         {
           "id": "MA53-PNT-029",
-          "image": "/images/paintings/hand-painted-artwork-29.webp",
-          "caption": "Joyful Offering Portrait",
+          "image": "/images/paintings/hand-painted-artwork-29-painting1.webp",
+          "caption": "Heritage Offering Portrait",
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
@@ -1876,6 +1900,11 @@
           "id": "MA53-GFT-030",
           "image": "/images/customized-gifts/customized-gift-detail-30.webp",
           "caption": "Blue Border Welcome Home Plaque"
+        },
+        {
+          "id": "MA53-GFT-031",
+          "image": "/images/customized-gifts/customized-gift-detail-31.webp",
+          "caption": "Moonlight Star Gift Boxes"
         }
       ],
       "story": "Custom gifts turn personal details into handmade keepsakes designed around the recipient and occasion.",

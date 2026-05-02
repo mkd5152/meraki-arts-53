@@ -249,17 +249,25 @@ export function GalleryGrid({
       const displayReferenceId = seriesId
         ? referenceMaps.seriesReferenceIds.get(getSeriesKey(item))
         : referenceMaps.itemReferenceIds.get(getItemKey(item));
+      const seriesItems = item.seriesItems?.map((seriesItem) => ({
+        ...seriesItem,
+        referenceId:
+          referenceMaps.stageReferenceIds.get(getItemKey(seriesItem)) ??
+          seriesItem.referenceId
+      }));
+      const initialSeriesIndex = seriesItems?.length
+        ? seriesItems.length - 1
+        : undefined;
+      const representativeItem =
+        initialSeriesIndex === undefined ? undefined : seriesItems?.[initialSeriesIndex];
 
       return {
         ...item,
+        image: representativeItem?.image ?? item.image,
         referenceId: displayReferenceId ?? item.referenceId,
         displayReferenceId: displayReferenceId ?? item.referenceId,
-        seriesItems: item.seriesItems?.map((seriesItem) => ({
-          ...seriesItem,
-          referenceId:
-            referenceMaps.stageReferenceIds.get(getItemKey(seriesItem)) ??
-            seriesItem.referenceId
-        }))
+        seriesItems,
+        initialSeriesIndex
       };
     })
     .slice(0, limit ?? items.length);

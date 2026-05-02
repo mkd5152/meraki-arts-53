@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { GalleryViewerContent } from "@/lib/getData";
 
 export type LightboxItem = {
@@ -13,6 +14,7 @@ export type LightboxItem = {
   seriesItems?: LightboxItem[];
   seriesDescription?: string;
   seriesStage?: string;
+  initialSeriesIndex?: number;
 };
 
 type SimilarLightboxItem = LightboxItem & {
@@ -50,10 +52,15 @@ export function ImageLightbox({
   getInquiryHref,
   watermarkSrc
 }: ImageLightboxProps) {
+  const [mounted, setMounted] = useState(false);
   const [zoomed, setZoomed] = useState(false);
   const [seriesIndex, setSeriesIndex] = useState(0);
   const seriesItems = item?.seriesItems?.length ? item.seriesItems : [];
   const activeItem = seriesItems[seriesIndex] ?? item;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!item) {
@@ -61,7 +68,7 @@ export function ImageLightbox({
     }
 
     setZoomed(false);
-    setSeriesIndex(0);
+    setSeriesIndex(item.initialSeriesIndex ?? 0);
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -86,11 +93,15 @@ export function ImageLightbox({
     };
   }, [item, onClose, onNext, onPrevious]);
 
-  return (
+  if (!mounted) {
+    return null;
+  }
+
+  return createPortal(
     <AnimatePresence>
       {item && (
         <motion.div
-          className="fixed inset-0 z-[80] bg-ink/80 px-3 py-4 backdrop-blur-sm sm:p-6"
+          className="fixed inset-0 z-[80] bg-ink/88 p-0 backdrop-blur-sm sm:p-4"
           role="dialog"
           aria-modal="true"
           aria-label={labels.viewerLabel}
@@ -107,58 +118,68 @@ export function ImageLightbox({
           />
 
           <motion.div
-            className="relative mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-[1.5rem] bg-soft shadow-frame"
+            className="relative mx-auto flex h-[100dvh] w-full max-w-7xl flex-col overflow-hidden bg-ink shadow-frame sm:h-[calc(100dvh-2rem)] sm:rounded-[1.25rem]"
             initial={{ opacity: 0, y: 16, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.24, ease: "easeOut" }}
           >
-            <div className="flex items-start justify-between gap-4 border-b border-line bg-panel px-4 py-3 sm:px-5">
-              <div className="min-w-0">
+            <div className="absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 bg-gradient-to-b from-ink/88 via-ink/54 to-transparent px-3 pb-12 pt-3 text-paper sm:px-5 sm:pt-5">
+              <div className="min-w-0 rounded-2xl bg-ink/52 px-3 py-2 shadow-soft backdrop-blur sm:px-4">
                 {item.categoryTitle && (
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-clay">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-paper/72">
                     {item.categoryTitle}
                   </p>
                 )}
                 <div className="mt-1 flex min-w-0 flex-wrap items-center gap-2">
-                  <h2 className="min-w-0 truncate text-base font-semibold text-ink sm:text-lg">
+                  <h2 className="min-w-0 text-sm font-semibold leading-snug text-paper sm:text-base">
                     {item.caption}
                   </h2>
                   {activeItem?.referenceId && (
-                    <span className="shrink-0 rounded-full border border-line bg-soft px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-muted">
+                    <span className="shrink-0 rounded-full border border-paper/18 bg-paper/10 px-2.5 py-1 font-mono text-[9px] font-semibold uppercase tracking-[0.08em] text-paper/82">
                       {activeItem.referenceId}
                     </span>
                   )}
                 </div>
                 {seriesItems.length > 1 && activeItem && (
-                  <p className="mt-1 text-xs font-medium text-muted">
+                  <p className="mt-1 line-clamp-1 text-[11px] font-medium text-paper/70">
                     {activeItem.seriesStage
                       ? `${activeItem.seriesStage}: ${activeItem.caption}`
                       : activeItem.caption}
                   </p>
                 )}
-                <p className="mt-1 text-xs font-medium text-muted">
+                <p className="mt-1 text-[11px] font-medium text-paper/58">
                   {currentIndex + 1} / {total}
                 </p>
               </div>
 
-              <button
-                type="button"
-                onClick={onClose}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-soft text-lg font-semibold text-ink transition hover:border-clay hover:text-clay"
-                aria-label={labels.closeLabel}
-              >
-                X
-              </button>
+              <div className="flex shrink-0 items-center gap-2">
+                {inquiryLabel && getInquiryHref && (
+                  <a
+                    href={getInquiryHref(activeItem ?? item)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hidden min-h-10 items-center justify-center rounded-full bg-paper px-4 text-xs font-semibold text-ink shadow-soft transition hover:bg-gold sm:inline-flex"
+                  >
+                    {inquiryLabel}
+                  </a>
+                )}
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/16 bg-ink/68 text-lg font-semibold text-paper shadow-soft backdrop-blur transition hover:border-paper/42 hover:bg-paper hover:text-ink"
+                  aria-label={labels.closeLabel}
+                >
+                  X
+                </button>
+              </div>
             </div>
 
-            <div className="relative min-h-0 flex-1 overflow-auto bg-ink">
+            <div className="relative min-h-0 flex-1 overflow-hidden bg-ink">
               <button
                 type="button"
                 onClick={() => setZoomed((current) => !current)}
-                className={`relative block h-full min-h-[22rem] w-full touch-pan-x touch-pan-y ${
-                  zoomed ? "min-w-[140%] cursor-zoom-out" : "cursor-zoom-in"
-                }`}
+                className="relative block h-full min-h-[24rem] w-full touch-pan-x touch-pan-y cursor-zoom-in overflow-hidden"
                 aria-label={zoomed ? labels.closeLabel : labels.openLabel}
               >
                 <Image
@@ -166,9 +187,10 @@ export function ImageLightbox({
                   alt={activeItem?.caption ?? item.caption}
                   fill
                   priority
+                  unoptimized
                   sizes="(min-width: 1280px) 1152px, 100vw"
-                  className={`object-contain transition duration-300 ${
-                    zoomed ? "scale-125" : "scale-100"
+                  className={`object-cover object-[68%_50%] transition duration-300 sm:object-center ${
+                    zoomed ? "scale-110" : "scale-100"
                   }`}
                 />
               </button>
@@ -184,23 +206,12 @@ export function ImageLightbox({
                 />
               )}
 
-              {inquiryLabel && getInquiryHref && (
-                <a
-                  href={getInquiryHref(activeItem ?? item)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="absolute bottom-4 left-1/2 z-10 inline-flex min-h-11 -translate-x-1/2 items-center justify-center rounded-full bg-paper px-5 text-sm font-semibold text-ink shadow-soft transition hover:bg-gold"
-                >
-                  {inquiryLabel}
-                </a>
-              )}
-
               {total > 1 && (
                 <>
                   <button
                     type="button"
                     onClick={onPrevious}
-                    className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-paper hover:text-clay sm:left-5"
+                    className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/88 text-xl font-semibold text-ink shadow-soft backdrop-blur transition hover:bg-paper hover:text-clay sm:left-5"
                     aria-label={labels.previousLabel}
                   >
                     <span aria-hidden="true">&lt;</span>
@@ -208,7 +219,7 @@ export function ImageLightbox({
                   <button
                     type="button"
                     onClick={onNext}
-                    className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 text-xl font-semibold text-ink shadow-soft transition hover:bg-paper hover:text-clay sm:right-5"
+                    className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/88 text-xl font-semibold text-ink shadow-soft backdrop-blur transition hover:bg-paper hover:text-clay sm:right-5"
                     aria-label={labels.nextLabel}
                   >
                     <span aria-hidden="true">&gt;</span>
@@ -216,71 +227,94 @@ export function ImageLightbox({
                 </>
               )}
             </div>
-            {seriesItems.length > 1 && (
-              <div className="border-t border-line bg-panel p-3">
-                <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                  {labels.seriesLabel}
-                </p>
-                <div className="flex gap-3 overflow-x-auto pb-1">
-                  {seriesItems.map((seriesItem, index) => (
-                    <button
-                      key={`${seriesItem.image}-${index}`}
-                      type="button"
-                      onClick={() => {
-                        setSeriesIndex(index);
-                        setZoomed(false);
-                      }}
-                      className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border bg-mist transition ${
-                        index === seriesIndex ? "border-clay" : "border-line"
-                      }`}
-                      aria-label={`${seriesItem.referenceId ?? index + 1}: ${
-                        seriesItem.caption
-                      }`}
-                    >
-                      <Image
-                        src={seriesItem.image}
-                        alt={seriesItem.caption}
-                        fill
-                        sizes="80px"
-                        className="object-cover"
-                      />
-                      <span className="absolute inset-x-1 bottom-1 truncate rounded-full bg-ink/72 px-1 py-0.5 font-mono text-[7px] font-semibold uppercase tracking-[0.02em] text-paper">
-                        {seriesItem.referenceId ?? index + 1}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-            {similarItems.length > 0 && similarLabel && onSelectIndex && (
-              <div className="border-t border-line bg-panel p-3">
-                <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                  {similarLabel}
-                </p>
-                <div className="flex gap-3 overflow-x-auto pb-1">
-                  {similarItems.map((similar) => (
-                    <button
-                      key={`${similar.image}-${similar.index}`}
-                      type="button"
-                      onClick={() => onSelectIndex(similar.index)}
-                      className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-line bg-mist transition hover:border-clay"
-                      aria-label={similar.caption}
-                    >
-                      <Image
-                        src={similar.image}
-                        alt={similar.caption}
-                        fill
-                        sizes="80px"
-                        className="object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
+            {(seriesItems.length > 1 ||
+              (similarItems.length > 0 && similarLabel && onSelectIndex) ||
+              (inquiryLabel && getInquiryHref)) && (
+              <div className="shrink-0 border-t border-paper/10 bg-ink/92 px-3 py-3 text-paper sm:px-5">
+                {inquiryLabel && getInquiryHref && (
+                  <a
+                    href={getInquiryHref(activeItem ?? item)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mb-3 inline-flex min-h-10 w-full items-center justify-center rounded-full bg-paper px-4 text-xs font-semibold text-ink shadow-soft transition hover:bg-gold sm:hidden"
+                  >
+                    {inquiryLabel}
+                  </a>
+                )}
+                {seriesItems.length > 1 && (
+                  <div>
+                    <p className="mb-2 px-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-paper/62">
+                      {labels.seriesLabel}
+                    </p>
+                    <div className="flex gap-2 overflow-x-auto pb-1">
+                      {seriesItems.map((seriesItem, index) => (
+                        <button
+                          key={`${seriesItem.image}-${index}`}
+                          type="button"
+                          onClick={() => {
+                            setSeriesIndex(index);
+                            setZoomed(false);
+                          }}
+                          className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border bg-mist transition sm:h-20 sm:w-20 ${
+                            index === seriesIndex
+                              ? "border-gold ring-2 ring-gold/35"
+                              : "border-paper/18"
+                          }`}
+                          aria-label={`${seriesItem.referenceId ?? index + 1}: ${
+                            seriesItem.caption
+                          }`}
+                        >
+                          <Image
+                            src={seriesItem.image}
+                            alt={seriesItem.caption}
+                            fill
+                            unoptimized
+                            loading="eager"
+                            sizes="80px"
+                            className="object-cover"
+                          />
+                          <span className="absolute inset-x-1 bottom-1 truncate rounded-full bg-ink/72 px-1 py-0.5 font-mono text-[6px] font-semibold uppercase tracking-[0.02em] text-paper sm:text-[7px]">
+                            {seriesItem.referenceId ?? index + 1}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {similarItems.length > 0 && similarLabel && onSelectIndex && (
+                  <div className="mt-3 hidden sm:block">
+                    <p className="mb-2 px-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-paper/62">
+                      {similarLabel}
+                    </p>
+                    <div className="flex gap-2 overflow-x-auto pb-1">
+                      {similarItems.map((similar) => (
+                        <button
+                          key={`${similar.image}-${similar.index}`}
+                          type="button"
+                          onClick={() => onSelectIndex(similar.index)}
+                          className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-paper/18 bg-mist transition hover:border-gold"
+                          aria-label={similar.caption}
+                        >
+                          <Image
+                            src={similar.image}
+                            alt={similar.caption}
+                            fill
+                            unoptimized
+                            loading="eager"
+                            sizes="64px"
+                            className="object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }

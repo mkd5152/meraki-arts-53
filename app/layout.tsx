@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className={montserrat.variable}>
+      <body className={montserrat.variable} suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{
             __html:

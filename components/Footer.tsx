@@ -28,7 +28,7 @@ export function Footer({ brand, footer, links }: FooterProps) {
             {footer.description}
           </p>
           <p className="mt-6 text-xs text-muted/70">
-            {new Date().getFullYear()} {footer.copyright}
+            {footer.copyrightYear} {footer.copyright}
           </p>
         </div>
         <div className="grid content-start gap-3">
