@@ -5,7 +5,7 @@ const canvas = { width: 1600, height: 1200 };
 const targets = [
   {
     input: "creations/IMG-20220525-WA0010.jpg",
-    output: "public/images/paintings/hand-painted-artwork-05.webp",
+    output: "public/images/paintings/hand-painted-artwork-06.webp",
     mode: "frame",
     crop: null
   },

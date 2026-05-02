@@ -88,9 +88,6 @@ export function GalleryGrid({
     () =>
       artForms.flatMap((artForm) =>
         artForm.gallery.map((item, itemIndex) => {
-          const reserveSeriesNumbers =
-            "reserveSeriesNumbers" in artForm &&
-            artForm.reserveSeriesNumbers === true;
           const profiles = filters?.profiles as
             | Record<string, FilterProfile>
             | undefined;
@@ -115,7 +112,6 @@ export function GalleryGrid({
             categoryTitle: artForm.title,
             categorySlug: artForm.slug,
             categoryAccent: artForm.accent,
-            reserveSeriesNumbers,
             tags
           };
         })
@@ -158,8 +154,6 @@ export function GalleryGrid({
     "seriesDescription" in item && typeof item.seriesDescription === "string"
       ? item.seriesDescription
       : undefined;
-  const getReserveSeriesNumbers = (item: GalleryItem) =>
-    "reserveSeriesNumbers" in item && item.reserveSeriesNumbers === true;
   const getSeriesKey = (item: GalleryItem) =>
     `${item.categoryId}:${getSeriesId(item)}`;
   const getItemKey = (item: GalleryItem) =>
@@ -192,18 +186,10 @@ export function GalleryGrid({
 
       const seriesKey = getSeriesKey(item);
       let parentReferenceId = seriesReferenceIds.get(seriesKey);
-      const reserveSeriesNumbers = getReserveSeriesNumbers(item);
-
-      if (reserveSeriesNumbers) {
-        visibleCategoryCounts[item.categoryId] =
-          (visibleCategoryCounts[item.categoryId] ?? 0) + 1;
-      }
 
       if (!parentReferenceId) {
-        if (!reserveSeriesNumbers) {
-          visibleCategoryCounts[item.categoryId] =
-            (visibleCategoryCounts[item.categoryId] ?? 0) + 1;
-        }
+        visibleCategoryCounts[item.categoryId] =
+          (visibleCategoryCounts[item.categoryId] ?? 0) + 1;
         parentReferenceId = getGalleryReferenceId(
           item.categoryId,
           visibleCategoryCounts[item.categoryId] - 1
