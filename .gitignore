@@ -9,6 +9,8 @@ dist
 # Local source assets and generated backups
 backups/
 creations/*
+!creations/segregated/
+!creations/segregated/**
 !creations/_inbox/
 creations/_inbox/*
 !creations/_inbox/README.md

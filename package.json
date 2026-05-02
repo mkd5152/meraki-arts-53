@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "images:check-inbox": "node scripts/check-image-inbox.mjs"
+    "images:check-inbox": "node scripts/check-image-inbox.mjs",
+    "images:check-parity": "node scripts/check-image-parity.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.0.0",

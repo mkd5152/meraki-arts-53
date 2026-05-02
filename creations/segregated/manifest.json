@@ -3,10 +3,10 @@
   "note": "Original source files copied into category folders to mirror public/images. Top-level creation files were not moved or edited.",
   "counts": {
     "paintings": 29,
-    "customized-gifts": 30,
+    "customized-gifts": 27,
     "mehendi": 93,
     "lamasa": 4,
-    "texture-art": 3,
+    "texture-art": 6,
     "rida-design": 6,
     "outline-art": 1,
     "terrazzo": 1,
@@ -17,7 +17,7 @@
       "sourceIndex": 1,
       "category": "paintings",
       "sourceFile": "IMG-20220523-WA0006.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-02__IMG-20220523-WA0006.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-02.jpg",
       "originalPath": "creations/original-imports/IMG-20220523-WA0006.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-02.webp"
     },
@@ -25,7 +25,7 @@
       "sourceIndex": 2,
       "category": "paintings",
       "sourceFile": "IMG-20220524-WA0000.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-03__IMG-20220524-WA0000.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-03.jpg",
       "originalPath": "creations/original-imports/IMG-20220524-WA0000.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-03.webp"
     },
@@ -33,7 +33,7 @@
       "sourceIndex": 3,
       "category": "paintings",
       "sourceFile": "IMG-20220524-WA0004.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-04__IMG-20220524-WA0004.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-04.jpg",
       "originalPath": "creations/original-imports/IMG-20220524-WA0004.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-04.webp"
     },
@@ -41,7 +41,7 @@
       "sourceIndex": 4,
       "category": "paintings",
       "sourceFile": "IMG-20220524-WA0005.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-05__IMG-20220524-WA0005.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-05.jpg",
       "originalPath": "creations/original-imports/IMG-20220524-WA0005.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-05.webp"
     },
@@ -49,7 +49,7 @@
       "sourceIndex": 5,
       "category": "paintings",
       "sourceFile": "IMG-20220525-WA0010.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-06__IMG-20220525-WA0010.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-06.jpg",
       "originalPath": "creations/original-imports/IMG-20220525-WA0010.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-06.webp"
     },
@@ -57,7 +57,7 @@
       "sourceIndex": 6,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0006.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-01__IMG-20220626-WA0006.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-01.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0006.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-01.webp"
     },
@@ -65,7 +65,7 @@
       "sourceIndex": 7,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0007.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-02__IMG-20220626-WA0007.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-02.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0007.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-02.webp"
     },
@@ -73,7 +73,7 @@
       "sourceIndex": 8,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0008.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-03__IMG-20220626-WA0008.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-03.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0008.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-03.webp"
     },
@@ -81,7 +81,7 @@
       "sourceIndex": 9,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0009.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-04__IMG-20220626-WA0009.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-04.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0009.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-04.webp"
     },
@@ -89,7 +89,7 @@
       "sourceIndex": 10,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0010.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-05__IMG-20220626-WA0010.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-05.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0010.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-05.webp"
     },
@@ -97,7 +97,7 @@
       "sourceIndex": 11,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0011.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-06__IMG-20220626-WA0011.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-06.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0011.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-06.webp"
     },
@@ -105,7 +105,7 @@
       "sourceIndex": 12,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0012.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-07__IMG-20220626-WA0012.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-07.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0012.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-07.webp"
     },
@@ -113,7 +113,7 @@
       "sourceIndex": 13,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0013.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-08__IMG-20220626-WA0013.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-08.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0013.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-08.webp"
     },
@@ -121,7 +121,7 @@
       "sourceIndex": 14,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0014.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-09__IMG-20220626-WA0014.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-09.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0014.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-09.webp"
     },
@@ -129,7 +129,7 @@
       "sourceIndex": 15,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0015.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-10__IMG-20220626-WA0015.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-10.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0015.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-10.webp"
     },
@@ -137,7 +137,7 @@
       "sourceIndex": 16,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0016.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-11__IMG-20220626-WA0016.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-11.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0016.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-11.webp"
     },
@@ -145,7 +145,7 @@
       "sourceIndex": 17,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0017.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-12__IMG-20220626-WA0017.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-12.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0017.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-12.webp"
     },
@@ -153,7 +153,7 @@
       "sourceIndex": 18,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0018.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-13__IMG-20220626-WA0018.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-13.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0018.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-13.webp"
     },
@@ -161,7 +161,7 @@
       "sourceIndex": 19,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0019.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-14__IMG-20220626-WA0019.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-14.jpg",
       "originalPath": "creations/original-imports/IMG-20220626-WA0019.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-14.webp"
     },
@@ -169,7 +169,7 @@
       "sourceIndex": 20,
       "category": "customized-gifts",
       "sourceFile": "IMG-20230308-WA0007.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-15__IMG-20230308-WA0007.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-15.jpg",
       "originalPath": "creations/original-imports/IMG-20230308-WA0007.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-15.webp"
     },
@@ -177,7 +177,7 @@
       "sourceIndex": 21,
       "category": "customized-gifts",
       "sourceFile": "IMG-20230309-WA0009.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-16__IMG-20230309-WA0009.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-16.jpg",
       "originalPath": "creations/original-imports/IMG-20230309-WA0009.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-16.webp"
     },
@@ -185,7 +185,7 @@
       "sourceIndex": 22,
       "category": "customized-gifts",
       "sourceFile": "IMG-20230309-WA0010.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-17__IMG-20230309-WA0010.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-17.jpg",
       "originalPath": "creations/original-imports/IMG-20230309-WA0010.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-17.webp"
     },
@@ -193,7 +193,7 @@
       "sourceIndex": 23,
       "category": "customized-gifts",
       "sourceFile": "IMG-20231118-WA0024.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-18__IMG-20231118-WA0024.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-18.jpg",
       "originalPath": "creations/original-imports/IMG-20231118-WA0024.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-18.webp"
     },
@@ -201,7 +201,7 @@
       "sourceIndex": 24,
       "category": "mehendi",
       "sourceFile": "IMG-20231124-WA0019.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-01__IMG-20231124-WA0019.jpg",
+      "copiedFile": "mehendi/mehendi-design-01.jpg",
       "originalPath": "creations/original-imports/IMG-20231124-WA0019.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-01.webp"
     },
@@ -209,7 +209,7 @@
       "sourceIndex": 25,
       "category": "mehendi",
       "sourceFile": "IMG-20231124-WA0021.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-02__IMG-20231124-WA0021.jpg",
+      "copiedFile": "mehendi/mehendi-design-02.jpg",
       "originalPath": "creations/original-imports/IMG-20231124-WA0021.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-02.webp"
     },
@@ -217,7 +217,7 @@
       "sourceIndex": 26,
       "category": "mehendi",
       "sourceFile": "IMG-20231124-WA0022.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-03__IMG-20231124-WA0022.jpg",
+      "copiedFile": "mehendi/mehendi-design-03.jpg",
       "originalPath": "creations/original-imports/IMG-20231124-WA0022.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-03.webp"
     },
@@ -225,7 +225,7 @@
       "sourceIndex": 27,
       "category": "customized-gifts",
       "sourceFile": "IMG-20231125-WA0001.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-19__IMG-20231125-WA0001.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-19.jpg",
       "originalPath": "creations/original-imports/IMG-20231125-WA0001.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-19.webp"
     },
@@ -233,7 +233,7 @@
       "sourceIndex": 28,
       "category": "lamasa",
       "sourceFile": "IMG-20231126-WA0002.jpg",
-      "copiedFile": "lamasa/lamasa-decor-source-01__IMG-20231126-WA0002.jpg",
+      "copiedFile": "lamasa/lamasa-decor-01.jpg",
       "originalPath": "creations/original-imports/IMG-20231126-WA0002.jpg",
       "publicImage": "public/images/lamasa/lamasa-decor-01.webp"
     },
@@ -241,7 +241,7 @@
       "sourceIndex": 29,
       "category": "customized-gifts",
       "sourceFile": "IMG-20231214-WA0119.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-20__IMG-20231214-WA0119.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-20.jpg",
       "originalPath": "creations/original-imports/IMG-20231214-WA0119.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-20.webp"
     },
@@ -249,7 +249,7 @@
       "sourceIndex": 30,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0013.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-07__IMG-20240312-WA0013.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-07.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0013.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-07.webp"
     },
@@ -257,7 +257,7 @@
       "sourceIndex": 31,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0014.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-08__IMG-20240312-WA0014.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-08.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0014.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-08.webp"
     },
@@ -265,7 +265,7 @@
       "sourceIndex": 32,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0015.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-09__IMG-20240312-WA0015.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-09.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0015.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-09.webp"
     },
@@ -273,7 +273,7 @@
       "sourceIndex": 33,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0016.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-10__IMG-20240312-WA0016.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-10.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0016.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-10.webp"
     },
@@ -281,7 +281,7 @@
       "sourceIndex": 34,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0017.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-11__IMG-20240312-WA0017.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-11.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0017.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-11.webp"
     },
@@ -289,7 +289,7 @@
       "sourceIndex": 35,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0018.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-12__IMG-20240312-WA0018.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-12.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0018.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-12.webp"
     },
@@ -297,7 +297,7 @@
       "sourceIndex": 36,
       "category": "paintings",
       "sourceFile": "IMG-20240312-WA0019.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-13__IMG-20240312-WA0019.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-13.jpg",
       "originalPath": "creations/original-imports/IMG-20240312-WA0019.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-13.webp"
     },
@@ -305,7 +305,7 @@
       "sourceIndex": 37,
       "category": "paintings",
       "sourceFile": "IMG-20240321-WA0000.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-14__IMG-20240321-WA0000.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-14.jpg",
       "originalPath": "creations/original-imports/IMG-20240321-WA0000.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-14.webp"
     },
@@ -313,7 +313,7 @@
       "sourceIndex": 38,
       "category": "paintings",
       "sourceFile": "IMG-20240321-WA0002.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-15__IMG-20240321-WA0002.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-15.jpg",
       "originalPath": "creations/original-imports/IMG-20240321-WA0002.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-15.webp"
     },
@@ -321,7 +321,7 @@
       "sourceIndex": 39,
       "category": "paintings",
       "sourceFile": "IMG-20240321-WA0016.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-16__IMG-20240321-WA0016.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-16.jpg",
       "originalPath": "creations/original-imports/IMG-20240321-WA0016.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-16.webp"
     },
@@ -329,7 +329,7 @@
       "sourceIndex": 40,
       "category": "paintings",
       "sourceFile": "IMG-20240327-WA0014.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-17__IMG-20240327-WA0014.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-17.jpg",
       "originalPath": "creations/original-imports/IMG-20240327-WA0014.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-17.webp"
     },
@@ -337,7 +337,7 @@
       "sourceIndex": 41,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0017.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-18__IMG-20240406-WA0017.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-18.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0017.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-18.webp"
     },
@@ -345,7 +345,7 @@
       "sourceIndex": 42,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0018.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-19__IMG-20240406-WA0018.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-19.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0018.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-19.webp"
     },
@@ -353,7 +353,7 @@
       "sourceIndex": 43,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0019.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-20__IMG-20240406-WA0019.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-20.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0019.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-20.webp"
     },
@@ -361,7 +361,7 @@
       "sourceIndex": 44,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0020.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-21__IMG-20240406-WA0020.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-21.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0020.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-21.webp"
     },
@@ -369,7 +369,7 @@
       "sourceIndex": 45,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0021.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-22__IMG-20240406-WA0021.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-22.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0021.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-22.webp"
     },
@@ -377,7 +377,7 @@
       "sourceIndex": 46,
       "category": "paintings",
       "sourceFile": "IMG-20240406-WA0022.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-23__IMG-20240406-WA0022.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-23.jpg",
       "originalPath": "creations/original-imports/IMG-20240406-WA0022.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-23.webp"
     },
@@ -385,7 +385,7 @@
       "sourceIndex": 47,
       "category": "paintings",
       "sourceFile": "IMG-20250103-WA0001.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-24__IMG-20250103-WA0001.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-24.jpg",
       "originalPath": "creations/original-imports/IMG-20250103-WA0001.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-24.webp"
     },
@@ -393,7 +393,7 @@
       "sourceIndex": 48,
       "category": "customized-gifts",
       "sourceFile": "IMG-20250120-WA0002.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-21__IMG-20250120-WA0002.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-21.jpg",
       "originalPath": "creations/original-imports/IMG-20250120-WA0002.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-21.webp"
     },
@@ -401,7 +401,7 @@
       "sourceIndex": 49,
       "category": "paintings",
       "sourceFile": "IMG-20250221-WA0012.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-001__IMG-20250221-WA0012.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-01-001.jpg",
       "originalPath": "creations/original-imports/IMG-20250221-WA0012.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-001.webp"
     },
@@ -409,7 +409,7 @@
       "sourceIndex": 50,
       "category": "paintings",
       "sourceFile": "IMG-20250221-WA0014.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-002__IMG-20250221-WA0014.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-01-002.jpg",
       "originalPath": "creations/original-imports/IMG-20250221-WA0014.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-002.webp"
     },
@@ -417,7 +417,7 @@
       "sourceIndex": 51,
       "category": "paintings",
       "sourceFile": "IMG-20250221-WA0015.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-003__IMG-20250221-WA0015.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-01-003.jpg",
       "originalPath": "creations/original-imports/IMG-20250221-WA0015.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-003.webp"
     },
@@ -425,7 +425,7 @@
       "sourceIndex": 52,
       "category": "paintings",
       "sourceFile": "IMG-20250221-WA0016.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-004__IMG-20250221-WA0016.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-01-004.jpg",
       "originalPath": "creations/original-imports/IMG-20250221-WA0016.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-004.webp"
     },
@@ -433,7 +433,7 @@
       "sourceIndex": 53,
       "category": "paintings",
       "sourceFile": "IMG-20250222-WA0002.jpg",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-005__IMG-20250222-WA0002.jpg",
+      "copiedFile": "paintings/hand-painted-artwork-01-005.jpg",
       "originalPath": "creations/original-imports/IMG-20250222-WA0002.jpg",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-005.webp"
     },
@@ -448,7 +448,7 @@
       "sourceIndex": 55,
       "category": "customized-gifts",
       "sourceFile": "IMG-20250222-WA0017.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-22__IMG-20250222-WA0017.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-22.jpg",
       "originalPath": "creations/original-imports/IMG-20250222-WA0017.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-22.webp"
     },
@@ -456,7 +456,7 @@
       "sourceIndex": 56,
       "category": "mehendi",
       "sourceFile": "IMG-20250324-WA0056.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-04__IMG-20250324-WA0056.jpg",
+      "copiedFile": "mehendi/mehendi-design-04.jpg",
       "originalPath": "creations/original-imports/IMG-20250324-WA0056.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-04.webp"
     },
@@ -464,7 +464,7 @@
       "sourceIndex": 57,
       "category": "mehendi",
       "sourceFile": "IMG-20250324-WA0057.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-05__IMG-20250324-WA0057.jpg",
+      "copiedFile": "mehendi/mehendi-design-05.jpg",
       "originalPath": "creations/original-imports/IMG-20250324-WA0057.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-05.webp"
     },
@@ -472,7 +472,7 @@
       "sourceIndex": 58,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0002.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-06__IMG-20250325-WA0002.jpg",
+      "copiedFile": "mehendi/mehendi-design-06.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0002.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-06.webp"
     },
@@ -480,7 +480,7 @@
       "sourceIndex": 59,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0003.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-07__IMG-20250325-WA0003.jpg",
+      "copiedFile": "mehendi/mehendi-design-07.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0003.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-07.webp"
     },
@@ -488,7 +488,7 @@
       "sourceIndex": 60,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0004.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-08__IMG-20250325-WA0004.jpg",
+      "copiedFile": "mehendi/mehendi-design-08.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0004.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-08.webp"
     },
@@ -496,7 +496,7 @@
       "sourceIndex": 61,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0005.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-09__IMG-20250325-WA0005.jpg",
+      "copiedFile": "mehendi/mehendi-design-09.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0005.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-09.webp"
     },
@@ -504,7 +504,7 @@
       "sourceIndex": 62,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0006.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-10__IMG-20250325-WA0006.jpg",
+      "copiedFile": "mehendi/mehendi-design-10.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0006.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-10.webp"
     },
@@ -512,7 +512,7 @@
       "sourceIndex": 63,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0007.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-11__IMG-20250325-WA0007.jpg",
+      "copiedFile": "mehendi/mehendi-design-11.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0007.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-11.webp"
     },
@@ -520,7 +520,7 @@
       "sourceIndex": 64,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0008.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-12__IMG-20250325-WA0008.jpg",
+      "copiedFile": "mehendi/mehendi-design-12.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0008.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-12.webp"
     },
@@ -528,7 +528,7 @@
       "sourceIndex": 65,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0009.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-13__IMG-20250325-WA0009.jpg",
+      "copiedFile": "mehendi/mehendi-design-13.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0009.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-13.webp"
     },
@@ -536,7 +536,7 @@
       "sourceIndex": 66,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0010.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-14__IMG-20250325-WA0010.jpg",
+      "copiedFile": "mehendi/mehendi-design-14.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0010.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-14.webp"
     },
@@ -544,7 +544,7 @@
       "sourceIndex": 67,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0011.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-15__IMG-20250325-WA0011.jpg",
+      "copiedFile": "mehendi/mehendi-design-15.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0011.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-15.webp"
     },
@@ -552,7 +552,7 @@
       "sourceIndex": 68,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0012.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-16__IMG-20250325-WA0012.jpg",
+      "copiedFile": "mehendi/mehendi-design-16.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0012.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-16.webp"
     },
@@ -560,7 +560,7 @@
       "sourceIndex": 69,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0013.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-17__IMG-20250325-WA0013.jpg",
+      "copiedFile": "mehendi/mehendi-design-17.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0013.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-17.webp"
     },
@@ -568,7 +568,7 @@
       "sourceIndex": 70,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0014.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-18__IMG-20250325-WA0014.jpg",
+      "copiedFile": "mehendi/mehendi-design-18.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0014.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-18.webp"
     },
@@ -576,7 +576,7 @@
       "sourceIndex": 71,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0015.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-19__IMG-20250325-WA0015.jpg",
+      "copiedFile": "mehendi/mehendi-design-19.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0015.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-19.webp"
     },
@@ -584,7 +584,7 @@
       "sourceIndex": 72,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0016.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-20__IMG-20250325-WA0016.jpg",
+      "copiedFile": "mehendi/mehendi-design-20.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0016.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-20.webp"
     },
@@ -592,7 +592,7 @@
       "sourceIndex": 73,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0017.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-21__IMG-20250325-WA0017.jpg",
+      "copiedFile": "mehendi/mehendi-design-21.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0017.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-21.webp"
     },
@@ -600,7 +600,7 @@
       "sourceIndex": 74,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0018.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-22__IMG-20250325-WA0018.jpg",
+      "copiedFile": "mehendi/mehendi-design-22.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0018.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-22.webp"
     },
@@ -608,7 +608,7 @@
       "sourceIndex": 75,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0019.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-23__IMG-20250325-WA0019.jpg",
+      "copiedFile": "mehendi/mehendi-design-23.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0019.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-23.webp"
     },
@@ -616,7 +616,7 @@
       "sourceIndex": 76,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0020.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-24__IMG-20250325-WA0020.jpg",
+      "copiedFile": "mehendi/mehendi-design-24.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0020.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-24.webp"
     },
@@ -624,7 +624,7 @@
       "sourceIndex": 77,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0021.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-25__IMG-20250325-WA0021.jpg",
+      "copiedFile": "mehendi/mehendi-design-25.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0021.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-25.webp"
     },
@@ -632,7 +632,7 @@
       "sourceIndex": 78,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0022.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-26__IMG-20250325-WA0022.jpg",
+      "copiedFile": "mehendi/mehendi-design-26.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0022.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-26.webp"
     },
@@ -640,7 +640,7 @@
       "sourceIndex": 79,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0023.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-27__IMG-20250325-WA0023.jpg",
+      "copiedFile": "mehendi/mehendi-design-27.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0023.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-27.webp"
     },
@@ -648,7 +648,7 @@
       "sourceIndex": 80,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0024.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-28__IMG-20250325-WA0024.jpg",
+      "copiedFile": "mehendi/mehendi-design-28.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0024.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-28.webp"
     },
@@ -656,7 +656,7 @@
       "sourceIndex": 81,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0025.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-29__IMG-20250325-WA0025.jpg",
+      "copiedFile": "mehendi/mehendi-design-29.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0025.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-29.webp"
     },
@@ -664,7 +664,7 @@
       "sourceIndex": 82,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0026.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-30__IMG-20250325-WA0026.jpg",
+      "copiedFile": "mehendi/mehendi-design-30.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0026.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-30.webp"
     },
@@ -672,7 +672,7 @@
       "sourceIndex": 83,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0027.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-31__IMG-20250325-WA0027.jpg",
+      "copiedFile": "mehendi/mehendi-design-31.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0027.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-31.webp"
     },
@@ -680,7 +680,7 @@
       "sourceIndex": 84,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0028.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-32__IMG-20250325-WA0028.jpg",
+      "copiedFile": "mehendi/mehendi-design-32.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0028.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-32.webp"
     },
@@ -688,7 +688,7 @@
       "sourceIndex": 85,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0029.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-33__IMG-20250325-WA0029.jpg",
+      "copiedFile": "mehendi/mehendi-design-33.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0029.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-33.webp"
     },
@@ -696,7 +696,7 @@
       "sourceIndex": 86,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0030.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-34__IMG-20250325-WA0030.jpg",
+      "copiedFile": "mehendi/mehendi-design-34.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0030.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-34.webp"
     },
@@ -704,7 +704,7 @@
       "sourceIndex": 87,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0031.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-35__IMG-20250325-WA0031.jpg",
+      "copiedFile": "mehendi/mehendi-design-35.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0031.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-35.webp"
     },
@@ -712,7 +712,7 @@
       "sourceIndex": 88,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0032.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-36__IMG-20250325-WA0032.jpg",
+      "copiedFile": "mehendi/mehendi-design-36.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0032.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-36.webp"
     },
@@ -720,7 +720,7 @@
       "sourceIndex": 89,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0033.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-37__IMG-20250325-WA0033.jpg",
+      "copiedFile": "mehendi/mehendi-design-37.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0033.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-37.webp"
     },
@@ -728,7 +728,7 @@
       "sourceIndex": 90,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0034.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-38__IMG-20250325-WA0034.jpg",
+      "copiedFile": "mehendi/mehendi-design-38.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0034.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-38.webp"
     },
@@ -736,7 +736,7 @@
       "sourceIndex": 91,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0035.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-39__IMG-20250325-WA0035.jpg",
+      "copiedFile": "mehendi/mehendi-design-39.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0035.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-39.webp"
     },
@@ -744,7 +744,7 @@
       "sourceIndex": 92,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0036.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-40__IMG-20250325-WA0036.jpg",
+      "copiedFile": "mehendi/mehendi-design-40.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0036.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-40.webp"
     },
@@ -752,7 +752,7 @@
       "sourceIndex": 93,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0038.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-41__IMG-20250325-WA0038.jpg",
+      "copiedFile": "mehendi/mehendi-design-41.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0038.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-41.webp"
     },
@@ -760,7 +760,7 @@
       "sourceIndex": 94,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0039.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-42__IMG-20250325-WA0039.jpg",
+      "copiedFile": "mehendi/mehendi-design-42.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0039.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-42.webp"
     },
@@ -768,7 +768,7 @@
       "sourceIndex": 95,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0040.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-43__IMG-20250325-WA0040.jpg",
+      "copiedFile": "mehendi/mehendi-design-43.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0040.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-43.webp"
     },
@@ -776,7 +776,7 @@
       "sourceIndex": 96,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0041.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-44__IMG-20250325-WA0041.jpg",
+      "copiedFile": "mehendi/mehendi-design-44.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0041.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-44.webp"
     },
@@ -784,7 +784,7 @@
       "sourceIndex": 97,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0042.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-45__IMG-20250325-WA0042.jpg",
+      "copiedFile": "mehendi/mehendi-design-45.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0042.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-45.webp"
     },
@@ -792,7 +792,7 @@
       "sourceIndex": 98,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0043.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-46__IMG-20250325-WA0043.jpg",
+      "copiedFile": "mehendi/mehendi-design-46.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0043.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-46.webp"
     },
@@ -800,7 +800,7 @@
       "sourceIndex": 99,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0044.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-47__IMG-20250325-WA0044.jpg",
+      "copiedFile": "mehendi/mehendi-design-47.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0044.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-47.webp"
     },
@@ -808,7 +808,7 @@
       "sourceIndex": 100,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0045.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-48__IMG-20250325-WA0045.jpg",
+      "copiedFile": "mehendi/mehendi-design-48.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0045.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-48.webp"
     },
@@ -816,7 +816,7 @@
       "sourceIndex": 101,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0046.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-49__IMG-20250325-WA0046.jpg",
+      "copiedFile": "mehendi/mehendi-design-49.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0046.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-49.webp"
     },
@@ -824,7 +824,7 @@
       "sourceIndex": 102,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0048.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-50__IMG-20250325-WA0048.jpg",
+      "copiedFile": "mehendi/mehendi-design-50.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0048.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-50.webp"
     },
@@ -832,7 +832,7 @@
       "sourceIndex": 103,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0049.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-51__IMG-20250325-WA0049.jpg",
+      "copiedFile": "mehendi/mehendi-design-51.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0049.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-51.webp"
     },
@@ -840,7 +840,7 @@
       "sourceIndex": 104,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0050.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-52__IMG-20250325-WA0050.jpg",
+      "copiedFile": "mehendi/mehendi-design-52.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0050.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-52.webp"
     },
@@ -848,7 +848,7 @@
       "sourceIndex": 105,
       "category": "mehendi",
       "sourceFile": "IMG-20250325-WA0051.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-53__IMG-20250325-WA0051.jpg",
+      "copiedFile": "mehendi/mehendi-design-53.jpg",
       "originalPath": "creations/original-imports/IMG-20250325-WA0051.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-53.webp"
     },
@@ -856,7 +856,7 @@
       "sourceIndex": 106,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0003.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-54__IMG-20250406-WA0003.jpg",
+      "copiedFile": "mehendi/mehendi-design-54.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0003.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-54.webp"
     },
@@ -864,7 +864,7 @@
       "sourceIndex": 107,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0004.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-55__IMG-20250406-WA0004.jpg",
+      "copiedFile": "mehendi/mehendi-design-55.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0004.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-55.webp"
     },
@@ -872,7 +872,7 @@
       "sourceIndex": 108,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0005.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-56__IMG-20250406-WA0005.jpg",
+      "copiedFile": "mehendi/mehendi-design-56.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0005.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-56.webp"
     },
@@ -880,7 +880,7 @@
       "sourceIndex": 109,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0006.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-57__IMG-20250406-WA0006.jpg",
+      "copiedFile": "mehendi/mehendi-design-57.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0006.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-57.webp"
     },
@@ -888,7 +888,7 @@
       "sourceIndex": 110,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0007.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-58__IMG-20250406-WA0007.jpg",
+      "copiedFile": "mehendi/mehendi-design-58.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0007.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-58.webp"
     },
@@ -896,7 +896,7 @@
       "sourceIndex": 111,
       "category": "mehendi",
       "sourceFile": "IMG-20250406-WA0008.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-59__IMG-20250406-WA0008.jpg",
+      "copiedFile": "mehendi/mehendi-design-59.jpg",
       "originalPath": "creations/original-imports/IMG-20250406-WA0008.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-59.webp"
     },
@@ -904,7 +904,7 @@
       "sourceIndex": 112,
       "category": "mehendi",
       "sourceFile": "IMG-20250620-WA0002.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-60__IMG-20250620-WA0002.jpg",
+      "copiedFile": "mehendi/mehendi-design-60.jpg",
       "originalPath": "creations/original-imports/IMG-20250620-WA0002.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-60.webp"
     },
@@ -912,7 +912,7 @@
       "sourceIndex": 113,
       "category": "mehendi",
       "sourceFile": "IMG-20250620-WA0003.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-61__IMG-20250620-WA0003.jpg",
+      "copiedFile": "mehendi/mehendi-design-61.jpg",
       "originalPath": "creations/original-imports/IMG-20250620-WA0003.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-61.webp"
     },
@@ -920,7 +920,7 @@
       "sourceIndex": 114,
       "category": "mehendi",
       "sourceFile": "IMG-20250620-WA0004.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-62__IMG-20250620-WA0004.jpg",
+      "copiedFile": "mehendi/mehendi-design-62.jpg",
       "originalPath": "creations/original-imports/IMG-20250620-WA0004.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-62.webp"
     },
@@ -928,7 +928,7 @@
       "sourceIndex": 115,
       "category": "mehendi",
       "sourceFile": "IMG-20250621-WA0000.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-63__IMG-20250621-WA0000.jpg",
+      "copiedFile": "mehendi/mehendi-design-63.jpg",
       "originalPath": "creations/original-imports/IMG-20250621-WA0000.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-63.webp"
     },
@@ -936,7 +936,7 @@
       "sourceIndex": 116,
       "category": "mehendi",
       "sourceFile": "IMG-20250621-WA0029.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-64__IMG-20250621-WA0029.jpg",
+      "copiedFile": "mehendi/mehendi-design-64.jpg",
       "originalPath": "creations/original-imports/IMG-20250621-WA0029.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-64.webp"
     },
@@ -944,7 +944,7 @@
       "sourceIndex": 117,
       "category": "mehendi",
       "sourceFile": "IMG-20250622-WA0002.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-65__IMG-20250622-WA0002.jpg",
+      "copiedFile": "mehendi/mehendi-design-65.jpg",
       "originalPath": "creations/original-imports/IMG-20250622-WA0002.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-65.webp"
     },
@@ -952,7 +952,7 @@
       "sourceIndex": 118,
       "category": "mehendi",
       "sourceFile": "IMG-20250625-WA0009.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-66__IMG-20250625-WA0009.jpg",
+      "copiedFile": "mehendi/mehendi-design-66.jpg",
       "originalPath": "creations/original-imports/IMG-20250625-WA0009.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-66.webp"
     },
@@ -960,7 +960,7 @@
       "sourceIndex": 119,
       "category": "mehendi",
       "sourceFile": "IMG-20250726-WA0002.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-67__IMG-20250726-WA0002.jpg",
+      "copiedFile": "mehendi/mehendi-design-67.jpg",
       "originalPath": "creations/original-imports/IMG-20250726-WA0002.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-67.webp"
     },
@@ -968,7 +968,7 @@
       "sourceIndex": 120,
       "category": "mehendi",
       "sourceFile": "IMG-20250726-WA0020.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-68__IMG-20250726-WA0020.jpg",
+      "copiedFile": "mehendi/mehendi-design-68.jpg",
       "originalPath": "creations/original-imports/IMG-20250726-WA0020.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-68.webp"
     },
@@ -976,7 +976,7 @@
       "sourceIndex": 121,
       "category": "mehendi",
       "sourceFile": "IMG-20250727-WA0000.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-69__IMG-20250727-WA0000.jpg",
+      "copiedFile": "mehendi/mehendi-design-69.jpg",
       "originalPath": "creations/original-imports/IMG-20250727-WA0000.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-69.webp"
     },
@@ -984,7 +984,7 @@
       "sourceIndex": 122,
       "category": "customized-gifts",
       "sourceFile": "IMG-20250813-WA0009.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-23__IMG-20250813-WA0009.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-23.jpg",
       "originalPath": "creations/original-imports/IMG-20250813-WA0009.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-23.webp"
     },
@@ -992,7 +992,7 @@
       "sourceIndex": 123,
       "category": "customized-gifts",
       "sourceFile": "IMG-20250813-WA0010.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-24__IMG-20250813-WA0010.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-24.jpg",
       "originalPath": "creations/original-imports/IMG-20250813-WA0010.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-24.webp"
     },
@@ -1000,23 +1000,15 @@
       "sourceIndex": 124,
       "category": "customized-gifts",
       "sourceFile": "IMG-20250813-WA0012.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-25__IMG-20250813-WA0012.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-25.jpg",
       "originalPath": "creations/original-imports/IMG-20250813-WA0012.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-25.webp"
-    },
-    {
-      "sourceIndex": 125,
-      "category": "texture-art",
-      "sourceFile": "IMG-20250824-WA0018.jpg",
-      "copiedFile": "texture-art/texture-art-source-03__IMG-20250824-WA0018.jpg",
-      "originalPath": "creations/original-imports/IMG-20250824-WA0018.jpg",
-      "publicImage": "public/images/texture-art/texture-art-leaf-relief-03.webp"
     },
     {
       "sourceIndex": 126,
       "category": "mehendi",
       "sourceFile": "IMG-20250903-WA0009.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-70__IMG-20250903-WA0009.jpg",
+      "copiedFile": "mehendi/mehendi-design-70.jpg",
       "originalPath": "creations/original-imports/IMG-20250903-WA0009.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-70.webp"
     },
@@ -1024,7 +1016,7 @@
       "sourceIndex": 127,
       "category": "mehendi",
       "sourceFile": "IMG-20250903-WA0010.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-71__IMG-20250903-WA0010.jpg",
+      "copiedFile": "mehendi/mehendi-design-71.jpg",
       "originalPath": "creations/original-imports/IMG-20250903-WA0010.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-71.webp"
     },
@@ -1060,7 +1052,7 @@
       "sourceIndex": 132,
       "category": "mehendi",
       "sourceFile": "IMG-20250911-WA0006.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-72__IMG-20250911-WA0006.jpg",
+      "copiedFile": "mehendi/mehendi-design-72.jpg",
       "originalPath": "creations/original-imports/IMG-20250911-WA0006.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-72.webp"
     },
@@ -1068,7 +1060,7 @@
       "sourceIndex": 133,
       "category": "mehendi",
       "sourceFile": "IMG-20250911-WA0007.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-73__IMG-20250911-WA0007.jpg",
+      "copiedFile": "mehendi/mehendi-design-73.jpg",
       "originalPath": "creations/original-imports/IMG-20250911-WA0007.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-73.webp"
     },
@@ -1076,7 +1068,7 @@
       "sourceIndex": 134,
       "category": "mehendi",
       "sourceFile": "IMG-20250911-WA0008.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-74__IMG-20250911-WA0008.jpg",
+      "copiedFile": "mehendi/mehendi-design-74.jpg",
       "originalPath": "creations/original-imports/IMG-20250911-WA0008.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-74.webp"
     },
@@ -1091,7 +1083,7 @@
       "sourceIndex": 136,
       "category": "lamasa",
       "sourceFile": "IMG-20250911-WA0014.jpg",
-      "copiedFile": "lamasa/lamasa-decor-source-03__IMG-20250911-WA0014.jpg",
+      "copiedFile": "lamasa/lamasa-decor-03.jpg",
       "originalPath": "creations/original-imports/IMG-20250911-WA0014.jpg",
       "publicImage": "public/images/lamasa/lamasa-decor-03.webp"
     },
@@ -1106,7 +1098,7 @@
       "sourceIndex": 138,
       "category": "rida-design",
       "sourceFile": "IMG-20250926-WA0013.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-06__IMG-20250926-WA0013.jpg",
+      "copiedFile": "rida-design/rida-design-study-06.jpg",
       "originalPath": "creations/original-imports/IMG-20250926-WA0013.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-06.webp"
     },
@@ -1121,7 +1113,7 @@
       "sourceIndex": 140,
       "category": "lamasa",
       "sourceFile": "IMG-20250928-WA0000.jpg",
-      "copiedFile": "lamasa/lamasa-decor-source-04__IMG-20250928-WA0000.jpg",
+      "copiedFile": "lamasa/lamasa-decor-04.jpg",
       "originalPath": "creations/original-imports/IMG-20250928-WA0000.jpg",
       "publicImage": "public/images/lamasa/lamasa-decor-04.webp"
     },
@@ -1129,7 +1121,7 @@
       "sourceIndex": 141,
       "category": "mehendi",
       "sourceFile": "IMG-20251011-WA0006.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-75__IMG-20251011-WA0006.jpg",
+      "copiedFile": "mehendi/mehendi-design-75.jpg",
       "originalPath": "creations/original-imports/IMG-20251011-WA0006.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-75.webp"
     },
@@ -1137,7 +1129,7 @@
       "sourceIndex": 142,
       "category": "mehendi",
       "sourceFile": "IMG-20251011-WA0009.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-76__IMG-20251011-WA0009.jpg",
+      "copiedFile": "mehendi/mehendi-design-76.jpg",
       "originalPath": "creations/original-imports/IMG-20251011-WA0009.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-76.webp"
     },
@@ -1145,43 +1137,15 @@
       "sourceIndex": 143,
       "category": "mehendi",
       "sourceFile": "IMG-20251011-WA0010.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-77__IMG-20251011-WA0010.jpg",
+      "copiedFile": "mehendi/mehendi-design-77.jpg",
       "originalPath": "creations/original-imports/IMG-20251011-WA0010.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-77.webp"
-    },
-    {
-      "sourceIndex": 144,
-      "category": "customized-gifts",
-      "sourceFile": "IMG-20251012-WA0004.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-26__IMG-20251012-WA0004.jpg",
-      "originalPath": "creations/original-imports/IMG-20251012-WA0004.jpg"
-    },
-    {
-      "sourceIndex": 145,
-      "category": "customized-gifts",
-      "sourceFile": "IMG-20251012-WA0006.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-27__IMG-20251012-WA0006.jpg",
-      "originalPath": "creations/original-imports/IMG-20251012-WA0006.jpg"
-    },
-    {
-      "sourceIndex": 146,
-      "category": "customized-gifts",
-      "sourceFile": "IMG-20251012-WA0009.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-28__IMG-20251012-WA0009.jpg",
-      "originalPath": "creations/original-imports/IMG-20251012-WA0009.jpg"
-    },
-    {
-      "sourceIndex": 147,
-      "category": "customized-gifts",
-      "sourceFile": "IMG-20251012-WA0012.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-29__IMG-20251012-WA0012.jpg",
-      "originalPath": "creations/original-imports/IMG-20251012-WA0012.jpg"
     },
     {
       "sourceIndex": 148,
       "category": "customized-gifts",
       "sourceFile": "IMG-20251012-WA0013.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-30__IMG-20251012-WA0013.jpg",
+      "copiedFile": "customized-gifts/customized-gift-detail-26.jpg",
       "originalPath": "creations/original-imports/IMG-20251012-WA0013.jpg",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-26.webp"
     },
@@ -1189,7 +1153,7 @@
       "sourceIndex": 149,
       "category": "rida-design",
       "sourceFile": "IMG-20251021-WA0015.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-01__IMG-20251021-WA0015.jpg",
+      "copiedFile": "rida-design/rida-design-study-01.jpg",
       "originalPath": "creations/original-imports/IMG-20251021-WA0015.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-01.webp"
     },
@@ -1197,7 +1161,7 @@
       "sourceIndex": 150,
       "category": "rida-design",
       "sourceFile": "IMG-20251028-WA0037.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-02__IMG-20251028-WA0037.jpg",
+      "copiedFile": "rida-design/rida-design-study-02.jpg",
       "originalPath": "creations/original-imports/IMG-20251028-WA0037.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-02.webp"
     },
@@ -1205,7 +1169,7 @@
       "sourceIndex": 151,
       "category": "mehendi",
       "sourceFile": "IMG-20251104-WA0024.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-78__IMG-20251104-WA0024.jpg",
+      "copiedFile": "mehendi/mehendi-design-78.jpg",
       "originalPath": "creations/original-imports/IMG-20251104-WA0024.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-78.webp"
     },
@@ -1213,7 +1177,7 @@
       "sourceIndex": 152,
       "category": "mehendi",
       "sourceFile": "IMG-20251104-WA0025.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-79__IMG-20251104-WA0025.jpg",
+      "copiedFile": "mehendi/mehendi-design-79.jpg",
       "originalPath": "creations/original-imports/IMG-20251104-WA0025.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-79.webp"
     },
@@ -1221,7 +1185,7 @@
       "sourceIndex": 153,
       "category": "mehendi",
       "sourceFile": "IMG-20251104-WA0026.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-80__IMG-20251104-WA0026.jpg",
+      "copiedFile": "mehendi/mehendi-design-80.jpg",
       "originalPath": "creations/original-imports/IMG-20251104-WA0026.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-80.webp"
     },
@@ -1229,7 +1193,7 @@
       "sourceIndex": 154,
       "category": "mehendi",
       "sourceFile": "IMG-20251104-WA0029.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-81__IMG-20251104-WA0029.jpg",
+      "copiedFile": "mehendi/mehendi-design-81.jpg",
       "originalPath": "creations/original-imports/IMG-20251104-WA0029.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-81.webp"
     },
@@ -1237,7 +1201,7 @@
       "sourceIndex": 155,
       "category": "mehendi",
       "sourceFile": "IMG-20251105-WA0012.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-82__IMG-20251105-WA0012.jpg",
+      "copiedFile": "mehendi/mehendi-design-82.jpg",
       "originalPath": "creations/original-imports/IMG-20251105-WA0012.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-82.webp"
     },
@@ -1245,7 +1209,7 @@
       "sourceIndex": 156,
       "category": "mehendi",
       "sourceFile": "IMG-20251127-WA0000.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-83__IMG-20251127-WA0000.jpg",
+      "copiedFile": "mehendi/mehendi-design-83.jpg",
       "originalPath": "creations/original-imports/IMG-20251127-WA0000.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-83.webp"
     },
@@ -1253,7 +1217,7 @@
       "sourceIndex": 157,
       "category": "mehendi",
       "sourceFile": "IMG-20251128-WA0003.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-84__IMG-20251128-WA0003.jpg",
+      "copiedFile": "mehendi/mehendi-design-84.jpg",
       "originalPath": "creations/original-imports/IMG-20251128-WA0003.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-84.webp"
     },
@@ -1261,7 +1225,7 @@
       "sourceIndex": 158,
       "category": "outline-art",
       "sourceFile": "IMG-20260207-WA0001.jpg",
-      "copiedFile": "outline-art/golden-bloom-outline-source-01__IMG-20260207-WA0001.jpg",
+      "copiedFile": "outline-art/golden-bloom-outline-01.jpg",
       "originalPath": "creations/original-imports/IMG-20260207-WA0001.jpg",
       "publicImage": "public/images/outline-art/golden-bloom-outline-01.webp"
     },
@@ -1269,7 +1233,7 @@
       "sourceIndex": 159,
       "category": "mehendi",
       "sourceFile": "IMG-20260213-WA0017.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-85__IMG-20260213-WA0017.jpg",
+      "copiedFile": "mehendi/mehendi-design-85.jpg",
       "originalPath": "creations/original-imports/IMG-20260213-WA0017.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-85.webp"
     },
@@ -1277,7 +1241,7 @@
       "sourceIndex": 160,
       "category": "mehendi",
       "sourceFile": "IMG-20260214-WA0000.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-86__IMG-20260214-WA0000.jpg",
+      "copiedFile": "mehendi/mehendi-design-86.jpg",
       "originalPath": "creations/original-imports/IMG-20260214-WA0000.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-86.webp"
     },
@@ -1285,7 +1249,7 @@
       "sourceIndex": 161,
       "category": "mehendi",
       "sourceFile": "IMG-20260214-WA0001.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-87__IMG-20260214-WA0001.jpg",
+      "copiedFile": "mehendi/mehendi-design-87.jpg",
       "originalPath": "creations/original-imports/IMG-20260214-WA0001.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-87.webp"
     },
@@ -1293,23 +1257,15 @@
       "sourceIndex": 162,
       "category": "mehendi",
       "sourceFile": "IMG-20260214-WA0003.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-88__IMG-20260214-WA0003.jpg",
+      "copiedFile": "mehendi/mehendi-design-88.jpg",
       "originalPath": "creations/original-imports/IMG-20260214-WA0003.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-88.webp"
-    },
-    {
-      "sourceIndex": 163,
-      "category": "terrazzo",
-      "sourceFile": "IMG-20260222-WA0013.jpg",
-      "copiedFile": "terrazzo/terrazzo-decor-source-01__IMG-20260222-WA0013.jpg",
-      "originalPath": "creations/original-imports/IMG-20260222-WA0013.jpg",
-      "publicImage": "public/images/terrazzo/terrazzo-decor-01.webp"
     },
     {
       "sourceIndex": 164,
       "category": "rida-design",
       "sourceFile": "IMG-20260225-WA0001.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-03__IMG-20260225-WA0001.jpg",
+      "copiedFile": "rida-design/rida-design-study-03.jpg",
       "originalPath": "creations/original-imports/IMG-20260225-WA0001.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-03.webp"
     },
@@ -1317,7 +1273,7 @@
       "sourceIndex": 165,
       "category": "rida-design",
       "sourceFile": "IMG-20260226-WA0032.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-04__IMG-20260226-WA0032.jpg",
+      "copiedFile": "rida-design/rida-design-study-04.jpg",
       "originalPath": "creations/original-imports/IMG-20260226-WA0032.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-04.webp"
     },
@@ -1325,7 +1281,7 @@
       "sourceIndex": 166,
       "category": "rida-design",
       "sourceFile": "IMG-20260227-WA0015.jpg",
-      "copiedFile": "rida-design/rida-design-study-source-05__IMG-20260227-WA0015.jpg",
+      "copiedFile": "rida-design/rida-design-study-05.jpg",
       "originalPath": "creations/original-imports/IMG-20260227-WA0015.jpg",
       "publicImage": "public/images/rida-design/rida-design-study-05.webp"
     },
@@ -1333,7 +1289,7 @@
       "sourceIndex": 167,
       "category": "mehendi",
       "sourceFile": "IMG-20260308-WA0028.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-89__IMG-20260308-WA0028.jpg",
+      "copiedFile": "mehendi/mehendi-design-89.jpg",
       "originalPath": "creations/original-imports/IMG-20260308-WA0028.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-89.webp"
     },
@@ -1341,7 +1297,7 @@
       "sourceIndex": 168,
       "category": "mehendi",
       "sourceFile": "IMG-20260308-WA0029.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-90__IMG-20260308-WA0029.jpg",
+      "copiedFile": "mehendi/mehendi-design-90.jpg",
       "originalPath": "creations/original-imports/IMG-20260308-WA0029.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-90.webp"
     },
@@ -1349,7 +1305,7 @@
       "sourceIndex": 169,
       "category": "mehendi",
       "sourceFile": "IMG-20260309-WA0000.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-91__IMG-20260309-WA0000.jpg",
+      "copiedFile": "mehendi/mehendi-design-91.jpg",
       "originalPath": "creations/original-imports/IMG-20260309-WA0000.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-91.webp"
     },
@@ -1357,7 +1313,7 @@
       "sourceIndex": 170,
       "category": "mehendi",
       "sourceFile": "IMG-20260309-WA0001.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-92__IMG-20260309-WA0001.jpg",
+      "copiedFile": "mehendi/mehendi-design-92.jpg",
       "originalPath": "creations/original-imports/IMG-20260309-WA0001.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-92.webp"
     },
@@ -1365,7 +1321,7 @@
       "sourceIndex": 171,
       "category": "mehendi",
       "sourceFile": "IMG-20260309-WA0002.jpg",
-      "copiedFile": "mehendi/mehendi-design-source-93__IMG-20260309-WA0002.jpg",
+      "copiedFile": "mehendi/mehendi-design-93.jpg",
       "originalPath": "creations/original-imports/IMG-20260309-WA0002.jpg",
       "publicImage": "public/images/mehendi/mehendi-design-93.webp"
     },
@@ -1373,17 +1329,9 @@
       "sourceIndex": 172,
       "category": "chenille-craft",
       "sourceFile": "IMG-20260310-WA0011.jpg",
-      "copiedFile": "chenille-craft/chenille-floral-source-01__IMG-20260310-WA0011.jpg",
+      "copiedFile": "chenille-craft/chenille-floral-01.jpg",
       "originalPath": "creations/original-imports/IMG-20260310-WA0011.jpg",
       "publicImage": "public/images/chenille-craft/chenille-floral-01.webp"
-    },
-    {
-      "sourceIndex": 173,
-      "category": "texture-art",
-      "sourceFile": "WhatsApp Image 2026-04-27 at 12.50.55 PM.jpeg",
-      "copiedFile": "texture-art/texture-art-source-01__WhatsApp-Image-2026-04-27-at-12.50.55-PM.jpeg",
-      "originalPath": "creations/original-imports/WhatsApp Image 2026-04-27 at 12.50.55 PM.jpeg",
-      "publicImage": "public/images/texture-art/texture-art-green-flow-02.webp"
     },
     {
       "sourceIndex": 174,
@@ -1396,7 +1344,7 @@
       "sourceIndex": 175,
       "category": "paintings",
       "sourceFile": "painting1.png",
-      "copiedFile": "paintings/hand-painted-artwork-source-01-006__painting1.png",
+      "copiedFile": "paintings/hand-painted-artwork-01-006.png",
       "originalPath": "creations/segregated/paintings/hand-painted-artwork-source-30__painting1.png",
       "publicImage": "public/images/paintings/hand-painted-artwork-01-006.webp"
     },
@@ -1404,49 +1352,73 @@
       "sourceIndex": 176,
       "category": "texture-art",
       "sourceFile": "texture1.png",
-      "copiedFile": "texture-art/texture-art-source-08__texture1.png",
-      "originalPath": "creations/segregated/texture-art/texture-art-source-08__texture1.png",
+      "copiedFile": "texture-art/texture-art-pink-bloom-panel-05.png",
+      "originalPath": "creations/segregated/texture-art/texture-art-pink-bloom-panel-05.png",
       "publicImage": "public/images/texture-art/texture-art-pink-bloom-panel-05.webp"
     },
     {
       "sourceIndex": 177,
       "category": "texture-art",
       "sourceFile": "texture1-2.png",
-      "copiedFile": "texture-art/texture-art-source-09__texture1-2.png",
-      "originalPath": "creations/segregated/texture-art/texture-art-source-09__texture1-2.png",
+      "copiedFile": "texture-art/texture-art-pink-bloom-panel-06.png",
+      "originalPath": "creations/segregated/texture-art/texture-art-pink-bloom-panel-06.png",
       "publicImage": "public/images/texture-art/texture-art-pink-bloom-panel-06.webp"
     },
     {
       "sourceIndex": 178,
       "category": "customized-gifts",
       "sourceFile": "customized-gifts1.png",
-      "copiedFile": "customized-gifts/customized-gift-detail-source-31__customized-gifts1.png",
-      "originalPath": "creations/segregated/customized-gifts/customized-gift-detail-source-31__customized-gifts1.png",
+      "copiedFile": "customized-gifts/customized-gift-detail-27.png",
+      "originalPath": "creations/segregated/customized-gifts/customized-gift-detail-27.png",
       "publicImage": "public/images/customized-gifts/customized-gift-detail-27.webp"
     },
     {
       "sourceIndex": 179,
       "category": "texture-art",
       "sourceFile": "texture2.png",
-      "copiedFile": "texture-art/texture-art-source-10__texture2.png",
-      "originalPath": "creations/segregated/texture-art/texture-art-source-10__texture2.png",
+      "copiedFile": "texture-art/texture-art-emerald-flow-panel-07.png",
+      "originalPath": "creations/segregated/texture-art/texture-art-emerald-flow-panel-07.png",
       "publicImage": "public/images/texture-art/texture-art-emerald-flow-panel-07.webp"
     },
     {
       "sourceIndex": 180,
       "category": "texture-art",
       "sourceFile": "texture3.png",
-      "copiedFile": "texture-art/texture-art-source-11__texture3.png",
-      "originalPath": "creations/segregated/texture-art/texture-art-source-11__texture3.png",
+      "copiedFile": "texture-art/texture-art-layered-leaf-display-03.png",
+      "originalPath": "creations/segregated/texture-art/texture-art-layered-leaf-display-03.png",
       "publicImage": "public/images/texture-art/texture-art-layered-leaf-display-03.webp"
     },
     {
       "sourceIndex": 181,
       "category": "lamasa",
       "sourceFile": "lamasa1.png",
-      "copiedFile": "lamasa/lamasa-decor-source-02__lamasa1.png",
-      "originalPath": "creations/segregated/lamasa/lamasa-decor-source-02__lamasa1.png",
+      "copiedFile": "lamasa/lamasa-decor-02.png",
+      "originalPath": "creations/segregated/lamasa/lamasa-decor-02.png",
       "publicImage": "public/images/lamasa/lamasa-decor-02.webp"
+    },
+    {
+      "sourceIndex": 182,
+      "category": "terrazzo",
+      "sourceFile": "terrazo.jpeg",
+      "copiedFile": "terrazzo/terrazzo-marbled-gold-tray-01.jpeg",
+      "originalPath": "creations/segregated/terrazzo/terrazzo-marbled-gold-tray-01.jpeg",
+      "publicImage": "public/images/terrazzo/terrazzo-marbled-gold-tray-01.webp"
+    },
+    {
+      "sourceIndex": 183,
+      "category": "texture-art",
+      "sourceFile": "texture-art3.jpeg",
+      "copiedFile": "texture-art/texture-art-gilded-bloom-02.jpeg",
+      "originalPath": "creations/segregated/texture-art/texture-art-gilded-bloom-02.jpeg",
+      "publicImage": "public/images/texture-art/texture-art-gilded-bloom-02.webp"
+    },
+    {
+      "sourceIndex": 184,
+      "category": "texture-art",
+      "sourceFile": "texture-art4.jpeg",
+      "copiedFile": "texture-art/texture-art-gilded-bloom-04.jpeg",
+      "originalPath": "creations/segregated/texture-art/texture-art-gilded-bloom-04.jpeg",
+      "publicImage": "public/images/texture-art/texture-art-gilded-bloom-04.webp"
     }
   ],
   "updatedAt": "2026-05-02T11:27:43.058Z"
