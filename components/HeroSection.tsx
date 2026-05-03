@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedLogo } from "@/components/AnimatedLogo";
@@ -75,11 +72,8 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10" />
       <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgb(var(--color-ink)/0.9)_0%,rgb(var(--color-ink)/0.58)_36%,rgb(var(--color-ink)/0.18)_72%,rgb(var(--color-ink)/0.05)_100%)] lg:block" />
 
-      <motion.div
+      <div
         className="relative z-10 mx-auto flex min-h-[78svh] w-full max-w-7xl flex-col justify-end px-4 pb-9 pt-16 sm:min-h-[76svh] sm:px-6 sm:pb-12 lg:min-h-[78svh] lg:px-8 lg:pb-16"
-        initial={false}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="max-w-3xl">
           <h1 className="sr-only">{artist.brandName}</h1>
@@ -128,7 +122,7 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

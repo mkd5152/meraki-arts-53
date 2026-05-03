@@ -1,6 +1,3 @@
-"use client";
-
-import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import type { BrandContent } from "@/lib/getData";
 
@@ -51,12 +48,11 @@ function LogoImages({
 }
 
 export function AnimatedLogo({ logo, className = "" }: AnimatedLogoProps) {
-  const shouldReduceMotion = useReducedMotion();
   const assets = "assets" in logo ? logo.assets : undefined;
   const transitionSrc =
     assets && "transition" in assets ? assets.transition : undefined;
 
-  if (!assets || shouldReduceMotion) {
+  if (!assets) {
     return (
       <span
         className={`relative block aspect-[2400/1395] w-full ${className}`}

@@ -131,7 +131,6 @@ textarea {
 
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -152,6 +151,7 @@ textarea {
 
 .meraki-logo-transition {
   animation: meraki-logo-transition-hide 3.52s ease-out both;
+  pointer-events: none;
 }
 
 .meraki-logo-final {
@@ -166,5 +166,17 @@ textarea {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .meraki-logo-transition {
+    display: none !important;
+  }
+
+  .meraki-logo-final {
+    opacity: 1 !important;
+  }
+
+  .meraki-logo-clip {
+    clip-path: inset(0% 0% 0% 0%) !important;
   }
 }
