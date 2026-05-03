@@ -12,13 +12,16 @@
       "monogram": "M",
       "caption": "Handmade creative brand",
       "assets": {
-        "wordmark": "/brand/generated/meraki-option4-wordmark.png",
-        "wordmarkDark": "/brand/generated/meraki-option4-wordmark-dark.png",
-        "mark": "/brand/generated/meraki-option4-mark.png",
-        "badge": "/brand/generated/meraki-option4-mark.png",
-        "loading": "/brand/generated/meraki-option4-mark.png",
-        "watermark": "/brand/generated/meraki-option4-wordmark.png",
-        "watermarkDark": "/brand/generated/meraki-option4-wordmark-dark.png",
+        "wordmark": "/brand/generated/meraki-option4-wordmark-1200.webp",
+        "wordmarkDark": "/brand/generated/meraki-option4-wordmark-dark-1200.webp",
+        "transition": "/brand/generated/meraki-logo-transition-transparent.webp",
+        "wordmarkSmall": "/brand/generated/meraki-option4-wordmark-420.webp",
+        "wordmarkDarkSmall": "/brand/generated/meraki-option4-wordmark-dark-420.webp",
+        "mark": "/brand/generated/meraki-option4-mark-256.webp",
+        "badge": "/brand/generated/meraki-option4-mark-256.webp",
+        "loading": "/brand/generated/meraki-option4-mark-256.webp",
+        "watermark": "/brand/generated/meraki-option4-wordmark-420.webp",
+        "watermarkDark": "/brand/generated/meraki-option4-wordmark-dark-640.webp",
         "lockupDark": "/brand/generated/meraki-option4-lockup-dark.png",
         "socialCard": "/brand/generated/meraki-option4-lockup.png"
       }

@@ -10,9 +10,9 @@
   --color-ink: 39 37 35;
   --color-muted: 112 103 94;
   --color-line: 225 214 202;
-  --color-clay: 183 102 77;
+  --color-clay: 154 78 55;
   --color-rosewood: 143 77 79;
-  --color-sage: 127 140 107;
+  --color-sage: 100 113 83;
   --color-gold: 225 161 53;
   --color-teal: 46 124 128;
   --color-mist: 232 237 240;
@@ -111,6 +111,51 @@ textarea {
   right: 0;
   width: 32%;
   background: rgb(var(--color-gold) / 0.8);
+}
+
+@keyframes meraki-logo-clip-reveal {
+  from {
+    clip-path: inset(0% 100% 0% 0%);
+  }
+
+  to {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes meraki-logo-transition-hide {
+  0%,
+  94% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes meraki-logo-final-settle {
+  0%,
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.meraki-logo-clip {
+  animation: meraki-logo-clip-reveal 2.15s cubic-bezier(0.4, 0, 0.2, 1) 120ms both;
+}
+
+.meraki-logo-transition {
+  animation: meraki-logo-transition-hide 3.52s ease-out both;
+}
+
+.meraki-logo-final {
+  animation: meraki-logo-final-settle 3.46s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {

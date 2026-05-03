@@ -27,7 +27,7 @@ export function Footer({ brand, footer, links }: FooterProps) {
           <p className="mt-5 max-w-md text-sm leading-6 text-muted">
             {footer.description}
           </p>
-          <p className="mt-6 text-xs text-muted/70">
+          <p className="mt-6 text-xs text-muted">
             {footer.copyrightYear} {footer.copyright}
           </p>
         </div>

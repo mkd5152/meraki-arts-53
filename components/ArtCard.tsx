@@ -142,11 +142,13 @@ export function ArtCard({
         type="button"
         onClick={onClick}
         className={`${cardClassName} block w-full p-0 text-left text-inherit outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-paper`}
-        aria-label={interactionLabel ? `${interactionLabel}: ${title}` : title}
         whileHover={{ scale: 1.01 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
       >
         {cardBody}
+        {interactionLabel && (
+          <span className="sr-only">{interactionLabel}</span>
+        )}
       </motion.button>
     );
   }

@@ -51,13 +51,13 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
             className={`group relative min-h-0 overflow-hidden ${
               mosaicClasses[index] ?? "hidden lg:block"
             }`}
-            aria-label={`${piece.title}: ${piece.caption}`}
           >
             <Image
               src={piece.image}
               alt={piece.caption}
               fill
-              priority={index < 3}
+              priority={index === 0}
+              fetchPriority={index === 0 ? "high" : undefined}
               sizes={
                 index === 0
                   ? "(min-width: 1024px) 50vw, 100vw"
@@ -77,7 +77,7 @@ export function HeroSection({ artist, brand, artForms, hero }: HeroSectionProps)
 
       <motion.div
         className="relative z-10 mx-auto flex min-h-[78svh] w-full max-w-7xl flex-col justify-end px-4 pb-9 pt-16 sm:min-h-[76svh] sm:px-6 sm:pb-12 lg:min-h-[78svh] lg:px-8 lg:pb-16"
-        initial={{ opacity: 0, y: 16 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >

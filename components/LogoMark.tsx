@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { BrandContent } from "@/lib/getData";
 
 type LogoMarkProps = {
@@ -8,12 +9,17 @@ type LogoMarkProps = {
 
 export function LogoMark({ logo, compact = false, footer = false }: LogoMarkProps) {
   const assets = "assets" in logo ? logo.assets : undefined;
+  const wordmarkSrc = assets?.wordmarkSmall ?? assets?.wordmark ?? "";
+  const wordmarkDarkSrc = assets?.wordmarkDarkSmall ?? assets?.wordmarkDark ?? "";
   const lightWordmarkClass = `w-auto object-contain ${
     footer ? "block h-16 sm:h-[4.75rem]" : "hidden h-12 sm:block sm:h-14"
   }`;
   const darkWordmarkClass = `hidden w-auto object-contain ${
     footer ? "h-16 dark:block sm:h-[4.75rem]" : "h-12 dark:sm:block sm:h-14"
   }`;
+  const wordmarkWidth = footer ? 260 : 192;
+  const wordmarkHeight = footer ? 151 : 112;
+  const wordmarkSizes = footer ? "130px" : "96px";
 
   return (
     <span
@@ -22,9 +28,12 @@ export function LogoMark({ logo, compact = false, footer = false }: LogoMarkProp
     >
       {assets ? (
         <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full shadow-sm sm:h-12 sm:w-12">
-          <img
+          <Image
             src={assets.mark}
             alt=""
+            width={96}
+            height={96}
+            sizes="48px"
             className="h-full w-full object-contain"
             aria-hidden="true"
           />
@@ -39,15 +48,21 @@ export function LogoMark({ logo, compact = false, footer = false }: LogoMarkProp
         <>
           {assets ? (
             <span className="min-w-0">
-              <img
-                src={assets.wordmark}
+              <Image
+                src={wordmarkSrc}
                 alt=""
+                width={wordmarkWidth}
+                height={wordmarkHeight}
+                sizes={wordmarkSizes}
                 className={`${lightWordmarkClass} dark:hidden`}
                 aria-hidden="true"
               />
-              <img
-                src={assets.wordmarkDark}
+              <Image
+                src={wordmarkDarkSrc}
                 alt=""
+                width={wordmarkWidth}
+                height={wordmarkHeight}
+                sizes={wordmarkSizes}
                 className={darkWordmarkClass}
                 aria-hidden="true"
               />
