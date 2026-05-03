@@ -266,7 +266,7 @@
       "images": [
         "/images/texture-art/texture-art-gilded-bloom-04.webp",
         "/images/lamasa/lamasa-decor-04.webp",
-        "/images/customized-gifts/customized-gift-detail-08.webp"
+        "/images/customized-gifts/customized-gift-detail-06-001.webp"
       ]
     },
     "originStory": {
@@ -565,7 +565,7 @@
         "title": "Behind the making table",
         "excerpt": "A look at how references, color, material, and occasion come together before a handmade piece begins.",
         "readTime": "3 min read",
-        "image": "/images/customized-gifts/customized-gift-detail-01.webp",
+        "image": "/images/customized-gifts/customized-gift-detail-01-001.webp",
         "sections": [
           {
             "heading": "Start with the moment",
@@ -601,7 +601,7 @@
         "title": "Gift ideas with a personal touch",
         "excerpt": "Ways to turn a small handmade detail into a thoughtful gift for birthdays, weddings, milestones, and intimate celebrations.",
         "readTime": "3 min read",
-        "image": "/images/customized-gifts/customized-gift-detail-08.webp",
+        "image": "/images/customized-gifts/customized-gift-detail-06-001.webp",
         "sections": [
           {
             "heading": "Use the recipient as the brief",
@@ -818,7 +818,7 @@
       "title": "Custom Gifts",
       "description": "Personalized handmade pieces designed for meaningful occasions.",
       "isVisible": true,
-      "image": "/images/customized-gifts/customized-gift-detail-08.webp",
+      "image": "/images/customized-gifts/customized-gift-detail-06-001.webp",
       "startingFrom": "Quoted by detail and quantity",
       "includes": [
         "Idea refinement",
@@ -1712,142 +1712,182 @@
       "title": "Customized Gifts",
       "slug": "customized-gifts",
       "description": "Personalized keepsakes designed for celebrations, milestones, and thoughtful gestures.",
-      "coverImage": "/images/customized-gifts/customized-gift-detail-01.webp",
+      "coverImage": "/images/customized-gifts/customized-gift-detail-01-002.webp",
       "accent": "#2e7c80",
       "gallery": [
         {
-          "id": "MA53-GFT-001",
-          "image": "/images/customized-gifts/customized-gift-detail-01.webp",
-          "caption": "Golden Heart Glow Wall"
+          "id": "MA53-GFT-001-001",
+          "image": "/images/customized-gifts/customized-gift-detail-01-001.webp",
+          "caption": "Golden Heart Glow Wall",
+          "seriesId": "heartlight-wall-gift-set",
+          "seriesTitle": "Heartlight Wall Gift Set",
+          "seriesDescription": "A personalized heartlight wall gift shown in its warm glow setup and brighter room view.",
+          "seriesStage": "Glow setup"
+        },
+        {
+          "id": "MA53-GFT-001-002",
+          "image": "/images/customized-gifts/customized-gift-detail-01-002.webp",
+          "caption": "Anniversary Heartlight Wall",
+          "seriesId": "heartlight-wall-gift-set",
+          "seriesTitle": "Heartlight Wall Gift Set",
+          "seriesDescription": "A personalized heartlight wall gift shown in its warm glow setup and brighter room view.",
+          "seriesStage": "Room view"
         },
         {
           "id": "MA53-GFT-002",
           "image": "/images/customized-gifts/customized-gift-detail-02.webp",
-          "caption": "Anniversary Heartlight Wall"
+          "caption": "Floating Lantern Room Decor"
         },
         {
-          "id": "MA53-GFT-003",
-          "image": "/images/customized-gifts/customized-gift-detail-03.webp",
-          "caption": "Floating Lantern Room Decor"
+          "id": "MA53-GFT-003-001",
+          "image": "/images/customized-gifts/customized-gift-detail-03-001.webp",
+          "caption": "Love Glow Keepsake",
+          "seriesId": "love-glow-celebration-set",
+          "seriesTitle": "Love Glow Celebration Set",
+          "seriesDescription": "A two-view love-themed gift setup shown as a glowing detail and celebration scene.",
+          "seriesStage": "Glow detail"
         },
         {
           "id": "MA53-GFT-004",
           "image": "/images/customized-gifts/customized-gift-detail-04.webp",
-          "caption": "Love Glow Keepsake"
+          "caption": "Petal Heart Hand Portrait"
         },
         {
           "id": "MA53-GFT-005",
           "image": "/images/customized-gifts/customized-gift-detail-05.webp",
-          "caption": "Petal Heart Hand Portrait"
+          "caption": "Birthday Balloon Room Moment"
         },
         {
-          "id": "MA53-GFT-006",
-          "image": "/images/customized-gifts/customized-gift-detail-06.webp",
-          "caption": "Birthday Balloon Room Moment"
+          "id": "MA53-GFT-003-002",
+          "image": "/images/customized-gifts/customized-gift-detail-03-002.webp",
+          "caption": "Love Letter Celebration Table",
+          "seriesId": "love-glow-celebration-set",
+          "seriesTitle": "Love Glow Celebration Set",
+          "seriesDescription": "A two-view love-themed gift setup shown as a glowing detail and celebration scene.",
+          "seriesStage": "Celebration view"
+        },
+        {
+          "id": "MA53-GFT-006-001",
+          "image": "/images/customized-gifts/customized-gift-detail-06-001.webp",
+          "caption": "Midnight Birthday Hamper",
+          "seriesId": "birthday-surprise-gift-set",
+          "seriesTitle": "Birthday Surprise Gift Set",
+          "seriesDescription": "A two-view birthday gift set shown as the hamper reveal and matching surprise box.",
+          "seriesStage": "Hamper view"
         },
         {
           "id": "MA53-GFT-007",
           "image": "/images/customized-gifts/customized-gift-detail-07.webp",
-          "caption": "Love Letter Celebration Table"
+          "caption": "Tiny Travel Blessing Jar"
         },
         {
           "id": "MA53-GFT-008",
           "image": "/images/customized-gifts/customized-gift-detail-08.webp",
-          "caption": "Midnight Birthday Hamper"
+          "caption": "Forever Love Mini Sign"
+        },
+        {
+          "id": "MA53-GFT-006-002",
+          "image": "/images/customized-gifts/customized-gift-detail-06-002.webp",
+          "caption": "Purple Birthday Surprise Box",
+          "seriesId": "birthday-surprise-gift-set",
+          "seriesTitle": "Birthday Surprise Gift Set",
+          "seriesDescription": "A two-view birthday gift set shown as the hamper reveal and matching surprise box.",
+          "seriesStage": "Surprise box"
         },
         {
           "id": "MA53-GFT-009",
           "image": "/images/customized-gifts/customized-gift-detail-09.webp",
-          "caption": "Tiny Travel Blessing Jar"
+          "caption": "Memory Frame Gift Board"
         },
         {
-          "id": "MA53-GFT-010",
-          "image": "/images/customized-gifts/customized-gift-detail-10.webp",
-          "caption": "Forever Love Mini Sign"
+          "id": "MA53-GFT-010-001",
+          "image": "/images/customized-gifts/customized-gift-detail-10-001.webp",
+          "caption": "Balloon Note Keepsake",
+          "seriesId": "balloon-note-keepsake-set",
+          "seriesTitle": "Balloon Note Keepsake Set",
+          "seriesDescription": "A two-view balloon note keepsake shown as the main note piece and matching mini card.",
+          "seriesStage": "Main note"
+        },
+        {
+          "id": "MA53-GFT-010-002",
+          "image": "/images/customized-gifts/customized-gift-detail-10-002.webp",
+          "caption": "Balloon Wishes Mini Card",
+          "seriesId": "balloon-note-keepsake-set",
+          "seriesTitle": "Balloon Note Keepsake Set",
+          "seriesDescription": "A two-view balloon note keepsake shown as the main note piece and matching mini card.",
+          "seriesStage": "Mini card"
         },
         {
           "id": "MA53-GFT-011",
           "image": "/images/customized-gifts/customized-gift-detail-11.webp",
-          "caption": "Purple Birthday Surprise Box"
+          "caption": "Sunshine Dress Keepsake"
         },
         {
-          "id": "MA53-GFT-012",
-          "image": "/images/customized-gifts/customized-gift-detail-12.webp",
-          "caption": "Memory Frame Gift Board"
+          "id": "MA53-GFT-012-001",
+          "image": "/images/customized-gifts/customized-gift-detail-12-001.webp",
+          "caption": "Strawberry Gift Pair",
+          "seriesId": "strawberry-gift-favor-set",
+          "seriesTitle": "Strawberry Gift Favor Set",
+          "seriesDescription": "A two-view strawberry-themed gift set shown as paired pieces and party favors.",
+          "seriesStage": "Gift pair"
+        },
+        {
+          "id": "MA53-GFT-012-002",
+          "image": "/images/customized-gifts/customized-gift-detail-12-002.webp",
+          "caption": "Strawberry Party Favors",
+          "seriesId": "strawberry-gift-favor-set",
+          "seriesTitle": "Strawberry Gift Favor Set",
+          "seriesDescription": "A two-view strawberry-themed gift set shown as paired pieces and party favors.",
+          "seriesStage": "Party favors"
         },
         {
           "id": "MA53-GFT-013",
           "image": "/images/customized-gifts/customized-gift-detail-13.webp",
-          "caption": "Balloon Note Keepsake"
+          "caption": "Festive Favor Pail"
         },
         {
           "id": "MA53-GFT-014",
           "image": "/images/customized-gifts/customized-gift-detail-14.webp",
-          "caption": "Balloon Wishes Mini Card"
+          "caption": "Birthday Name Banner"
         },
         {
           "id": "MA53-GFT-015",
           "image": "/images/customized-gifts/customized-gift-detail-15.webp",
-          "caption": "Sunshine Dress Keepsake"
+          "caption": "Royal Birthday Light Board"
         },
         {
           "id": "MA53-GFT-016",
           "image": "/images/customized-gifts/customized-gift-detail-16.webp",
-          "caption": "Strawberry Gift Pair"
+          "caption": "Storybook Garden Birthday Backdrop"
         },
         {
           "id": "MA53-GFT-017",
           "image": "/images/customized-gifts/customized-gift-detail-17.webp",
-          "caption": "Strawberry Party Favors"
+          "caption": "Birthday Door Blessing Frame"
         },
         {
           "id": "MA53-GFT-018",
           "image": "/images/customized-gifts/customized-gift-detail-18.webp",
-          "caption": "Festive Favor Pail"
+          "caption": "Thoughtful Teacher Keepsake"
         },
         {
           "id": "MA53-GFT-019",
           "image": "/images/customized-gifts/customized-gift-detail-19.webp",
-          "caption": "Birthday Name Banner"
+          "caption": "Heartfall Photo Curtain"
         },
         {
           "id": "MA53-GFT-020",
           "image": "/images/customized-gifts/customized-gift-detail-20.webp",
-          "caption": "Royal Birthday Light Board"
+          "caption": "Golden Birthday Door Bunting"
         },
         {
           "id": "MA53-GFT-021",
           "image": "/images/customized-gifts/customized-gift-detail-21.webp",
-          "caption": "Storybook Garden Birthday Backdrop"
+          "caption": "Blue Border Welcome Home Plaque"
         },
         {
           "id": "MA53-GFT-022",
           "image": "/images/customized-gifts/customized-gift-detail-22.webp",
-          "caption": "Birthday Door Blessing Frame"
-        },
-        {
-          "id": "MA53-GFT-023",
-          "image": "/images/customized-gifts/customized-gift-detail-23.webp",
-          "caption": "Thoughtful Teacher Keepsake"
-        },
-        {
-          "id": "MA53-GFT-024",
-          "image": "/images/customized-gifts/customized-gift-detail-24.webp",
-          "caption": "Heartfall Photo Curtain"
-        },
-        {
-          "id": "MA53-GFT-025",
-          "image": "/images/customized-gifts/customized-gift-detail-25.webp",
-          "caption": "Golden Birthday Door Bunting"
-        },
-        {
-          "id": "MA53-GFT-026",
-          "image": "/images/customized-gifts/customized-gift-detail-26.webp",
-          "caption": "Blue Border Welcome Home Plaque"
-        },
-        {
-          "id": "MA53-GFT-027",
-          "image": "/images/customized-gifts/customized-gift-detail-27.webp",
           "caption": "Moonlight Star Gift Boxes"
         }
       ],

@@ -11,17 +11,17 @@ const targets = [
   },
   {
     input: "creations/IMG-20220626-WA0008.jpg",
-    output: "public/images/customized-gifts/customized-gift-detail-03.webp",
+    output: "public/images/customized-gifts/customized-gift-detail-02.webp",
     mode: "coloredDecor"
   },
   {
     input: "creations/IMG-20220626-WA0011.jpg",
-    output: "public/images/customized-gifts/customized-gift-detail-06.webp",
+    output: "public/images/customized-gifts/customized-gift-detail-05.webp",
     mode: "coloredDecor"
   },
   {
     input: "creations/IMG-20231125-WA0001.jpg",
-    output: "public/images/customized-gifts/customized-gift-detail-19.webp",
+    output: "public/images/customized-gifts/customized-gift-detail-14.webp",
     mode: "banner"
   },
   {

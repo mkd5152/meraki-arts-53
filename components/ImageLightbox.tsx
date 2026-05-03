@@ -53,7 +53,6 @@ export function ImageLightbox({
   watermarkSrc
 }: ImageLightboxProps) {
   const [mounted, setMounted] = useState(false);
-  const [zoomed, setZoomed] = useState(false);
   const [seriesIndex, setSeriesIndex] = useState(0);
   const seriesItems = item?.seriesItems?.length ? item.seriesItems : [];
   const activeItem = seriesItems[seriesIndex] ?? item;
@@ -67,7 +66,6 @@ export function ImageLightbox({
       return;
     }
 
-    setZoomed(false);
     setSeriesIndex(item.initialSeriesIndex ?? 0);
 
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -178,10 +176,22 @@ export function ImageLightbox({
             <div className="relative min-h-0 flex-1 overflow-hidden bg-ink">
               <button
                 type="button"
-                onClick={() => setZoomed((current) => !current)}
-                className="relative block h-full min-h-[24rem] w-full touch-pan-x touch-pan-y cursor-zoom-in overflow-hidden"
-                aria-label={zoomed ? labels.closeLabel : labels.openLabel}
+                className="relative block h-full min-h-[24rem] w-full touch-pan-x touch-pan-y cursor-default overflow-hidden"
+                aria-label={labels.openLabel}
               >
+                <Image
+                  src={activeItem?.image ?? item.image}
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1280px) 1152px, 100vw"
+                  className="scale-105 object-cover object-center opacity-55 blur-2xl"
+                  aria-hidden="true"
+                />
+                <span
+                  className="absolute inset-0 bg-ink/36"
+                  aria-hidden="true"
+                />
                 <Image
                   src={activeItem?.image ?? item.image}
                   alt={activeItem?.caption ?? item.caption}
@@ -189,9 +199,7 @@ export function ImageLightbox({
                   priority
                   unoptimized
                   sizes="(min-width: 1280px) 1152px, 100vw"
-                  className={`object-cover object-[68%_50%] transition duration-300 sm:object-center ${
-                    zoomed ? "scale-110" : "scale-100"
-                  }`}
+                  className="object-contain object-center"
                 />
               </button>
 
@@ -253,7 +261,6 @@ export function ImageLightbox({
                           type="button"
                           onClick={() => {
                             setSeriesIndex(index);
-                            setZoomed(false);
                           }}
                           className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border bg-mist transition sm:h-20 sm:w-20 ${
                             index === seriesIndex
