@@ -5,17 +5,50 @@ import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { ServiceCard } from "@/components/ServiceCard";
 import { getContent } from "@/lib/getData";
+import {
+  buildBreadcrumbJsonLd,
+  buildMetadata,
+  buildServicesJsonLd,
+  buildWebPageJsonLd,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
 export const metadata: Metadata = {
-  title: content.servicesPage.hero.title,
-  description: content.servicesPage.hero.intro
+  ...buildMetadata({
+    title: content.servicesPage.hero.title,
+    description: content.servicesPage.hero.intro,
+    path: "/services",
+    image: content.artForms[content.artForms.length - 1]?.coverImage,
+    keywords: [
+      "custom gift services",
+      "handmade decor services",
+      "custom handmade commissions",
+      "personalized gift commissions"
+    ]
+  })
 };
 
 export default function ServicesPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" }
+          ]),
+          buildWebPageJsonLd({
+            title: content.servicesPage.hero.title,
+            description: content.servicesPage.hero.intro,
+            path: "/services",
+            image: content.artForms[content.artForms.length - 1]?.coverImage
+          }),
+          buildServicesJsonLd(content)
+        ])}
+      />
       <PageHero
         eyebrow={content.servicesPage.hero.eyebrow}
         title={content.servicesPage.hero.title}

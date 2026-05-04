@@ -4,17 +4,43 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
+import {
+  buildBreadcrumbJsonLd,
+  buildMetadata,
+  buildWebPageJsonLd,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
 export const metadata: Metadata = {
-  title: content.aboutPage.hero.title,
-  description: content.aboutPage.hero.intro
+  ...buildMetadata({
+    title: content.aboutPage.hero.title,
+    description: content.aboutPage.hero.intro,
+    path: "/about",
+    image: content.home.hero.image,
+    keywords: ["about Meraki Arts 53", "handmade artist", "custom craft studio"]
+  })
 };
 
 export default function AboutPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" }
+          ]),
+          buildWebPageJsonLd({
+            title: content.aboutPage.hero.title,
+            description: content.aboutPage.hero.intro,
+            path: "/about",
+            image: content.home.hero.image
+          })
+        ])}
+      />
       <PageHero
         eyebrow={content.aboutPage.hero.eyebrow}
         title={content.aboutPage.hero.title}

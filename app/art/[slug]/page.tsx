@@ -5,6 +5,13 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getArtFormBySlug, getContent } from "@/lib/getData";
+import {
+  buildArtFormKeywords,
+  buildBreadcrumbJsonLd,
+  buildCollectionJsonLd,
+  buildMetadata,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
@@ -31,8 +38,13 @@ export async function generateMetadata({
   }
 
   return {
-    title: artForm.title,
-    description: artForm.description
+    ...buildMetadata({
+      title: artForm.title,
+      description: artForm.description,
+      path: `/art/${artForm.slug}`,
+      image: artForm.coverImage,
+      keywords: buildArtFormKeywords(artForm)
+    })
   };
 }
 
@@ -53,6 +65,23 @@ export default async function ArtFormPage({ params }: PageProps) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Portfolio", path: "/gallery" },
+            { name: artForm.title, path: `/art/${artForm.slug}` }
+          ]),
+          buildCollectionJsonLd({
+            title: `${artForm.title} Portfolio`,
+            description: artForm.description,
+            path: `/art/${artForm.slug}`,
+            image: artForm.coverImage,
+            items: artForm.gallery
+          })
+        ])}
+      />
       <PageHero
         eyebrow={content.navigation.workDropdownLabel}
         title={artForm.title}

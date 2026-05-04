@@ -5,12 +5,28 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
+import {
+  buildBreadcrumbJsonLd,
+  buildMetadata,
+  buildWebPageJsonLd,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
 export const metadata: Metadata = {
-  title: content.journalPage.hero.title,
-  description: content.journalPage.hero.intro
+  ...buildMetadata({
+    title: content.journalPage.hero.title,
+    description: content.journalPage.hero.intro,
+    path: "/journal",
+    image: content.journalPage.articles[0]?.image,
+    keywords: [
+      "handmade art process",
+      "custom gift ideas",
+      "handmade piece care",
+      "creative journal"
+    ]
+  })
 };
 
 export default function JournalPage() {
@@ -21,6 +37,21 @@ export default function JournalPage() {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Journal", path: "/journal" }
+          ]),
+          buildWebPageJsonLd({
+            title: content.journalPage.hero.title,
+            description: content.journalPage.hero.intro,
+            path: "/journal",
+            image: featured?.image
+          })
+        ])}
+      />
       <PageHero
         eyebrow={content.journalPage.hero.eyebrow}
         title={content.journalPage.hero.title}

@@ -3,7 +3,7 @@
   "note": "Original source files copied into category folders to mirror public/images. Top-level creation files were not moved or edited.",
   "counts": {
     "paintings": 29,
-    "customized-gifts": 27,
+    "customized-gifts": 25,
     "mehendi": 93,
     "lamasa": 4,
     "texture-art": 6,
@@ -105,9 +105,8 @@
       "sourceIndex": 12,
       "category": "customized-gifts",
       "sourceFile": "customized-gift-detail-03-002.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-03-002.jpg",
-      "originalPath": "creations/segregated/customized-gifts/customized-gift-detail-03-002.jpg",
-      "publicImage": "public/images/customized-gifts/customized-gift-detail-03-002.webp"
+      "copiedFile": "_archived/customized-gifts/customized-gift-detail-03-002.jpg",
+      "originalPath": "creations/segregated/_archived/customized-gifts/customized-gift-detail-03-002.jpg"
     },
     {
       "sourceIndex": 13,
@@ -145,9 +144,8 @@
       "sourceIndex": 17,
       "category": "customized-gifts",
       "sourceFile": "IMG-20220626-WA0017.jpg",
-      "copiedFile": "customized-gifts/customized-gift-detail-09.jpg",
-      "originalPath": "creations/original-imports/IMG-20220626-WA0017.jpg",
-      "publicImage": "public/images/customized-gifts/customized-gift-detail-09.webp"
+      "copiedFile": "_archived/customized-gifts/customized-gift-detail-09.jpg",
+      "originalPath": "creations/original-imports/IMG-20220626-WA0017.jpg"
     },
     {
       "sourceIndex": 18,

@@ -4,17 +4,47 @@ import { FAQSection } from "@/components/FAQSection";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
+import {
+  buildBreadcrumbJsonLd,
+  buildMetadata,
+  buildWebPageJsonLd,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
 export const metadata: Metadata = {
-  title: content.contactPage.hero.title,
-  description: content.contactPage.hero.intro
+  ...buildMetadata({
+    title: content.contactPage.hero.title,
+    description: content.contactPage.hero.intro,
+    path: "/contact",
+    image: content.artForms[1]?.coverImage,
+    keywords: [
+      "request custom handmade gift",
+      "contact Meraki Arts 53",
+      "custom art commission"
+    ]
+  })
 };
 
 export default function ContactPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" }
+          ]),
+          buildWebPageJsonLd({
+            title: content.contactPage.hero.title,
+            description: content.contactPage.hero.intro,
+            path: "/contact",
+            image: content.artForms[1]?.coverImage
+          })
+        ])}
+      />
       <PageHero
         eyebrow={content.contactPage.hero.eyebrow}
         title={content.contactPage.hero.title}

@@ -3,17 +3,51 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
+import {
+  buildBreadcrumbJsonLd,
+  buildCollectionJsonLd,
+  buildMetadata,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
 export const metadata: Metadata = {
-  title: content.galleryPage.hero.title,
-  description: content.galleryPage.hero.intro
+  ...buildMetadata({
+    title: content.galleryPage.hero.title,
+    description: content.galleryPage.hero.intro,
+    path: "/gallery",
+    image: content.artForms[0]?.coverImage,
+    keywords: [
+      "handmade art gallery",
+      "custom gift gallery",
+      "mehendi portfolio",
+      "texture art portfolio"
+    ]
+  })
 };
 
 export default function GalleryPage() {
+  const galleryItems = content.artForms.flatMap((artForm) => artForm.gallery);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd([
+          buildBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: content.galleryPage.hero.title, path: "/gallery" }
+          ]),
+          buildCollectionJsonLd({
+            title: content.galleryPage.hero.title,
+            description: content.galleryPage.hero.intro,
+            path: "/gallery",
+            image: content.artForms[0]?.coverImage,
+            items: galleryItems
+          })
+        ])}
+      />
       <PageHero
         eyebrow={content.galleryPage.hero.eyebrow}
         title={content.galleryPage.hero.title}

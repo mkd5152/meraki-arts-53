@@ -1742,13 +1742,9 @@
           "caption": "Floating Lantern Room Decor"
         },
         {
-          "id": "MA53-GFT-003-001",
+          "id": "MA53-GFT-003",
           "image": "/images/customized-gifts/customized-gift-detail-03-001.webp",
-          "caption": "Love Glow Keepsake",
-          "seriesId": "love-glow-celebration-set",
-          "seriesTitle": "Love Glow Celebration Set",
-          "seriesDescription": "A two-view love-themed gift setup shown as a glowing detail and celebration scene.",
-          "seriesStage": "Glow detail"
+          "caption": "Love Glow Balloon Decor"
         },
         {
           "id": "MA53-GFT-004",
@@ -1759,15 +1755,6 @@
           "id": "MA53-GFT-005",
           "image": "/images/customized-gifts/customized-gift-detail-05.webp",
           "caption": "Birthday Balloon Room Moment"
-        },
-        {
-          "id": "MA53-GFT-003-002",
-          "image": "/images/customized-gifts/customized-gift-detail-03-002.webp",
-          "caption": "Love Letter Celebration Table",
-          "seriesId": "love-glow-celebration-set",
-          "seriesTitle": "Love Glow Celebration Set",
-          "seriesDescription": "A two-view love-themed gift setup shown as a glowing detail and celebration scene.",
-          "seriesStage": "Celebration view"
         },
         {
           "id": "MA53-GFT-006-001",
@@ -1798,11 +1785,6 @@
           "seriesStage": "Surprise box"
         },
         {
-          "id": "MA53-GFT-009",
-          "image": "/images/customized-gifts/customized-gift-detail-09.webp",
-          "caption": "Memory Frame Gift Board"
-        },
-        {
           "id": "MA53-GFT-010-001",
           "image": "/images/customized-gifts/customized-gift-detail-10-001.webp",
           "caption": "Balloon Note Keepsake",
@@ -1823,7 +1805,7 @@
         {
           "id": "MA53-GFT-011",
           "image": "/images/customized-gifts/customized-gift-detail-11.webp",
-          "caption": "Sunshine Dress Keepsake"
+          "caption": "Strawberry Favor Bag"
         },
         {
           "id": "MA53-GFT-012-001",
@@ -1846,7 +1828,7 @@
         {
           "id": "MA53-GFT-013",
           "image": "/images/customized-gifts/customized-gift-detail-13.webp",
-          "caption": "Festive Favor Pail"
+          "caption": "Watermelon Favor Pail"
         },
         {
           "id": "MA53-GFT-014",
@@ -1861,7 +1843,7 @@
         {
           "id": "MA53-GFT-016",
           "image": "/images/customized-gifts/customized-gift-detail-16.webp",
-          "caption": "Storybook Garden Birthday Backdrop"
+          "caption": "Fruit Garden First Birthday Backdrop"
         },
         {
           "id": "MA53-GFT-017",

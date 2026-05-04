@@ -5,6 +5,13 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { getContent } from "@/lib/getData";
+import {
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebsiteJsonLd,
+  jsonLd,
+  siteUrl
+} from "@/lib/seo";
 import "./globals.css";
 
 const content = getContent();
@@ -16,27 +23,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://merakiarts53.vercel.app"),
+  ...buildMetadata({
+    title: content.artist.brandName,
+    description: content.artist.intro,
+    image: content.brand.logo.assets.socialCard
+  }),
+  metadataBase: new URL(siteUrl),
   title: {
     default: content.artist.brandName,
     template: `%s | ${content.artist.brandName}`
   },
-  description: content.artist.intro,
+  applicationName: content.artist.brandName,
+  authors: [{ name: content.artist.brandName, url: siteUrl }],
+  creator: content.artist.brandName,
+  publisher: content.artist.brandName,
+  category: "Handmade art and custom gifts",
   icons: {
     icon: "/icon.png"
-  },
-  openGraph: {
-    title: content.artist.brandName,
-    description: content.artist.intro,
-    type: "website",
-    images: [
-      {
-        url: content.brand.logo.assets.socialCard,
-        width: 3400,
-        height: 1500,
-        alt: content.artist.brandName
-      }
-    ]
   }
 };
 
@@ -54,6 +57,13 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={montserrat.variable} suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd([
+            buildOrganizationJsonLd(content),
+            buildWebsiteJsonLd(content)
+          ])}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html:
