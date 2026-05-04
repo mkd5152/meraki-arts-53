@@ -15,6 +15,8 @@ import {
 
 const content = getContent();
 
+export const dynamicParams = false;
+
 type PageProps = {
   params: Promise<{
     slug: string;
