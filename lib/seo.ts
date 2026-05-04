@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ArtForm, Content } from "@/lib/getData";
 
-const fallbackSiteUrl = "https://merakiarts53.vercel.app";
+const fallbackSiteUrl = "https://merakiarts53.com";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl
