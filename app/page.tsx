@@ -7,7 +7,12 @@ import { HeroSection } from "@/components/HeroSection";
 import { JournalSection } from "@/components/JournalSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { getContent } from "@/lib/getData";
-import { buildCollectionJsonLd, buildMetadata, jsonLd } from "@/lib/seo";
+import {
+  buildCollectionJsonLd,
+  buildMetadata,
+  getPageKeywords,
+  jsonLd
+} from "@/lib/seo";
 
 const content = getContent();
 
@@ -16,13 +21,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Meraki Arts 53 creates handmade texture art, customized gifts, mehendi designs, paintings, textile details, and decor for personal moments.",
   image: content.home.hero.image,
-  keywords: [
-    "handmade customized gifts",
-    "personalized handmade gifts",
-    "mehendi designs",
-    "texture art decor",
-    "handmade art portfolio"
-  ]
+  keywords: getPageKeywords(content, "home")
 });
 
 export default function Home() {

@@ -7,6 +7,7 @@ import {
   buildBreadcrumbJsonLd,
   buildCollectionJsonLd,
   buildMetadata,
+  getPageKeywords,
   jsonLd
 } from "@/lib/seo";
 
@@ -18,12 +19,7 @@ export const metadata: Metadata = {
     description: content.galleryPage.hero.intro,
     path: "/gallery",
     image: content.artForms[0]?.coverImage,
-    keywords: [
-      "handmade art gallery",
-      "custom gift gallery",
-      "mehendi portfolio",
-      "texture art portfolio"
-    ]
+    keywords: getPageKeywords(content, "gallery")
   })
 };
 

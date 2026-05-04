@@ -94,7 +94,7 @@
           "label": "creative disciplines"
         },
         {
-          "value": "180+",
+          "value": "160+",
           "label": "gallery details"
         },
         {
@@ -844,7 +844,14 @@
     {
       "title": "Bridal & Occasion Mehendi",
       "description": "Elegant mehendi design for celebrations, portraits, and personal expression.",
-      "isVisible": false
+      "isVisible": true,
+      "image": "/images/mehendi/mehendi-design-01.webp",
+      "startingFrom": "Quoted by occasion and design detail",
+      "includes": [
+        "Style and occasion direction",
+        "Pattern density planning",
+        "Elegant hand or occasion design"
+      ]
     },
     {
       "title": "Textile Detail Work",
@@ -877,7 +884,7 @@
       "isVisible": true,
       "title": "Texture Art",
       "slug": "texture-art",
-      "description": "Layered texture artwork with sculptural details, raised surfaces, and dimensional finishes for statement decor.",
+      "description": "Layered texture art, floral relief panels, and dimensional handmade wall decor for homes, gifts, and styled spaces in Dubai, Chennai, and online.",
       "coverImage": "/images/texture-art/texture-art-gilded-bloom-04.webp",
       "accent": "#2e7c80",
       "gallery": [
@@ -888,7 +895,8 @@
           "seriesId": "gilded-bloom-texture-panel",
           "seriesTitle": "Gilded Bloom Texture Panel",
           "seriesDescription": "A two-view texture art sequence showing the raised floral detail and styled display.",
-          "seriesStage": "Detail view"
+          "seriesStage": "Detail view",
+          "altText": "Gilded Bloom Texture Detail by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         },
         {
           "id": "MA53-TEX-002",
@@ -897,12 +905,14 @@
           "seriesId": "gilded-bloom-texture-panel",
           "seriesTitle": "Gilded Bloom Texture Panel",
           "seriesDescription": "A two-view texture art sequence showing the raised floral detail and styled display.",
-          "seriesStage": "Styled display"
+          "seriesStage": "Styled display",
+          "altText": "Gilded Bloom Styled Panel by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         },
         {
           "id": "MA53-TEX-003",
           "image": "/images/texture-art/texture-art-layered-leaf-display-03.webp",
-          "caption": "Layered Leaf Texture Display"
+          "caption": "Layered Leaf Texture Display",
+          "altText": "Layered Leaf Texture Display by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         },
         {
           "id": "MA53-TEX-004",
@@ -911,7 +921,8 @@
           "seriesId": "pink-bloom-texture-panel",
           "seriesTitle": "Pink Bloom Texture Panel",
           "seriesDescription": "A two-view texture art sequence showing the raised floral texture in close detail and as a styled finished panel.",
-          "seriesStage": "Detail view"
+          "seriesStage": "Detail view",
+          "altText": "Pink Bloom Texture Detail by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         },
         {
           "id": "MA53-TEX-005",
@@ -920,496 +931,735 @@
           "seriesId": "pink-bloom-texture-panel",
           "seriesTitle": "Pink Bloom Texture Panel",
           "seriesDescription": "A two-view texture art sequence showing the raised floral texture in close detail and as a styled finished panel.",
-          "seriesStage": "Styled view"
+          "seriesStage": "Styled view",
+          "altText": "Pink Bloom Styled Panel by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         },
         {
           "id": "MA53-TEX-006",
           "image": "/images/texture-art/texture-art-emerald-flow-panel-07.webp",
-          "caption": "Emerald Flow Texture Panel"
+          "caption": "Emerald Flow Texture Panel",
+          "altText": "Emerald Flow Texture Panel by Meraki Arts 53 - Texture Art portfolio for home styling and housewarming gifts custom requests."
         }
       ],
-      "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully.",
+      "story": "Layered texture art is best for statement decor, meaningful wall pieces, and tactile surfaces that hold light beautifully. Meraki Arts 53 creates floral relief artwork, color-led texture panels, and small sculptural details for home styling, personal gifting, and custom decor requests in Dubai, Chennai, and online.",
       "popularRequests": [
+        "Texture art wall panels",
         "Floral relief artwork",
-        "Textured wall panels",
+        "Custom textured canvas decor",
+        "Gold accent texture art",
         "Color-led statement pieces"
       ],
       "useCases": [
         "Home styling",
+        "Housewarming gifts",
         "Personal gifting",
-        "Small feature walls"
-      ]
+        "Small feature walls",
+        "Statement wall decor"
+      ],
+      "searchContent": {
+        "title": "Texture Art for Handmade Wall Decor and Statement Gifts",
+        "body": "Choose texture art when you want a handmade piece with depth, raised floral detail, and a polished finish. These works suit clients searching for texture art in Dubai, handmade wall decor in Chennai, custom floral relief artwork, and meaningful decor gifts that feel personal without becoming visually heavy.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Available for custom texture art conversations across Dubai, UAE, Chennai, India, and online. Share your wall size, color palette, room mood, and timeline to shape a textured artwork direction.",
+        "targetKeywords": [
+          "Texture art wall panels",
+          "Floral relief artwork",
+          "Custom textured canvas decor",
+          "Gold accent texture art",
+          "Color-led statement pieces",
+          "Home styling",
+          "Housewarming gifts",
+          "Personal gifting",
+          "Small feature walls",
+          "Statement wall decor",
+          "Texture Art in Dubai",
+          "Texture Art in Chennai",
+          "Texture Art online",
+          "custom texture art request"
+        ]
+      }
     },
     {
       "id": "terrazzo",
       "isVisible": true,
       "title": "Terrazzo",
       "slug": "terrazzo",
-      "description": "Modern terrazzo-inspired surfaces and decor with playful yet polished finishes.",
+      "description": "Modern terrazzo-inspired handmade trays, surfaces, and decor objects for housewarming gifts, shelf styling, and personal home accents.",
       "coverImage": "/images/terrazzo/terrazzo-marbled-gold-tray-01.webp",
       "accent": "#b8844a",
       "gallery": [
         {
           "id": "MA53-TRZ-001",
           "image": "/images/terrazzo/terrazzo-marbled-gold-tray-01.webp",
-          "caption": "Marbled Gold Oval Tray"
+          "caption": "Marbled Gold Oval Tray",
+          "altText": "Marbled Gold Oval Tray by Meraki Arts 53 - Terrazzo portfolio for housewarming and home styling custom requests."
         }
       ],
-      "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents.",
+      "story": "Terrazzo-inspired decor brings a polished, contemporary object feel to handmade home accents. Meraki Arts 53 shapes terrazzo-style trays and decor pieces for housewarming gifts, desk styling, shelf styling, and small custom home accents.",
       "popularRequests": [
+        "Terrazzo trays",
         "Small decor objects",
+        "Housewarming gifts",
         "Neutral home accents",
         "Giftable display pieces"
       ],
       "useCases": [
         "Housewarming",
         "Home styling",
-        "Desk and shelf decor"
-      ]
+        "Desk decor",
+        "Shelf decor",
+        "Personal gifting"
+      ],
+      "searchContent": {
+        "title": "Terrazzo-Inspired Handmade Decor and Gift Objects",
+        "body": "Terrazzo decor works well for people searching for handmade trays, modern decor gifts, housewarming gifts in Dubai, or small handmade home accents in Chennai. Each piece is planned around color balance, finish, and everyday display value.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Custom terrazzo-inspired decor can be discussed online for Dubai, UAE, Chennai, India, and nearby gifting needs.",
+        "targetKeywords": [
+          "Terrazzo trays",
+          "Small decor objects",
+          "Housewarming gifts",
+          "Neutral home accents",
+          "Giftable display pieces",
+          "Housewarming",
+          "Home styling",
+          "Desk decor",
+          "Shelf decor",
+          "Personal gifting",
+          "Terrazzo in Dubai",
+          "Terrazzo in Chennai",
+          "Terrazzo online",
+          "custom terrazzo request"
+        ]
+      }
     },
     {
       "id": "mehendi",
-      "isVisible": false,
+      "isVisible": true,
       "title": "Mehendi",
       "slug": "mehendi",
-      "description": "Intricate, elegant mehendi designs tailored for occasions and personal expression.",
+      "description": "Intricate mehendi designs for bridal, festive, party, and personal occasions, with elegant patterns tailored for hands, arms, and celebrations.",
       "coverImage": "/images/mehendi/mehendi-design-01.webp",
       "accent": "#d65f4d",
       "gallery": [
         {
           "image": "/images/mehendi/mehendi-design-01.webp",
-          "caption": "Mehendi design 1"
+          "caption": "Intricate Mehendi Design 01",
+          "altText": "Intricate Mehendi Design 01 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-02.webp",
-          "caption": "Mehendi design 2"
+          "caption": "Intricate Mehendi Design 02",
+          "altText": "Intricate Mehendi Design 02 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-03.webp",
-          "caption": "Mehendi design 3"
+          "caption": "Intricate Mehendi Design 03",
+          "altText": "Intricate Mehendi Design 03 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-04.webp",
-          "caption": "Mehendi design 4"
+          "caption": "Intricate Mehendi Design 04",
+          "altText": "Intricate Mehendi Design 04 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-05.webp",
-          "caption": "Mehendi design 5"
+          "caption": "Intricate Mehendi Design 05",
+          "altText": "Intricate Mehendi Design 05 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-06.webp",
-          "caption": "Mehendi design 6"
+          "caption": "Intricate Mehendi Design 06",
+          "altText": "Intricate Mehendi Design 06 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-07.webp",
-          "caption": "Mehendi design 7"
+          "caption": "Intricate Mehendi Design 07",
+          "altText": "Intricate Mehendi Design 07 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-08.webp",
-          "caption": "Mehendi design 8"
+          "caption": "Intricate Mehendi Design 08",
+          "altText": "Intricate Mehendi Design 08 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-09.webp",
-          "caption": "Mehendi design 9"
+          "caption": "Intricate Mehendi Design 09",
+          "altText": "Intricate Mehendi Design 09 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-10.webp",
-          "caption": "Mehendi design 10"
+          "caption": "Intricate Mehendi Design 10",
+          "altText": "Intricate Mehendi Design 10 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-11.webp",
-          "caption": "Mehendi design 11"
+          "caption": "Intricate Mehendi Design 11",
+          "altText": "Intricate Mehendi Design 11 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-12.webp",
-          "caption": "Mehendi design 12"
+          "caption": "Intricate Mehendi Design 12",
+          "altText": "Intricate Mehendi Design 12 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-13.webp",
-          "caption": "Mehendi design 13"
+          "caption": "Intricate Mehendi Design 13",
+          "altText": "Intricate Mehendi Design 13 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-14.webp",
-          "caption": "Mehendi design 14"
+          "caption": "Intricate Mehendi Design 14",
+          "altText": "Intricate Mehendi Design 14 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-15.webp",
-          "caption": "Mehendi design 15"
+          "caption": "Intricate Mehendi Design 15",
+          "altText": "Intricate Mehendi Design 15 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-16.webp",
-          "caption": "Mehendi design 16"
+          "caption": "Intricate Mehendi Design 16",
+          "altText": "Intricate Mehendi Design 16 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-17.webp",
-          "caption": "Mehendi design 17"
+          "caption": "Intricate Mehendi Design 17",
+          "altText": "Intricate Mehendi Design 17 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-18.webp",
-          "caption": "Mehendi design 18"
+          "caption": "Intricate Mehendi Design 18",
+          "altText": "Intricate Mehendi Design 18 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-19.webp",
-          "caption": "Mehendi design 19"
+          "caption": "Intricate Mehendi Design 19",
+          "altText": "Intricate Mehendi Design 19 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-20.webp",
-          "caption": "Mehendi design 20"
+          "caption": "Intricate Mehendi Design 20",
+          "altText": "Intricate Mehendi Design 20 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-21.webp",
-          "caption": "Mehendi design 21"
+          "caption": "Intricate Mehendi Design 21",
+          "altText": "Intricate Mehendi Design 21 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-22.webp",
-          "caption": "Mehendi design 22"
+          "caption": "Intricate Mehendi Design 22",
+          "altText": "Intricate Mehendi Design 22 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-23.webp",
-          "caption": "Mehendi design 23"
+          "caption": "Intricate Mehendi Design 23",
+          "altText": "Intricate Mehendi Design 23 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-24.webp",
-          "caption": "Mehendi design 24"
+          "caption": "Intricate Mehendi Design 24",
+          "altText": "Intricate Mehendi Design 24 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-25.webp",
-          "caption": "Mehendi design 25"
+          "caption": "Intricate Mehendi Design 25",
+          "altText": "Intricate Mehendi Design 25 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-26.webp",
-          "caption": "Mehendi design 26"
+          "caption": "Intricate Mehendi Design 26",
+          "altText": "Intricate Mehendi Design 26 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-27.webp",
-          "caption": "Mehendi design 27"
+          "caption": "Intricate Mehendi Design 27",
+          "altText": "Intricate Mehendi Design 27 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-28.webp",
-          "caption": "Mehendi design 28"
+          "caption": "Intricate Mehendi Design 28",
+          "altText": "Intricate Mehendi Design 28 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-29.webp",
-          "caption": "Mehendi design 29"
+          "caption": "Intricate Mehendi Design 29",
+          "altText": "Intricate Mehendi Design 29 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-30.webp",
-          "caption": "Mehendi design 30"
+          "caption": "Intricate Mehendi Design 30",
+          "altText": "Intricate Mehendi Design 30 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-31.webp",
-          "caption": "Mehendi design 31"
+          "caption": "Intricate Mehendi Design 31",
+          "altText": "Intricate Mehendi Design 31 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-32.webp",
-          "caption": "Mehendi design 32"
+          "caption": "Intricate Mehendi Design 32",
+          "altText": "Intricate Mehendi Design 32 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-33.webp",
-          "caption": "Mehendi design 33"
+          "caption": "Intricate Mehendi Design 33",
+          "altText": "Intricate Mehendi Design 33 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-34.webp",
-          "caption": "Mehendi design 34"
+          "caption": "Intricate Mehendi Design 34",
+          "altText": "Intricate Mehendi Design 34 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-35.webp",
-          "caption": "Mehendi design 35"
+          "caption": "Intricate Mehendi Design 35",
+          "altText": "Intricate Mehendi Design 35 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-36.webp",
-          "caption": "Mehendi design 36"
+          "caption": "Intricate Mehendi Design 36",
+          "altText": "Intricate Mehendi Design 36 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-37.webp",
-          "caption": "Mehendi design 37"
+          "caption": "Intricate Mehendi Design 37",
+          "altText": "Intricate Mehendi Design 37 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-38.webp",
-          "caption": "Mehendi design 38"
+          "caption": "Intricate Mehendi Design 38",
+          "altText": "Intricate Mehendi Design 38 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-39.webp",
-          "caption": "Mehendi design 39"
+          "caption": "Intricate Mehendi Design 39",
+          "altText": "Intricate Mehendi Design 39 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-40.webp",
-          "caption": "Mehendi design 40"
+          "caption": "Intricate Mehendi Design 40",
+          "altText": "Intricate Mehendi Design 40 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-41.webp",
-          "caption": "Mehendi design 41"
+          "caption": "Intricate Mehendi Design 41",
+          "altText": "Intricate Mehendi Design 41 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-42.webp",
-          "caption": "Mehendi design 42"
+          "caption": "Intricate Mehendi Design 42",
+          "altText": "Intricate Mehendi Design 42 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-43.webp",
-          "caption": "Mehendi design 43"
+          "caption": "Intricate Mehendi Design 43",
+          "altText": "Intricate Mehendi Design 43 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-44.webp",
-          "caption": "Mehendi design 44"
+          "caption": "Intricate Mehendi Design 44",
+          "altText": "Intricate Mehendi Design 44 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-45.webp",
-          "caption": "Mehendi design 45"
+          "caption": "Intricate Mehendi Design 45",
+          "altText": "Intricate Mehendi Design 45 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-46.webp",
-          "caption": "Mehendi design 46"
+          "caption": "Intricate Mehendi Design 46",
+          "altText": "Intricate Mehendi Design 46 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-47.webp",
-          "caption": "Mehendi design 47"
+          "caption": "Intricate Mehendi Design 47",
+          "altText": "Intricate Mehendi Design 47 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-48.webp",
-          "caption": "Mehendi design 48"
+          "caption": "Intricate Mehendi Design 48",
+          "altText": "Intricate Mehendi Design 48 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-49.webp",
-          "caption": "Mehendi design 49"
+          "caption": "Intricate Mehendi Design 49",
+          "altText": "Intricate Mehendi Design 49 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-50.webp",
-          "caption": "Mehendi design 50"
+          "caption": "Intricate Mehendi Design 50",
+          "altText": "Intricate Mehendi Design 50 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-51.webp",
-          "caption": "Mehendi design 51"
+          "caption": "Intricate Mehendi Design 51",
+          "altText": "Intricate Mehendi Design 51 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-52.webp",
-          "caption": "Mehendi design 52"
+          "caption": "Intricate Mehendi Design 52",
+          "altText": "Intricate Mehendi Design 52 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-53.webp",
-          "caption": "Mehendi design 53"
+          "caption": "Intricate Mehendi Design 53",
+          "altText": "Intricate Mehendi Design 53 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-54.webp",
-          "caption": "Mehendi design 54"
+          "caption": "Intricate Mehendi Design 54",
+          "altText": "Intricate Mehendi Design 54 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-55.webp",
-          "caption": "Mehendi design 55"
+          "caption": "Intricate Mehendi Design 55",
+          "altText": "Intricate Mehendi Design 55 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-56.webp",
-          "caption": "Mehendi design 56"
+          "caption": "Intricate Mehendi Design 56",
+          "altText": "Intricate Mehendi Design 56 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-57.webp",
-          "caption": "Mehendi design 57"
+          "caption": "Intricate Mehendi Design 57",
+          "altText": "Intricate Mehendi Design 57 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-58.webp",
-          "caption": "Mehendi design 58"
+          "caption": "Intricate Mehendi Design 58",
+          "altText": "Intricate Mehendi Design 58 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-59.webp",
-          "caption": "Mehendi design 59"
+          "caption": "Intricate Mehendi Design 59",
+          "altText": "Intricate Mehendi Design 59 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-60.webp",
-          "caption": "Mehendi design 60"
+          "caption": "Intricate Mehendi Design 60",
+          "altText": "Intricate Mehendi Design 60 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-61.webp",
-          "caption": "Mehendi design 61"
+          "caption": "Intricate Mehendi Design 61",
+          "altText": "Intricate Mehendi Design 61 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-62.webp",
-          "caption": "Mehendi design 62"
+          "caption": "Intricate Mehendi Design 62",
+          "altText": "Intricate Mehendi Design 62 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-63.webp",
-          "caption": "Mehendi design 63"
+          "caption": "Intricate Mehendi Design 63",
+          "altText": "Intricate Mehendi Design 63 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-64.webp",
-          "caption": "Mehendi design 64"
+          "caption": "Intricate Mehendi Design 64",
+          "altText": "Intricate Mehendi Design 64 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-65.webp",
-          "caption": "Mehendi design 65"
+          "caption": "Intricate Mehendi Design 65",
+          "altText": "Intricate Mehendi Design 65 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-66.webp",
-          "caption": "Mehendi design 66"
+          "caption": "Intricate Mehendi Design 66",
+          "altText": "Intricate Mehendi Design 66 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-67.webp",
-          "caption": "Mehendi design 67"
+          "caption": "Intricate Mehendi Design 67",
+          "altText": "Intricate Mehendi Design 67 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-68.webp",
-          "caption": "Mehendi design 68"
+          "caption": "Intricate Mehendi Design 68",
+          "altText": "Intricate Mehendi Design 68 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-69.webp",
-          "caption": "Mehendi design 69"
+          "caption": "Intricate Mehendi Design 69",
+          "altText": "Intricate Mehendi Design 69 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-70.webp",
-          "caption": "Mehendi design 70"
+          "caption": "Intricate Mehendi Design 70",
+          "altText": "Intricate Mehendi Design 70 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-71.webp",
-          "caption": "Mehendi design 71"
+          "caption": "Intricate Mehendi Design 71",
+          "altText": "Intricate Mehendi Design 71 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-72.webp",
-          "caption": "Mehendi design 72"
+          "caption": "Intricate Mehendi Design 72",
+          "altText": "Intricate Mehendi Design 72 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-73.webp",
-          "caption": "Mehendi design 73"
+          "caption": "Intricate Mehendi Design 73",
+          "altText": "Intricate Mehendi Design 73 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-74.webp",
-          "caption": "Mehendi design 74"
+          "caption": "Intricate Mehendi Design 74",
+          "altText": "Intricate Mehendi Design 74 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-75.webp",
-          "caption": "Mehendi design 75"
+          "caption": "Intricate Mehendi Design 75",
+          "altText": "Intricate Mehendi Design 75 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-76.webp",
-          "caption": "Mehendi design 76"
+          "caption": "Intricate Mehendi Design 76",
+          "altText": "Intricate Mehendi Design 76 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-77.webp",
-          "caption": "Mehendi design 77"
+          "caption": "Intricate Mehendi Design 77",
+          "altText": "Intricate Mehendi Design 77 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-78.webp",
-          "caption": "Mehendi design 78"
+          "caption": "Intricate Mehendi Design 78",
+          "altText": "Intricate Mehendi Design 78 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-79.webp",
-          "caption": "Mehendi design 79"
+          "caption": "Intricate Mehendi Design 79",
+          "altText": "Intricate Mehendi Design 79 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-80.webp",
-          "caption": "Mehendi design 80"
+          "caption": "Intricate Mehendi Design 80",
+          "altText": "Intricate Mehendi Design 80 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-81.webp",
-          "caption": "Mehendi design 81"
+          "caption": "Intricate Mehendi Design 81",
+          "altText": "Intricate Mehendi Design 81 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-82.webp",
-          "caption": "Mehendi design 82"
+          "caption": "Intricate Mehendi Design 82",
+          "altText": "Intricate Mehendi Design 82 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-83.webp",
-          "caption": "Mehendi design 83"
+          "caption": "Intricate Mehendi Design 83",
+          "altText": "Intricate Mehendi Design 83 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-84.webp",
-          "caption": "Mehendi design 84"
+          "caption": "Intricate Mehendi Design 84",
+          "altText": "Intricate Mehendi Design 84 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-85.webp",
-          "caption": "Mehendi design 85"
+          "caption": "Intricate Mehendi Design 85",
+          "altText": "Intricate Mehendi Design 85 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-86.webp",
-          "caption": "Mehendi design 86"
+          "caption": "Intricate Mehendi Design 86",
+          "altText": "Intricate Mehendi Design 86 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-87.webp",
-          "caption": "Mehendi design 87"
+          "caption": "Intricate Mehendi Design 87",
+          "altText": "Intricate Mehendi Design 87 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-88.webp",
-          "caption": "Mehendi design 88"
+          "caption": "Intricate Mehendi Design 88",
+          "altText": "Intricate Mehendi Design 88 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-89.webp",
-          "caption": "Mehendi design 89"
+          "caption": "Intricate Mehendi Design 89",
+          "altText": "Intricate Mehendi Design 89 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-90.webp",
-          "caption": "Mehendi design 90"
+          "caption": "Intricate Mehendi Design 90",
+          "altText": "Intricate Mehendi Design 90 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-91.webp",
-          "caption": "Mehendi design 91"
+          "caption": "Intricate Mehendi Design 91",
+          "altText": "Intricate Mehendi Design 91 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-92.webp",
-          "caption": "Mehendi design 92"
+          "caption": "Intricate Mehendi Design 92",
+          "altText": "Intricate Mehendi Design 92 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         },
         {
           "image": "/images/mehendi/mehendi-design-93.webp",
-          "caption": "Mehendi design 93"
+          "caption": "Intricate Mehendi Design 93",
+          "altText": "Intricate Mehendi Design 93 by Meraki Arts 53 - Mehendi portfolio for weddings and eid celebrations custom requests."
         }
-      ]
+      ],
+      "story": "Mehendi work at Meraki Arts 53 focuses on balanced lines, graceful spacing, and occasion-ready detail. The portfolio supports people looking for mehendi designs in Dubai, a mehendi artist in Chennai, bridal mehendi inspiration, festive henna patterns, and personal designs for intimate celebrations.",
+      "popularRequests": [
+        "Bridal mehendi designs",
+        "Festive mehendi",
+        "Simple elegant mehendi",
+        "Party mehendi designs",
+        "Personalized henna patterns"
+      ],
+      "useCases": [
+        "Weddings",
+        "Eid celebrations",
+        "Festive occasions",
+        "Engagements",
+        "Personal styling"
+      ],
+      "searchContent": {
+        "title": "Mehendi Designs for Bridal, Festive, and Personal Occasions",
+        "body": "Browse intricate mehendi patterns for weddings, festivals, and personal moments. The gallery helps clients searching for mehendi artist in Dubai, mehendi artist in Chennai, bridal mehendi designs, festive henna designs, and elegant hand mehendi inspiration.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Share the occasion, design density, preferred style, and timing to discuss mehendi availability for Dubai, UAE, Chennai, India, or online design direction.",
+        "targetKeywords": [
+          "Bridal mehendi designs",
+          "Festive mehendi",
+          "Simple elegant mehendi",
+          "Party mehendi designs",
+          "Personalized henna patterns",
+          "Weddings",
+          "Eid celebrations",
+          "Festive occasions",
+          "Engagements",
+          "Personal styling",
+          "Mehendi in Dubai",
+          "Mehendi in Chennai",
+          "Mehendi online",
+          "custom mehendi request"
+        ]
+      }
     },
     {
       "id": "chenille-craft",
       "isVisible": true,
       "title": "Chenille Craft",
       "slug": "chenille-craft",
-      "description": "Soft sculptural florals and decorative pieces shaped with chenille stems for a playful handmade finish.",
+      "description": "Soft chenille craft florals, stems, and decorative handmade pieces for birthdays, desk decor, keepsakes, and playful custom gifts.",
       "coverImage": "/images/chenille-craft/chenille-floral-01.webp",
       "accent": "#2e7c80",
       "gallery": [
         {
           "id": "MA53-CHN-001",
           "image": "/images/chenille-craft/chenille-floral-01.webp",
-          "caption": "Purple Chenille Lily Stem"
+          "caption": "Purple Chenille Lily Stem",
+          "altText": "Purple Chenille Lily Stem by Meraki Arts 53 - Chenille Craft portfolio for birthdays and desk decor custom requests."
         }
       ],
-      "story": "Chenille craft brings a soft sculptural look to florals, keepsakes, and playful decorative details.",
+      "story": "Chenille craft brings a soft sculptural look to florals, keepsakes, and playful decorative details. Meraki Arts 53 uses chenille stems for giftable florals, mini decor accents, and custom handmade pieces for birthdays and personal displays.",
       "popularRequests": [
-        "Floral bunches",
-        "Mini decor accents",
-        "Giftable handmade pieces"
+        "Chenille flower bouquets",
+        "Mini floral decor",
+        "Soft handmade gifts",
+        "Birthday craft gifts",
+        "Desk decor accents"
       ],
       "useCases": [
         "Birthdays",
         "Desk decor",
-        "Personal keepsakes"
-      ]
+        "Personal keepsakes",
+        "Small gifts",
+        "Home accents"
+      ],
+      "searchContent": {
+        "title": "Chenille Craft Florals and Soft Handmade Gifts",
+        "body": "Chenille craft is a sweet direction for people looking for handmade gifts in Dubai, soft floral keepsakes, craft decor in Chennai, and playful custom gift ideas. The pieces are light, tactile, and designed for small moments of color.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Custom chenille craft requests can be shaped for Dubai, UAE, Chennai, India, and online gift conversations.",
+        "targetKeywords": [
+          "Chenille flower bouquets",
+          "Mini floral decor",
+          "Soft handmade gifts",
+          "Birthday craft gifts",
+          "Desk decor accents",
+          "Birthdays",
+          "Desk decor",
+          "Personal keepsakes",
+          "Small gifts",
+          "Home accents",
+          "Chenille Craft in Dubai",
+          "Chenille Craft in Chennai",
+          "Chenille Craft online",
+          "custom chenille craft request"
+        ]
+      }
     },
     {
       "id": "outline-art",
       "isVisible": true,
       "title": "Outline Art",
       "slug": "outline-art",
-      "description": "Clean outlined panels with floral detail, lace-like borders, and a polished handmade finish.",
+      "description": "Clean floral outline art, lace-inspired border panels, and personalized motif work for keepsakes, decor panels, and textile-inspired gifts.",
       "coverImage": "/images/outline-art/golden-bloom-outline-01.webp",
       "accent": "#df7b80",
       "gallery": [
         {
           "id": "MA53-OUT-001",
           "image": "/images/outline-art/golden-bloom-outline-01.webp",
-          "caption": "Golden Bloom Lace Panel"
+          "caption": "Golden Bloom Lace Panel",
+          "altText": "Golden Bloom Lace Panel by Meraki Arts 53 - Outline Art portfolio for keepsakes and decor panels custom requests."
         }
       ],
-      "story": "Outline art brings floral shapes, lace-inspired borders, and clean line detail into polished handmade panels.",
+      "story": "Outline art brings floral shapes, lace-inspired borders, and clean line detail into polished handmade panels. It works for personal motifs, decorative panels, textile-inspired keepsakes, and gifts that need a refined handmade finish.",
       "popularRequests": [
         "Floral outline panels",
         "Lace-style borders",
-        "Personalized motifs"
+        "Personalized motifs",
+        "Outline art gifts",
+        "Textile-inspired panels"
       ],
       "useCases": [
         "Keepsakes",
         "Decor panels",
-        "Personal gifts"
-      ]
+        "Personal gifts",
+        "Textile detail inspiration",
+        "Minimal wall decor"
+      ],
+      "searchContent": {
+        "title": "Outline Art Panels with Floral and Lace-Inspired Detail",
+        "body": "Outline art is useful for clients searching for handmade floral panels, custom outline art in Dubai, personalized motif gifts in Chennai, or clean lace-style decor. It keeps the focus on linework, balance, and a polished handmade finish.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Share the motif, initials, floral direction, color preference, and display purpose for outline art requests across Dubai, UAE, Chennai, India, and online.",
+        "targetKeywords": [
+          "Floral outline panels",
+          "Lace-style borders",
+          "Personalized motifs",
+          "Outline art gifts",
+          "Textile-inspired panels",
+          "Keepsakes",
+          "Decor panels",
+          "Personal gifts",
+          "Textile detail inspiration",
+          "Minimal wall decor",
+          "Outline Art in Dubai",
+          "Outline Art in Chennai",
+          "Outline Art online",
+          "custom outline art request"
+        ]
+      }
     },
     {
       "id": "rida-design",
       "isVisible": false,
       "title": "Textile Motif Studies",
       "slug": "rida-design",
-      "description": "Considered wearable textile details with balanced motifs, colors, and finishing.",
+      "description": "Wearable textile motif studies, floral borders, and refined fabric detail ideas for personal, festive, and custom design direction.",
       "coverImage": "/images/rida-design/rida-design-study-01.webp",
       "accent": "#7d8b68",
       "gallery": [
@@ -1420,7 +1670,8 @@
           "seriesId": "rida-floral-border-study",
           "seriesTitle": "Floral Border Study",
           "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
-          "seriesStage": "Border draft"
+          "seriesStage": "Border draft",
+          "altText": "Lilac Lace Border Draft by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         },
         {
           "id": "MA53-RDA-002",
@@ -1429,7 +1680,8 @@
           "seriesId": "rida-floral-border-study",
           "seriesTitle": "Floral Border Study",
           "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
-          "seriesStage": "Motif direction"
+          "seriesStage": "Motif direction",
+          "altText": "Purple Lily Border Motif by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         },
         {
           "id": "MA53-RDA-003",
@@ -1438,49 +1690,80 @@
           "seriesId": "rida-floral-border-study",
           "seriesTitle": "Floral Border Study",
           "seriesDescription": "A connected set of border and motif studies showing how a wearable textile detail develops from lace placement to floral linework.",
-          "seriesStage": "Line sketch"
+          "seriesStage": "Line sketch",
+          "altText": "Linear Floral Sketch by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         },
         {
           "id": "MA53-RDA-004",
           "image": "/images/rida-design/rida-design-study-04.webp",
-          "caption": "Side Bloom Border Study"
+          "caption": "Side Bloom Border Study",
+          "altText": "Side Bloom Border Study by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         },
         {
           "id": "MA53-RDA-005",
           "image": "/images/rida-design/rida-design-study-05.webp",
-          "caption": "Soft Vine Hem Motif"
+          "caption": "Soft Vine Hem Motif",
+          "altText": "Soft Vine Hem Motif by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         },
         {
           "id": "MA53-RDA-006",
           "image": "/images/rida-design/rida-design-study-06.webp",
-          "caption": "Single Daisy Sleeve Motif"
+          "caption": "Single Daisy Sleeve Motif",
+          "altText": "Single Daisy Sleeve Motif by Meraki Arts 53 - Textile Motif Studies portfolio for personal wear and festive moments custom requests."
         }
       ],
-      "story": "Wearable textile design focuses on refined detail, balanced motifs, and gentle customization.",
+      "story": "Wearable textile design focuses on refined detail, balanced motifs, and gentle customization. Meraki Arts 53 develops floral border ideas, sleeve motifs, lace-inspired studies, and soft accent work for personal wear and festive textile moments.",
       "popularRequests": [
-        "Floral detailing",
-        "Soft accent work",
-        "Personalized design direction"
+        "Rida design motifs",
+        "Floral textile borders",
+        "Sleeve motif studies",
+        "Lace-inspired details",
+        "Custom textile design direction"
       ],
       "useCases": [
         "Personal wear",
         "Festive moments",
-        "Thoughtful textile detail"
-      ]
+        "Thoughtful textile detail",
+        "Custom clothing accents",
+        "Motif planning"
+      ],
+      "searchContent": {
+        "title": "Textile Motif Studies and Rida Design Details",
+        "body": "This category supports people searching for rida design inspiration, textile motif design in Dubai, floral border design in Chennai, and custom wearable detail ideas. The focus is balance, softness, and wearable finishing.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Textile motif studies can be planned online for Dubai, UAE, Chennai, India, and custom personal design requests.",
+        "targetKeywords": [
+          "Rida design motifs",
+          "Floral textile borders",
+          "Sleeve motif studies",
+          "Lace-inspired details",
+          "Custom textile design direction",
+          "Personal wear",
+          "Festive moments",
+          "Thoughtful textile detail",
+          "Custom clothing accents",
+          "Motif planning",
+          "Textile Motif Studies in Dubai",
+          "Textile Motif Studies in Chennai",
+          "Textile Motif Studies online",
+          "custom textile motif studies request"
+        ]
+      }
     },
     {
       "id": "lamasa",
       "isVisible": true,
       "title": "Lamasa",
       "slug": "lamasa",
-      "description": "Handmade lamasa decor pieces shaped with playful detail, soft color, and a polished finish.",
+      "description": "Handmade lamasa decor, miniature details, trinket trays, wall hangings, and themed occasion pieces with soft color and polished finishing.",
       "coverImage": "/images/lamasa/lamasa-decor-01.webp",
       "accent": "#e1a135",
       "gallery": [
         {
           "id": "MA53-LAM-001",
           "image": "/images/lamasa/lamasa-decor-01.webp",
-          "caption": "Candy Dot Trinket Garden"
+          "caption": "Candy Dot Trinket Garden",
+          "altText": "Candy Dot Trinket Garden by Meraki Arts 53 - Lamasa portfolio for home decor and celebrations custom requests."
         },
         {
           "id": "MA53-LAM-002-001",
@@ -1489,7 +1772,8 @@
           "seriesId": "lamasa-trinket-stage-set",
           "seriesTitle": "Lamasa Trinket Stage Set",
           "seriesDescription": "A two-stage lamasa sequence showing the coordinated handmade decor views as one set.",
-          "seriesStage": "Tray view"
+          "seriesStage": "Tray view",
+          "altText": "Moonlit Star Trinket Tray by Meraki Arts 53 - Lamasa portfolio for home decor and celebrations custom requests."
         },
         {
           "id": "MA53-LAM-002-002",
@@ -1498,32 +1782,60 @@
           "seriesId": "lamasa-trinket-stage-set",
           "seriesTitle": "Lamasa Trinket Stage Set",
           "seriesDescription": "A two-stage lamasa sequence showing the coordinated handmade decor views as one set.",
-          "seriesStage": "Scatter view"
+          "seriesStage": "Scatter view",
+          "altText": "Pastel Daisy Scatter Set by Meraki Arts 53 - Lamasa portfolio for home decor and celebrations custom requests."
         },
         {
           "id": "MA53-LAM-003",
           "image": "/images/lamasa/lamasa-decor-04.webp",
-          "caption": "Sunflower Garden Wall Hanging"
+          "caption": "Sunflower Garden Wall Hanging",
+          "altText": "Sunflower Garden Wall Hanging by Meraki Arts 53 - Lamasa portfolio for home decor and celebrations custom requests."
         }
       ],
-      "story": "Lamasa pieces are sculpted for charming handmade decor, miniature details, and occasion-ready presentation.",
+      "story": "Lamasa pieces are sculpted for charming handmade decor, miniature details, and occasion-ready presentation. Meraki Arts 53 creates lamasa bowls, trinket trays, wall hangings, and playful themed objects for gifts and small home displays.",
       "popularRequests": [
-        "Decor bowls",
-        "Mini food-inspired details",
+        "Lamasa decor pieces",
+        "Miniature food-inspired details",
+        "Trinket trays",
+        "Wall hangings",
         "Themed occasion pieces"
       ],
       "useCases": [
         "Home decor",
         "Celebrations",
-        "Custom gifting"
-      ]
+        "Custom gifting",
+        "Shelf styling",
+        "Festive decor"
+      ],
+      "searchContent": {
+        "title": "Lamasa Handmade Decor, Trinket Trays, and Miniature Details",
+        "body": "Lamasa decor is a strong fit for people searching for handmade decor in Dubai, custom lamasa art, mini decor gifts in Chennai, or themed handmade pieces for celebrations. The work combines sculpted detail with soft color and careful presentation.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Discuss lamasa decor ideas for Dubai, UAE, Chennai, India, and online custom gifting needs.",
+        "targetKeywords": [
+          "Lamasa decor pieces",
+          "Miniature food-inspired details",
+          "Trinket trays",
+          "Wall hangings",
+          "Themed occasion pieces",
+          "Home decor",
+          "Celebrations",
+          "Custom gifting",
+          "Shelf styling",
+          "Festive decor",
+          "Lamasa in Dubai",
+          "Lamasa in Chennai",
+          "Lamasa online",
+          "custom lamasa request"
+        ]
+      }
     },
     {
       "id": "paintings",
       "isVisible": true,
       "title": "Paintings",
       "slug": "paintings",
-      "description": "Expressive paintings and studies that bring warmth, story, and softness to a space.",
+      "description": "Expressive handmade paintings, floral studies, portrait process pieces, and custom artwork for wall decor, personal gifts, and room styling.",
       "coverImage": "/images/paintings/hand-painted-artwork-01-006.webp",
       "accent": "#c85e4d",
       "gallery": [
@@ -1534,7 +1846,8 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "Paper sketch"
+          "seriesStage": "Paper sketch",
+          "altText": "Quiet Line Portrait Study by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-001-002",
@@ -1543,7 +1856,8 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "Canvas sketch"
+          "seriesStage": "Canvas sketch",
+          "altText": "Windowlight Figure Sketch by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-001-003",
@@ -1552,7 +1866,8 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "First color layer"
+          "seriesStage": "First color layer",
+          "altText": "Blue Veil Silhouette Study by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-001-004",
@@ -1561,7 +1876,8 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "Palette refinement"
+          "seriesStage": "Palette refinement",
+          "altText": "Ruby Veil Portrait Study by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-001-005",
@@ -1570,7 +1886,8 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "Light and mood"
+          "seriesStage": "Light and mood",
+          "altText": "Lantern Glow Portrait by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-001-006",
@@ -1579,142 +1896,192 @@
           "seriesId": "portrait-painting-process",
           "seriesTitle": "Portrait Painting Process Sequence",
           "seriesDescription": "A process sequence that moves from paper sketch to canvas blocking, color layers, refinement, and final detail.",
-          "seriesStage": "Final touch"
+          "seriesStage": "Final touch",
+          "altText": "Heritage Offering Portrait by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-002",
           "image": "/images/paintings/hand-painted-artwork-02.webp",
-          "caption": "Storybook Garden Bookmark Trio"
+          "caption": "Storybook Garden Bookmark Trio",
+          "altText": "Storybook Garden Bookmark Trio by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-003",
           "image": "/images/paintings/hand-painted-artwork-03.webp",
-          "caption": "Blue Blossom Note Set"
+          "caption": "Blue Blossom Note Set",
+          "altText": "Blue Blossom Note Set by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-004",
           "image": "/images/paintings/hand-painted-artwork-04.webp",
-          "caption": "Tiny Wreath Keepsake Card"
+          "caption": "Tiny Wreath Keepsake Card",
+          "altText": "Tiny Wreath Keepsake Card by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-005",
           "image": "/images/paintings/hand-painted-artwork-05.webp",
-          "caption": "Marigold Memory Notes"
+          "caption": "Marigold Memory Notes",
+          "altText": "Marigold Memory Notes by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-006",
           "image": "/images/paintings/hand-painted-artwork-06.webp",
-          "caption": "Mint Garden Letter Set"
+          "caption": "Mint Garden Letter Set",
+          "altText": "Mint Garden Letter Set by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-007",
           "image": "/images/paintings/hand-painted-artwork-07.webp",
-          "caption": "Sunlit Daisy Bookmark Trio"
+          "caption": "Sunlit Daisy Bookmark Trio",
+          "altText": "Sunlit Daisy Bookmark Trio by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-008",
           "image": "/images/paintings/hand-painted-artwork-08.webp",
-          "caption": "Wildflower Blush Card"
+          "caption": "Wildflower Blush Card",
+          "altText": "Wildflower Blush Card by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-009",
           "image": "/images/paintings/hand-painted-artwork-09.webp",
-          "caption": "Festival Bloom Gift Tags"
+          "caption": "Festival Bloom Gift Tags",
+          "altText": "Festival Bloom Gift Tags by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-010",
           "image": "/images/paintings/hand-painted-artwork-10.webp",
-          "caption": "Rose Garden Mini Cards"
+          "caption": "Rose Garden Mini Cards",
+          "altText": "Rose Garden Mini Cards by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-011",
           "image": "/images/paintings/hand-painted-artwork-11.webp",
-          "caption": "Skyline Bloom Note Trio"
+          "caption": "Skyline Bloom Note Trio",
+          "altText": "Skyline Bloom Note Trio by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-012",
           "image": "/images/paintings/hand-painted-artwork-12.webp",
-          "caption": "Vintage Rose Letter Garden"
+          "caption": "Vintage Rose Letter Garden",
+          "altText": "Vintage Rose Letter Garden by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-013",
           "image": "/images/paintings/hand-painted-artwork-13.webp",
-          "caption": "Moonwash Floral Orbs"
+          "caption": "Moonwash Floral Orbs",
+          "altText": "Moonwash Floral Orbs by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-014",
           "image": "/images/paintings/hand-painted-artwork-14.webp",
-          "caption": "Wreath and Rose Stationery"
+          "caption": "Wreath and Rose Stationery",
+          "altText": "Wreath and Rose Stationery by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-015",
           "image": "/images/paintings/hand-painted-artwork-15.webp",
-          "caption": "Rainbow Arc Bookmark"
+          "caption": "Rainbow Arc Bookmark",
+          "altText": "Rainbow Arc Bookmark by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-016",
           "image": "/images/paintings/hand-painted-artwork-16.webp",
-          "caption": "Pastel Rainbow Pocket Card"
+          "caption": "Pastel Rainbow Pocket Card",
+          "altText": "Pastel Rainbow Pocket Card by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-017",
           "image": "/images/paintings/hand-painted-artwork-17.webp",
-          "caption": "Violet Petal Bookmark"
+          "caption": "Violet Petal Bookmark",
+          "altText": "Violet Petal Bookmark by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-018",
           "image": "/images/paintings/hand-painted-artwork-18.webp",
-          "caption": "Emerald Wreath Note Duo"
+          "caption": "Emerald Wreath Note Duo",
+          "altText": "Emerald Wreath Note Duo by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-019",
           "image": "/images/paintings/hand-painted-artwork-19.webp",
-          "caption": "Tulip Whisper Note Set"
+          "caption": "Tulip Whisper Note Set",
+          "altText": "Tulip Whisper Note Set by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-020",
           "image": "/images/paintings/hand-painted-artwork-20.webp",
-          "caption": "Lavender Corner Cards"
+          "caption": "Lavender Corner Cards",
+          "altText": "Lavender Corner Cards by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-021",
           "image": "/images/paintings/hand-painted-artwork-21.webp",
-          "caption": "Marigold Border Bookmark Set"
+          "caption": "Marigold Border Bookmark Set",
+          "altText": "Marigold Border Bookmark Set by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-022",
           "image": "/images/paintings/hand-painted-artwork-22.webp",
-          "caption": "Rainbow Garden Note Collage"
+          "caption": "Rainbow Garden Note Collage",
+          "altText": "Rainbow Garden Note Collage by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-023",
           "image": "/images/paintings/hand-painted-artwork-23.webp",
-          "caption": "Petal Parade Note Set"
+          "caption": "Petal Parade Note Set",
+          "altText": "Petal Parade Note Set by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         },
         {
           "id": "MA53-PNT-024",
           "image": "/images/paintings/hand-painted-artwork-24.webp",
-          "caption": "Soft Script Mini Notes"
+          "caption": "Soft Script Mini Notes",
+          "altText": "Soft Script Mini Notes by Meraki Arts 53 - Paintings portfolio for wall decor and personal gifts custom requests."
         }
       ],
-      "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts.",
+      "story": "Painted work carries color, mood, and personal expression into framed pieces, decor, and gifts. Meraki Arts 53 creates floral paintings, colorful studies, portrait process work, and custom artwork for personal gifting and home styling.",
       "popularRequests": [
+        "Custom paintings",
         "Floral paintings",
-        "Colorful decor pieces",
-        "Personalized artwork"
+        "Portrait-inspired artwork",
+        "Colorful wall decor",
+        "Personalized artwork gifts"
       ],
       "useCases": [
         "Wall decor",
         "Personal gifts",
-        "Room styling"
-      ]
+        "Room styling",
+        "Keepsakes",
+        "Art-led decor"
+      ],
+      "searchContent": {
+        "title": "Handmade Paintings for Wall Decor and Personal Gifts",
+        "body": "The paintings portfolio helps clients searching for handmade paintings in Dubai, custom artwork in Chennai, floral wall art, portrait-inspired paintings, and personal art gifts. Each piece is shaped around color, feeling, and display purpose.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Custom painting conversations can be started online for Dubai, UAE, Chennai, India, and personal gifting requests.",
+        "targetKeywords": [
+          "Custom paintings",
+          "Floral paintings",
+          "Portrait-inspired artwork",
+          "Colorful wall decor",
+          "Personalized artwork gifts",
+          "Wall decor",
+          "Personal gifts",
+          "Room styling",
+          "Keepsakes",
+          "Art-led decor",
+          "Paintings in Dubai",
+          "Paintings in Chennai",
+          "Paintings online",
+          "custom paintings request"
+        ]
+      }
     },
     {
       "id": "customized-gifts",
       "isVisible": true,
       "title": "Customized Gifts",
       "slug": "customized-gifts",
-      "description": "Personalized keepsakes designed for celebrations, milestones, and thoughtful gestures.",
+      "description": "Customized gifts, personalized keepsakes, birthday hampers, handmade gift decor, and theme-led pieces for celebrations and milestones.",
       "coverImage": "/images/customized-gifts/customized-gift-detail-01-002.webp",
       "accent": "#2e7c80",
       "gallery": [
@@ -1725,7 +2092,8 @@
           "seriesId": "heartlight-wall-gift-set",
           "seriesTitle": "Heartlight Wall Gift Set",
           "seriesDescription": "A personalized heartlight wall gift shown in its warm glow setup and brighter room view.",
-          "seriesStage": "Glow setup"
+          "seriesStage": "Glow setup",
+          "altText": "Golden Heart Glow Wall by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-001-002",
@@ -1734,27 +2102,32 @@
           "seriesId": "heartlight-wall-gift-set",
           "seriesTitle": "Heartlight Wall Gift Set",
           "seriesDescription": "A personalized heartlight wall gift shown in its warm glow setup and brighter room view.",
-          "seriesStage": "Room view"
+          "seriesStage": "Room view",
+          "altText": "Anniversary Heartlight Wall by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-002",
           "image": "/images/customized-gifts/customized-gift-detail-02.webp",
-          "caption": "Floating Lantern Room Decor"
+          "caption": "Floating Lantern Room Decor",
+          "altText": "Floating Lantern Room Decor by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-003",
           "image": "/images/customized-gifts/customized-gift-detail-03-001.webp",
-          "caption": "Love Glow Balloon Decor"
+          "caption": "Love Glow Balloon Decor",
+          "altText": "Love Glow Balloon Decor by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-004",
           "image": "/images/customized-gifts/customized-gift-detail-04.webp",
-          "caption": "Petal Heart Hand Portrait"
+          "caption": "Petal Heart Hand Portrait",
+          "altText": "Petal Heart Hand Portrait by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-005",
           "image": "/images/customized-gifts/customized-gift-detail-05.webp",
-          "caption": "Birthday Balloon Room Moment"
+          "caption": "Birthday Balloon Room Moment",
+          "altText": "Birthday Balloon Room Moment by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-006-001",
@@ -1763,17 +2136,20 @@
           "seriesId": "birthday-surprise-gift-set",
           "seriesTitle": "Birthday Surprise Gift Set",
           "seriesDescription": "A two-view birthday gift set shown as the hamper reveal and matching surprise box.",
-          "seriesStage": "Hamper view"
+          "seriesStage": "Hamper view",
+          "altText": "Midnight Birthday Hamper by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-007",
           "image": "/images/customized-gifts/customized-gift-detail-07.webp",
-          "caption": "Tiny Travel Blessing Jar"
+          "caption": "Tiny Travel Blessing Jar",
+          "altText": "Tiny Travel Blessing Jar by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-008",
           "image": "/images/customized-gifts/customized-gift-detail-08.webp",
-          "caption": "Forever Love Mini Sign"
+          "caption": "Forever Love Mini Sign",
+          "altText": "Forever Love Mini Sign by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-006-002",
@@ -1782,7 +2158,8 @@
           "seriesId": "birthday-surprise-gift-set",
           "seriesTitle": "Birthday Surprise Gift Set",
           "seriesDescription": "A two-view birthday gift set shown as the hamper reveal and matching surprise box.",
-          "seriesStage": "Surprise box"
+          "seriesStage": "Surprise box",
+          "altText": "Purple Birthday Surprise Box by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-010-001",
@@ -1791,7 +2168,8 @@
           "seriesId": "balloon-note-keepsake-set",
           "seriesTitle": "Balloon Note Keepsake Set",
           "seriesDescription": "A two-view balloon note keepsake shown as the main note piece and matching mini card.",
-          "seriesStage": "Main note"
+          "seriesStage": "Main note",
+          "altText": "Balloon Note Keepsake by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-010-002",
@@ -1800,12 +2178,14 @@
           "seriesId": "balloon-note-keepsake-set",
           "seriesTitle": "Balloon Note Keepsake Set",
           "seriesDescription": "A two-view balloon note keepsake shown as the main note piece and matching mini card.",
-          "seriesStage": "Mini card"
+          "seriesStage": "Mini card",
+          "altText": "Balloon Wishes Mini Card by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-011",
           "image": "/images/customized-gifts/customized-gift-detail-11.webp",
-          "caption": "Strawberry Favor Bag"
+          "caption": "Strawberry Favor Bag",
+          "altText": "Strawberry Favor Bag by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-012-001",
@@ -1814,7 +2194,8 @@
           "seriesId": "strawberry-gift-favor-set",
           "seriesTitle": "Strawberry Gift Favor Set",
           "seriesDescription": "A two-view strawberry-themed gift set shown as paired pieces and party favors.",
-          "seriesStage": "Gift pair"
+          "seriesStage": "Gift pair",
+          "altText": "Strawberry Gift Pair by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-012-002",
@@ -1823,70 +2204,174 @@
           "seriesId": "strawberry-gift-favor-set",
           "seriesTitle": "Strawberry Gift Favor Set",
           "seriesDescription": "A two-view strawberry-themed gift set shown as paired pieces and party favors.",
-          "seriesStage": "Party favors"
+          "seriesStage": "Party favors",
+          "altText": "Strawberry Party Favors by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-013",
           "image": "/images/customized-gifts/customized-gift-detail-13.webp",
-          "caption": "Watermelon Favor Pail"
+          "caption": "Watermelon Favor Pail",
+          "altText": "Watermelon Favor Pail by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-014",
           "image": "/images/customized-gifts/customized-gift-detail-14.webp",
-          "caption": "Birthday Name Banner"
+          "caption": "Birthday Name Banner",
+          "altText": "Birthday Name Banner by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-015",
           "image": "/images/customized-gifts/customized-gift-detail-15.webp",
-          "caption": "Royal Birthday Light Board"
+          "caption": "Royal Birthday Light Board",
+          "altText": "Royal Birthday Light Board by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-016",
           "image": "/images/customized-gifts/customized-gift-detail-16.webp",
-          "caption": "Fruit Garden First Birthday Backdrop"
+          "caption": "Fruit Garden First Birthday Backdrop",
+          "altText": "Fruit Garden First Birthday Backdrop by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-017",
           "image": "/images/customized-gifts/customized-gift-detail-17.webp",
-          "caption": "Birthday Door Blessing Frame"
+          "caption": "Birthday Door Blessing Frame",
+          "altText": "Birthday Door Blessing Frame by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-018",
           "image": "/images/customized-gifts/customized-gift-detail-18.webp",
-          "caption": "Thoughtful Teacher Keepsake"
+          "caption": "Thoughtful Teacher Keepsake",
+          "altText": "Thoughtful Teacher Keepsake by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-019",
           "image": "/images/customized-gifts/customized-gift-detail-19.webp",
-          "caption": "Heartfall Photo Curtain"
+          "caption": "Heartfall Photo Curtain",
+          "altText": "Heartfall Photo Curtain by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-020",
           "image": "/images/customized-gifts/customized-gift-detail-20.webp",
-          "caption": "Golden Birthday Door Bunting"
+          "caption": "Golden Birthday Door Bunting",
+          "altText": "Golden Birthday Door Bunting by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-021",
           "image": "/images/customized-gifts/customized-gift-detail-21.webp",
-          "caption": "Blue Border Welcome Home Plaque"
+          "caption": "Blue Border Welcome Home Plaque",
+          "altText": "Blue Border Welcome Home Plaque by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         },
         {
           "id": "MA53-GFT-022",
           "image": "/images/customized-gifts/customized-gift-detail-22.webp",
-          "caption": "Moonlight Star Gift Boxes"
+          "caption": "Moonlight Star Gift Boxes",
+          "altText": "Moonlight Star Gift Boxes by Meraki Arts 53 - Customized Gifts portfolio for birthdays and anniversaries custom requests."
         }
       ],
-      "story": "Custom gifts turn personal details into handmade keepsakes designed around the recipient and occasion.",
+      "story": "Custom gifts turn personal details into handmade keepsakes designed around the recipient and occasion. Meraki Arts 53 creates birthday hampers, personalized decor, anniversary keepsakes, theme-led gift pieces, and event-ready handmade details for clients searching for customized gifts in Dubai, handmade gifts in Chennai, and personal gifts online.",
       "popularRequests": [
+        "Customized gifts",
         "Personalized keepsakes",
-        "Occasion gifts",
-        "Theme-led handmade details"
+        "Birthday hampers",
+        "Anniversary gifts",
+        "Theme-led handmade details",
+        "Occasion gifts"
       ],
       "useCases": [
         "Birthdays",
         "Anniversaries",
-        "Milestones"
+        "Milestones",
+        "Festive gifting",
+        "Event decor"
+      ],
+      "searchContent": {
+        "title": "Customized Gifts and Personalized Handmade Keepsakes",
+        "body": "This category is built for people looking for customized gifts in Dubai, handmade gifts in Chennai, personalized birthday gifts, anniversary keepsakes, and meaningful handmade presents. Each request can be shaped around the recipient, occasion, colors, size, quantity, and timeline.",
+        "localTitle": "Availability and custom requests",
+        "localBody": "Start a custom gift request from Dubai, UAE, Chennai, India, or online. Share the occasion, recipient details, theme, budget range, and deadline so the direction can be planned clearly.",
+        "targetKeywords": [
+          "Customized gifts",
+          "Personalized keepsakes",
+          "Birthday hampers",
+          "Anniversary gifts",
+          "Theme-led handmade details",
+          "Occasion gifts",
+          "Birthdays",
+          "Anniversaries",
+          "Milestones",
+          "Festive gifting",
+          "Event decor",
+          "Customized Gifts in Dubai",
+          "Customized Gifts in Chennai",
+          "Customized Gifts online",
+          "custom customized gifts request"
+        ]
+      }
+    }
+  ],
+  "seo": {
+    "siteUrlEnv": "NEXT_PUBLIC_SITE_URL",
+    "targetMarkets": [
+      "Dubai",
+      "UAE",
+      "Chennai",
+      "India",
+      "Online"
+    ],
+    "primaryKeywords": [
+      "customized gifts in Dubai",
+      "handmade gifts in Dubai",
+      "personalized gifts in Dubai",
+      "mehendi artist in Dubai",
+      "texture art in Dubai",
+      "handmade decor in Dubai",
+      "customized gifts in Chennai",
+      "handmade gifts in Chennai",
+      "mehendi artist in Chennai",
+      "personalized handmade gifts online"
+    ],
+    "pageKeywords": {
+      "home": [
+        "Meraki Arts 53 handmade art",
+        "customized gifts in Dubai",
+        "handmade gifts in Chennai",
+        "texture art and decor portfolio",
+        "personalized handmade gifts online"
+      ],
+      "gallery": [
+        "handmade art gallery",
+        "customized gift gallery",
+        "mehendi design portfolio",
+        "texture art portfolio",
+        "handmade decor gallery"
+      ],
+      "services": [
+        "custom handmade commissions",
+        "custom gift services in Dubai",
+        "handmade decor services in Dubai",
+        "personalized gift commissions in Chennai",
+        "mehendi and handmade art services"
+      ],
+      "about": [
+        "about Meraki Arts 53",
+        "handmade artist for custom gifts",
+        "custom craft studio Dubai Chennai",
+        "multi-medium handmade art studio"
+      ],
+      "contact": [
+        "request custom handmade gift",
+        "contact Meraki Arts 53",
+        "custom art commission Dubai",
+        "personalized gift request Chennai",
+        "book custom handmade art"
+      ],
+      "journal": [
+        "handmade art process",
+        "custom gift ideas",
+        "handmade piece care",
+        "mehendi and gift inspiration",
+        "creative journal Meraki Arts 53"
       ]
     }
-  ]
+  }
 }

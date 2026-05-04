@@ -29,6 +29,37 @@ export const seoKeywords = [
   "personalized gifts"
 ];
 
+export function getSeoConfig(content: Content) {
+  return "seo" in content ? content.seo : undefined;
+}
+
+export function getTargetMarkets(content: Content) {
+  const configuredMarkets = process.env.NEXT_PUBLIC_TARGET_LOCATIONS?.split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (configuredMarkets?.length) {
+    return configuredMarkets;
+  }
+
+  return (
+    getSeoConfig(content)?.targetMarkets ?? [
+      "Dubai",
+      "UAE",
+      "Chennai",
+      "India",
+      "Online"
+    ]
+  );
+}
+
+export function getPageKeywords(
+  content: Content,
+  page: keyof Content["seo"]["pageKeywords"]
+) {
+  return getSeoConfig(content)?.pageKeywords?.[page] ?? [];
+}
+
 type PageMetadataInput = {
   title: string;
   description: string;
@@ -122,6 +153,7 @@ export function buildOrganizationJsonLd(content: Content) {
     sameAs: content.brand.social
       .filter((item) => item.href.startsWith("http"))
       .map((item) => item.href),
+    areaServed: getTargetMarkets(content),
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -200,7 +232,7 @@ export function buildCollectionJsonLd({
   description: string;
   path: string;
   image?: string;
-  items: Array<{ caption: string; image: string; id?: string }>;
+  items: Array<{ caption: string; image: string; id?: string; altText?: string }>;
 }) {
   return {
     "@context": "https://schema.org",
@@ -218,6 +250,7 @@ export function buildCollectionJsonLd({
         item: {
           "@type": "CreativeWork",
           name: item.caption,
+          description: item.altText,
           identifier: item.id,
           image: absoluteUrl(item.image)
         }
@@ -244,7 +277,7 @@ export function buildServicesJsonLd(content: Content) {
         provider: {
           "@id": `${siteUrl}/#organization`
         },
-        areaServed: "Worldwide"
+        areaServed: getTargetMarkets(content)
       }
     }))
   };
@@ -278,11 +311,14 @@ export function buildArtFormKeywords(artForm: ArtForm) {
   const popularRequests =
     "popularRequests" in artForm ? artForm.popularRequests ?? [] : [];
   const useCases = "useCases" in artForm ? artForm.useCases ?? [] : [];
+  const searchKeywords =
+    "searchContent" in artForm ? artForm.searchContent?.targetKeywords ?? [] : [];
 
   return [
     artForm.title,
     `${artForm.title} by Meraki Arts 53`,
     ...popularRequests,
-    ...useCases
+    ...useCases,
+    ...searchKeywords
   ];
 }

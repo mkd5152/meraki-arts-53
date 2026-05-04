@@ -8,6 +8,7 @@ import {
   buildBreadcrumbJsonLd,
   buildMetadata,
   buildWebPageJsonLd,
+  getPageKeywords,
   jsonLd
 } from "@/lib/seo";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     description: content.aboutPage.hero.intro,
     path: "/about",
     image: content.home.hero.image,
-    keywords: ["about Meraki Arts 53", "handmade artist", "custom craft studio"]
+    keywords: getPageKeywords(content, "about")
   })
 };
 

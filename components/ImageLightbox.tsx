@@ -9,6 +9,7 @@ import type { GalleryViewerContent } from "@/lib/getData";
 export type LightboxItem = {
   image: string;
   caption: string;
+  altText?: string;
   referenceId?: string;
   categoryTitle?: string;
   seriesItems?: LightboxItem[];
@@ -194,7 +195,12 @@ export function ImageLightbox({
                 />
                 <Image
                   src={activeItem?.image ?? item.image}
-                  alt={activeItem?.caption ?? item.caption}
+                  alt={
+                    activeItem?.altText ??
+                    item.altText ??
+                    activeItem?.caption ??
+                    item.caption
+                  }
                   fill
                   priority
                   unoptimized
@@ -273,7 +279,7 @@ export function ImageLightbox({
                         >
                           <Image
                             src={seriesItem.image}
-                            alt={seriesItem.caption}
+                            alt={seriesItem.altText ?? seriesItem.caption}
                             fill
                             unoptimized
                             loading="eager"
@@ -304,7 +310,7 @@ export function ImageLightbox({
                         >
                           <Image
                             src={similar.image}
-                            alt={similar.caption}
+                            alt={similar.altText ?? similar.caption}
                             fill
                             unoptimized
                             loading="eager"

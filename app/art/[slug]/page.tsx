@@ -62,6 +62,7 @@ export default async function ArtFormPage({ params }: PageProps) {
   const popularRequests =
     "popularRequests" in artForm ? artForm.popularRequests ?? [] : [];
   const useCases = "useCases" in artForm ? artForm.useCases ?? [] : [];
+  const searchContent = artForm.searchContent;
 
   return (
     <main>
@@ -138,6 +139,39 @@ export default async function ArtFormPage({ params }: PageProps) {
               </ul>
             </article>
           )}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper
+        eyebrow={content.navigation.workDropdownLabel}
+        title={searchContent.title}
+        intro={searchContent.body}
+        className="bg-panel"
+      >
+        <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr]">
+          <article className="rounded-[1.5rem] border border-line bg-paper p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-ink">
+              {searchContent.localTitle}
+            </h2>
+            <p className="mt-4 text-base leading-8 text-muted">
+              {searchContent.localBody}
+            </p>
+          </article>
+          <article className="rounded-[1.5rem] border border-line bg-paper p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-ink">
+              Popular request themes
+            </h2>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {searchContent.targetKeywords.slice(0, 8).map((keyword) => (
+                <li
+                  key={keyword}
+                  className="rounded-full bg-soft px-3 py-2 text-xs font-semibold text-muted"
+                >
+                  {keyword}
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </SectionWrapper>
 

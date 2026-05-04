@@ -9,6 +9,7 @@ type ArtCardProps = {
   title: string;
   description?: string;
   image: string;
+  altText?: string;
   href?: string;
   onClick?: () => void;
   caption?: string;
@@ -26,6 +27,7 @@ export function ArtCard({
   title,
   description,
   image,
+  altText,
   href,
   onClick,
   caption,
@@ -61,7 +63,7 @@ export function ArtCard({
       >
         <Image
           src={image}
-          alt={caption || title}
+          alt={altText || caption || title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition duration-500 group-hover:scale-105"

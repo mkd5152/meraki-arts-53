@@ -31,6 +31,7 @@ type FilterProfile = Record<string, string[]>;
 type InquiryItem = {
   image: string;
   caption: string;
+  altText?: string;
   referenceId?: string;
   categoryTitle?: string;
 };
@@ -281,9 +282,14 @@ export function GalleryGrid({
     selectedIndex === null ? null : displayItems[selectedIndex] ?? null;
   const getDisplayReferenceId = (item: DisplayItem) =>
     item.displayReferenceId ?? item.referenceId;
+  const getAltText = (item: GalleryItem | DisplayItem | null) =>
+    item && "altText" in item && typeof item.altText === "string"
+      ? item.altText
+      : undefined;
   const selectedLightboxItem = selectedItem
     ? {
         ...selectedItem,
+        altText: getAltText(selectedItem),
         referenceId: getDisplayReferenceId(selectedItem)
       }
     : null;
@@ -360,6 +366,7 @@ export function GalleryGrid({
         <ArtCard
           title={item.caption}
           image={item.image}
+          altText={getAltText(item)}
           description={
             item.seriesCount && item.seriesCount > 1
               ? item.seriesDescription

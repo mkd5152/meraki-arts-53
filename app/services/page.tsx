@@ -10,6 +10,7 @@ import {
   buildMetadata,
   buildServicesJsonLd,
   buildWebPageJsonLd,
+  getPageKeywords,
   jsonLd
 } from "@/lib/seo";
 
@@ -21,12 +22,7 @@ export const metadata: Metadata = {
     description: content.servicesPage.hero.intro,
     path: "/services",
     image: content.artForms[content.artForms.length - 1]?.coverImage,
-    keywords: [
-      "custom gift services",
-      "handmade decor services",
-      "custom handmade commissions",
-      "personalized gift commissions"
-    ]
+    keywords: getPageKeywords(content, "services")
   })
 };
 

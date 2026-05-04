@@ -9,6 +9,7 @@ import {
   buildBreadcrumbJsonLd,
   buildMetadata,
   buildWebPageJsonLd,
+  getPageKeywords,
   jsonLd
 } from "@/lib/seo";
 
@@ -20,12 +21,7 @@ export const metadata: Metadata = {
     description: content.journalPage.hero.intro,
     path: "/journal",
     image: content.journalPage.articles[0]?.image,
-    keywords: [
-      "handmade art process",
-      "custom gift ideas",
-      "handmade piece care",
-      "creative journal"
-    ]
+    keywords: getPageKeywords(content, "journal")
   })
 };
 
