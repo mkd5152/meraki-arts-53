@@ -17,9 +17,9 @@ import {
 const content = getContent();
 
 export const metadata: Metadata = buildMetadata({
-  title: "Handmade Art, Custom Gifts, Mehendi & Decor",
+  title: "Texture Art, Terrazzo Decor, Canvas Art & Handmade Gifts",
   description:
-    "Meraki Arts 53 creates handmade texture art, customized gifts, mehendi designs, paintings, textile details, and decor for personal moments.",
+    "Meraki Arts 53 creates texture art, terrazzo-inspired decor, canvas paintings, handmade decor, textile details, and customized gifts.",
   image: content.home.hero.image,
   keywords: getPageKeywords(content, "home")
 });
