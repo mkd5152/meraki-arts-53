@@ -368,26 +368,6 @@
             "Housewarming"
           ]
         },
-        "mehendi": {
-          "occasion": [
-            "Wedding",
-            "Festive",
-            "Personal"
-          ],
-          "color": [
-            "Warm brown",
-            "Deep detail",
-            "Natural"
-          ],
-          "giftType": [
-            "Occasion styling",
-            "Personal detail"
-          ],
-          "eventType": [
-            "Bridal",
-            "Celebration"
-          ]
-        },
         "chenille-craft": {
           "occasion": [
             "Gifting",
@@ -844,7 +824,7 @@
     {
       "title": "Bridal & Occasion Mehendi",
       "description": "Elegant mehendi design for celebrations, portraits, and personal expression.",
-      "isVisible": true,
+      "isVisible": false,
       "image": "/images/mehendi/mehendi-design-01.webp",
       "startingFrom": "Quoted by occasion and design detail",
       "includes": [
@@ -1035,7 +1015,7 @@
     },
     {
       "id": "mehendi",
-      "isVisible": true,
+      "isVisible": false,
       "title": "Mehendi",
       "slug": "mehendi",
       "description": "Intricate mehendi designs for bridal, festive, party, and personal occasions, with elegant patterns tailored for hands, arms, and celebrations.",
@@ -2369,7 +2349,7 @@
         "handmade art process",
         "custom gift ideas",
         "handmade piece care",
-        "mehendi and gift inspiration",
+        "art and gift inspiration",
         "creative journal Meraki Arts 53"
       ]
     }

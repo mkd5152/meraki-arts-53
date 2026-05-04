@@ -37,11 +37,32 @@ const withVisibleGallery = (artForm: ArtForm): ArtForm =>
 export const getArtForms = (): ArtForm[] =>
   data.artForms.filter(isVisible).map(withVisibleGallery);
 
-export const getContent = (): Content => ({
-  ...data,
-  artForms: getArtForms(),
-  services: data.services.filter(isVisible)
-});
+const getGalleryPage = (artForms: ArtForm[]): Content["galleryPage"] => {
+  const visibleArtFormIds = new Set(artForms.map((artForm) => artForm.id));
+
+  return {
+    ...data.galleryPage,
+    filters: {
+      ...data.galleryPage.filters,
+      profiles: Object.fromEntries(
+        Object.entries(data.galleryPage.filters.profiles).filter(([id]) =>
+          visibleArtFormIds.has(id as ArtForm["id"])
+        )
+      ) as Content["galleryPage"]["filters"]["profiles"]
+    }
+  };
+};
+
+export const getContent = (): Content => {
+  const artForms = getArtForms();
+
+  return {
+    ...data,
+    artForms,
+    galleryPage: getGalleryPage(artForms),
+    services: data.services.filter(isVisible)
+  };
+};
 
 export const getArtFormBySlug = (slug: string): ArtForm | undefined =>
   getArtForms().find((artForm) => artForm.slug === slug);
