@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { BrandCursor } from "@/components/BrandCursor";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -86,6 +87,7 @@ export default function RootLayout({
             links={content.navigation.links}
           />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
