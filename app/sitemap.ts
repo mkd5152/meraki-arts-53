@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getContent } from "@/lib/getData";
+import { landingPages } from "@/lib/landingPages";
 import { absoluteUrl } from "@/lib/seo";
 
 const content = getContent();
@@ -91,5 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...artRoutes, ...journalRoutes];
+  const landingRoutes = landingPages.map((page) =>
+    entry({
+      path: `/${page.slug}`,
+      priority: 0.88,
+      changeFrequency: "monthly",
+      images: [page.image]
+    })
+  );
+
+  return [...staticRoutes, ...artRoutes, ...landingRoutes, ...journalRoutes];
 }

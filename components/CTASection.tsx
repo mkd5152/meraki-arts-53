@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TrackedLink } from "@/components/TrackedLink";
 
 type CTASectionProps = {
   eyebrow?: string;
@@ -39,19 +39,31 @@ export function CTASection({
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link
+            <TrackedLink
               href={primaryCta.href}
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-paper px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-soft"
+              trackingEvent="cta_click"
+              trackingProperties={{
+                source: "cta_section",
+                label: primaryCta.label,
+                href: primaryCta.href
+              }}
             >
               {primaryCta.label}
-            </Link>
+            </TrackedLink>
             {secondaryCta && (
-              <Link
+              <TrackedLink
                 href={secondaryCta.href}
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-paper/24 px-5 py-3 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:border-paper/60 hover:bg-paper/10"
+                trackingEvent="cta_click"
+                trackingProperties={{
+                  source: "cta_section",
+                  label: secondaryCta.label,
+                  href: secondaryCta.href
+                }}
               >
                 {secondaryCta.label}
-              </Link>
+              </TrackedLink>
             )}
           </div>
         </div>

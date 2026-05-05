@@ -17,9 +17,9 @@ import {
 const content = getContent();
 
 export const metadata: Metadata = buildMetadata({
-  title: "Texture Art, Terrazzo Decor, Canvas Art & Handmade Gifts",
+  title: "Handmade Gifts, Texture Art & Decor in India",
   description:
-    "Meraki Arts 53 creates texture art, terrazzo-inspired decor, canvas paintings, handmade decor, textile details, and customized gifts.",
+    "Meraki Arts 53 creates customized gifts, texture art, terrazzo-inspired decor, canvas paintings, handmade decor, and textile details for Pune, Chennai, and India shipping.",
   image: content.home.hero.image,
   keywords: getPageKeywords(content, "home")
 });

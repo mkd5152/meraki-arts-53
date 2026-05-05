@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import type { GalleryViewerContent } from "@/lib/getData";
+import { trackSiteEvent } from "@/lib/trackEvent";
 
 export type LightboxItem = {
   image: string;
@@ -159,6 +160,14 @@ export function ImageLightbox({
                     target="_blank"
                     rel="noreferrer"
                     className="hidden min-h-10 items-center justify-center rounded-full bg-paper px-4 text-xs font-semibold text-ink shadow-soft transition hover:bg-gold sm:inline-flex"
+                    onClick={() =>
+                      trackSiteEvent("whatsapp_click", {
+                        source: "image_lightbox",
+                        medium: activeItem?.categoryTitle ?? item.categoryTitle,
+                        referenceId:
+                          activeItem?.referenceId ?? item.referenceId
+                      })
+                    }
                   >
                     {inquiryLabel}
                   </a>
@@ -251,6 +260,14 @@ export function ImageLightbox({
                     target="_blank"
                     rel="noreferrer"
                     className="mb-3 inline-flex min-h-10 w-full items-center justify-center rounded-full bg-paper px-4 text-xs font-semibold text-ink shadow-soft transition hover:bg-gold sm:hidden"
+                    onClick={() =>
+                      trackSiteEvent("whatsapp_click", {
+                        source: "image_lightbox_mobile",
+                        medium: activeItem?.categoryTitle ?? item.categoryTitle,
+                        referenceId:
+                          activeItem?.referenceId ?? item.referenceId
+                      })
+                    }
                   >
                     {inquiryLabel}
                   </a>

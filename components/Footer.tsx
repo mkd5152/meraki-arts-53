@@ -6,6 +6,7 @@ import type {
   NavigationContent
 } from "@/lib/getData";
 import { LogoMark } from "@/components/LogoMark";
+import { TrackedLink } from "@/components/TrackedLink";
 
 type FooterProps = {
   artist: Artist;
@@ -15,6 +16,27 @@ type FooterProps = {
 };
 
 const isExternalHref = (href: string) => href.startsWith("http");
+const getContactTrackingEvent = (href: string, label: string) => {
+  const normalized = `${href} ${label}`.toLowerCase();
+
+  if (normalized.includes("wa.me") || normalized.includes("whatsapp")) {
+    return "whatsapp_click";
+  }
+
+  if (normalized.includes("instagram")) {
+    return "instagram_click";
+  }
+
+  if (normalized.includes("mailto:")) {
+    return "email_click";
+  }
+
+  if (normalized.includes("tel:")) {
+    return "phone_click";
+  }
+
+  return "outbound_click";
+};
 
 export function Footer({ brand, footer, links }: FooterProps) {
   return (
@@ -53,23 +75,31 @@ export function Footer({ brand, footer, links }: FooterProps) {
           </p>
           <div className="grid gap-2">
             {brand.social.map((link) => (
-              <Link
+              <TrackedLink
                 key={link.label}
                 href={link.href}
                 target={isExternalHref(link.href) ? "_blank" : undefined}
                 rel={isExternalHref(link.href) ? "noreferrer" : undefined}
                 className="text-sm font-medium text-muted hover:text-clay"
+                trackingEvent={getContactTrackingEvent(link.href, link.label)}
+                trackingProperties={{
+                  source: "footer",
+                  label: link.label,
+                  href: link.href
+                }}
               >
                 {link.label}
-              </Link>
+              </TrackedLink>
             ))}
           </div>
-          <Link
+          <TrackedLink
             href={footer.contactHref}
             className="mt-2 inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-paper hover:bg-clay"
+            trackingEvent="contact_click"
+            trackingProperties={{ source: "footer" }}
           >
             {footer.contactLabel}
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </footer>

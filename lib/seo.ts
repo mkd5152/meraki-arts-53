@@ -46,10 +46,10 @@ export function getTargetMarkets(content: Content) {
 
   return (
     getSeoConfig(content)?.targetMarkets ?? [
-      "Dubai",
-      "UAE",
+      "Pune",
       "Chennai",
-      "India",
+      "India shipping",
+      "Dubai",
       "Online"
     ]
   );
@@ -258,6 +258,23 @@ export function buildCollectionJsonLd({
         }
       }))
     }
+  };
+}
+
+export function buildFAQPageJsonLd(
+  items: Array<{ question: string; answer: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
   };
 }
 

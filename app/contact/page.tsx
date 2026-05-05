@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { FAQSection } from "@/components/FAQSection";
 import { PageHero } from "@/components/PageHero";
 import { SectionWrapper } from "@/components/SectionWrapper";
+import { TrackedLink } from "@/components/TrackedLink";
 import { getContent } from "@/lib/getData";
 import {
   buildBreadcrumbJsonLd,
@@ -13,6 +14,28 @@ import {
 } from "@/lib/seo";
 
 const content = getContent();
+
+const getContactTrackingEvent = (href: string, label: string) => {
+  const normalized = `${href} ${label}`.toLowerCase();
+
+  if (normalized.includes("wa.me") || normalized.includes("whatsapp")) {
+    return "whatsapp_click";
+  }
+
+  if (normalized.includes("instagram")) {
+    return "instagram_click";
+  }
+
+  if (normalized.includes("mailto:")) {
+    return "email_click";
+  }
+
+  if (normalized.includes("tel:")) {
+    return "phone_click";
+  }
+
+  return "outbound_click";
+};
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -72,15 +95,21 @@ export default function ContactPage() {
             </ul>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {content.contactPage.quickLinks.map((link) => (
-                <a
+                <TrackedLink
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-soft px-4 text-sm font-semibold text-ink transition hover:border-clay hover:text-clay"
+                  trackingEvent={getContactTrackingEvent(link.href, link.label)}
+                  trackingProperties={{
+                    source: "contact_quick_links",
+                    label: link.label,
+                    href: link.href
+                  }}
                 >
                   {link.label}
-                </a>
+                </TrackedLink>
               ))}
             </div>
           </aside>

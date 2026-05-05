@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import type { ArtForm, Content, GalleryViewerContent } from "@/lib/getData";
+import { trackSiteEvent } from "@/lib/trackEvent";
 import { ArtCard } from "@/components/ArtCard";
 import { FilterTabs } from "@/components/FilterTabs";
 import { ImageLightbox } from "@/components/ImageLightbox";
@@ -396,6 +397,13 @@ export function GalleryGrid({
           target={delivery ? "_blank" : undefined}
           rel={delivery ? "noreferrer" : undefined}
           className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-line bg-panel px-4 text-xs font-semibold uppercase tracking-[0.12em] text-muted transition hover:border-clay hover:text-clay"
+          onClick={() =>
+            trackSiteEvent(delivery ? "whatsapp_click" : "contact_click", {
+              source: "gallery_grid",
+              medium: item.categoryTitle,
+              referenceId: getDisplayReferenceId(item)
+            })
+          }
         >
           {inquiryLabel}
         </Link>

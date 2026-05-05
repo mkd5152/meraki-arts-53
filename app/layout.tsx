@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { BrandCursor } from "@/components/BrandCursor";
 import { Footer } from "@/components/Footer";
+import { GoogleTag } from "@/components/GoogleTag";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { getContent } from "@/lib/getData";
@@ -90,6 +91,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleTag />
       </body>
     </html>
   );

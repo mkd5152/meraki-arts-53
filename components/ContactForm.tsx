@@ -2,6 +2,7 @@
 
 import { type FormEvent, useEffect, useState } from "react";
 import type { ArtForm, Content } from "@/lib/getData";
+import { trackSiteEvent } from "@/lib/trackEvent";
 
 type ContactFormProps = {
   form: Content["contactPage"]["form"];
@@ -80,10 +81,22 @@ export function ContactForm({ form, delivery, artForms }: ContactFormProps) {
     emailPayload.append("Formatted request", requestMessage);
 
     setStatus("sending");
+    trackSiteEvent("contact_form_submit", {
+      source: "contact_form",
+      medium,
+      occasion,
+      hasBudget: budget !== "-"
+    });
 
     const whatsappUrl = `${delivery.whatsappHref}?text=${encodeURIComponent(
       requestMessage
     )}`;
+    trackSiteEvent("whatsapp_click", {
+      source: "contact_form",
+      medium,
+      occasion
+    });
+
     const whatsappWindow = window.open(
       whatsappUrl,
       "_blank",
@@ -108,10 +121,20 @@ export function ContactForm({ form, delivery, artForms }: ContactFormProps) {
       }
 
       setStatus("sent");
+      trackSiteEvent("contact_form_email_sent", {
+        source: "contact_form",
+        medium,
+        occasion
+      });
       currentForm.reset();
       setSelectedMedium("");
     } catch (error) {
       console.error(error);
+      trackSiteEvent("contact_form_email_fallback", {
+        source: "contact_form",
+        medium,
+        occasion
+      });
       setStatus("fallback");
     }
   };
