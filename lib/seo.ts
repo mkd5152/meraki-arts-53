@@ -2,14 +2,56 @@ import type { Metadata } from "next";
 import type { ArtForm, Content } from "@/lib/getData";
 
 const fallbackSiteUrl = "https://merakiarts53.com";
+const productionHost = "merakiarts53.com";
+const redirectHosts = new Set([
+  "www.merakiarts53.com",
+  "merakiarts53.vercel.app"
+]);
+
+function normalizeSiteUrl(value: string) {
+  const trimmed = value.trim().replace(/\/+$/, "");
+  const url = new URL(
+    /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`
+  );
+
+  if (redirectHosts.has(url.hostname)) {
+    url.hostname = productionHost;
+    url.port = "";
+  }
+
+  if (url.hostname === productionHost) {
+    url.protocol = "https:";
+    url.port = "";
+  }
+
+  return url.origin;
+}
 
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl)
 ).replace(/\/$/, "");
 
 export const absoluteUrl = (path = "/") => {
   if (/^https?:\/\//i.test(path)) {
-    return path;
+    const url = new URL(path);
+    const isCanonicalHost = url.hostname === productionHost;
+    const isRedirectHost = redirectHosts.has(url.hostname);
+
+    if (!isCanonicalHost && !isRedirectHost) {
+      return path;
+    }
+
+    if (isRedirectHost) {
+      url.hostname = productionHost;
+      url.port = "";
+    }
+
+    if (url.hostname === productionHost) {
+      url.protocol = "https:";
+      url.port = "";
+    }
+
+    return url.toString().replace(/\/$/, "");
   }
 
   return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
