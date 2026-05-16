@@ -21,6 +21,7 @@ creations/_inbox/existing/*
 creations/_inbox/new/*
 !creations/_inbox/new/.keep
 brand-assets/
+insta/
 
 # Local logo export scripts
 scripts/build-logo-kit.mjs
