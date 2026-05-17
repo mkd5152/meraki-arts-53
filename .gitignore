@@ -22,6 +22,7 @@ creations/_inbox/new/*
 !creations/_inbox/new/.keep
 brand-assets/
 insta/
+tmp/
 
 # Local logo export scripts
 scripts/build-logo-kit.mjs

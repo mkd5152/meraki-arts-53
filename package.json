@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
+    "instagram:check": "python3 scripts/check-instagram.py",
     "images:check-inbox": "node scripts/check-image-inbox.mjs",
     "images:check-parity": "node scripts/check-image-parity.mjs"
   },

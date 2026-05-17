@@ -191,6 +191,9 @@ availability unless the user provides them.
 
 For any Instagram post, carousel, reel, or story request:
 
+- Prefer `npm run instagram:check -- --count 9` for the quick live check. It
+  uses the local Instaloader session and writes the full response to
+  `tmp/instagram/merakiarts53-latest.json`.
 - Quickly open/check `https://www.instagram.com/merakiarts53/`.
 - Compare against recent posts for repeated artwork, repeated visual layout,
   repeated hook, caption angle, hashtag pattern, and overall grid feel.
@@ -908,6 +911,7 @@ Useful commands:
 - `npm run dev`
 - `npm run build`
 - `npm run typecheck`
+- `npm run instagram:check -- --count 9`
 - `npm run images:check-inbox`
 - `npm run images:check-parity`
 
