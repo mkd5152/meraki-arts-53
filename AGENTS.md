@@ -158,6 +158,7 @@ Default caption structure:
 Hashtag split rule:
 
 - Caption always gets exactly 5 hashtags, including `#art`.
+- Do not use `#MerakiArts53` in captions or comment hashtags.
 - Put every additional hashtag separately under `Comment hashtags` so the user
   can paste them as the first comment.
 - This applies to every Instagram post request: single post, carousel, reel,
@@ -310,14 +311,19 @@ If only 5 slides are needed:
 
 Carousel copy rules:
 
-- Slide headline: ideally under 8 words.
-- Supporting text: ideally under 18 words.
+- Slide headline: ideally under 8 words, but treat this as manual overlay/copy
+  guidance, not text that Gemini should render inside the image.
+- Supporting text: ideally under 18 words, but keep it outside the generated
+  image unless the user explicitly asks for text in the image.
 - No paragraph-heavy slides.
 - Each slide should have one job.
-- Use visual hierarchy: big artwork, small text.
+- Use visual hierarchy: big artwork and clean negative space for manual text
+  editing later.
 - Use brand palette with ivory/ink as the base and coral, rose, gold, sage, or
   teal as accents.
 - Include a final CTA slide with DM/WhatsApp order flow.
+- Default carousel image prompts should not generate text inside slides 1
+  through the second-last slide. The final CTA slide may include one short CTA.
 
 Default carousel output format:
 
@@ -331,7 +337,7 @@ Slides:
    Visual: ...
    Design note: ...
 
-Gemini carousel prompt:
+Gemini single-slide prompts:
 ...
 
 Caption:
@@ -344,16 +350,20 @@ Alt text:
 ...
 ```
 
-The Gemini carousel prompt should include:
+The Gemini carousel prompts should be separate one-slide prompts. Do not ask
+Gemini to generate the full carousel in one prompt, because that can create a
+PowerPoint-style collage or presentation slide. Each prompt should include:
 
-- aspect ratio and slide count
+- square 1:1 aspect ratio
+- the exact slide number and any slide copy as manual-overlay notes only
 - brand colors
-- typography direction
-- per-slide text
-- per-slide visual idea
+- typography direction only for the final CTA slide, unless the user explicitly
+  asks for generated text
+- that single slide's visual idea
 - layout rules
-- negative prompt to avoid unreadable text, clutter, random hands, fake logos,
-  distorted products, and incorrect spelling
+- negative prompt to avoid generated overlay text, unreadable text, clutter,
+  random hands, fake logos, distorted products, PowerPoint/presentation
+  layouts, multiple slides in one image, and incorrect spelling
 
 ## When The User Asks For A Reel
 
@@ -387,7 +397,7 @@ Default pacing:
 - 0-1s: hook or most satisfying visual.
 - 1-3s: process, texture, material, or close-up detail.
 - 3-6s: reveal, styling, or finished piece.
-- 6-8s: CTA, brand mark, or final beauty shot.
+- 6-8s: final beauty shot with no generated text or logo.
 
 Default reel deliverables:
 
@@ -395,12 +405,22 @@ Default reel deliverables:
 - Image details showing exactly where to get the start/end images from, including
   local repo paths, public paths, category, caption/title, and visibility status
   when available.
+- A first-step 9:16 image edit prompt for the source picture before the Veo
+  prompt. Tell the user to clean, crop, or extend the background in a way the
+  source can support, make it aesthetic and Instagram-worthy, preserve the exact
+  artwork/product/decor, and use the edited 9:16 image as the Veo start frame.
 - Start-frame image or start-frame image prompt.
 - Optional end-frame image or end-frame image prompt when useful.
 - Concept.
-- Hook text to add as the first on-screen text.
+- Manual hook line to add while posting. Keep this outside the Veo prompt so
+  the generated video itself still has no text. Make it catchy and youth-facing
+  when appropriate. Vary the style across a weekly set: use at most one `POV:`
+  hook unless the user asks for more, and mix in trend-style observations,
+  emotional hooks, direct one-liners, and save-worthy lines.
 - Shot list with timestamps.
-- Overlay text.
+- On-screen text: none inside the AI-generated reel. Do not include generated
+  titles, captions, subtitles, labels, or typography in Veo prompts unless the
+  user explicitly asks for manual overlay copy separately.
 - Voiceover if useful.
 - Caption with exactly 5 hashtags, including `#art`.
 - Remaining hashtags separately as `Comment hashtags`.
@@ -428,10 +448,10 @@ Caption/title: [...]
 Visibility: [visible/hidden/unknown]
 End frame source: [local path, generated frame, or optional]
 
-Reel concept:
+Manual hook line to add while posting:
 ...
 
-Hook text:
+Reel concept:
 ...
 
 Start frame:
@@ -446,8 +466,9 @@ Shot list:
 3.0-6.0s: ...
 6.0-8.0s: ...
 
-Overlay text:
-...
+On-screen text:
+None inside the generated video. No titles, captions, subtitles, labels,
+typography, or generated words.
 
 Caption:
 ...
@@ -468,7 +489,7 @@ Good reel shot ideas:
 - Satisfying peel/reveal/placement moment.
 - Before-to-after transition.
 - Packing or gift-ready finishing.
-- Final styled shot with subtle logo/wordmark.
+- Final styled shot without generated text, logo, or wordmark.
 
 Avoid:
 
@@ -478,7 +499,7 @@ Avoid:
 - distorted hands
 - changing the artwork
 - fake extra products not present in the source
-- unreadable AI-generated text inside the video
+- any AI-generated text inside the video unless the user explicitly asks for it
 
 ## When The User Asks For A Reel Prompt
 
@@ -500,11 +521,13 @@ For Veo prompts specifically:
   upload the images.
 - Put the full Veo prompt in one single contiguous `Veo prompt` copy block. Do
   not split the actual prompt into separate blocks outside that section.
-- The `Veo prompt` block itself may include scene, camera, timing, overlay text,
-  audio mood, and negative instructions, but all of that must stay inside the
-  one prompt block.
-- Put hook/caption/hashtags outside the `Veo prompt` block unless they need to
-  be part of the video generation prompt.
+- The `Veo prompt` block itself may include scene, camera, timing, audio mood,
+  and negative instructions, but all of that must stay inside the one prompt
+  block.
+- Do not include on-screen text in the Veo prompt. Keep captions and hashtags
+  outside the video prompt for the Instagram post copy only.
+- Provide one catchy manual hook line outside the Veo prompt for the user to
+  add while posting. This hook is not part of the video generation prompt.
 - Do not wrap prompt settings, image details, and the Veo prompt inside one
   combined code block. The prompt must be easy to copy by itself.
 
@@ -537,7 +560,9 @@ Visibility: [visible/hidden/unknown]
 Veo prompt:
 Create an 8-second 9:16 vertical Instagram Reel for Meraki Arts 53.
 Use the provided artwork/product as the exact reference. Preserve its colors,
-shape, materials, text, names, and handmade imperfections. Show [scene].
+shape, materials, and handmade imperfections. Preserve any real text that is
+physically part of the product only when the user explicitly wants it preserved.
+Show [scene].
 Lighting: soft natural light. Style: warm, polished handmade studio.
 Camera: macro close-ups, gentle pans, smooth reveal.
 
@@ -546,20 +571,18 @@ Scene prompts:
 2. ...
 3. ...
 
-Overlay text:
-Hook: ...
-...
+On-screen text:
+None. Do not generate titles, captions, subtitles, labels, typography, logos,
+or any written words inside the video.
 
 Negative prompt:
 Do not alter the artwork, do not change names or dates, no fake logos,
-no warped hands, no extra fingers, no distorted product edges, no unreadable
-text, no cluttered background, no plastic-looking surfaces, no over-smoothing.
+no warped hands, no extra fingers, no distorted product edges, no captions,
+no subtitles, no labels, no generated words, no unreadable text, no cluttered
+background, no plastic-looking surfaces, no over-smoothing.
 ```
 
 ```text
-Hook text:
-...
-
 Caption:
 ...
 
@@ -571,6 +594,21 @@ If the user supplies an image, tell the tool to use it as the exact reference.
 If the user does not supply an image, use the relevant category style and ask
 for the actual image only if a faithful product reel is impossible without it.
 
+For Veo reel prompts, always use this two-step image flow:
+
+1. First provide a 9:16 image edit prompt for the source image. The edit prompt
+   should clean the original background or messy room, create a polished Meraki
+   Arts 53 presentation when the source can support it, preserve the exact
+   product or decor, avoid private text, and leave mobile-safe negative space.
+   For fragile room/decor photos, use crop/cleanup/blurred-duplicate fill
+   instead of background replacement.
+2. Then write the Veo prompt telling the model to use the edited 9:16 image as
+   the exact start-frame reference. Do not ask Veo to reinterpret the raw photo.
+3. If an end frame is useful, provide a second 9:16 edit prompt or tell the user
+   to make a wider reveal variant from the same edited image. Do not do this for
+   fragile room/decor photos where expansion would change the setup; use the
+   same preserved frame instead.
+
 ## When The User Asks For A Carousel Prompt
 
 Return a prompt for generating or designing a multi-slide carousel.
@@ -578,10 +616,47 @@ Return a prompt for generating or designing a multi-slide carousel.
 Default prompt requirements:
 
 - Square 1:1 unless asked otherwise.
+- First provide a 1:1 image edit prompt for the main reference picture. The
+  prompt should remove the original background, clean clutter, place the product
+  or artwork on a warm ivory premium studio surface, preserve exact details, and
+  avoid extra text/logos/props unless requested.
+- If the carousel is informational and has no product photo, first provide a
+  1:1 generated reference/cover image prompt that establishes the visual style.
+- If the carousel is educational, instructional, or has no reference/product
+  image, generated slide text is allowed and usually expected. Keep the text
+  short, useful, and easy to read. The "no text except final CTA" rule applies
+  to image-provided product/reference carousels, not educational carousels.
+- Then write one Gemini prompt per carousel slide and tell Gemini to use the
+  edited 1:1 image as the exact product/reference image where relevant.
+- When the user provides an image for a carousel, every image-based slide must
+  strictly use that attached/edited image as the exact reference. Do not invent,
+  replace, substitute, redraw, or "upgrade" it into a generic product. Name the
+  specific object that must not be replaced, such as "do not turn this treat
+  pouch into a shopping bag or gift bag."
+- For image-based carousel prompts, keep the prompt simple and product-photo
+  oriented. Use the user's proven style:
+  "Use the attached image as the exact product reference. Create a square 1:1
+  [hero/close-up/macro/top-angle/imaginative/final CTA] image of the same
+  [product]..." Then describe the shot and list the exact details to preserve.
+  Avoid long defensive prompt soup unless fixing a specific failure.
+- A strong image-based carousel sequence is: full hero shot, close-up of the
+  key detail, macro material/detail shot, top-angle or diagonal editorial shot,
+  one imaginative but realistic product photo, and final CTA slide.
+- For image-provided product/reference carousels, do not put generated/overlay
+  text inside slide images except on the final CTA slide, unless the user
+  explicitly asks otherwise. Slide 1 through the second-last slide should be
+  visual-only. Preserve real text that is physically printed on the product only
+  if the user wants the reference preserved; do not rewrite it.
+- For image-provided product/reference carousels, the final CTA slide only may
+  render one short CTA as text. For educational/instructional carousels, short
+  useful text may appear on every slide.
+- Never ask Gemini to generate all carousel slides in one prompt. Use separate
+  prompts labeled Slide 1, Slide 2, etc.
 - Use Meraki Arts 53 palette.
 - Use handmade texture, dot, brush, or floral accents sparingly.
 - Keep product/artwork as the visual hero.
-- Keep text sharp, spelled correctly, and inside safe margins.
+- When a slide intentionally includes text, keep it sharp, spelled correctly,
+  and inside safe margins.
 - Use a consistent layout system across all slides.
 - End with a CTA slide.
 
@@ -633,7 +708,6 @@ Do not overload with 30 repetitive tags unless asked.
 
 Core hashtags:
 
-- #MerakiArts53
 - #HandmadeByMeraki
 - #HandmadeInIndia
 - #IndianHandmade
@@ -733,7 +807,13 @@ images, prioritize preserving the actual artwork.
 
 Default behavior for image edits:
 
-- Always remove the background first unless the user explicitly says to keep it.
+- For simple isolated products, remove the background first unless the user
+  explicitly says to keep it.
+- For fragile real-scene references such as room decor, thin strings, hanging
+  hearts, balloons, fairy lights, flowers, or transparent/fine details, do not
+  force a full background removal if it will make the model rebuild the object.
+  Prefer faithful crop, cleanup, distraction removal, and background extension
+  from the original photo.
 - Make the image more fancy/premium with a polished Meraki Arts 53 presentation:
   clean ivory/brand-color background, soft natural shadow, subtle texture,
   tasteful accent details, and better crop/composition.
@@ -824,6 +904,45 @@ Never rely on generated text inside an image unless the tool is known to render
 text correctly. Prefer adding text in design/editing software after image
 generation.
 
+For Instagram prompt packs, always include image-prep prompts before the final
+Gemini/Veo prompts:
+
+- For reels, create a 9:16 mobile start-frame edit prompt first. It should
+  clean/crop/extend the messy background, make the frame aesthetic and premium,
+  preserve the actual artwork/product/decor, and explicitly say no
+  hallucinated objects, no altered handwriting/details, no extra people, and no
+  logos.
+- For real reference photos, especially room decor with thin strings, balloons,
+  flowers, hanging pieces, or other fragile details, never use language like
+  "recreate the decor" or "redesign the scene." Say "photo edit of the original
+  image only." Preserve object count, positions, spacing, colors, string
+  lengths, proportions, and handmade imperfections. Prefer crop, cleanup, and
+  background extension over asking the model to build a new clean scene.
+- If the source is a wide landscape room/decor photo that must become a 9:16
+  Reel frame, prefer a preserved-photo layout: place the original photo as the
+  main visible layer and use a blurred/brightened duplicate of the same photo as
+  the vertical background fill. Do not ask AI to replace the room, make a studio
+  version, or expand the decor into a new vertical scene.
+- Reel prompts should default to no on-screen text at all. Do not include
+  generated titles, captions, subtitles, labels, typography, logos, or written
+  words inside the video prompt unless the user explicitly asks for manual
+  overlay copy.
+- For carousels, create a 1:1 square product/reference image prompt first. It
+  should remove the original background, isolate the item, place it on a clean
+  warm ivory handmade-paper/studio surface, and preserve exact details.
+- When a carousel uses a provided product/reference image, the slide prompts
+  must say to use that exact image and must explicitly forbid substituting a
+  generic version of the object.
+- Carousel slide image prompts should be visual-only until the final CTA slide:
+  no generated headlines, paragraphs, labels, logos, watermarks, or new words.
+  The final CTA slide may contain one short CTA.
+- The final Veo/Gemini prompt must say to use the edited image as the exact
+  reference. This is the default way to reduce hallucinations and keep the final
+  Reel or carousel faithful.
+- For privacy-sensitive custom gifts, the image-prep prompt must crop, remove,
+  blur, or avoid names, faces, private notes, dates, and personal photos unless
+  the user explicitly asks to preserve them.
+
 ## Prompt Templates
 
 Gemini static post image prompt:
@@ -844,21 +963,13 @@ no harsh shadows, no over-smoothed plastic finish.
 Gemini carousel design prompt:
 
 ```text
-Design a [slide count]-slide 1:1 Instagram carousel for Meraki Arts 53.
-Use ivory and ink as the base, with coral, rose, gold, sage, and teal accents.
-Use subtle handmade dots, brush details, or floral accents. The artwork/product
-must be the main focus. Keep typography readable and inside safe margins.
-
-Slides:
-1. [title] - [visual]
-2. [title] - [visual]
-3. [title] - [visual]
-4. [title] - [visual]
-5. [title] - [visual]
-
-Negative prompt: no clutter, no tiny unreadable text, no misspellings,
-no distorted product, no random stock elements, no fake customer details,
-no harsh shadows, no excessive decoration.
+Use the attached image as the exact product reference. Create a square 1:1
+Instagram carousel image of the same [product] as the hero. [Describe one clear
+shot: full hero / close-up / macro detail / top-angle / imaginative realistic
+product photo.] Preserve [specific product details] exactly. Soft natural
+light, warm ivory handmade-paper background, premium handmade mood, calm
+negative space. No added text, no logo, no people, no extra props, no redesign,
+no altered writing, no generic substitute product, no distorted product.
 ```
 
 Reel prompt:
@@ -871,13 +982,14 @@ final reveal in soft natural light. Camera movement should be smooth: slow pan,
 close detail, reveal, final styled shot. Mood: warm, polished, handmade,
 personal.
 
-Overlay text:
-Hook: [short first text line]
-[text]
+On-screen text:
+None. Do not generate titles, captions, subtitles, labels, typography, logos,
+or any written words inside the video.
 
 Negative prompt: no altered artwork, no distorted hands, no extra fingers,
-no incorrect names/dates, no fake logos, no unreadable text, no cluttered
-background, no heavy blur, no plastic finish.
+no incorrect names/dates, no fake logos, no captions, no subtitles, no labels,
+no generated words, no unreadable text, no cluttered background, no heavy blur,
+no plastic finish.
 ```
 
 ## Ordering And Inquiry Copy
